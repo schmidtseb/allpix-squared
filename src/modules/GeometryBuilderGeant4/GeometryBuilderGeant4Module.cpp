@@ -22,6 +22,7 @@
 #include <Math/Vector3D.h>
 
 #include "GeometryConstructionG4.hpp"
+#include "GeometryConstructionCustomG4.hpp"
 
 #include "tools/ROOT.h"
 #include "tools/geant4.h"
@@ -91,8 +92,14 @@ void GeometryBuilderGeant4Module::init() {
     RELEASE_STREAM(std::cout);
 
     // Set the geometry construction to use
-    auto geometry_construction = new GeometryConstructionG4(geo_manager_, config_);
-    run_manager_g4_->SetUserInitialization(geometry_construction);
+    if(config_.get<bool>("custom")) {
+        run_manager_g4_->SetUserInitialization(new GeometryConstructionCustomG4(geo_manager_, config_));
+    } else {
+        run_manager_g4_->SetUserInitialization(new GeometryConstructionG4(geo_manager_, config_));
+    }
+
+    // auto geometry_construction = new GeometryConstructionG4(geo_manager_, config_);
+    // run_manager_g4_->SetUserInitialization(new GeometryConstructionG4(geo_manager_, config_));
 
     // Run the geometry construct function in GeometryConstructionG4
     LOG(TRACE) << "Building Geant4 geometry";

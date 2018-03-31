@@ -8,7 +8,7 @@
  * Intergovernmental Organization or submit itself to any jurisdiction.
  */
 
-#include "GeometryConstructionG4.hpp"
+#include "GeometryConstructionCustomG4.hpp"
 
 #include <memory>
 #include <string>
@@ -39,7 +39,7 @@
 
 using namespace allpix;
 
-GeometryConstructionG4::GeometryConstructionG4(GeometryManager* geo_manager, Configuration& config)
+GeometryConstructionCustomG4::GeometryConstructionCustomG4(GeometryManager* geo_manager, Configuration& config)
     : geo_manager_(geo_manager), config_(config) {}
 
 /**
@@ -56,7 +56,7 @@ template <typename T, typename... Args> static std::shared_ptr<T> make_shared_no
  * First initializes all the materials. Then constructs the world from the internally calculated world size with a certain
  * margin. Finally builds all the individual detectors.
  */
-G4VPhysicalVolume* GeometryConstructionG4::Construct() {
+G4VPhysicalVolume* GeometryConstructionCustomG4::Construct() {
     // Initialize materials
     init_materials();
 
@@ -111,6 +111,22 @@ G4VPhysicalVolume* GeometryConstructionG4::Construct() {
     world_phys_ =
         std::make_unique<G4PVPlacement>(nullptr, G4ThreeVector(0., 0., 0.), world_log_.get(), "World", nullptr, false, 0);
 
+    // Build the phantom
+    if(config_.has("phantom_dimensions") && config_.has("phantom_position")) {
+        G4ThreeVector phantom_dimensions = config_.get<G4ThreeVector>("phantom_dimensions");
+        G4ThreeVector phantom_position = config_.get<G4ThreeVector>("phantom_position");
+        build_phantom(phantom_dimensions, phantom_position);
+    }
+
+    // Build hull around source
+    if(config_.has("source_hull_radius") && config_.has("source_hull_depth")) {
+        double source_hull_radius = config_.get<double>("source_hull_radius");
+        double source_hull_depth = config_.get<double>("source_hull_depth");
+        G4ThreeVector source_position = config_.get<G4ThreeVector>("source_position");
+
+        build_source(source_hull_radius, source_hull_depth, source_position);
+    }
+
     // Build all the detectors in the world
     build_detectors();
 
@@ -126,7 +142,7 @@ G4VPhysicalVolume* GeometryConstructionG4::Construct() {
  * - kapton
  * - solder
  */
-void GeometryConstructionG4::init_materials() {
+void GeometryConstructionCustomG4::init_materials() {
     G4NistManager* nistman = G4NistManager::Instance();
 
     // Build table of materials from database
@@ -137,6 +153,7 @@ void GeometryConstructionG4::init_materials() {
     materials_["aluminum"] = nistman->FindOrBuildMaterial("G4_Al");
     materials_["air"] = nistman->FindOrBuildMaterial("G4_AIR");
     materials_["lead"] = nistman->FindOrBuildMaterial("G4_Pb");
+    materials_["water"] = nistman->FindOrBuildMaterial("G4_WATER");
 
     // Create required elements:
     G4Element* H = new G4Element("Hydrogen", "H", 1., 1.01 * CLHEP::g / CLHEP::mole);
@@ -174,9 +191,126 @@ void GeometryConstructionG4::init_materials() {
     Solder->AddElement(Sn, 0.63);
     Solder->AddElement(Pb, 0.37);
     materials_["solder"] = Solder;
+
+    // Create hard lead material
+    G4Material* HardLead = new G4Material("HardLead", 11. * CLHEP::g / CLHEP::cm3, 2);
+    HardLead->AddMaterial(materials_["lead"], 0.96);
+    HardLead->AddMaterial(nistman->FindOrBuildMaterial("G4_Sb"), 0.04);
+    materials_["hardlead"] = HardLead;
+
+    // Create PMMA material
+    G4Material* PMMA = new G4Material("PMMA", 1.19 * CLHEP::g / CLHEP::cm3, 3);
+    PMMA->AddElement(C, 1.0/3);
+    PMMA->AddElement(H, 8.0/15);
+    PMMA->AddElement(O, 2.0/15);
+    materials_["pmma"] = PMMA;
 }
 
-void GeometryConstructionG4::build_detectors() {
+// phantom_position specifies the center of the front plane of the phantom
+void GeometryConstructionCustomG4::build_phantom(G4ThreeVector phantom_dimensions, G4ThreeVector phantom_position) {
+    // Thickness
+    double phantom_thick = 10 * CLHEP::mm;
+
+    // Get dimensions
+    double dim_x = phantom_dimensions.x() / 2;
+    double dim_y = phantom_dimensions.y() / 2; 
+    double dim_z = phantom_dimensions.z() / 2;
+
+    // Correct position
+    phantom_position += G4ThreeVector(0, 0, dim_z);
+
+    /*
+    // Get positions
+    double pos_x = phantom_position.x();
+    double pos_y = phantom_position.y();
+    double pos_z = phantom_position.z();
+    */
+
+    auto phantoms_log = std::make_shared<std::vector<std::shared_ptr<G4LogicalVolume>>>();
+    auto phantoms_phys = std::make_shared<std::vector<std::shared_ptr<G4PVPlacement>>>();
+    // Construct PMMA
+    // Outer
+    auto phantom_outer_solid = std::make_shared<G4Box>("phantom_outer", dim_x, dim_y, dim_z);
+    solids_.push_back(phantom_outer_solid);
+    // Inner
+    auto phantom_inner_solid = std::make_shared<G4Box>("phantom_inner", dim_x-phantom_thick, dim_y-phantom_thick, dim_z-1.25/2*phantom_thick);
+    solids_.push_back(phantom_inner_solid);
+
+    auto phantom_solid = std::make_shared<G4SubtractionSolid>("phantom_solid", phantom_outer_solid.get(), phantom_inner_solid.get(), nullptr, G4ThreeVector(0, 0, -0.25*phantom_thick));
+    solids_.push_back(phantom_solid);
+
+    auto phantom_log = make_shared_no_delete<G4LogicalVolume>(phantom_solid.get(), materials_["pmma"], "phantom_log");
+    phantoms_log->push_back(phantom_log);
+    auto phantom_phys= make_shared_no_delete<G4PVPlacement>(nullptr, phantom_position, phantom_log.get(), "phantom_phys", world_log_.get(), false, 0);
+    phantoms_phys->push_back(phantom_phys);
+
+    // Construct Water
+    auto phantom_waters_log = std::make_shared<std::vector<std::shared_ptr<G4LogicalVolume>>>();
+    auto phantom_waters_phys = std::make_shared<std::vector<std::shared_ptr<G4PVPlacement>>>();
+
+    auto phantom_water_log = make_shared_no_delete<G4LogicalVolume>(phantom_inner_solid.get(), materials_["water"], "phantom_water_log");
+    phantom_waters_log->push_back(phantom_water_log);
+    auto phantom_water_phys = make_shared_no_delete<G4PVPlacement>(nullptr, phantom_position + G4ThreeVector(0, 0, -0.25*phantom_thick), phantom_water_log.get(), "phantom_water_phys", world_log_.get(), false, 0);
+    phantom_waters_phys->push_back(phantom_water_phys);
+
+    // Add to first detector
+    std::vector<std::shared_ptr<Detector>> detectors = geo_manager_->getDetectors();
+    auto detector = detectors.at(0);
+
+    detector->setExternalObject("phantom_log", phantoms_log);
+    detector->setExternalObject("phantom_phys", phantoms_phys);
+
+    // Set object attributes
+    // PMMA
+    auto PMMAColor = G4Color(0.88, 0.97, 1.0, 0.1);
+    G4VisAttributes PhantomVisAtt = G4VisAttributes(PMMAColor);
+    PhantomVisAtt.SetForceSolid(false);
+
+    for(auto& phan_log : *phantoms_log) {
+        phan_log->SetVisAttributes(PhantomVisAtt);
+    }
+
+    // Water
+    auto WaterColor = G4Color(0.05, 0.75, 1.0, 0.1);
+    G4VisAttributes WaterVisAtt = G4VisAttributes(WaterColor);
+    WaterVisAtt.SetForceSolid(false);
+
+    phantom_water_log->SetVisAttributes(WaterVisAtt);
+}
+
+void GeometryConstructionCustomG4::build_source(double source_hull_radius, double source_hull_depth, G4ThreeVector source_position) {
+    auto hulls_log = std::make_shared<std::vector<std::shared_ptr<G4LogicalVolume>>>();
+    auto hulls_phys = std::make_shared<std::vector<std::shared_ptr<G4PVPlacement>>>();
+
+    // Solids
+    // Outer
+    auto hull_outer_solid = std::make_shared<G4Tubs>("hull_outer", 0, 2*source_hull_radius, source_hull_depth, 0, 360*CLHEP::deg);
+    solids_.push_back(hull_outer_solid);
+
+    // Inner
+    auto hull_inner_solid = std::make_shared<G4Tubs>("hull_inner", 0, source_hull_radius, source_hull_depth, 0, 360*CLHEP::deg);
+    solids_.push_back(hull_inner_solid);
+
+    auto hull_solid = std::make_shared<G4SubtractionSolid>("hull_solid", hull_outer_solid.get(), hull_inner_solid.get(), nullptr, G4ThreeVector(0, 0, source_hull_depth));
+    solids_.push_back(hull_solid);
+
+    // Logical
+    auto hull_log = make_shared_no_delete<G4LogicalVolume>(hull_solid.get(), materials_["hardlead"], "hull_log");
+    hulls_log->push_back(hull_log);
+
+    // Physical 
+    auto hull_phys= make_shared_no_delete<G4PVPlacement>(nullptr, source_position, hull_log.get(), "hull_phys", world_log_.get(), false, 0);
+    hulls_phys->push_back(hull_phys);
+
+    // Add to first detector
+    std::vector<std::shared_ptr<Detector>> detectors = geo_manager_->getDetectors();
+    auto detector = detectors.at(0);
+
+    detector->setExternalObject("hull_log", hulls_log);
+    detector->setExternalObject("hull_phys", hulls_phys);
+}
+
+void GeometryConstructionCustomG4::build_detectors() {
     // Loop through all detectors and construct them
     std::vector<std::shared_ptr<Detector>> detectors = geo_manager_->getDetectors();
     LOG(TRACE) << "Building " << detectors.size() << " device(s)";

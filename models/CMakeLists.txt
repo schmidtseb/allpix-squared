@@ -31,4 +31,5 @@ INSTALL(
     cmsp1.conf
     clicpix.conf
     clicpix2.conf
+    dosepix.conf
     DESTINATION ${MODEL_DIRECTORY})
