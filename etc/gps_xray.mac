@@ -1,0 +1,18 @@
+/gps/verbose 2
+/gps/particle gamma
+/gps/pos/type Point
+/gps/pos/centre 0. 0. -12.5 cm
+
+# Angular distribution
+/gps/ang/type iso
+
+# Position distribution
+#/gps/pos/shape Circle
+#/gps/pos/radius 5 mm
+
+# Energy distribution
+/gps/ene/type Arb
+/gps/hist/type arb
+/gps/hist/file /home/solvalou/Documents/dosimetrie/allpix-squared/etc/spectrum_100keV_1mAir.hist
+/gps/hist/inter Spline
+
