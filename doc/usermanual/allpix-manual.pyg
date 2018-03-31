@@ -1,0 +1,8 @@
+void run(unsigned int event_id) {
+    // Check if we have mutually exclusive options defined:
+    if(config.count({"exclusive_opt_a", "exclusive_opt_b"}) > 1) {
+        // Raise an error if the combination of keys is not valid
+        //   provide the configuration object, keys and an explanation
+        throw InvalidCombinationError(config, {"exclusive_opt_a", "exclusive_opt_b"}, "Options A and B are mutually exclusive, specify only one.");
+    }
+}
