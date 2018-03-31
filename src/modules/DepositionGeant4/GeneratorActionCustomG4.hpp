@@ -11,6 +11,7 @@
 #define ALLPIX_SIMPLE_DEPOSITION_MODULE_GENERATOR_ACTION_CUSTOM_H
 
 #include <memory>
+#include <random>
 #include <Eigen/Core>
 
 #include <G4GeneralParticleSource.hh>
