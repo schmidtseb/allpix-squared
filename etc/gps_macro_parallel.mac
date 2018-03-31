@@ -1,0 +1,19 @@
+/gps/particle gamma
+/gps/pos/type Plane
+/gps/pos/centre 0. 0. -1 cm
+
+# Angular distribution
+/gps/ang/type planar
+
+# Position distribution
+/gps/pos/shape Square
+/gps/pos/halfx 15 cm
+/gps/pos/halfy 15 cm
+
+# Energy distribution
+/gps/energy 59.5 keV
+#/gps/ene/type User
+#/gps/hist/type energy
+#/gps/hist/point 59.5 1.
+# /gps/hist/file energy_hist.dat
+# /gps/hist/inter Lin
