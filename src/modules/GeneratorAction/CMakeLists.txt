@@ -3,7 +3,7 @@ ALLPIX_UNIQUE_MODULE(MODULE_NAME)
 
 # Add source files to library
 ALLPIX_MODULE_SOURCES(${MODULE_NAME} 
-    DepositionRandomModule.cpp
+    GeneratorActionModule.cpp
     # ADD SOURCE FILES HERE...
 )
 

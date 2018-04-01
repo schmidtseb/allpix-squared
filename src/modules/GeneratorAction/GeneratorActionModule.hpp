@@ -1,7 +1,7 @@
 /**
  * @file
- * @brief Definition of [DepositionRandom] module
- * @copyright Copyright (c) 2018 CERN and the Allpix Squared authors.
+ * @brief Definition of [GeneratorAction] module
+ * @copyright Copyright (c) 2017 CERN and the Allpix Squared authors.
  * This software is distributed under the terms of the MIT License, copied verbatim in the file "LICENSE.md".
  * In applying this license, CERN does not waive the privileges and immunities granted to it by virtue of its status as an
  * Intergovernmental Organization or submit itself to any jurisdiction.
@@ -27,7 +27,7 @@ namespace allpix {
      *
      * More detailed explanation of module
      */
-    class DepositionRandomModule : public Module {
+    class GeneratorActionModule : public Module {
     public:
         /**
          * @brief Constructor for this unique module
@@ -35,7 +35,7 @@ namespace allpix {
          * @param messenger Pointer to the messenger object to allow binding to messages on the bus
          * @param geo_manager Pointer to the geometry manager, containing the detectors
          */
-        DepositionRandomModule(Configuration config, Messenger* messenger, GeometryManager* geo_manager);
+        GeneratorActionModule(Configuration config, Messenger* messenger, GeometryManager* geo_manager);
 
         /**
          * @brief [Initialise this module]
@@ -54,4 +54,3 @@ namespace allpix {
         std::vector<std::shared_ptr<PixelHitMessage>> messages_;
     };
 } // namespace allpix
-
