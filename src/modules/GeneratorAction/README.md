@@ -1,4 +1,4 @@
-# DepositionRandom
+# GeneratorAction
 **Maintainer**: Sebastian Schmidt (schm.seb@googlemail.com)  
 **Status**: Immature  
 [**Input**: *INPUT_MESSAGE*]  
