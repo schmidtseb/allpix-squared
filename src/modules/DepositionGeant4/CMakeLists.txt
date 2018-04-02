@@ -23,14 +23,9 @@ ENDIF()
 # Add source files to library
 ALLPIX_MODULE_SOURCES(${MODULE_NAME}
     DepositionGeant4Module.cpp
-    GeneratorActionG4.cpp
-    GeneratorActionCustomG4.cpp
     SensitiveDetectorActionG4.cpp
     PhysicsList.cpp
 )
-
-FIND_PACKAGE(Eigen3 REQUIRED)
-INCLUDE_DIRECTORIES(SYSTEM ${EIGEN3_INCLUDE_DIR})
 
 TARGET_INCLUDE_DIRECTORIES(${MODULE_NAME} SYSTEM PRIVATE ${Geant4_INCLUDE_DIRS})
 

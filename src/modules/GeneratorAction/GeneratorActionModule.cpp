@@ -12,33 +12,35 @@
 #include <string>
 #include <utility>
 
+#include <G4RunManager.hh>
+
 #include "core/utils/log.h"
+
+#include "GeneratorActionG4.hpp"
+#include "GeneratorActionCustomG4.hpp"
 
 using namespace allpix;
 
 GeneratorActionModule::GeneratorActionModule(Configuration config, Messenger* messenger, GeometryManager* geo_manager)
-    : Module(std::move(config)), geo_manager_(geo_manager), messenger_(messenger) {
+    : Module(std::move(config)), geo_manager_(geo_manager), messenger_(messenger),
+      run_manager_g4_(nullptr) {
 
-    // ... Implement ... (Typically bounds the required messages and optionally sets configuration defaults)
-    // Input required by this module
-    messenger_->bindMulti(this, &GeneratorActionModule::messages_, MsgFlags::REQUIRED);
+    config_.setDefault<bool>("random", false);
+    config_.setDefault<bool>("custom", false);
 }
 
 void GeneratorActionModule::init() {
-    // Loop over detectors and do something
-    std::vector<std::shared_ptr<Detector>> detectors = geo_manager_->getDetectors();
-    for(auto& detector : detectors) {
-        // Get the detector name
-        std::string detectorName = detector->getName();
-        LOG(DEBUG) << "Detector with name " << detectorName;
+    run_manager_g4_ = G4RunManager::GetRunManager();
+    if(run_manager_g4_ == nullptr) {
+        throw ModuleError("Cannot deposit charges using Geant4 without a Geant4 geometry builder");
+    }
+
+    if(config_.get<bool>("custom")) {
+        run_manager_g4_->SetUserAction(new GeneratorActionCustomG4(config_));
+    } else {
+        run_manager_g4_->SetUserAction(new GeneratorActionG4(config_));
     }
 }
 
 void GeneratorActionModule::run(unsigned int) {
-    // ... Implement ... (Typically uses the configuration to execute function and outputs an message)
-    // Loop through all receieved messages and print some information
-    for(auto& message : messages_) {
-        std::string detectorName = message->getDetector()->getName();
-        LOG(DEBUG) << "Picked up " << message->getData().size() << " objects from detector " << detectorName;
-    }
 }

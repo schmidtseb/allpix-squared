@@ -12,33 +12,27 @@
 #include <string>
 #include <utility>
 
+#include <G4RunManager.hh>
+
 #include "core/utils/log.h"
+
+#include "GeneratorActionRandomG4.hpp"
 
 using namespace allpix;
 
 GeneratorActionRandomModule::GeneratorActionRandomModule(Configuration config, Messenger* messenger, GeometryManager* geo_manager)
-    : Module(std::move(config)), geo_manager_(geo_manager), messenger_(messenger) {
-
-    // ... Implement ... (Typically bounds the required messages and optionally sets configuration defaults)
-    // Input required by this module
-    messenger_->bindMulti(this, &GeneratorActionRandomModule::messages_, MsgFlags::REQUIRED);
+    : Module(std::move(config)), geo_manager_(geo_manager), messenger_(messenger), 
+      run_manager_g4_(nullptr) {
 }
 
 void GeneratorActionRandomModule::init() {
-    // Loop over detectors and do something
-    std::vector<std::shared_ptr<Detector>> detectors = geo_manager_->getDetectors();
-    for(auto& detector : detectors) {
-        // Get the detector name
-        std::string detectorName = detector->getName();
-        LOG(DEBUG) << "Detector with name " << detectorName;
+    run_manager_g4_ = G4RunManager::GetRunManager();
+    if(run_manager_g4_ == nullptr) {
+        throw ModuleError("Cannot deposit charges using Geant4 without a Geant4 geometry builder");
     }
+
+    run_manager_g4_->SetUserAction(new GeneratorActionRandomG4(config_));
 }
 
 void GeneratorActionRandomModule::run(unsigned int) {
-    // ... Implement ... (Typically uses the configuration to execute function and outputs an message)
-    // Loop through all receieved messages and print some information
-    for(auto& message : messages_) {
-        std::string detectorName = message->getDetector()->getName();
-        LOG(DEBUG) << "Picked up " << message->getData().size() << " objects from detector " << detectorName;
-    }
 }

@@ -18,7 +18,7 @@
 #include "core/messenger/Messenger.hpp"
 #include "core/module/Module.hpp"
 
-#include "objects/PixelHit.hpp"
+class G4RunManager;
 
 namespace allpix {
     /**
@@ -51,6 +51,8 @@ namespace allpix {
         // General module members
         GeometryManager* geo_manager_;
         Messenger* messenger_;
-        std::vector<std::shared_ptr<PixelHitMessage>> messages_;
+
+        // Pointer to the Geant4 manager (owned by GeometryBuilderGeant4)
+        G4RunManager* run_manager_g4_;
     };
 } // namespace allpix
