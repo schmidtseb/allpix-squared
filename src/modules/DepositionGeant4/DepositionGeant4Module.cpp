@@ -33,8 +33,6 @@
 #include "tools/ROOT.h"
 #include "tools/geant4.h"
 
-#include "GeneratorActionG4.hpp"
-#include "GeneratorActionCustomG4.hpp"
 #include "SensitiveDetectorActionG4.hpp"
 
 #include "PhysicsList.hpp"
@@ -189,14 +187,16 @@ void DepositionGeant4Module::init() {
 
     // Build particle generator
     LOG(TRACE) << "Constructing particle source";
-    LOG(INFO) << "Using custom? " << config_.get<bool>("custom");
+    // LOG(INFO) << "Using custom? " << config_.get<bool>("custom");
     LOG(INFO) << "Has gps? " << config_.has("gps");
 
+    /* 
     if(config_.get<bool>("custom")) {
         run_manager_g4_->SetUserAction(new GeneratorActionCustomG4(config_));
     } else {
         run_manager_g4_->SetUserAction(new GeneratorActionG4(config_));
     }
+    */
 
     if(config_.has("gps")) {
         LOG(INFO) << "Using gps source";
