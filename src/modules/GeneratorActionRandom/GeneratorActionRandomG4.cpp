@@ -111,10 +111,11 @@ GeneratorActionRandomG4::GeneratorActionRandomG4(const Configuration& config)
 
     // Position & Direction
     parallel_source->GetAngDist()->SetAngDistType("planar");
+    parallel_source->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(0, 0, 1));
 
     parallel_source->GetPosDist()->SetPosDisType("Plane");
     parallel_source->GetPosDist()->SetPosDisShape("Square");
-    parallel_source->GetPosDist()->SetCentreCoords(G4ThreeVector(0, 0, 10));
+    parallel_source->GetPosDist()->SetCentreCoords(G4ThreeVector(0, 0, -10));
     parallel_source->GetPosDist()->SetHalfX(bounding_box_x);
     parallel_source->GetPosDist()->SetHalfY(bounding_box_y);
 }
@@ -197,7 +198,7 @@ void GeneratorActionRandomG4::GeneratePrimaries(G4Event* event) {
     // Set event attributes if ROOT-source is used
     if (particle_source_->GetCurrentSourceIndex() == 0) {
         GeneratePrimariesRandom();
-    } 
+    }
 
     // Generate event
     particle_source_->GeneratePrimaryVertex(event);
