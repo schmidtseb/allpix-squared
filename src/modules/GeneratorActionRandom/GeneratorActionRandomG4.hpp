@@ -62,6 +62,9 @@ namespace allpix {
         double x_branch, y_branch, z_branch;
         double phi_branch, theta_branch;
 
+        // Bounding box dimensions
+        double bounding_box_x, bounding_box_y;
+
         // Source offset
         double x_offset, y_offset, z_offset;
 
@@ -70,12 +73,15 @@ namespace allpix {
 
         // Source
         G4SingleParticleSource* single_source;
+        G4SingleParticleSource* parallel_source;
 
         // Random generator
         void InitRandom(const Configuration& config);
         void GeneratePrimariesRandom();
         std::mt19937_64 random_generator;
         std::uniform_int_distribution<long long int> uniform_distribution;
+
+        int idx;
     };
 } // namespace allpix
 

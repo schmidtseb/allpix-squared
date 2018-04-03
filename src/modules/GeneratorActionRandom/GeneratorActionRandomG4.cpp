@@ -25,7 +25,6 @@
 #include "core/config/exceptions.h"
 #include "core/utils/log.h"
 #include "tools/geant4.h"
-// #include "tools/ROOT.h"
 
 #include <TBranchElement.h>
 #include <TClass.h>
@@ -41,9 +40,6 @@ GeneratorActionRandomG4::GeneratorActionRandomG4(const Configuration& config)
 
     // Set verbosity of source to off
     particle_source_->SetVerbosity(0);
-
-    // Get source specific parameters
-    single_source = particle_source_->GetCurrentSource();
 
     // Find Geant4 particle
     auto particle_type = config.get<std::string>("particle_type", "");
@@ -80,6 +76,10 @@ GeneratorActionRandomG4::GeneratorActionRandomG4(const Configuration& config)
 
     LOG(DEBUG) << "Using particle " << particle->GetParticleName() << " (ID " << particle->GetPDGEncoding() << ").";
 
+    // = ROOT SOURCE - Index 0 =
+    single_source = particle_source_->GetCurrentSource();
+    particle_source_->SetCurrentSourceIntensity(1.);
+
     // Set global parameters of the source
     single_source->SetNumberOfParticles(1);
     single_source->SetParticleDefinition(particle);
@@ -88,6 +88,35 @@ GeneratorActionRandomG4::GeneratorActionRandomG4(const Configuration& config)
 
     // Set energy parameters
     single_source->GetEneDist()->SetEnergyDisType(config.get<std::string>("energy_dis_type", "Mono"));
+
+    // = PARALLEL SOURCE - Index 1 =
+    // Add additional source
+    particle_source_->AddaSource( config.get<double>("parallel_source_intensity", 0.) );
+    
+    // Get the source
+    particle_source_->SetCurrentSourceto(1);
+    parallel_source = particle_source_->GetCurrentSource();
+
+    // Set global parameters of the source
+    parallel_source->SetNumberOfParticles(1);
+    parallel_source->SetParticleDefinition(particle);
+    // Set the primary track's start time in for the current event to zero:
+    parallel_source->SetParticleTime(0.0);
+
+    // Set source parameters
+    // Energy
+    LOG(INFO) << "Set primary energy of parallel source to " << config.get<double>("parallel_source_energy");
+    parallel_source->GetEneDist()->SetEnergyDisType("Mono");
+    parallel_source->GetEneDist()->SetMonoEnergy(config.get<double>("parallel_source_energy"));
+
+    // Position & Direction
+    parallel_source->GetAngDist()->SetAngDistType("planar");
+
+    parallel_source->GetPosDist()->SetPosDisType("Plane");
+    parallel_source->GetPosDist()->SetPosDisShape("Square");
+    parallel_source->GetPosDist()->SetCentreCoords(G4ThreeVector(0, 0, 10));
+    parallel_source->GetPosDist()->SetHalfX(bounding_box_x);
+    parallel_source->GetPosDist()->SetHalfY(bounding_box_y);
 }
 
 void GeneratorActionRandomG4::InitRandom(const Configuration& config) {
@@ -113,6 +142,11 @@ void GeneratorActionRandomG4::InitRandom(const Configuration& config) {
     root_tree->SetBranchAddress(config.get<std::string>("theta_attribute").c_str(), &theta_branch, nullptr);
     LOG(INFO) << "Set branches";
 
+    // Get bounding box dimensions
+    // Position of top right corner
+    bounding_box_x = root_tree->GetMaximum("x");
+    bounding_box_y = root_tree->GetMaximum("y");
+
     // Get source offset
     G4ThreeVector source_offset = config.get<G4ThreeVector>("offset", G4ThreeVector(0, 0, 0));
     x_offset = source_offset.x();
@@ -128,22 +162,21 @@ void GeneratorActionRandomG4::InitRandom(const Configuration& config) {
     }
 
     // Create uniform random generator
-    uniform_distribution = std::uniform_int_distribution<long long int>(0, num_entries);
+    uniform_distribution = std::uniform_int_distribution<long long int>(1, num_entries);
     LOG(INFO) << "Created random generator";
-
-    // Set source properties
-    // single_source->GetEneDist()->SetEnergyDisType("Mono");
-    // single_source->GetAngDist()->SetAngDistType("planar");
-    LOG(INFO) << "Set source properties";
+    idx = 1;
 }
 
 void GeneratorActionRandomG4::GeneratePrimariesRandom() {
     // Randomly select event from tree
-    root_tree->GetEntry( uniform_distribution(random_generator) );
+    root_tree->GetEntry( idx ); // uniform_distribution(random_generator) );
+    if (++idx > num_entries) {
+        idx = 1;
+    }
 
     // Set energy, position, and direction of particle source to sampled values
     // Energy
-    single_source->GetEneDist()->SetMonoEnergy(E_branch);
+    single_source->GetEneDist()->SetMonoEnergy(E_branch / 1000);
 
     // Position
     single_source->GetPosDist()->SetCentreCoords(G4ThreeVector(x_branch + x_offset, y_branch + y_offset, z_branch*z_invert + z_offset));
@@ -161,8 +194,10 @@ void GeneratorActionRandomG4::GeneratePrimariesRandom() {
  * Called automatically for every event
  */
 void GeneratorActionRandomG4::GeneratePrimaries(G4Event* event) {
-    // Set event attributes
-    GeneratePrimariesRandom();
+    // Set event attributes if ROOT-source is used
+    if (particle_source_->GetCurrentSourceIndex() == 0) {
+        GeneratePrimariesRandom();
+    } 
 
     // Generate event
     particle_source_->GeneratePrimaryVertex(event);
