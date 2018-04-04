@@ -35,9 +35,6 @@ using namespace allpix;
 GeneratorActionRandomG4::GeneratorActionRandomG4(const Configuration& config)
     : particle_source_(std::make_unique<G4GeneralParticleSource>()) {
     // === Load from config ===
-    // Initialize random stuff
-    InitRandom(config);
-
     // Set verbosity of source to off
     particle_source_->SetVerbosity(0);
 
@@ -76,7 +73,15 @@ GeneratorActionRandomG4::GeneratorActionRandomG4(const Configuration& config)
 
     LOG(DEBUG) << "Using particle " << particle->GetParticleName() << " (ID " << particle->GetPDGEncoding() << ").";
 
-    // = ROOT SOURCE - Index 0 =
+    // Initialize random stuff
+    InitRandom(config);
+
+    // Initialize source
+    InitSource(config, particle);
+}
+
+void GeneratorActionRandomG4::InitSource(const Configuration& config, G4ParticleDefinition* particle) {
+    // Get source
     single_source = particle_source_->GetCurrentSource();
     particle_source_->SetCurrentSourceIntensity(1.);
 
@@ -89,35 +94,27 @@ GeneratorActionRandomG4::GeneratorActionRandomG4(const Configuration& config)
     // Set energy parameters
     single_source->GetEneDist()->SetEnergyDisType(config.get<std::string>("energy_dis_type", "Mono"));
 
-    // = PARALLEL SOURCE - Index 1 =
-    // Add additional source
-    particle_source_->AddaSource( config.get<double>("parallel_source_intensity", 0.) );
-    
-    // Get the source
-    particle_source_->SetCurrentSourceto(1);
-    parallel_source = particle_source_->GetCurrentSource();
+    // Get bounding box dimensions
+    // Position of top right corner
+    bounding_box_x = root_tree->GetMaximum("x");
+    bounding_box_y = root_tree->GetMaximum("y");
 
-    // Set global parameters of the source
-    parallel_source->SetNumberOfParticles(1);
-    parallel_source->SetParticleDefinition(particle);
-    // Set the primary track's start time in for the current event to zero:
-    parallel_source->SetParticleTime(0.0);
+    // Get source offset
+    G4ThreeVector source_offset = config.get<G4ThreeVector>("offset", G4ThreeVector(0, 0, 0));
+    x_offset = source_offset.x();
+    y_offset = source_offset.y();
+    z_offset = source_offset.z();
 
-    // Set source parameters
-    // Energy
-    LOG(INFO) << "Set primary energy of parallel source to " << config.get<double>("parallel_source_energy");
-    parallel_source->GetEneDist()->SetEnergyDisType("Mono");
-    parallel_source->GetEneDist()->SetMonoEnergy(config.get<double>("parallel_source_energy"));
+    // Parallel source energy
+    E_parallel = config.get<double>("parallel_source_energy");
 
-    // Position & Direction
-    parallel_source->GetAngDist()->SetAngDistType("planar");
-    parallel_source->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(0, 0, 1));
-
-    parallel_source->GetPosDist()->SetPosDisType("Plane");
-    parallel_source->GetPosDist()->SetPosDisShape("Square");
-    parallel_source->GetPosDist()->SetCentreCoords(G4ThreeVector(0, 0, -10));
-    parallel_source->GetPosDist()->SetHalfX(bounding_box_x);
-    parallel_source->GetPosDist()->SetHalfY(bounding_box_y);
+    // Invert the z-axis? 
+    // No need to invert x- and y-axes due to symmetries
+    if (config.get<bool>("invert_z", false)) {
+        z_invert = -1;
+    } else {
+        z_invert = 1;
+    }
 }
 
 void GeneratorActionRandomG4::InitRandom(const Configuration& config) {
@@ -143,29 +140,18 @@ void GeneratorActionRandomG4::InitRandom(const Configuration& config) {
     root_tree->SetBranchAddress(config.get<std::string>("theta_attribute").c_str(), &theta_branch, nullptr);
     LOG(INFO) << "Set branches";
 
-    // Get bounding box dimensions
-    // Position of top right corner
-    bounding_box_x = root_tree->GetMaximum("x");
-    bounding_box_y = root_tree->GetMaximum("y");
-
-    // Get source offset
-    G4ThreeVector source_offset = config.get<G4ThreeVector>("offset", G4ThreeVector(0, 0, 0));
-    x_offset = source_offset.x();
-    y_offset = source_offset.y();
-    z_offset = source_offset.z();
-
-    // Invert the z-axis? 
-    // No need to invert x- and y-axes due to symmetries
-    if (config.get<bool>("invert_z", false)) {
-        z_invert = -1;
-    } else {
-        z_invert = 1;
-    }
+    // Create binomial random generator
+    execute_parallel = false;
+    double probability = config.get<double>("parallel_source_intensity");
+    std::binomial_distribution<int> binom_dist(static_cast<int>(num_entries), probability);
+    num_parallel = binom_dist(random_generator);
+    LOG(INFO) << "Number of parallel events: " << num_parallel;
 
     // Create uniform random generator
     uniform_distribution = std::uniform_int_distribution<long long int>(1, num_entries);
     LOG(INFO) << "Created random generator";
     idx = 1;
+    main_idx = 1;
 }
 
 void GeneratorActionRandomG4::GeneratePrimariesRandom() {
@@ -191,15 +177,37 @@ void GeneratorActionRandomG4::GeneratePrimariesRandom() {
     single_source->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(x_dir, y_dir, z_dir));
 }
 
+void GeneratorActionRandomG4::GeneratePrimariesParallel() {
+    execute_parallel = true;
+
+    // Set source parameters
+    // Energy
+    single_source->GetEneDist()->SetMonoEnergy(E_parallel);
+
+    // Position & Direction
+    single_source->GetAngDist()->SetAngDistType("planar");
+    single_source->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(0, 0, 1));
+
+    single_source->GetPosDist()->SetPosDisType("Plane");
+    single_source->GetPosDist()->SetPosDisShape("Square");
+    single_source->GetPosDist()->SetCentreCoords(G4ThreeVector(0, 0, -10));
+    single_source->GetPosDist()->SetHalfX(bounding_box_x);
+    single_source->GetPosDist()->SetHalfY(bounding_box_y);
+}
+
 /**
  * Called automatically for every event
  */
 void GeneratorActionRandomG4::GeneratePrimaries(G4Event* event) {
     // Set event attributes if ROOT-source is used
-    if (particle_source_->GetCurrentSourceIndex() == 0) {
+    if (main_idx <= num_entries - num_parallel)
         GeneratePrimariesRandom();
+    else if (!execute_parallel) {
+        GeneratePrimariesParallel();
     }
 
     // Generate event
     particle_source_->GeneratePrimaryVertex(event);
+
+    main_idx++;
 }

@@ -73,15 +73,20 @@ namespace allpix {
 
         // Source
         G4SingleParticleSource* single_source;
-        G4SingleParticleSource* parallel_source;
+        double E_parallel;
+        void InitSource(const Configuration&, G4ParticleDefinition*);
 
         // Random generator
-        void InitRandom(const Configuration& config);
+        void InitRandom(const Configuration&);
         void GeneratePrimariesRandom();
+        void GeneratePrimariesParallel();
         std::mt19937_64 random_generator;
         std::uniform_int_distribution<long long int> uniform_distribution;
 
+        bool execute_parallel;
+        int num_parallel;
         int idx;
+        int main_idx;
     };
 } // namespace allpix
 
