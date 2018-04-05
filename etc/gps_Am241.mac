@@ -1,0 +1,17 @@
+/gps/particle gamma
+/gps/pos/type Plane #Point
+/gps/pos/centre 0. 0. -12.5 cm
+
+# Angular distribution
+/gps/ang/type iso
+
+# Position distribution
+/gps/pos/shape Circle
+/gps/pos/radius 5 mm
+
+# Energy distribution
+# /gps/energy 59.5 keV
+/gps/ene/type User
+/gps/hist/type energy
+/gps/hist/file Am241Hist.dat
+# /gps/hist/inter Lin
