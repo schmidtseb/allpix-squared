@@ -198,17 +198,6 @@ void DepositionGeant4Module::init() {
     }
     */
 
-    if(config_.has("gps")) {
-        LOG(INFO) << "Using gps source";
-        auto macro_infile = config_.get<std::string>("gps");
-        if(config_.has("macro_path")) {
-            std::string macro_path = config_.get<std::string>("macro_path");
-            ui_g4->ApplyCommand("/control/macroPath " + macro_path);
-            LOG(INFO) << "Set macro path to: " << macro_path << "\"";
-        }
-        ui_g4->ApplyCommand("/control/execute " + macro_infile);
-    }
-
     // Get the creation energy for charge (default is silicon electron hole pair energy)
     auto charge_creation_energy = config_.get<double>("charge_creation_energy", Units::get(3.64, "eV"));
 
