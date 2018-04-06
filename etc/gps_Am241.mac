@@ -7,8 +7,8 @@
 /gps/ang/type iso
 
 # Position distribution
-/gps/pos/shape Circle
-/gps/pos/radius 5 mm
+#/gps/pos/shape Circle
+#/gps/pos/radius 5 mm
 
 # Energy distribution
 # /gps/energy 59.5 keV

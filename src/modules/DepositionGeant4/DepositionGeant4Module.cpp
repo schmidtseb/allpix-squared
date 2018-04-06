@@ -34,8 +34,7 @@
 #include "tools/geant4.h"
 
 #include "SensitiveDetectorActionG4.hpp"
-
-#include "PhysicsList.hpp"
+// #include "PhysicsList.hpp"
 
 #define G4_NUM_SEEDS 10
 
@@ -107,22 +106,9 @@ void DepositionGeant4Module::init() {
     }
 
     // Find the physics list    
-    /*
-    bool use_decay_physics;
-    if(config_.has("gps")) {
-        use_decay_physics = false;
-    } else {
-        use_decay_physics = true;
-    }
-    G4VModularPhysicsList* physicsList = new PhysicsList(use_decay_physics); 
-    */
-
+    // G4VModularPhysicsList* physicsList;
     G4PhysListFactory physListFactory;
     G4VModularPhysicsList* physicsList = physListFactory.GetReferencePhysList(config_.get<std::string>("physics_list"));
-
-    // Tracking Messenger
-    // G4TrackingAction* trackingAction;
-    // trackingAction->SetFullChain(false);
 
     if(physicsList == nullptr) {
         std::string message = "specified physics list does not exists";
@@ -187,16 +173,6 @@ void DepositionGeant4Module::init() {
 
     // Build particle generator
     LOG(TRACE) << "Constructing particle source";
-    // LOG(INFO) << "Using custom? " << config_.get<bool>("custom");
-    LOG(INFO) << "Has gps? " << config_.has("gps");
-
-    /* 
-    if(config_.get<bool>("custom")) {
-        run_manager_g4_->SetUserAction(new GeneratorActionCustomG4(config_));
-    } else {
-        run_manager_g4_->SetUserAction(new GeneratorActionG4(config_));
-    }
-    */
 
     // Get the creation energy for charge (default is silicon electron hole pair energy)
     auto charge_creation_energy = config_.get<double>("charge_creation_energy", Units::get(3.64, "eV"));

@@ -26,10 +26,26 @@
 #include "core/utils/log.h"
 #include "tools/geant4.h"
 
+// Decay Physics
+#include "G4GenericIon.hh"
+#include "G4DecayPhysics.hh"
+#include "G4RadioactiveDecay.hh"
+#include "G4RadioactiveDecayPhysics.hh"
+#include "G4NucleusLimits.hh"
+
+// Deexcitation
+#include "G4UAtomicDeexcitation.hh"
+#include "G4LossTableManager.hh"
+
 using namespace allpix;
 
 GeneratorActionCustomG4::GeneratorActionCustomG4(const Configuration& config)
     : particle_source_(std::make_unique<G4GeneralParticleSource>()) {
+    use_decay_physics = config.get<bool>("use_decay_physics", false);
+    if(use_decay_physics) {
+        ActivateDecay();
+    }
+
     // === Load from config ===
     // Source and phantom positions
     G4ThreeVector beam_pos_conf = config.get<G4ThreeVector>("beam_position");
@@ -58,7 +74,6 @@ GeneratorActionCustomG4::GeneratorActionCustomG4(const Configuration& config)
     // Get angle distribution parameter
     ang_dist_type = config.get<std::string>("ang_dist_type", "beam2d");
 
-
     if(config.has("gps")) {
         LOG(INFO) << "Using gps source";
 
@@ -80,6 +95,7 @@ GeneratorActionCustomG4::GeneratorActionCustomG4(const Configuration& config)
         G4ParticleDefinition* particle = nullptr;
 
         if(particle_type == "ion") {
+            LOG(INFO) << "Particle Ion selected";
             auto pdg_table = G4IonTable::GetIonTable();
 
             auto ion_type = config.get<G4TwoVector>("ion_type", G4TwoVector(0., 0.));
@@ -96,6 +112,10 @@ GeneratorActionCustomG4::GeneratorActionCustomG4(const Configuration& config)
             particle = pdg_table->GetIon(fAtomicNumber, fAtomicMass, fIonExciteEnergy);
             if(particle == nullptr) {
                 throw InvalidValueError(config, "ion_type", "Specified ion is not defined.");
+            }
+
+            if(use_decay_physics) {
+                radioactiveDecay->SetNucleusLimits(G4NucleusLimits(fAtomicMass, fAtomicMass, fAtomicNumber, fAtomicNumber));
             }
 
             // single_source->SetParticleCharge(fIonCharge*eplus);
@@ -152,6 +172,7 @@ GeneratorActionCustomG4::GeneratorActionCustomG4(const Configuration& config)
 
         // Set energy parameters
         if(particle_type == "ion") {
+            single_source->GetAngDist()->SetAngDistType("iso");
             single_source->GetEneDist()->SetEnergyDisType("Mono");
             single_source->GetEneDist()->SetMonoEnergy(0.);
         } else {
@@ -160,6 +181,34 @@ GeneratorActionCustomG4::GeneratorActionCustomG4(const Configuration& config)
             single_source->GetEneDist()->SetBeamSigmaInE(config.get<double>("beam_energy_spread", 0.));
         }
     }
+}
+
+void GeneratorActionCustomG4::ActivateDecay() {
+    // physicsList = new PhysicsList(use_decay_physics);
+    LOG(INFO) << "Decay physics set to on";
+
+    radioactiveDecay = new G4RadioactiveDecay();
+    radioactiveDecay->SetHLThreshold(1.);
+
+    radioactiveDecay->SetBRBias(false);
+    radioactiveDecay->SetICM(false);
+    radioactiveDecay->SetARM(false);
+    radioactiveDecay->SetAnalogueMonteCarlo(true);
+
+    G4PhysicsListHelper* ph = G4PhysicsListHelper::GetPhysicsListHelper();
+    ph->RegisterProcess(radioactiveDecay, G4GenericIon::GenericIon());
+
+    // Deexcitation
+    G4VAtomDeexcitation* de = new G4UAtomicDeexcitation();
+    de->SetFluo(true);
+    de->SetAuger(false);
+    de->SetPIXE(false);
+    de->InitialiseAtomicDeexcitation();
+    G4LossTableManager::Instance()->SetAtomDeexcitation(de);
+
+    // Tracking Messenger
+    // G4TrackingAction* trackingAction;
+    // trackingAction->SetFullChain(false);
 }
 
 void GeneratorActionCustomG4::InitRandom() {
@@ -208,8 +257,12 @@ void GeneratorActionCustomG4::GeneratePrimariesPyramid() {
     auto single_source = particle_source_->GetCurrentSource();
     // single_source->GetPosDist()->SetCentreCoords(G4ThreeVector(source_position.x(), source_position.y(), source_position.z()));
     single_source->GetAngDist()->SetAngDistType("planar");
-    single_source->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(x, y, z));
-    // single_source->SetParticlePosition(G4ThreeVector(source_position.x(), source_position.y(), source_position.z()));
+
+    if (use_decay_physics) {
+        radioactiveDecay->SetDecayDirection(G4ThreeVector(x, y, z));
+    } else {
+        single_source->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(x, y, z));
+    }
 
     LOG(DEBUG) << "Angle data: \"" << minPhi << ", " << maxPhi << ", " << minTheta << ", " << maxTheta;
     // LOG(INFO) << "" << ;
@@ -222,7 +275,7 @@ void GeneratorActionCustomG4::GeneratePrimariesPyramid() {
 void GeneratorActionCustomG4::GeneratePrimaries(G4Event* event) {
     if (ang_dist_type == "pyramid") {
         GeneratePrimariesPyramid();
-    }
+    } 
 
     // Generate event
     particle_source_->GeneratePrimaryVertex(event);

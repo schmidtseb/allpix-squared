@@ -23,6 +23,8 @@
 
 #include "core/config/Configuration.hpp"
 
+class G4RadioactiveDecay;
+
 namespace allpix {
     /**
      * @brief Generates the particles in every event
@@ -42,6 +44,10 @@ namespace allpix {
 
     private:
         std::unique_ptr<G4GeneralParticleSource> particle_source_;
+        // Decay physics
+        bool use_decay_physics;
+        G4RadioactiveDecay* radioactiveDecay;
+        void ActivateDecay();
 
         // Defined in config
         std::string ang_dist_type;
