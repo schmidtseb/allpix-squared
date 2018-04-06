@@ -44,7 +44,6 @@ GeneratorActionG4::GeneratorActionG4(const Configuration& config)
         // Get UI manager for sending commands
         G4UImanager* ui_g4 = G4UImanager::GetUIpointer();
 
-
         auto macro_infile = config.get<std::string>("gps");
         if(config.has("macro_path")) {
             std::string macro_path = config.get<std::string>("macro_path");
