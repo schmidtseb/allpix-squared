@@ -26,6 +26,8 @@ class G4UserLimits;
 class G4RunManager;
 
 namespace allpix {
+    class ForceCollisionBiasingOperatorG4;
+
     /**
      * @ingroup Modules
      * @brief Module to simulate the particle beam and generating the charge deposits in the sensor
@@ -63,6 +65,9 @@ namespace allpix {
     private:
         Messenger* messenger_;
         GeometryManager* geo_manager_;
+
+        // Biasing
+        ForceCollisionBiasingOperatorG4* fcbo;
 
         // Handling of the charge deposition in all the sensitive devices
         std::vector<SensitiveDetectorActionG4*> sensors_;
