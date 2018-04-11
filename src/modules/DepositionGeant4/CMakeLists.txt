@@ -25,6 +25,7 @@ ALLPIX_MODULE_SOURCES(${MODULE_NAME}
     DepositionGeant4Module.cpp
     SensitiveDetectorActionG4.cpp
     PhysicsList.cpp
+    ForceCollisionBiasingOperatorG4.cpp
 )
 
 TARGET_INCLUDE_DIRECTORIES(${MODULE_NAME} SYSTEM PRIVATE ${Geant4_INCLUDE_DIRS})
