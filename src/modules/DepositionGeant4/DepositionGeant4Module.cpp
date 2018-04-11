@@ -25,6 +25,12 @@
 #include <G4UImanager.hh>
 #include <G4UserLimits.hh>
 
+// Biasing
+#include <G4GenericBiasingPhysics.hh>
+#include <G4ParticleDefinition.hh>
+#include <G4ParticleTable.hh>
+#include "ForceCollisionBiasingOperatorG4.hpp"
+
 #include "core/config/exceptions.h"
 #include "core/geometry/GeometryManager.hpp"
 #include "core/module/exceptions.h"
@@ -52,8 +58,13 @@ DepositionGeant4Module::DepositionGeant4Module(Configuration config, Messenger* 
     // Set default physics list
     config_.setDefault("physics_list", "FTFP_BERT_LIV");
 
+    // Output plots
     config_.setDefault<bool>("output_plots", false);
     config_.setDefault<int>("output_plots_scale", Units::get(100, "ke"));
+
+    // Biasing
+    config_.setDefault<bool>("bias", false);
+    config_.setDefault<std::string>("bias_particle_type", "gamma");
 
     // Add the particle source position to the geometry
     geo_manager_->addPoint(config_.get<ROOT::Math::XYZPoint>("beam_position"));
@@ -137,6 +148,48 @@ void DepositionGeant4Module::init() {
     }
     // Register a step limiter (uses the user limits defined earlier)
     physicsList->RegisterPhysics(new G4StepLimiterPhysics());
+
+    // Set biasing
+    if(config_.get<bool>("bias")) {
+        // Set biasing physics
+        G4GenericBiasingPhysics* biasing_physics = new G4GenericBiasingPhysics();
+
+        // Get particle type from config
+        auto particle_type = config_.get<std::string>("bias_particle_type", "gamma");
+        std::transform(particle_type.begin(), particle_type.end(), particle_type.begin(), ::tolower);
+
+        // Set biasing on particle type
+        biasing_physics->Bias(particle_type);
+
+        // Set new, biased physics list
+        physicsList->RegisterPhysics(biasing_physics);
+        run_manager_g4_->SetUserInitialization(physicsList);
+
+        // Look if particle exists
+        G4ParticleDefinition* particle = nullptr;
+        auto pdg_table = G4ParticleTable::GetParticleTable();
+        particle = pdg_table->FindParticle(particle_type);
+
+        if(particle == nullptr) {
+            throw InvalidValueError(config_, "bias_particle_type", "particle type does not exist.");
+        }
+
+        // Create new Biasing Operator for the particle
+        fcbo = new ForceCollisionBiasingOperatorG4(particle);
+
+        // Loop over detectors
+        std::vector<std::shared_ptr<Detector>> detectors = geo_manager_->getDetectors();
+        for(auto& detector : geo_manager_->getDetectors()) {
+            // Get the detector name
+            auto logical_volume = detector->getExternalObject<G4LogicalVolume>("sensor_log");
+            if(logical_volume == nullptr) {
+                throw ModuleError("Detector " + detector->getName() + " has no sensitive device (broken Geant4 geometry)");
+            }
+
+            // Attach to logical sensor volume
+            fcbo->AttachTo(logical_volume.get());
+        }
+    }
 
     // Set the range-cut off threshold for secondary production:
     double production_cut;
