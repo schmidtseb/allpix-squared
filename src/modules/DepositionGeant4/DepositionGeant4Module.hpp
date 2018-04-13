@@ -27,6 +27,7 @@ class G4RunManager;
 
 namespace allpix {
     class ForceCollisionBiasingOperatorG4;
+    class CrossSectionBiasingOperatorG4;
 
     /**
      * @ingroup Modules
@@ -68,6 +69,7 @@ namespace allpix {
 
         // Biasing
         ForceCollisionBiasingOperatorG4* fcbo;
+        CrossSectionBiasingOperatorG4* csbo;
 
         // Handling of the charge deposition in all the sensitive devices
         std::vector<SensitiveDetectorActionG4*> sensors_;

@@ -30,6 +30,7 @@
 #include <G4ParticleDefinition.hh>
 #include <G4ParticleTable.hh>
 #include "ForceCollisionBiasingOperatorG4.hpp"
+#include "CrossSectionBiasingOperatorG4.hpp"
 
 #include "core/config/exceptions.h"
 #include "core/geometry/GeometryManager.hpp"
@@ -176,6 +177,7 @@ void DepositionGeant4Module::init() {
 
         // Create new Biasing Operator for the particle
         fcbo = new ForceCollisionBiasingOperatorG4(particle);
+        csbo = new CrossSectionBiasingOperatorG4(particle, "XS");
 
         // Loop over detectors
         std::vector<std::shared_ptr<Detector>> detectors = geo_manager_->getDetectors();
@@ -187,7 +189,8 @@ void DepositionGeant4Module::init() {
             }
 
             // Attach to logical sensor volume
-            fcbo->AttachTo(logical_volume.get());
+            // fcbo->AttachTo(logical_volume.get());
+            csbo->AttachTo(logical_volume.get());
         }
     }
 
