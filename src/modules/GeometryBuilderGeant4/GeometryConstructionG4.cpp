@@ -37,6 +37,11 @@
 
 #include "Parameterization2DG4.hpp"
 
+// Include GDML if Geant4 version has it
+#ifdef Geant4_GDML
+#include "G4GDMLParser.hh"
+#endif
+
 using namespace allpix;
 
 GeometryConstructionG4::GeometryConstructionG4(GeometryManager* geo_manager, Configuration& config)
@@ -113,6 +118,22 @@ G4VPhysicalVolume* GeometryConstructionG4::Construct() {
 
     // Build all the detectors in the world
     build_detectors();
+
+    // Load gdml file
+    if(config_.has("GDML_input_file")) {
+#ifdef Geant4_GDML
+        std::string GDML_input_file = config_.get<std::string>("GDML_input_file");
+        G4ThreeVector GDML_input_offset = config_.get<G4ThreeVector>("GDML_input_offset", G4ThreeVector(0, 0, 0));
+
+        G4LogicalVolume* gdml_phys = import_gdml(GDML_input_file, GDML_input_offset);
+        world_log_->AddDaugther( gdml_phys );
+#else
+        std::string error = "You requested to import the geometry in GDML. ";
+        error += "However, GDML support is currently disabled in Geant4. ";
+        error += "To enable it, configure and compile Geant4 with the option -DGEANT4_USE_GDML=ON.";
+        throw allpix::InvalidValueError(config_, "GDML_input_file", error);
+#endif
+    }
 
     return world_phys_.get();
 }
@@ -431,4 +452,14 @@ void GeometryConstructionG4::build_detectors() {
 
         LOG(TRACE) << " Constructed detector " << detector->getName() << " succesfully";
     }
+}
+
+G4VPhysicalVolume GeometryConstructionG4::import_gdml(std::string filename, G4ThreeVector offset)  {
+    G4GDMLParser parser;
+    parser.Read(filename, false);
+
+    G4VPhysicalVolume* import_physical = parser.GetWorldVolume();
+    import_physical->SetTranslation(offset);
+
+    return import_physical;
 }
