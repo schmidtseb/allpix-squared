@@ -52,6 +52,8 @@ namespace allpix {
          */
         void build_detectors();
 
+        void import_gdml(std::string filename, G4ThreeVector offset);
+
         // List of all materials
         std::map<std::string, G4Material*> materials_;
 
