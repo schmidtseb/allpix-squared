@@ -19,6 +19,8 @@
 
 #include "core/geometry/GeometryManager.hpp"
 
+class G4Colour;
+
 namespace allpix {
     /**
      * @brief Constructs the Geant4 geometry during Geant4 initialization
@@ -52,7 +54,11 @@ namespace allpix {
          */
         void build_detectors();
 
-        void import_gdml(std::string filename, G4ThreeVector offset);
+        /**
+         * @brief Import gdml model from file
+         */
+        void import_gdml();
+        G4Colour get_color(std::string value);
 
         // List of all materials
         std::map<std::string, G4Material*> materials_;
