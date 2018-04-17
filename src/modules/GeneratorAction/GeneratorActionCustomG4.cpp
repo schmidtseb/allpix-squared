@@ -47,11 +47,26 @@ GeneratorActionCustomG4::GeneratorActionCustomG4(const Configuration& config)
     }
 
     // === Load from config ===
-    // Source and phantom positions
-    G4ThreeVector beam_pos_conf = config.get<G4ThreeVector>("beam_position");
-    G4ThreeVector phant_pos_conf = config.get<G4ThreeVector>("phantom_position");
+    // Use angle?
+    if(config.has("source_angle")) {
+        source_angle = config.get<double>("source_angle");
+        source_distance = config.get<double>("source_distance", Units::get(5., "cm"));
+        LOG(INFO) << "Source angle: " << source_angle;
+        LOG(INFO) << "Source distance: " << source_distance;
 
-    source_position = Eigen::Vector3d(beam_pos_conf.x(), beam_pos_conf.y(), beam_pos_conf.z());
+        double x = source_distance * std::sin(source_angle/180. * CLHEP::pi);
+        double z = -source_distance * std::cos(source_angle/180. * CLHEP::pi);
+
+        source_position = Eigen::Vector3d(x, 0., z);
+        LOG(INFO) << "Final source position: " << source_position;
+    } else {
+        // Source and phantom positions
+        G4ThreeVector beam_pos_conf = config.get<G4ThreeVector>("beam_position");
+
+        source_position = Eigen::Vector3d(beam_pos_conf.x(), beam_pos_conf.y(), beam_pos_conf.z());
+    }
+
+    G4ThreeVector phant_pos_conf = config.get<G4ThreeVector>("phantom_position");
     phantom_position = Eigen::Vector3d(phant_pos_conf.x(), phant_pos_conf.y(), phant_pos_conf.z());
 
     // Half length of phantom
@@ -215,7 +230,7 @@ void GeneratorActionCustomG4::InitRandom() {
     // Vector of source-phantom
     Eigen::Vector3d v = phantom_position - source_position;
     LOG(INFO) << phantom_position;
-    LOG(INFO) << source_position;
+    // LOG(INFO) << source_position;
 
     // Convert to spherical coordinates
     r_p = v.norm();
@@ -226,10 +241,18 @@ void GeneratorActionCustomG4::InitRandom() {
     theta_rand = std::atan(phantom_size/r_p);
     phi_rand = theta_rand;
 
+    // Init phi and theta ranges
+    minPhi = phi_p - phi_rand;
+    maxPhi = phi_p + phi_rand;
+
+    minTheta = theta_p - theta_rand;
+    maxTheta = theta_p + theta_rand;
+
     // Create uniform random generator
     uniform_distribution = std::uniform_real_distribution<double>(0, 1);
 
     LOG(INFO) << "Spherical coordinates = (" << r_p << ", " << phi_p << ", " << theta_p << ")";
+    LOG(DEBUG) << "Angle data: \"" << minPhi << ", " << maxPhi << ", " << minTheta << ", " << maxTheta;
     LOG(INFO) << "Angular range = " << theta_rand;
 }
 
@@ -237,25 +260,21 @@ void GeneratorActionCustomG4::GeneratePrimariesPyramid() {
     // Generate random
     // Phi
     double randPhi = uniform_distribution(random_generator);
-    double minPhi = phi_p - phi_rand;
-    double maxPhi = phi_p + phi_rand;
     double phi = minPhi + (maxPhi - minPhi) * randPhi;
 
     // Theta
     double randTheta = uniform_distribution(random_generator);
-    double minTheta = theta_p - theta_rand;
-    double maxTheta = theta_p + theta_rand;
     double cosTheta = -randTheta * (std::cos(minTheta) - std::cos(maxTheta)) + std::cos(minTheta);
     double sinTheta = std::sqrt(1 - cosTheta*cosTheta);
 
     // Transform spherical to cartesian coordinates
     double z = sinTheta*std::cos(phi);
-    double x = -sinTheta*std::sin(phi);
-    double y = -cosTheta;
+    double x = sinTheta*std::sin(phi);
+    double y = cosTheta;
 
     // Set beam direction
     auto single_source = particle_source_->GetCurrentSource();
-    // single_source->GetPosDist()->SetCentreCoords(G4ThreeVector(source_position.x(), source_position.y(), source_position.z()));
+    single_source->GetPosDist()->SetCentreCoords(G4ThreeVector(source_position.x(), source_position.y(), source_position.z()));
     single_source->GetAngDist()->SetAngDistType("planar");
 
     if (use_decay_physics) {
@@ -264,8 +283,6 @@ void GeneratorActionCustomG4::GeneratePrimariesPyramid() {
         single_source->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(x, y, z));
     }
 
-    LOG(DEBUG) << "Angle data: \"" << minPhi << ", " << maxPhi << ", " << minTheta << ", " << maxTheta;
-    // LOG(INFO) << "" << ;
     LOG(DEBUG) << "Particle data (x, y, z) = (" << x << ", " << y << ", " << z << ")";
 }
 

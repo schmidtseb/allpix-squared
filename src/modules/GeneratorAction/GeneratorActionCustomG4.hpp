@@ -50,6 +50,9 @@ namespace allpix {
         void ActivateDecay();
 
         // Defined in config
+        double source_angle;
+        double source_distance;
+
         std::string ang_dist_type;
         Eigen::Vector3d source_position;
         Eigen::Vector3d phantom_position;
@@ -60,6 +63,8 @@ namespace allpix {
         void GeneratePrimariesPyramid();
         std::mt19937_64 random_generator;
         double r_p, phi_p, theta_p;
+        double minPhi, maxPhi;
+        double minTheta, maxTheta;
         double theta_rand, phi_rand;
         std::uniform_real_distribution<double> uniform_distribution;
     };
