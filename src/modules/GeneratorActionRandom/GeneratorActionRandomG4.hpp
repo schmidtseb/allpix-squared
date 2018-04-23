@@ -49,6 +49,11 @@ namespace allpix {
         std::unique_ptr<G4GeneralParticleSource> particle_source_;
 
         // Defined in config
+        // Angular distribution
+        std::string ang_dist_type;
+
+        // Energy only?
+        bool energy_only;
 
         // Root file
         TFile* root_file;
@@ -82,6 +87,19 @@ namespace allpix {
         void GeneratePrimariesParallel();
         std::mt19937_64 random_generator;
         std::uniform_int_distribution<long long int> uniform_distribution;
+
+        // Random for pyramid beam
+        Eigen::Vector3d source_position;
+        Eigen::Vector3d phantom_position;
+        double phantom_size;
+
+        void GeneratePrimariesPyramid();
+        std::mt19937_64 random_generator_pyramid;
+        double r_p, phi_p, theta_p;
+        double minPhi, maxPhi;
+        double minTheta, maxTheta;
+        double theta_rand, phi_rand;
+        std::uniform_real_distribution<double> uniform_distribution_pyramid;
 
         bool execute_parallel;
         int num_parallel;

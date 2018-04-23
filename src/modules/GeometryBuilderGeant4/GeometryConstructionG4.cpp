@@ -159,6 +159,8 @@ void GeometryConstructionG4::init_materials() {
     G4Element* Cl = new G4Element("Chlorine", "Cl", 17., 35.45 * CLHEP::g / CLHEP::mole);
     G4Element* Sn = new G4Element("Tin", "Sn", 50., 118.710 * CLHEP::g / CLHEP::mole);
     G4Element* Pb = new G4Element("Lead", "Pb", 82., 207.2 * CLHEP::g / CLHEP::mole);
+    G4Element* Cd = new G4Element("Cadmium", "Cd", 48., 112.4 * CLHEP::g / CLHEP::mole);
+    G4Element* Te = new G4Element("Tellurium", "Te", 52., 127.6 * CLHEP::g / CLHEP::mole);
 
     // Add vacuum
     materials_["vacuum"] = new G4Material("Vacuum", 1, 1.01 * CLHEP::g / CLHEP::mole, 0.0001 * CLHEP::g / CLHEP::cm3);
@@ -188,6 +190,12 @@ void GeometryConstructionG4::init_materials() {
     Solder->AddElement(Sn, 0.63);
     Solder->AddElement(Pb, 0.37);
     materials_["solder"] = Solder;
+
+    // Create CdTe sensor material
+    G4Material* CdTe = new G4Material("CdTe", 5.85 * CLHEP::g / CLHEP::cm3, 2);
+    CdTe->AddElement(Cd, 0.5);
+    CdTe->AddElement(Te, 0.5);
+    materials_["cadmium_telluride"] = CdTe;
 }
 
 void GeometryConstructionG4::build_detectors() {
@@ -243,7 +251,7 @@ void GeometryConstructionG4::build_detectors() {
                                                   model->getSensorSize().z() / 2.0);
         solids_.push_back(sensor_box);
         auto sensor_log =
-            make_shared_no_delete<G4LogicalVolume>(sensor_box.get(), materials_["silicon"], "sensor_" + name + "_log");
+            make_shared_no_delete<G4LogicalVolume>(sensor_box.get(), materials_[model->getSensorMaterial()], "sensor_" + name + "_log");
         detector->setExternalObject("sensor_log", sensor_log);
 
         // Place the sensor box
@@ -260,7 +268,7 @@ void GeometryConstructionG4::build_detectors() {
                                                  model->getSensorSize().z() / 2.0);
         solids_.push_back(pixel_box);
         auto pixel_log =
-            make_shared_no_delete<G4LogicalVolume>(pixel_box.get(), materials_["silicon"], "pixel_" + name + "_log");
+            make_shared_no_delete<G4LogicalVolume>(pixel_box.get(), materials_[model->getSensorMaterial()], "pixel_" + name + "_log");
         detector->setExternalObject("pixel_log", pixel_log);
 
         // Create the parameterization for the pixel grid
@@ -290,7 +298,7 @@ void GeometryConstructionG4::build_detectors() {
 
             // Create the logical volume for the chip
             auto chip_log =
-                make_shared_no_delete<G4LogicalVolume>(chip_box.get(), materials_["silicon"], "chip_" + name + "_log");
+                make_shared_no_delete<G4LogicalVolume>(chip_box.get(), materials_[model->getSensorMaterial()], "chip_" + name + "_log");
             detector->setExternalObject("chip_log", chip_log);
 
             // Place the chip

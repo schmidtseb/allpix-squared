@@ -73,6 +73,24 @@ GeneratorActionRandomG4::GeneratorActionRandomG4(const Configuration& config)
 
     LOG(DEBUG) << "Using particle " << particle->GetParticleName() << " (ID " << particle->GetPDGEncoding() << ").";
 
+    // Get angular distribution
+    ang_dist_type = config.get<std::string>("ang_dist_type", "None");
+    if(ang_dist_type == "pyramid") {
+        G4ThreeVector phant_pos_conf = config.get<G4ThreeVector>("phantom_position");
+        phantom_position = Eigen::Vector3d(phant_pos_conf.x(), phant_pos_conf.y(), phant_pos_conf.z());
+
+        // Half length of phantom
+        phantom_size = config.get<double>("phantom_size", Units::get(15.0, "mm"));
+
+        // Source position
+        G4ThreeVector beam_pos_conf = config.get<G4ThreeVector>("beam_position");
+
+        source_position = Eigen::Vector3d(beam_pos_conf.x(), beam_pos_conf.y(), beam_pos_conf.z());
+    }
+
+    // Use energy only?
+    energy_only = config.get<bool>("energy_only", "false");
+
     // Initialize random stuff
     InitRandom(config);
 
@@ -131,14 +149,40 @@ void GeneratorActionRandomG4::InitRandom(const Configuration& config) {
 
     // Get attributes
     root_tree->SetBranchAddress(config.get<std::string>("E_attribute").c_str(), &E_branch, nullptr);
+    if (energy_only) {
+        root_tree->SetBranchAddress(config.get<std::string>("x_attribute").c_str(), &x_branch, nullptr);
+        root_tree->SetBranchAddress(config.get<std::string>("y_attribute").c_str(), &y_branch, nullptr);
+        root_tree->SetBranchAddress(config.get<std::string>("z_attribute").c_str(), &z_branch, nullptr);
+        root_tree->SetBranchAddress(config.get<std::string>("phi_attribute").c_str(), &phi_branch, nullptr);
+        root_tree->SetBranchAddress(config.get<std::string>("theta_attribute").c_str(), &theta_branch, nullptr);
+        LOG(INFO) << "Set branches";
+    } 
 
-    root_tree->SetBranchAddress(config.get<std::string>("x_attribute").c_str(), &x_branch, nullptr);
-    root_tree->SetBranchAddress(config.get<std::string>("y_attribute").c_str(), &y_branch, nullptr);
-    root_tree->SetBranchAddress(config.get<std::string>("z_attribute").c_str(), &z_branch, nullptr);
+    if (ang_dist_type == "pyramid") {
+        // Vector of source-phantom
+        Eigen::Vector3d v = phantom_position - source_position;
+        LOG(INFO) << phantom_position;
+        // LOG(INFO) << source_position;
 
-    root_tree->SetBranchAddress(config.get<std::string>("phi_attribute").c_str(), &phi_branch, nullptr);
-    root_tree->SetBranchAddress(config.get<std::string>("theta_attribute").c_str(), &theta_branch, nullptr);
-    LOG(INFO) << "Set branches";
+        // Convert to spherical coordinates
+        r_p = v.norm();
+        phi_p = std::atan2(v.x(), v.z());
+        theta_p = std::acos(v.y() / r_p);
+
+        // Get angular range
+        theta_rand = std::atan(phantom_size/r_p);
+        phi_rand = theta_rand;
+
+        // Init phi and theta ranges
+        minPhi = phi_p - phi_rand;
+        maxPhi = phi_p + phi_rand;
+
+        minTheta = theta_p - theta_rand;
+        maxTheta = theta_p + theta_rand;
+
+        // Create uniform random generator
+        uniform_distribution_pyramid = std::uniform_real_distribution<double>(0, 1);
+    }
 
     // Create binomial random generator
     execute_parallel = false;
@@ -164,6 +208,9 @@ void GeneratorActionRandomG4::GeneratePrimariesRandom() {
     // Set energy, position, and direction of particle source to sampled values
     // Energy
     single_source->GetEneDist()->SetMonoEnergy(E_branch / 1000);
+    if (energy_only) {
+        return;
+    }
 
     // Position
     single_source->GetPosDist()->SetCentreCoords(G4ThreeVector(x_branch + x_offset, y_branch + y_offset, z_branch*z_invert + z_offset));
@@ -195,15 +242,46 @@ void GeneratorActionRandomG4::GeneratePrimariesParallel() {
     single_source->GetPosDist()->SetHalfY(bounding_box_y);
 }
 
+void GeneratorActionRandomG4::GeneratePrimariesPyramid() {
+    // Generate random
+    // Phi
+    double randPhi = uniform_distribution_pyramid(random_generator_pyramid);
+    double phi = minPhi + (maxPhi - minPhi) * randPhi;
+
+    // Theta
+    double randTheta = uniform_distribution_pyramid(random_generator_pyramid);
+    double cosTheta = -randTheta * (std::cos(minTheta) - std::cos(maxTheta)) + std::cos(minTheta);
+    double sinTheta = std::sqrt(1 - cosTheta*cosTheta);
+
+    // Transform spherical to cartesian coordinates
+    double z = sinTheta*std::cos(phi);
+    double x = sinTheta*std::sin(phi);
+    double y = cosTheta;
+
+    // Set beam direction
+    // auto single_source = particle_source_->GetCurrentSource();
+    single_source->GetPosDist()->SetCentreCoords(G4ThreeVector(source_position.x(), source_position.y(), source_position.z()));
+    single_source->GetAngDist()->SetAngDistType("planar");
+
+    single_source->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(x, y, z));
+
+    LOG(DEBUG) << "Particle data (x, y, z) = (" << x << ", " << y << ", " << z << ")";
+}
+
 /**
  * Called automatically for every event
  */
 void GeneratorActionRandomG4::GeneratePrimaries(G4Event* event) {
     // Set event attributes if ROOT-source is used
-    if (main_idx <= num_entries - num_parallel)
+    if (energy_only && ang_dist_type == "pyramid") {
         GeneratePrimariesRandom();
-    else if (!execute_parallel) {
-        GeneratePrimariesParallel();
+        GeneratePrimariesPyramid();
+    } else {
+        if (main_idx <= num_entries - num_parallel)
+            GeneratePrimariesRandom();
+        else if (!execute_parallel) {
+            GeneratePrimariesParallel();
+        }
     }
 
     // Generate event
