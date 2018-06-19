@@ -1,0 +1,45 @@
+/gps/verbose 2
+/gps/particle gamma
+/gps/pos/type Point
+# /gps/pos/centre 0. 0. -12.5 cm
+
+# Angular distribution
+/gps/ang/type iso
+
+# Position distribution
+#/gps/pos/shape Circle
+#/gps/pos/radius 5 mm
+
+# Energy distribution
+/gps/ene/type User
+/gps/hist/type energy
+/gps/hist/point 0.11033 0.0127
+/gps/hist/point 0.13638999999999998 0.2
+/gps/hist/point 0.17698 0.0043
+/gps/hist/point 0.20131120000000002 0.471
+/gps/hist/point 0.20579429999999999 3.31
+/gps/hist/point 0.28026999999999996 0.008
+/gps/hist/point 0.2832668 0.266
+/gps/hist/point 0.2959565 28.71
+/gps/hist/point 0.30845507 29.7
+/gps/hist/point 0.31650617999999997 82.86
+/gps/hist/point 0.32909 0.0173
+/gps/hist/point 0.3744852 0.727
+/gps/hist/point 0.4164688 0.67
+/gps/hist/point 0.42051 0.069
+/gps/hist/point 0.46806885 47.84
+/gps/hist/point 0.48457510000000004 3.19
+/gps/hist/point 0.48545 0.0047
+/gps/hist/point 0.48906 0.438
+/gps/hist/point 0.588581 4.522
+/gps/hist/point 0.59363 0.042
+/gps/hist/point 0.59941 0.0039
+/gps/hist/point 0.6044110500000001 8.216
+/gps/hist/point 0.6124621499999999 5.34
+/gps/hist/point 0.70378 0.0053
+/gps/hist/point 0.7657999999999999 0.0013
+/gps/hist/point 0.8845365000000001 0.292
+/gps/hist/point 1.06149 0.0531
+/gps/hist/point 1.08996 0.00116
+/gps/hist/point 1.3785 0.0014
+

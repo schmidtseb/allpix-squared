@@ -137,7 +137,10 @@ namespace allpix {
             setSensorExcessBottom(config.get<double>("sensor_excess_bottom", default_sensor_excess));
             setSensorExcessLeft(config.get<double>("sensor_excess_left", default_sensor_excess));
             setSensorExcessRight(config.get<double>("sensor_excess_right", default_sensor_excess));
-
+            // Sensor material
+            std::string sensor_material = config.get<std::string>("sensor_material", "silicon");
+            std::transform(sensor_material.begin(), sensor_material.end(), sensor_material.begin(), ::tolower);
+            setSensorMaterial(sensor_material);
             // Chip thickness
             setChipThickness(config.get<double>("chip_thickness", 0));
 
@@ -300,6 +303,15 @@ namespace allpix {
             return getGridSize() + excess_thickness;
         }
         /**
+         * @brief Get material of the sensor
+         * @return Material of the sensor
+         *
+         * 
+         */
+        virtual std::string getSensorMaterial() const {
+            return sensor_material_;
+        }
+        /**
          * @brief Get center of the sensor in local coordinates
          * @return Center of the sensor
          *
@@ -310,6 +322,11 @@ namespace allpix {
                 (sensor_excess_.at(1) - sensor_excess_.at(3)) / 2.0, (sensor_excess_.at(0) - sensor_excess_.at(2)) / 2.0, 0);
             return getCenter() + offset;
         }
+        /**
+         * @brief Set the material of the sensor
+         * @param val Material of the sensor
+         */
+        void setSensorMaterial(std::string val) { sensor_material_ = val; }
         /**
          * @brief Set the thickness of the sensor
          * @param val Thickness of the sensor
@@ -431,6 +448,7 @@ namespace allpix {
         ROOT::Math::XYVector pixel_size_;
 
         double sensor_thickness_{};
+        std::string sensor_material_{};
         std::array<double, 4> sensor_excess_{};
 
         double chip_thickness_{};

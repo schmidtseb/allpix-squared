@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+    <define>
+        <position name="clamping_block_PVC_v0" unit="mm" x="36.94593" y="92.71763" z="-8.483977"/>
+        <position name="clamping_block_PVC_v1" unit="mm" x="37.13062" y="93.03469" z="-8.634694"/>
+        <position name="clamping_block_PVC_v2" unit="mm" x="36.94593" y="92.81734" z="-8.417347"/>
+        <position name="clamping_block_PVC_v3" unit="mm" x="36.94593" y="92.88398" z="-8.317627"/>
+        <position name="clamping_block_PVC_v4" unit="mm" x="37.13062" y="93.21475" z="-8.2"/>
+        <position name="clamping_block_PVC_v5" unit="mm" x="37.5" y="92.6" z="-9.4295"/>
+        <position name="clamping_block_PVC_v6" unit="mm" x="37.5" y="92.90576" z="-9.390873"/>
+        <position name="clamping_block_PVC_v7" unit="mm" x="37.31531" y="92.95288" z="-9.051932"/>
+        <position name="clamping_block_PVC_v8" unit="mm" x="37.5" y="93.19231" z="-9.277419"/>
+        <position name="clamping_block_PVC_v9" unit="mm" x="37.5" y="93.44165" z="-9.096267"/>
+        <position name="clamping_block_PVC_v10" unit="mm" x="37.5" y="93.6381" z="-8.858799"/>
+        <position name="clamping_block_PVC_v11" unit="mm" x="36.94593" y="92.90737" z="-8.2"/>
+        <position name="clamping_block_PVC_v12" unit="mm" x="36.94593" y="92.29263" z="-8.2"/>
+        <position name="clamping_block_PVC_v13" unit="mm" x="37.13062" y="91.98525" z="-8.2"/>
+        <position name="clamping_block_PVC_v14" unit="mm" x="36.94593" y="92.31602" z="-8.317627"/>
+        <position name="clamping_block_PVC_v15" unit="mm" x="37.13062" y="92.16531" z="-8.634694"/>
+        <position name="clamping_block_PVC_v16" unit="mm" x="36.94593" y="92.38265" z="-8.417347"/>
+        <position name="clamping_block_PVC_v17" unit="mm" x="36.76124" y="92.6" z="-8.2"/>
+        <position name="clamping_block_PVC_v18" unit="mm" x="36.94593" y="92.48238" z="-8.483977"/>
+        <position name="clamping_block_PVC_v19" unit="mm" x="37.5" y="91.5619" z="-8.858799"/>
+        <position name="clamping_block_PVC_v20" unit="mm" x="37.5" y="91.75835" z="-9.096267"/>
+        <position name="clamping_block_PVC_v21" unit="mm" x="37.31531" y="92.24712" z="-9.051932"/>
+        <position name="clamping_block_PVC_v22" unit="mm" x="37.5" y="92.00768" z="-9.277419"/>
+        <position name="clamping_block_PVC_v23" unit="mm" x="37.5" y="92.29424" z="-9.390873"/>
+        <position name="clamping_block_PVC_v24" unit="mm" x="36.85359" y="92.70867" z="-8.308674"/>
+        <position name="clamping_block_PVC_v25" unit="mm" x="36.88437" y="92.77747" z="-8.097542"/>
+        <position name="clamping_block_PVC_v26" unit="mm" x="36.85359" y="92.70867" z="-8.091327"/>
+        <position name="clamping_block_PVC_v27" unit="mm" x="37.03828" y="92.92602" z="-7.87398"/>
+        <position name="clamping_block_PVC_v28" unit="mm" x="37.13062" y="93.03469" z="-7.765306"/>
+        <position name="clamping_block_PVC_v29" unit="mm" x="37.13062" y="92.6" z="-7.58525"/>
+        <position name="clamping_block_PVC_v30" unit="mm" x="36.94593" y="92.6" z="-7.892625"/>
+        <position name="clamping_block_PVC_v31" unit="mm" x="37.03828" y="92.27398" z="-7.87398"/>
+        <position name="clamping_block_PVC_v32" unit="mm" x="37.13062" y="92.16531" z="-7.765306"/>
+        <position name="clamping_block_PVC_v33" unit="mm" x="36.85359" y="92.49133" z="-8.308674"/>
+        <position name="clamping_block_PVC_v34" unit="mm" x="36.85359" y="92.49133" z="-8.091327"/>
+        <position name="clamping_block_PVC_v35" unit="mm" x="36.89976" y="92.38702" z="-8.111779"/>
+        <position name="clamping_block_PVC_v36" unit="mm" x="37.5" y="93.76933" z="-8.579936"/>
+        <position name="clamping_block_PVC_v37" unit="mm" x="37.5" y="93.82707" z="-8.277201"/>
+        <position name="clamping_block_PVC_v38" unit="mm" x="37.5" y="93.80772" z="-7.969615"/>
+        <position name="clamping_block_PVC_v39" unit="mm" x="37.5" y="93.71249" z="-7.676504"/>
+        <position name="clamping_block_PVC_v40" unit="mm" x="37.5" y="93.54735" z="-7.416287"/>
+        <position name="clamping_block_PVC_v41" unit="mm" x="37.5" y="93.32269" z="-7.205314"/>
+        <position name="clamping_block_PVC_v42" unit="mm" x="37.5" y="93.05261" z="-7.05684"/>
+        <position name="clamping_block_PVC_v43" unit="mm" x="37.5" y="92.7541" z="-6.980195"/>
+        <position name="clamping_block_PVC_v44" unit="mm" x="37.5" y="92.4459" z="-6.980195"/>
+        <position name="clamping_block_PVC_v45" unit="mm" x="37.5" y="92.14739" z="-7.05684"/>
+        <position name="clamping_block_PVC_v46" unit="mm" x="37.5" y="91.87732" z="-7.205314"/>
+        <position name="clamping_block_PVC_v47" unit="mm" x="37.5" y="91.65266" z="-7.416287"/>
+        <position name="clamping_block_PVC_v48" unit="mm" x="37.5" y="91.48752" z="-7.676504"/>
+        <position name="clamping_block_PVC_v49" unit="mm" x="37.5" y="91.39228" z="-7.969615"/>
+        <position name="clamping_block_PVC_v50" unit="mm" x="37.5" y="91.37292" z="-8.277201"/>
+        <position name="clamping_block_PVC_v51" unit="mm" x="37.5" y="91.43068" z="-8.579936"/>
+        <position name="clamping_block_PVC_v52" unit="mm" x="46.3" y="91.43068" z="-8.579936"/>
+        <position name="clamping_block_PVC_v53" unit="mm" x="46.3" y="91.5619" z="-8.858799"/>
+        <position name="clamping_block_PVC_v54" unit="mm" x="46.3" y="92.6" z="-9.4295"/>
+        <position name="clamping_block_PVC_v55" unit="mm" x="46.3" y="91.75835" z="-9.096267"/>
+        <position name="clamping_block_PVC_v56" unit="mm" x="46.3" y="92.90576" z="-9.390873"/>
+        <position name="clamping_block_PVC_v57" unit="mm" x="46.3" y="92.00768" z="-9.277419"/>
+        <position name="clamping_block_PVC_v58" unit="mm" x="46.3" y="93.19231" z="-9.277419"/>
+        <position name="clamping_block_PVC_v59" unit="mm" x="46.3" y="92.29424" z="-9.390873"/>
+        <position name="clamping_block_PVC_v60" unit="mm" x="46.3" y="93.44165" z="-9.096267"/>
+        <position name="clamping_block_PVC_v61" unit="mm" x="46.3" y="93.6381" z="-8.858799"/>
+        <position name="clamping_block_PVC_v62" unit="mm" x="46.3" y="93.76933" z="-8.579936"/>
+        <position name="clamping_block_PVC_v63" unit="mm" x="46.3" y="93.82707" z="-8.277201"/>
+        <position name="clamping_block_PVC_v64" unit="mm" x="46.3" y="93.80772" z="-7.969615"/>
+        <position name="clamping_block_PVC_v65" unit="mm" x="46.3" y="93.71249" z="-7.676504"/>
+        <position name="clamping_block_PVC_v66" unit="mm" x="46.3" y="93.54735" z="-7.416287"/>
+        <position name="clamping_block_PVC_v67" unit="mm" x="46.3" y="93.32269" z="-7.205314"/>
+        <position name="clamping_block_PVC_v68" unit="mm" x="46.3" y="93.05261" z="-7.05684"/>
+        <position name="clamping_block_PVC_v69" unit="mm" x="46.3" y="92.7541" z="-6.980195"/>
+        <position name="clamping_block_PVC_v70" unit="mm" x="46.3" y="92.4459" z="-6.980195"/>
+        <position name="clamping_block_PVC_v71" unit="mm" x="46.3" y="92.14739" z="-7.05684"/>
+        <position name="clamping_block_PVC_v72" unit="mm" x="46.3" y="91.87732" z="-7.205314"/>
+        <position name="clamping_block_PVC_v73" unit="mm" x="46.3" y="91.65266" z="-7.416287"/>
+        <position name="clamping_block_PVC_v74" unit="mm" x="46.3" y="91.48752" z="-7.676504"/>
+        <position name="clamping_block_PVC_v75" unit="mm" x="46.3" y="91.39228" z="-7.969615"/>
+        <position name="clamping_block_PVC_v76" unit="mm" x="46.3" y="91.37292" z="-8.277201"/>
+        <position name="clamping_block_PVC_v77" unit="mm" x="-12.08525" y="91.53522" z="-22.2"/>
+        <position name="clamping_block_PVC_v78" unit="mm" x="-12.38178" y="91.41239" z="-22.2"/>
+        <position name="clamping_block_PVC_v79" unit="mm" x="-12.32006" y="91.43068" z="-12.2"/>
+        <position name="clamping_block_PVC_v80" unit="mm" x="-12.6228" y="91.37292" z="-12.2"/>
+        <position name="clamping_block_PVC_v81" unit="mm" x="-11.83061" y="91.73061" z="-22.2"/>
+        <position name="clamping_block_PVC_v82" unit="mm" x="-12.0412" y="91.5619" z="-12.2"/>
+        <position name="clamping_block_PVC_v83" unit="mm" x="-11.4705" y="92.6" z="-22.2"/>
+        <position name="clamping_block_PVC_v84" unit="mm" x="-11.4705" y="92.6" z="-12.2"/>
+        <position name="clamping_block_PVC_v85" unit="mm" x="-11.50913" y="92.90576" z="-12.2"/>
+        <position name="clamping_block_PVC_v86" unit="mm" x="-11.51239" y="92.91822" z="-22.2"/>
+        <position name="clamping_block_PVC_v87" unit="mm" x="-11.63522" y="91.98525" z="-22.2"/>
+        <position name="clamping_block_PVC_v88" unit="mm" x="-11.80373" y="91.75835" z="-12.2"/>
+        <position name="clamping_block_PVC_v89" unit="mm" x="-11.63522" y="93.21475" z="-22.2"/>
+        <position name="clamping_block_PVC_v90" unit="mm" x="-11.62258" y="93.19231" z="-12.2"/>
+        <position name="clamping_block_PVC_v91" unit="mm" x="-11.51239" y="92.28178" z="-22.2"/>
+        <position name="clamping_block_PVC_v92" unit="mm" x="-11.62258" y="92.00768" z="-12.2"/>
+        <position name="clamping_block_PVC_v93" unit="mm" x="-11.50913" y="92.29424" z="-12.2"/>
+        <position name="clamping_block_PVC_v94" unit="mm" x="-11.83061" y="93.46939" z="-22.2"/>
+        <position name="clamping_block_PVC_v95" unit="mm" x="-11.80373" y="93.44165" z="-12.2"/>
+        <position name="clamping_block_PVC_v96" unit="mm" x="-12.08525" y="93.66478" z="-22.2"/>
+        <position name="clamping_block_PVC_v97" unit="mm" x="-12.0412" y="93.6381" z="-12.2"/>
+        <position name="clamping_block_PVC_v98" unit="mm" x="-12.38178" y="93.78761" z="-22.2"/>
+        <position name="clamping_block_PVC_v99" unit="mm" x="-12.32006" y="93.76933" z="-12.2"/>
+        <position name="clamping_block_PVC_v100" unit="mm" x="-12.7" y="93.8295" z="-22.2"/>
+        <position name="clamping_block_PVC_v101" unit="mm" x="-12.6228" y="93.82707" z="-12.2"/>
+        <position name="clamping_block_PVC_v102" unit="mm" x="-13.01822" y="93.78761" z="-22.2"/>
+        <position name="clamping_block_PVC_v103" unit="mm" x="-12.93039" y="93.80772" z="-12.2"/>
+        <position name="clamping_block_PVC_v104" unit="mm" x="-13.31475" y="93.66478" z="-22.2"/>
+        <position name="clamping_block_PVC_v105" unit="mm" x="-13.2235" y="93.71249" z="-12.2"/>
+        <position name="clamping_block_PVC_v106" unit="mm" x="-13.56939" y="93.46939" z="-22.2"/>
+        <position name="clamping_block_PVC_v107" unit="mm" x="-13.48371" y="93.54735" z="-12.2"/>
+        <position name="clamping_block_PVC_v108" unit="mm" x="-13.76478" y="93.21475" z="-22.2"/>
+        <position name="clamping_block_PVC_v109" unit="mm" x="-13.69469" y="93.32269" z="-12.2"/>
+        <position name="clamping_block_PVC_v110" unit="mm" x="-13.88761" y="92.91822" z="-22.2"/>
+        <position name="clamping_block_PVC_v111" unit="mm" x="-13.84316" y="93.05261" z="-12.2"/>
+        <position name="clamping_block_PVC_v112" unit="mm" x="-13.9198" y="92.7541" z="-12.2"/>
+        <position name="clamping_block_PVC_v113" unit="mm" x="-13.9295" y="92.6" z="-22.2"/>
+        <position name="clamping_block_PVC_v114" unit="mm" x="-13.88761" y="92.28178" z="-22.2"/>
+        <position name="clamping_block_PVC_v115" unit="mm" x="-13.9198" y="92.4459" z="-12.2"/>
+        <position name="clamping_block_PVC_v116" unit="mm" x="-13.76478" y="91.98525" z="-22.2"/>
+        <position name="clamping_block_PVC_v117" unit="mm" x="-13.84316" y="92.14739" z="-12.2"/>
+        <position name="clamping_block_PVC_v118" unit="mm" x="-13.56939" y="91.73061" z="-22.2"/>
+        <position name="clamping_block_PVC_v119" unit="mm" x="-13.69469" y="91.87732" z="-12.2"/>
+        <position name="clamping_block_PVC_v120" unit="mm" x="-13.31475" y="91.53522" z="-22.2"/>
+        <position name="clamping_block_PVC_v121" unit="mm" x="-13.48371" y="91.65266" z="-12.2"/>
+        <position name="clamping_block_PVC_v122" unit="mm" x="-13.01822" y="91.41239" z="-22.2"/>
+        <position name="clamping_block_PVC_v123" unit="mm" x="-13.2235" y="91.48752" z="-12.2"/>
+        <position name="clamping_block_PVC_v124" unit="mm" x="-12.7" y="91.3705" z="-22.2"/>
+        <position name="clamping_block_PVC_v125" unit="mm" x="-12.93039" y="91.39228" z="-12.2"/>
+        <position name="clamping_block_PVC_v126" unit="mm" x="57.91475" y="91.53522" z="-22.2"/>
+        <position name="clamping_block_PVC_v127" unit="mm" x="57.61822" y="91.41239" z="-22.2"/>
+        <position name="clamping_block_PVC_v128" unit="mm" x="57.67994" y="91.43068" z="-12.2"/>
+        <position name="clamping_block_PVC_v129" unit="mm" x="57.3772" y="91.37292" z="-12.2"/>
+        <position name="clamping_block_PVC_v130" unit="mm" x="58.16939" y="91.73061" z="-22.2"/>
+        <position name="clamping_block_PVC_v131" unit="mm" x="57.9588" y="91.5619" z="-12.2"/>
+        <position name="clamping_block_PVC_v132" unit="mm" x="58.5295" y="92.6" z="-22.2"/>
+        <position name="clamping_block_PVC_v133" unit="mm" x="58.5295" y="92.6" z="-12.2"/>
+        <position name="clamping_block_PVC_v134" unit="mm" x="58.49087" y="92.90576" z="-12.2"/>
+        <position name="clamping_block_PVC_v135" unit="mm" x="58.48761" y="92.91822" z="-22.2"/>
+        <position name="clamping_block_PVC_v136" unit="mm" x="58.36478" y="91.98525" z="-22.2"/>
+        <position name="clamping_block_PVC_v137" unit="mm" x="58.19627" y="91.75835" z="-12.2"/>
+        <position name="clamping_block_PVC_v138" unit="mm" x="58.36478" y="93.21475" z="-22.2"/>
+        <position name="clamping_block_PVC_v139" unit="mm" x="58.37742" y="93.19231" z="-12.2"/>
+        <position name="clamping_block_PVC_v140" unit="mm" x="58.48761" y="92.28178" z="-22.2"/>
+        <position name="clamping_block_PVC_v141" unit="mm" x="58.37742" y="92.00768" z="-12.2"/>
+        <position name="clamping_block_PVC_v142" unit="mm" x="58.49087" y="92.29424" z="-12.2"/>
+        <position name="clamping_block_PVC_v143" unit="mm" x="58.16939" y="93.46939" z="-22.2"/>
+        <position name="clamping_block_PVC_v144" unit="mm" x="58.19627" y="93.44165" z="-12.2"/>
+        <position name="clamping_block_PVC_v145" unit="mm" x="57.91475" y="93.66478" z="-22.2"/>
+        <position name="clamping_block_PVC_v146" unit="mm" x="57.9588" y="93.6381" z="-12.2"/>
+        <position name="clamping_block_PVC_v147" unit="mm" x="57.61822" y="93.78761" z="-22.2"/>
+        <position name="clamping_block_PVC_v148" unit="mm" x="57.67994" y="93.76933" z="-12.2"/>
+        <position name="clamping_block_PVC_v149" unit="mm" x="57.3" y="93.8295" z="-22.2"/>
+        <position name="clamping_block_PVC_v150" unit="mm" x="57.3772" y="93.82707" z="-12.2"/>
+        <position name="clamping_block_PVC_v151" unit="mm" x="56.98178" y="93.78761" z="-22.2"/>
+        <position name="clamping_block_PVC_v152" unit="mm" x="57.06961" y="93.80772" z="-12.2"/>
+        <position name="clamping_block_PVC_v153" unit="mm" x="56.68525" y="93.66478" z="-22.2"/>
+        <position name="clamping_block_PVC_v154" unit="mm" x="56.7765" y="93.71249" z="-12.2"/>
+        <position name="clamping_block_PVC_v155" unit="mm" x="56.43061" y="93.46939" z="-22.2"/>
+        <position name="clamping_block_PVC_v156" unit="mm" x="56.51629" y="93.54735" z="-12.2"/>
+        <position name="clamping_block_PVC_v157" unit="mm" x="56.23522" y="93.21475" z="-22.2"/>
+        <position name="clamping_block_PVC_v158" unit="mm" x="56.30531" y="93.32269" z="-12.2"/>
+        <position name="clamping_block_PVC_v159" unit="mm" x="56.11239" y="92.91822" z="-22.2"/>
+        <position name="clamping_block_PVC_v160" unit="mm" x="56.15684" y="93.05261" z="-12.2"/>
+        <position name="clamping_block_PVC_v161" unit="mm" x="56.0802" y="92.7541" z="-12.2"/>
+        <position name="clamping_block_PVC_v162" unit="mm" x="56.0705" y="92.6" z="-22.2"/>
+        <position name="clamping_block_PVC_v163" unit="mm" x="56.11239" y="92.28178" z="-22.2"/>
+        <position name="clamping_block_PVC_v164" unit="mm" x="56.0802" y="92.4459" z="-12.2"/>
+        <position name="clamping_block_PVC_v165" unit="mm" x="56.23522" y="91.98525" z="-22.2"/>
+        <position name="clamping_block_PVC_v166" unit="mm" x="56.15684" y="92.14739" z="-12.2"/>
+        <position name="clamping_block_PVC_v167" unit="mm" x="56.43061" y="91.73061" z="-22.2"/>
+        <position name="clamping_block_PVC_v168" unit="mm" x="56.30531" y="91.87732" z="-12.2"/>
+        <position name="clamping_block_PVC_v169" unit="mm" x="56.68525" y="91.53522" z="-22.2"/>
+        <position name="clamping_block_PVC_v170" unit="mm" x="56.51629" y="91.65266" z="-12.2"/>
+        <position name="clamping_block_PVC_v171" unit="mm" x="56.98178" y="91.41239" z="-22.2"/>
+        <position name="clamping_block_PVC_v172" unit="mm" x="56.7765" y="91.48752" z="-12.2"/>
+        <position name="clamping_block_PVC_v173" unit="mm" x="57.3" y="91.3705" z="-22.2"/>
+        <position name="clamping_block_PVC_v174" unit="mm" x="57.06961" y="91.39228" z="-12.2"/>
+        <position name="clamping_block_PVC_v175" unit="mm" x="62.3" y="87.6" z="-22.2"/>
+        <position name="clamping_block_PVC_v176" unit="mm" x="-17.7" y="87.6" z="-22.2"/>
+        <position name="clamping_block_PVC_v177" unit="mm" x="62.3" y="97.6" z="-22.2"/>
+        <position name="clamping_block_PVC_v178" unit="mm" x="-17.7" y="97.6" z="-22.2"/>
+        <position name="clamping_block_PVC_v179" unit="mm" x="62.3" y="87.6" z="-12.2"/>
+        <position name="clamping_block_PVC_v180" unit="mm" x="62.3" y="97.6" z="-12.2"/>
+        <position name="clamping_block_PVC_v181" unit="mm" x="46.3" y="87.6" z="-12.2"/>
+        <position name="clamping_block_PVC_v182" unit="mm" x="46.3" y="97.6" z="-12.2"/>
+        <position name="clamping_block_PVC_v183" unit="mm" x="46.3" y="87.6" z="-4.2"/>
+        <position name="clamping_block_PVC_v184" unit="mm" x="46.3" y="97.6" z="-4.2"/>
+        <position name="clamping_block_PVC_v185" unit="mm" x="-1.7" y="87.6" z="-4.2"/>
+        <position name="clamping_block_PVC_v186" unit="mm" x="-1.7" y="97.6" z="-4.2"/>
+        <position name="clamping_block_PVC_v187" unit="mm" x="-1.7" y="87.6" z="6.8"/>
+        <position name="clamping_block_PVC_v188" unit="mm" x="-1.7" y="97.6" z="6.8"/>
+        <position name="clamping_block_PVC_v189" unit="mm" x="-7.7" y="87.6" z="6.8"/>
+        <position name="clamping_block_PVC_v190" unit="mm" x="-7.7" y="97.6" z="6.8"/>
+        <position name="clamping_block_PVC_v191" unit="mm" x="-7.7" y="87.6" z="-12.2"/>
+        <position name="clamping_block_PVC_v192" unit="mm" x="-7.7" y="97.6" z="-12.2"/>
+        <position name="clamping_block_PVC_v193" unit="mm" x="-17.7" y="87.6" z="-12.2"/>
+        <position name="clamping_block_PVC_v194" unit="mm" x="-17.7" y="97.6" z="-12.2"/>
+    </define>
+
+    <solids>
+        <tessellated aunit="deg" lunit="mm" name="clamping_block_PVC-SOL">
+             <triangular vertex1="clamping_block_PVC_v0" vertex2="clamping_block_PVC_v1" vertex3="clamping_block_PVC_v2"/>
+             <triangular vertex1="clamping_block_PVC_v2" vertex2="clamping_block_PVC_v1" vertex3="clamping_block_PVC_v3"/>
+             <triangular vertex1="clamping_block_PVC_v1" vertex2="clamping_block_PVC_v4" vertex3="clamping_block_PVC_v3"/>
+             <triangular vertex1="clamping_block_PVC_v5" vertex2="clamping_block_PVC_v6" vertex3="clamping_block_PVC_v7"/>
+             <triangular vertex1="clamping_block_PVC_v6" vertex2="clamping_block_PVC_v8" vertex3="clamping_block_PVC_v7"/>
+             <triangular vertex1="clamping_block_PVC_v8" vertex2="clamping_block_PVC_v9" vertex3="clamping_block_PVC_v7"/>
+             <triangular vertex1="clamping_block_PVC_v9" vertex2="clamping_block_PVC_v10" vertex3="clamping_block_PVC_v7"/>
+             <triangular vertex1="clamping_block_PVC_v1" vertex2="clamping_block_PVC_v0" vertex3="clamping_block_PVC_v7"/>
+             <triangular vertex1="clamping_block_PVC_v10" vertex2="clamping_block_PVC_v1" vertex3="clamping_block_PVC_v7"/>
+             <triangular vertex1="clamping_block_PVC_v0" vertex2="clamping_block_PVC_v5" vertex3="clamping_block_PVC_v7"/>
+             <triangular vertex1="clamping_block_PVC_v3" vertex2="clamping_block_PVC_v4" vertex3="clamping_block_PVC_v11"/>
+             <triangular vertex1="clamping_block_PVC_v12" vertex2="clamping_block_PVC_v13" vertex3="clamping_block_PVC_v14"/>
+             <triangular vertex1="clamping_block_PVC_v13" vertex2="clamping_block_PVC_v15" vertex3="clamping_block_PVC_v14"/>
+             <triangular vertex1="clamping_block_PVC_v14" vertex2="clamping_block_PVC_v15" vertex3="clamping_block_PVC_v16"/>
+             <triangular vertex1="clamping_block_PVC_v5" vertex2="clamping_block_PVC_v17" vertex3="clamping_block_PVC_v18"/>
+             <triangular vertex1="clamping_block_PVC_v16" vertex2="clamping_block_PVC_v15" vertex3="clamping_block_PVC_v18"/>
+             <triangular vertex1="clamping_block_PVC_v19" vertex2="clamping_block_PVC_v20" vertex3="clamping_block_PVC_v21"/>
+             <triangular vertex1="clamping_block_PVC_v20" vertex2="clamping_block_PVC_v22" vertex3="clamping_block_PVC_v21"/>
+             <triangular vertex1="clamping_block_PVC_v22" vertex2="clamping_block_PVC_v23" vertex3="clamping_block_PVC_v21"/>
+             <triangular vertex1="clamping_block_PVC_v23" vertex2="clamping_block_PVC_v5" vertex3="clamping_block_PVC_v21"/>
+             <triangular vertex1="clamping_block_PVC_v15" vertex2="clamping_block_PVC_v19" vertex3="clamping_block_PVC_v21"/>
+             <triangular vertex1="clamping_block_PVC_v5" vertex2="clamping_block_PVC_v18" vertex3="clamping_block_PVC_v21"/>
+             <triangular vertex1="clamping_block_PVC_v18" vertex2="clamping_block_PVC_v15" vertex3="clamping_block_PVC_v21"/>
+             <triangular vertex1="clamping_block_PVC_v3" vertex2="clamping_block_PVC_v11" vertex3="clamping_block_PVC_v24"/>
+             <triangular vertex1="clamping_block_PVC_v2" vertex2="clamping_block_PVC_v3" vertex3="clamping_block_PVC_v24"/>
+             <triangular vertex1="clamping_block_PVC_v0" vertex2="clamping_block_PVC_v2" vertex3="clamping_block_PVC_v24"/>
+             <triangular vertex1="clamping_block_PVC_v17" vertex2="clamping_block_PVC_v0" vertex3="clamping_block_PVC_v24"/>
+             <triangular vertex1="clamping_block_PVC_v24" vertex2="clamping_block_PVC_v11" vertex3="clamping_block_PVC_v25"/>
+             <triangular vertex1="clamping_block_PVC_v24" vertex2="clamping_block_PVC_v25" vertex3="clamping_block_PVC_v26"/>
+             <triangular vertex1="clamping_block_PVC_v17" vertex2="clamping_block_PVC_v24" vertex3="clamping_block_PVC_v26"/>
+             <triangular vertex1="clamping_block_PVC_v26" vertex2="clamping_block_PVC_v25" vertex3="clamping_block_PVC_v27"/>
+             <triangular vertex1="clamping_block_PVC_v25" vertex2="clamping_block_PVC_v11" vertex3="clamping_block_PVC_v27"/>
+             <triangular vertex1="clamping_block_PVC_v11" vertex2="clamping_block_PVC_v4" vertex3="clamping_block_PVC_v27"/>
+             <triangular vertex1="clamping_block_PVC_v4" vertex2="clamping_block_PVC_v28" vertex3="clamping_block_PVC_v27"/>
+             <triangular vertex1="clamping_block_PVC_v28" vertex2="clamping_block_PVC_v29" vertex3="clamping_block_PVC_v27"/>
+             <triangular vertex1="clamping_block_PVC_v27" vertex2="clamping_block_PVC_v29" vertex3="clamping_block_PVC_v30"/>
+             <triangular vertex1="clamping_block_PVC_v26" vertex2="clamping_block_PVC_v27" vertex3="clamping_block_PVC_v30"/>
+             <triangular vertex1="clamping_block_PVC_v30" vertex2="clamping_block_PVC_v29" vertex3="clamping_block_PVC_v31"/>
+             <triangular vertex1="clamping_block_PVC_v32" vertex2="clamping_block_PVC_v13" vertex3="clamping_block_PVC_v31"/>
+             <triangular vertex1="clamping_block_PVC_v29" vertex2="clamping_block_PVC_v32" vertex3="clamping_block_PVC_v31"/>
+             <triangular vertex1="clamping_block_PVC_v16" vertex2="clamping_block_PVC_v18" vertex3="clamping_block_PVC_v33"/>
+             <triangular vertex1="clamping_block_PVC_v18" vertex2="clamping_block_PVC_v17" vertex3="clamping_block_PVC_v33"/>
+             <triangular vertex1="clamping_block_PVC_v12" vertex2="clamping_block_PVC_v14" vertex3="clamping_block_PVC_v33"/>
+             <triangular vertex1="clamping_block_PVC_v14" vertex2="clamping_block_PVC_v16" vertex3="clamping_block_PVC_v33"/>
+             <triangular vertex1="clamping_block_PVC_v26" vertex2="clamping_block_PVC_v30" vertex3="clamping_block_PVC_v34"/>
+             <triangular vertex1="clamping_block_PVC_v33" vertex2="clamping_block_PVC_v17" vertex3="clamping_block_PVC_v34"/>
+             <triangular vertex1="clamping_block_PVC_v17" vertex2="clamping_block_PVC_v26" vertex3="clamping_block_PVC_v34"/>
+             <triangular vertex1="clamping_block_PVC_v30" vertex2="clamping_block_PVC_v31" vertex3="clamping_block_PVC_v34"/>
+             <triangular vertex1="clamping_block_PVC_v31" vertex2="clamping_block_PVC_v13" vertex3="clamping_block_PVC_v35"/>
+             <triangular vertex1="clamping_block_PVC_v12" vertex2="clamping_block_PVC_v33" vertex3="clamping_block_PVC_v35"/>
+             <triangular vertex1="clamping_block_PVC_v34" vertex2="clamping_block_PVC_v31" vertex3="clamping_block_PVC_v35"/>
+             <triangular vertex1="clamping_block_PVC_v33" vertex2="clamping_block_PVC_v34" vertex3="clamping_block_PVC_v35"/>
+             <triangular vertex1="clamping_block_PVC_v13" vertex2="clamping_block_PVC_v12" vertex3="clamping_block_PVC_v35"/>
+             <triangular vertex1="clamping_block_PVC_v10" vertex2="clamping_block_PVC_v36" vertex3="clamping_block_PVC_v1"/>
+             <triangular vertex1="clamping_block_PVC_v36" vertex2="clamping_block_PVC_v37" vertex3="clamping_block_PVC_v4"/>
+             <triangular vertex1="clamping_block_PVC_v37" vertex2="clamping_block_PVC_v38" vertex3="clamping_block_PVC_v4"/>
+             <triangular vertex1="clamping_block_PVC_v38" vertex2="clamping_block_PVC_v39" vertex3="clamping_block_PVC_v4"/>
+             <triangular vertex1="clamping_block_PVC_v1" vertex2="clamping_block_PVC_v36" vertex3="clamping_block_PVC_v4"/>
+             <triangular vertex1="clamping_block_PVC_v39" vertex2="clamping_block_PVC_v40" vertex3="clamping_block_PVC_v28"/>
+             <triangular vertex1="clamping_block_PVC_v40" vertex2="clamping_block_PVC_v41" vertex3="clamping_block_PVC_v28"/>
+             <triangular vertex1="clamping_block_PVC_v41" vertex2="clamping_block_PVC_v42" vertex3="clamping_block_PVC_v28"/>
+             <triangular vertex1="clamping_block_PVC_v4" vertex2="clamping_block_PVC_v39" vertex3="clamping_block_PVC_v28"/>
+             <triangular vertex1="clamping_block_PVC_v42" vertex2="clamping_block_PVC_v43" vertex3="clamping_block_PVC_v29"/>
+             <triangular vertex1="clamping_block_PVC_v43" vertex2="clamping_block_PVC_v44" vertex3="clamping_block_PVC_v29"/>
+             <triangular vertex1="clamping_block_PVC_v44" vertex2="clamping_block_PVC_v45" vertex3="clamping_block_PVC_v29"/>
+             <triangular vertex1="clamping_block_PVC_v28" vertex2="clamping_block_PVC_v42" vertex3="clamping_block_PVC_v29"/>
+             <triangular vertex1="clamping_block_PVC_v45" vertex2="clamping_block_PVC_v46" vertex3="clamping_block_PVC_v32"/>
+             <triangular vertex1="clamping_block_PVC_v46" vertex2="clamping_block_PVC_v47" vertex3="clamping_block_PVC_v32"/>
+             <triangular vertex1="clamping_block_PVC_v47" vertex2="clamping_block_PVC_v48" vertex3="clamping_block_PVC_v32"/>
+             <triangular vertex1="clamping_block_PVC_v29" vertex2="clamping_block_PVC_v45" vertex3="clamping_block_PVC_v32"/>
+             <triangular vertex1="clamping_block_PVC_v48" vertex2="clamping_block_PVC_v49" vertex3="clamping_block_PVC_v13"/>
+             <triangular vertex1="clamping_block_PVC_v49" vertex2="clamping_block_PVC_v50" vertex3="clamping_block_PVC_v13"/>
+             <triangular vertex1="clamping_block_PVC_v50" vertex2="clamping_block_PVC_v51" vertex3="clamping_block_PVC_v13"/>
+             <triangular vertex1="clamping_block_PVC_v32" vertex2="clamping_block_PVC_v48" vertex3="clamping_block_PVC_v13"/>
+             <triangular vertex1="clamping_block_PVC_v51" vertex2="clamping_block_PVC_v19" vertex3="clamping_block_PVC_v15"/>
+             <triangular vertex1="clamping_block_PVC_v13" vertex2="clamping_block_PVC_v51" vertex3="clamping_block_PVC_v15"/>
+             <triangular vertex1="clamping_block_PVC_v17" vertex2="clamping_block_PVC_v5" vertex3="clamping_block_PVC_v0"/>
+             <triangular vertex1="clamping_block_PVC_v51" vertex2="clamping_block_PVC_v50" vertex3="clamping_block_PVC_v52"/>
+             <triangular vertex1="clamping_block_PVC_v51" vertex2="clamping_block_PVC_v52" vertex3="clamping_block_PVC_v53"/>
+             <triangular vertex1="clamping_block_PVC_v19" vertex2="clamping_block_PVC_v51" vertex3="clamping_block_PVC_v53"/>
+             <triangular vertex1="clamping_block_PVC_v6" vertex2="clamping_block_PVC_v5" vertex3="clamping_block_PVC_v54"/>
+             <triangular vertex1="clamping_block_PVC_v19" vertex2="clamping_block_PVC_v53" vertex3="clamping_block_PVC_v55"/>
+             <triangular vertex1="clamping_block_PVC_v20" vertex2="clamping_block_PVC_v19" vertex3="clamping_block_PVC_v55"/>
+             <triangular vertex1="clamping_block_PVC_v8" vertex2="clamping_block_PVC_v6" vertex3="clamping_block_PVC_v56"/>
+             <triangular vertex1="clamping_block_PVC_v6" vertex2="clamping_block_PVC_v54" vertex3="clamping_block_PVC_v56"/>
+             <triangular vertex1="clamping_block_PVC_v22" vertex2="clamping_block_PVC_v20" vertex3="clamping_block_PVC_v57"/>
+             <triangular vertex1="clamping_block_PVC_v20" vertex2="clamping_block_PVC_v55" vertex3="clamping_block_PVC_v57"/>
+             <triangular vertex1="clamping_block_PVC_v9" vertex2="clamping_block_PVC_v8" vertex3="clamping_block_PVC_v58"/>
+             <triangular vertex1="clamping_block_PVC_v8" vertex2="clamping_block_PVC_v56" vertex3="clamping_block_PVC_v58"/>
+             <triangular vertex1="clamping_block_PVC_v22" vertex2="clamping_block_PVC_v57" vertex3="clamping_block_PVC_v59"/>
+             <triangular vertex1="clamping_block_PVC_v23" vertex2="clamping_block_PVC_v22" vertex3="clamping_block_PVC_v59"/>
+             <triangular vertex1="clamping_block_PVC_v10" vertex2="clamping_block_PVC_v9" vertex3="clamping_block_PVC_v60"/>
+             <triangular vertex1="clamping_block_PVC_v9" vertex2="clamping_block_PVC_v58" vertex3="clamping_block_PVC_v60"/>
+             <triangular vertex1="clamping_block_PVC_v5" vertex2="clamping_block_PVC_v23" vertex3="clamping_block_PVC_v54"/>
+             <triangular vertex1="clamping_block_PVC_v23" vertex2="clamping_block_PVC_v59" vertex3="clamping_block_PVC_v54"/>
+             <triangular vertex1="clamping_block_PVC_v36" vertex2="clamping_block_PVC_v10" vertex3="clamping_block_PVC_v61"/>
+             <triangular vertex1="clamping_block_PVC_v10" vertex2="clamping_block_PVC_v60" vertex3="clamping_block_PVC_v61"/>
+             <triangular vertex1="clamping_block_PVC_v37" vertex2="clamping_block_PVC_v36" vertex3="clamping_block_PVC_v62"/>
+             <triangular vertex1="clamping_block_PVC_v36" vertex2="clamping_block_PVC_v61" vertex3="clamping_block_PVC_v62"/>
+             <triangular vertex1="clamping_block_PVC_v38" vertex2="clamping_block_PVC_v37" vertex3="clamping_block_PVC_v63"/>
+             <triangular vertex1="clamping_block_PVC_v37" vertex2="clamping_block_PVC_v62" vertex3="clamping_block_PVC_v63"/>
+             <triangular vertex1="clamping_block_PVC_v39" vertex2="clamping_block_PVC_v38" vertex3="clamping_block_PVC_v64"/>
+             <triangular vertex1="clamping_block_PVC_v38" vertex2="clamping_block_PVC_v63" vertex3="clamping_block_PVC_v64"/>
+             <triangular vertex1="clamping_block_PVC_v40" vertex2="clamping_block_PVC_v39" vertex3="clamping_block_PVC_v65"/>
+             <triangular vertex1="clamping_block_PVC_v39" vertex2="clamping_block_PVC_v64" vertex3="clamping_block_PVC_v65"/>
+             <triangular vertex1="clamping_block_PVC_v41" vertex2="clamping_block_PVC_v40" vertex3="clamping_block_PVC_v66"/>
+             <triangular vertex1="clamping_block_PVC_v40" vertex2="clamping_block_PVC_v65" vertex3="clamping_block_PVC_v66"/>
+             <triangular vertex1="clamping_block_PVC_v42" vertex2="clamping_block_PVC_v41" vertex3="clamping_block_PVC_v67"/>
+             <triangular vertex1="clamping_block_PVC_v41" vertex2="clamping_block_PVC_v66" vertex3="clamping_block_PVC_v67"/>
+             <triangular vertex1="clamping_block_PVC_v43" vertex2="clamping_block_PVC_v42" vertex3="clamping_block_PVC_v68"/>
+             <triangular vertex1="clamping_block_PVC_v42" vertex2="clamping_block_PVC_v67" vertex3="clamping_block_PVC_v68"/>
+             <triangular vertex1="clamping_block_PVC_v43" vertex2="clamping_block_PVC_v68" vertex3="clamping_block_PVC_v69"/>
+             <triangular vertex1="clamping_block_PVC_v44" vertex2="clamping_block_PVC_v43" vertex3="clamping_block_PVC_v69"/>
+             <triangular vertex1="clamping_block_PVC_v44" vertex2="clamping_block_PVC_v69" vertex3="clamping_block_PVC_v70"/>
+             <triangular vertex1="clamping_block_PVC_v44" vertex2="clamping_block_PVC_v70" vertex3="clamping_block_PVC_v71"/>
+             <triangular vertex1="clamping_block_PVC_v45" vertex2="clamping_block_PVC_v44" vertex3="clamping_block_PVC_v71"/>
+             <triangular vertex1="clamping_block_PVC_v45" vertex2="clamping_block_PVC_v71" vertex3="clamping_block_PVC_v72"/>
+             <triangular vertex1="clamping_block_PVC_v46" vertex2="clamping_block_PVC_v45" vertex3="clamping_block_PVC_v72"/>
+             <triangular vertex1="clamping_block_PVC_v46" vertex2="clamping_block_PVC_v72" vertex3="clamping_block_PVC_v73"/>
+             <triangular vertex1="clamping_block_PVC_v47" vertex2="clamping_block_PVC_v46" vertex3="clamping_block_PVC_v73"/>
+             <triangular vertex1="clamping_block_PVC_v47" vertex2="clamping_block_PVC_v73" vertex3="clamping_block_PVC_v74"/>
+             <triangular vertex1="clamping_block_PVC_v48" vertex2="clamping_block_PVC_v47" vertex3="clamping_block_PVC_v74"/>
+             <triangular vertex1="clamping_block_PVC_v48" vertex2="clamping_block_PVC_v74" vertex3="clamping_block_PVC_v75"/>
+             <triangular vertex1="clamping_block_PVC_v49" vertex2="clamping_block_PVC_v48" vertex3="clamping_block_PVC_v75"/>
+             <triangular vertex1="clamping_block_PVC_v49" vertex2="clamping_block_PVC_v75" vertex3="clamping_block_PVC_v76"/>
+             <triangular vertex1="clamping_block_PVC_v50" vertex2="clamping_block_PVC_v49" vertex3="clamping_block_PVC_v76"/>
+             <triangular vertex1="clamping_block_PVC_v50" vertex2="clamping_block_PVC_v76" vertex3="clamping_block_PVC_v52"/>
+             <triangular vertex1="clamping_block_PVC_v77" vertex2="clamping_block_PVC_v78" vertex3="clamping_block_PVC_v79"/>
+             <triangular vertex1="clamping_block_PVC_v78" vertex2="clamping_block_PVC_v80" vertex3="clamping_block_PVC_v79"/>
+             <triangular vertex1="clamping_block_PVC_v81" vertex2="clamping_block_PVC_v77" vertex3="clamping_block_PVC_v82"/>
+             <triangular vertex1="clamping_block_PVC_v77" vertex2="clamping_block_PVC_v79" vertex3="clamping_block_PVC_v82"/>
+             <triangular vertex1="clamping_block_PVC_v83" vertex2="clamping_block_PVC_v84" vertex3="clamping_block_PVC_v85"/>
+             <triangular vertex1="clamping_block_PVC_v86" vertex2="clamping_block_PVC_v83" vertex3="clamping_block_PVC_v85"/>
+             <triangular vertex1="clamping_block_PVC_v87" vertex2="clamping_block_PVC_v81" vertex3="clamping_block_PVC_v88"/>
+             <triangular vertex1="clamping_block_PVC_v81" vertex2="clamping_block_PVC_v82" vertex3="clamping_block_PVC_v88"/>
+             <triangular vertex1="clamping_block_PVC_v89" vertex2="clamping_block_PVC_v86" vertex3="clamping_block_PVC_v90"/>
+             <triangular vertex1="clamping_block_PVC_v91" vertex2="clamping_block_PVC_v87" vertex3="clamping_block_PVC_v92"/>
+             <triangular vertex1="clamping_block_PVC_v87" vertex2="clamping_block_PVC_v88" vertex3="clamping_block_PVC_v92"/>
+             <triangular vertex1="clamping_block_PVC_v86" vertex2="clamping_block_PVC_v85" vertex3="clamping_block_PVC_v90"/>
+             <triangular vertex1="clamping_block_PVC_v83" vertex2="clamping_block_PVC_v91" vertex3="clamping_block_PVC_v93"/>
+             <triangular vertex1="clamping_block_PVC_v91" vertex2="clamping_block_PVC_v92" vertex3="clamping_block_PVC_v93"/>
+             <triangular vertex1="clamping_block_PVC_v94" vertex2="clamping_block_PVC_v89" vertex3="clamping_block_PVC_v95"/>
+             <triangular vertex1="clamping_block_PVC_v89" vertex2="clamping_block_PVC_v90" vertex3="clamping_block_PVC_v95"/>
+             <triangular vertex1="clamping_block_PVC_v83" vertex2="clamping_block_PVC_v93" vertex3="clamping_block_PVC_v84"/>
+             <triangular vertex1="clamping_block_PVC_v96" vertex2="clamping_block_PVC_v94" vertex3="clamping_block_PVC_v97"/>
+             <triangular vertex1="clamping_block_PVC_v94" vertex2="clamping_block_PVC_v95" vertex3="clamping_block_PVC_v97"/>
+             <triangular vertex1="clamping_block_PVC_v98" vertex2="clamping_block_PVC_v96" vertex3="clamping_block_PVC_v99"/>
+             <triangular vertex1="clamping_block_PVC_v96" vertex2="clamping_block_PVC_v97" vertex3="clamping_block_PVC_v99"/>
+             <triangular vertex1="clamping_block_PVC_v100" vertex2="clamping_block_PVC_v98" vertex3="clamping_block_PVC_v101"/>
+             <triangular vertex1="clamping_block_PVC_v98" vertex2="clamping_block_PVC_v99" vertex3="clamping_block_PVC_v101"/>
+             <triangular vertex1="clamping_block_PVC_v102" vertex2="clamping_block_PVC_v100" vertex3="clamping_block_PVC_v103"/>
+             <triangular vertex1="clamping_block_PVC_v100" vertex2="clamping_block_PVC_v101" vertex3="clamping_block_PVC_v103"/>
+             <triangular vertex1="clamping_block_PVC_v104" vertex2="clamping_block_PVC_v102" vertex3="clamping_block_PVC_v105"/>
+             <triangular vertex1="clamping_block_PVC_v102" vertex2="clamping_block_PVC_v103" vertex3="clamping_block_PVC_v105"/>
+             <triangular vertex1="clamping_block_PVC_v106" vertex2="clamping_block_PVC_v104" vertex3="clamping_block_PVC_v107"/>
+             <triangular vertex1="clamping_block_PVC_v104" vertex2="clamping_block_PVC_v105" vertex3="clamping_block_PVC_v107"/>
+             <triangular vertex1="clamping_block_PVC_v108" vertex2="clamping_block_PVC_v106" vertex3="clamping_block_PVC_v109"/>
+             <triangular vertex1="clamping_block_PVC_v106" vertex2="clamping_block_PVC_v107" vertex3="clamping_block_PVC_v109"/>
+             <triangular vertex1="clamping_block_PVC_v110" vertex2="clamping_block_PVC_v108" vertex3="clamping_block_PVC_v111"/>
+             <triangular vertex1="clamping_block_PVC_v108" vertex2="clamping_block_PVC_v109" vertex3="clamping_block_PVC_v111"/>
+             <triangular vertex1="clamping_block_PVC_v110" vertex2="clamping_block_PVC_v111" vertex3="clamping_block_PVC_v112"/>
+             <triangular vertex1="clamping_block_PVC_v113" vertex2="clamping_block_PVC_v110" vertex3="clamping_block_PVC_v112"/>
+             <triangular vertex1="clamping_block_PVC_v114" vertex2="clamping_block_PVC_v113" vertex3="clamping_block_PVC_v115"/>
+             <triangular vertex1="clamping_block_PVC_v113" vertex2="clamping_block_PVC_v112" vertex3="clamping_block_PVC_v115"/>
+             <triangular vertex1="clamping_block_PVC_v116" vertex2="clamping_block_PVC_v114" vertex3="clamping_block_PVC_v117"/>
+             <triangular vertex1="clamping_block_PVC_v114" vertex2="clamping_block_PVC_v115" vertex3="clamping_block_PVC_v117"/>
+             <triangular vertex1="clamping_block_PVC_v118" vertex2="clamping_block_PVC_v116" vertex3="clamping_block_PVC_v119"/>
+             <triangular vertex1="clamping_block_PVC_v116" vertex2="clamping_block_PVC_v117" vertex3="clamping_block_PVC_v119"/>
+             <triangular vertex1="clamping_block_PVC_v120" vertex2="clamping_block_PVC_v118" vertex3="clamping_block_PVC_v121"/>
+             <triangular vertex1="clamping_block_PVC_v118" vertex2="clamping_block_PVC_v119" vertex3="clamping_block_PVC_v121"/>
+             <triangular vertex1="clamping_block_PVC_v122" vertex2="clamping_block_PVC_v120" vertex3="clamping_block_PVC_v123"/>
+             <triangular vertex1="clamping_block_PVC_v120" vertex2="clamping_block_PVC_v121" vertex3="clamping_block_PVC_v123"/>
+             <triangular vertex1="clamping_block_PVC_v124" vertex2="clamping_block_PVC_v122" vertex3="clamping_block_PVC_v125"/>
+             <triangular vertex1="clamping_block_PVC_v122" vertex2="clamping_block_PVC_v123" vertex3="clamping_block_PVC_v125"/>
+             <triangular vertex1="clamping_block_PVC_v78" vertex2="clamping_block_PVC_v124" vertex3="clamping_block_PVC_v80"/>
+             <triangular vertex1="clamping_block_PVC_v124" vertex2="clamping_block_PVC_v125" vertex3="clamping_block_PVC_v80"/>
+             <triangular vertex1="clamping_block_PVC_v126" vertex2="clamping_block_PVC_v127" vertex3="clamping_block_PVC_v128"/>
+             <triangular vertex1="clamping_block_PVC_v127" vertex2="clamping_block_PVC_v129" vertex3="clamping_block_PVC_v128"/>
+             <triangular vertex1="clamping_block_PVC_v130" vertex2="clamping_block_PVC_v126" vertex3="clamping_block_PVC_v131"/>
+             <triangular vertex1="clamping_block_PVC_v126" vertex2="clamping_block_PVC_v128" vertex3="clamping_block_PVC_v131"/>
+             <triangular vertex1="clamping_block_PVC_v132" vertex2="clamping_block_PVC_v133" vertex3="clamping_block_PVC_v134"/>
+             <triangular vertex1="clamping_block_PVC_v135" vertex2="clamping_block_PVC_v132" vertex3="clamping_block_PVC_v134"/>
+             <triangular vertex1="clamping_block_PVC_v136" vertex2="clamping_block_PVC_v130" vertex3="clamping_block_PVC_v137"/>
+             <triangular vertex1="clamping_block_PVC_v130" vertex2="clamping_block_PVC_v131" vertex3="clamping_block_PVC_v137"/>
+             <triangular vertex1="clamping_block_PVC_v138" vertex2="clamping_block_PVC_v135" vertex3="clamping_block_PVC_v139"/>
+             <triangular vertex1="clamping_block_PVC_v140" vertex2="clamping_block_PVC_v136" vertex3="clamping_block_PVC_v141"/>
+             <triangular vertex1="clamping_block_PVC_v136" vertex2="clamping_block_PVC_v137" vertex3="clamping_block_PVC_v141"/>
+             <triangular vertex1="clamping_block_PVC_v135" vertex2="clamping_block_PVC_v134" vertex3="clamping_block_PVC_v139"/>
+             <triangular vertex1="clamping_block_PVC_v132" vertex2="clamping_block_PVC_v140" vertex3="clamping_block_PVC_v142"/>
+             <triangular vertex1="clamping_block_PVC_v140" vertex2="clamping_block_PVC_v141" vertex3="clamping_block_PVC_v142"/>
+             <triangular vertex1="clamping_block_PVC_v143" vertex2="clamping_block_PVC_v138" vertex3="clamping_block_PVC_v144"/>
+             <triangular vertex1="clamping_block_PVC_v138" vertex2="clamping_block_PVC_v139" vertex3="clamping_block_PVC_v144"/>
+             <triangular vertex1="clamping_block_PVC_v132" vertex2="clamping_block_PVC_v142" vertex3="clamping_block_PVC_v133"/>
+             <triangular vertex1="clamping_block_PVC_v145" vertex2="clamping_block_PVC_v143" vertex3="clamping_block_PVC_v146"/>
+             <triangular vertex1="clamping_block_PVC_v143" vertex2="clamping_block_PVC_v144" vertex3="clamping_block_PVC_v146"/>
+             <triangular vertex1="clamping_block_PVC_v147" vertex2="clamping_block_PVC_v145" vertex3="clamping_block_PVC_v148"/>
+             <triangular vertex1="clamping_block_PVC_v145" vertex2="clamping_block_PVC_v146" vertex3="clamping_block_PVC_v148"/>
+             <triangular vertex1="clamping_block_PVC_v149" vertex2="clamping_block_PVC_v147" vertex3="clamping_block_PVC_v150"/>
+             <triangular vertex1="clamping_block_PVC_v147" vertex2="clamping_block_PVC_v148" vertex3="clamping_block_PVC_v150"/>
+             <triangular vertex1="clamping_block_PVC_v151" vertex2="clamping_block_PVC_v149" vertex3="clamping_block_PVC_v152"/>
+             <triangular vertex1="clamping_block_PVC_v149" vertex2="clamping_block_PVC_v150" vertex3="clamping_block_PVC_v152"/>
+             <triangular vertex1="clamping_block_PVC_v153" vertex2="clamping_block_PVC_v151" vertex3="clamping_block_PVC_v154"/>
+             <triangular vertex1="clamping_block_PVC_v151" vertex2="clamping_block_PVC_v152" vertex3="clamping_block_PVC_v154"/>
+             <triangular vertex1="clamping_block_PVC_v155" vertex2="clamping_block_PVC_v153" vertex3="clamping_block_PVC_v156"/>
+             <triangular vertex1="clamping_block_PVC_v153" vertex2="clamping_block_PVC_v154" vertex3="clamping_block_PVC_v156"/>
+             <triangular vertex1="clamping_block_PVC_v157" vertex2="clamping_block_PVC_v155" vertex3="clamping_block_PVC_v158"/>
+             <triangular vertex1="clamping_block_PVC_v155" vertex2="clamping_block_PVC_v156" vertex3="clamping_block_PVC_v158"/>
+             <triangular vertex1="clamping_block_PVC_v159" vertex2="clamping_block_PVC_v157" vertex3="clamping_block_PVC_v160"/>
+             <triangular vertex1="clamping_block_PVC_v157" vertex2="clamping_block_PVC_v158" vertex3="clamping_block_PVC_v160"/>
+             <triangular vertex1="clamping_block_PVC_v159" vertex2="clamping_block_PVC_v160" vertex3="clamping_block_PVC_v161"/>
+             <triangular vertex1="clamping_block_PVC_v162" vertex2="clamping_block_PVC_v159" vertex3="clamping_block_PVC_v161"/>
+             <triangular vertex1="clamping_block_PVC_v163" vertex2="clamping_block_PVC_v162" vertex3="clamping_block_PVC_v164"/>
+             <triangular vertex1="clamping_block_PVC_v162" vertex2="clamping_block_PVC_v161" vertex3="clamping_block_PVC_v164"/>
+             <triangular vertex1="clamping_block_PVC_v165" vertex2="clamping_block_PVC_v163" vertex3="clamping_block_PVC_v166"/>
+             <triangular vertex1="clamping_block_PVC_v163" vertex2="clamping_block_PVC_v164" vertex3="clamping_block_PVC_v166"/>
+             <triangular vertex1="clamping_block_PVC_v167" vertex2="clamping_block_PVC_v165" vertex3="clamping_block_PVC_v168"/>
+             <triangular vertex1="clamping_block_PVC_v165" vertex2="clamping_block_PVC_v166" vertex3="clamping_block_PVC_v168"/>
+             <triangular vertex1="clamping_block_PVC_v169" vertex2="clamping_block_PVC_v167" vertex3="clamping_block_PVC_v170"/>
+             <triangular vertex1="clamping_block_PVC_v167" vertex2="clamping_block_PVC_v168" vertex3="clamping_block_PVC_v170"/>
+             <triangular vertex1="clamping_block_PVC_v171" vertex2="clamping_block_PVC_v169" vertex3="clamping_block_PVC_v172"/>
+             <triangular vertex1="clamping_block_PVC_v169" vertex2="clamping_block_PVC_v170" vertex3="clamping_block_PVC_v172"/>
+             <triangular vertex1="clamping_block_PVC_v173" vertex2="clamping_block_PVC_v171" vertex3="clamping_block_PVC_v174"/>
+             <triangular vertex1="clamping_block_PVC_v171" vertex2="clamping_block_PVC_v172" vertex3="clamping_block_PVC_v174"/>
+             <triangular vertex1="clamping_block_PVC_v127" vertex2="clamping_block_PVC_v173" vertex3="clamping_block_PVC_v129"/>
+             <triangular vertex1="clamping_block_PVC_v173" vertex2="clamping_block_PVC_v174" vertex3="clamping_block_PVC_v129"/>
+             <triangular vertex1="clamping_block_PVC_v89" vertex2="clamping_block_PVC_v157" vertex3="clamping_block_PVC_v86"/>
+             <triangular vertex1="clamping_block_PVC_v89" vertex2="clamping_block_PVC_v155" vertex3="clamping_block_PVC_v157"/>
+             <triangular vertex1="clamping_block_PVC_v136" vertex2="clamping_block_PVC_v175" vertex3="clamping_block_PVC_v130"/>
+             <triangular vertex1="clamping_block_PVC_v126" vertex2="clamping_block_PVC_v130" vertex3="clamping_block_PVC_v175"/>
+             <triangular vertex1="clamping_block_PVC_v94" vertex2="clamping_block_PVC_v155" vertex3="clamping_block_PVC_v89"/>
+             <triangular vertex1="clamping_block_PVC_v140" vertex2="clamping_block_PVC_v175" vertex3="clamping_block_PVC_v136"/>
+             <triangular vertex1="clamping_block_PVC_v176" vertex2="clamping_block_PVC_v118" vertex3="clamping_block_PVC_v120"/>
+             <triangular vertex1="clamping_block_PVC_v176" vertex2="clamping_block_PVC_v120" vertex3="clamping_block_PVC_v122"/>
+             <triangular vertex1="clamping_block_PVC_v176" vertex2="clamping_block_PVC_v122" vertex3="clamping_block_PVC_v124"/>
+             <triangular vertex1="clamping_block_PVC_v176" vertex2="clamping_block_PVC_v124" vertex3="clamping_block_PVC_v78"/>
+             <triangular vertex1="clamping_block_PVC_v176" vertex2="clamping_block_PVC_v78" vertex3="clamping_block_PVC_v77"/>
+             <triangular vertex1="clamping_block_PVC_v176" vertex2="clamping_block_PVC_v77" vertex3="clamping_block_PVC_v175"/>
+             <triangular vertex1="clamping_block_PVC_v127" vertex2="clamping_block_PVC_v126" vertex3="clamping_block_PVC_v175"/>
+             <triangular vertex1="clamping_block_PVC_v132" vertex2="clamping_block_PVC_v175" vertex3="clamping_block_PVC_v140"/>
+             <triangular vertex1="clamping_block_PVC_v116" vertex2="clamping_block_PVC_v118" vertex3="clamping_block_PVC_v176"/>
+             <triangular vertex1="clamping_block_PVC_v173" vertex2="clamping_block_PVC_v127" vertex3="clamping_block_PVC_v175"/>
+             <triangular vertex1="clamping_block_PVC_v171" vertex2="clamping_block_PVC_v173" vertex3="clamping_block_PVC_v175"/>
+             <triangular vertex1="clamping_block_PVC_v114" vertex2="clamping_block_PVC_v116" vertex3="clamping_block_PVC_v176"/>
+             <triangular vertex1="clamping_block_PVC_v169" vertex2="clamping_block_PVC_v171" vertex3="clamping_block_PVC_v175"/>
+             <triangular vertex1="clamping_block_PVC_v113" vertex2="clamping_block_PVC_v114" vertex3="clamping_block_PVC_v176"/>
+             <triangular vertex1="clamping_block_PVC_v177" vertex2="clamping_block_PVC_v132" vertex3="clamping_block_PVC_v135"/>
+             <triangular vertex1="clamping_block_PVC_v177" vertex2="clamping_block_PVC_v135" vertex3="clamping_block_PVC_v138"/>
+             <triangular vertex1="clamping_block_PVC_v177" vertex2="clamping_block_PVC_v175" vertex3="clamping_block_PVC_v132"/>
+             <triangular vertex1="clamping_block_PVC_v143" vertex2="clamping_block_PVC_v177" vertex3="clamping_block_PVC_v138"/>
+             <triangular vertex1="clamping_block_PVC_v145" vertex2="clamping_block_PVC_v177" vertex3="clamping_block_PVC_v143"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v96" vertex3="clamping_block_PVC_v98"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v98" vertex3="clamping_block_PVC_v100"/>
+             <triangular vertex1="clamping_block_PVC_v147" vertex2="clamping_block_PVC_v177" vertex3="clamping_block_PVC_v145"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v100" vertex3="clamping_block_PVC_v102"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v102" vertex3="clamping_block_PVC_v104"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v104" vertex3="clamping_block_PVC_v106"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v106" vertex3="clamping_block_PVC_v108"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v108" vertex3="clamping_block_PVC_v110"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v110" vertex3="clamping_block_PVC_v113"/>
+             <triangular vertex1="clamping_block_PVC_v149" vertex2="clamping_block_PVC_v177" vertex3="clamping_block_PVC_v147"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v113" vertex3="clamping_block_PVC_v176"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v177" vertex3="clamping_block_PVC_v153"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v153" vertex3="clamping_block_PVC_v155"/>
+             <triangular vertex1="clamping_block_PVC_v178" vertex2="clamping_block_PVC_v155" vertex3="clamping_block_PVC_v96"/>
+             <triangular vertex1="clamping_block_PVC_v96" vertex2="clamping_block_PVC_v155" vertex3="clamping_block_PVC_v94"/>
+             <triangular vertex1="clamping_block_PVC_v151" vertex2="clamping_block_PVC_v177" vertex3="clamping_block_PVC_v149"/>
+             <triangular vertex1="clamping_block_PVC_v153" vertex2="clamping_block_PVC_v177" vertex3="clamping_block_PVC_v151"/>
+             <triangular vertex1="clamping_block_PVC_v87" vertex2="clamping_block_PVC_v165" vertex3="clamping_block_PVC_v167"/>
+             <triangular vertex1="clamping_block_PVC_v87" vertex2="clamping_block_PVC_v167" vertex3="clamping_block_PVC_v81"/>
+             <triangular vertex1="clamping_block_PVC_v77" vertex2="clamping_block_PVC_v167" vertex3="clamping_block_PVC_v169"/>
+             <triangular vertex1="clamping_block_PVC_v77" vertex2="clamping_block_PVC_v169" vertex3="clamping_block_PVC_v175"/>
+             <triangular vertex1="clamping_block_PVC_v77" vertex2="clamping_block_PVC_v81" vertex3="clamping_block_PVC_v167"/>
+             <triangular vertex1="clamping_block_PVC_v91" vertex2="clamping_block_PVC_v162" vertex3="clamping_block_PVC_v163"/>
+             <triangular vertex1="clamping_block_PVC_v91" vertex2="clamping_block_PVC_v163" vertex3="clamping_block_PVC_v165"/>
+             <triangular vertex1="clamping_block_PVC_v91" vertex2="clamping_block_PVC_v165" vertex3="clamping_block_PVC_v87"/>
+             <triangular vertex1="clamping_block_PVC_v83" vertex2="clamping_block_PVC_v162" vertex3="clamping_block_PVC_v91"/>
+             <triangular vertex1="clamping_block_PVC_v86" vertex2="clamping_block_PVC_v157" vertex3="clamping_block_PVC_v159"/>
+             <triangular vertex1="clamping_block_PVC_v86" vertex2="clamping_block_PVC_v159" vertex3="clamping_block_PVC_v162"/>
+             <triangular vertex1="clamping_block_PVC_v86" vertex2="clamping_block_PVC_v162" vertex3="clamping_block_PVC_v83"/>
+             <triangular vertex1="clamping_block_PVC_v177" vertex2="clamping_block_PVC_v179" vertex3="clamping_block_PVC_v175"/>
+             <triangular vertex1="clamping_block_PVC_v177" vertex2="clamping_block_PVC_v180" vertex3="clamping_block_PVC_v179"/>
+             <triangular vertex1="clamping_block_PVC_v168" vertex2="clamping_block_PVC_v181" vertex3="clamping_block_PVC_v170"/>
+             <triangular vertex1="clamping_block_PVC_v172" vertex2="clamping_block_PVC_v170" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v166" vertex2="clamping_block_PVC_v181" vertex3="clamping_block_PVC_v168"/>
+             <triangular vertex1="clamping_block_PVC_v174" vertex2="clamping_block_PVC_v172" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v164" vertex2="clamping_block_PVC_v181" vertex3="clamping_block_PVC_v166"/>
+             <triangular vertex1="clamping_block_PVC_v161" vertex2="clamping_block_PVC_v182" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v161" vertex2="clamping_block_PVC_v181" vertex3="clamping_block_PVC_v164"/>
+             <triangular vertex1="clamping_block_PVC_v160" vertex2="clamping_block_PVC_v182" vertex3="clamping_block_PVC_v161"/>
+             <triangular vertex1="clamping_block_PVC_v158" vertex2="clamping_block_PVC_v182" vertex3="clamping_block_PVC_v160"/>
+             <triangular vertex1="clamping_block_PVC_v179" vertex2="clamping_block_PVC_v131" vertex3="clamping_block_PVC_v128"/>
+             <triangular vertex1="clamping_block_PVC_v179" vertex2="clamping_block_PVC_v128" vertex3="clamping_block_PVC_v129"/>
+             <triangular vertex1="clamping_block_PVC_v179" vertex2="clamping_block_PVC_v129" vertex3="clamping_block_PVC_v174"/>
+             <triangular vertex1="clamping_block_PVC_v179" vertex2="clamping_block_PVC_v174" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v137" vertex2="clamping_block_PVC_v131" vertex3="clamping_block_PVC_v179"/>
+             <triangular vertex1="clamping_block_PVC_v156" vertex2="clamping_block_PVC_v182" vertex3="clamping_block_PVC_v158"/>
+             <triangular vertex1="clamping_block_PVC_v141" vertex2="clamping_block_PVC_v137" vertex3="clamping_block_PVC_v179"/>
+             <triangular vertex1="clamping_block_PVC_v154" vertex2="clamping_block_PVC_v182" vertex3="clamping_block_PVC_v156"/>
+             <triangular vertex1="clamping_block_PVC_v142" vertex2="clamping_block_PVC_v141" vertex3="clamping_block_PVC_v179"/>
+             <triangular vertex1="clamping_block_PVC_v152" vertex2="clamping_block_PVC_v182" vertex3="clamping_block_PVC_v154"/>
+             <triangular vertex1="clamping_block_PVC_v133" vertex2="clamping_block_PVC_v142" vertex3="clamping_block_PVC_v179"/>
+             <triangular vertex1="clamping_block_PVC_v180" vertex2="clamping_block_PVC_v152" vertex3="clamping_block_PVC_v150"/>
+             <triangular vertex1="clamping_block_PVC_v180" vertex2="clamping_block_PVC_v150" vertex3="clamping_block_PVC_v148"/>
+             <triangular vertex1="clamping_block_PVC_v180" vertex2="clamping_block_PVC_v148" vertex3="clamping_block_PVC_v146"/>
+             <triangular vertex1="clamping_block_PVC_v180" vertex2="clamping_block_PVC_v146" vertex3="clamping_block_PVC_v144"/>
+             <triangular vertex1="clamping_block_PVC_v180" vertex2="clamping_block_PVC_v144" vertex3="clamping_block_PVC_v139"/>
+             <triangular vertex1="clamping_block_PVC_v180" vertex2="clamping_block_PVC_v139" vertex3="clamping_block_PVC_v134"/>
+             <triangular vertex1="clamping_block_PVC_v180" vertex2="clamping_block_PVC_v134" vertex3="clamping_block_PVC_v133"/>
+             <triangular vertex1="clamping_block_PVC_v180" vertex2="clamping_block_PVC_v182" vertex3="clamping_block_PVC_v152"/>
+             <triangular vertex1="clamping_block_PVC_v180" vertex2="clamping_block_PVC_v133" vertex3="clamping_block_PVC_v179"/>
+             <triangular vertex1="clamping_block_PVC_v72" vertex2="clamping_block_PVC_v183" vertex3="clamping_block_PVC_v73"/>
+             <triangular vertex1="clamping_block_PVC_v74" vertex2="clamping_block_PVC_v73" vertex3="clamping_block_PVC_v183"/>
+             <triangular vertex1="clamping_block_PVC_v71" vertex2="clamping_block_PVC_v183" vertex3="clamping_block_PVC_v72"/>
+             <triangular vertex1="clamping_block_PVC_v75" vertex2="clamping_block_PVC_v74" vertex3="clamping_block_PVC_v183"/>
+             <triangular vertex1="clamping_block_PVC_v70" vertex2="clamping_block_PVC_v183" vertex3="clamping_block_PVC_v71"/>
+             <triangular vertex1="clamping_block_PVC_v76" vertex2="clamping_block_PVC_v75" vertex3="clamping_block_PVC_v183"/>
+             <triangular vertex1="clamping_block_PVC_v69" vertex2="clamping_block_PVC_v183" vertex3="clamping_block_PVC_v70"/>
+             <triangular vertex1="clamping_block_PVC_v181" vertex2="clamping_block_PVC_v76" vertex3="clamping_block_PVC_v183"/>
+             <triangular vertex1="clamping_block_PVC_v52" vertex2="clamping_block_PVC_v76" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v53" vertex2="clamping_block_PVC_v52" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v55" vertex2="clamping_block_PVC_v53" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v57" vertex2="clamping_block_PVC_v55" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v59" vertex2="clamping_block_PVC_v57" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v184" vertex2="clamping_block_PVC_v69" vertex3="clamping_block_PVC_v68"/>
+             <triangular vertex1="clamping_block_PVC_v184" vertex2="clamping_block_PVC_v68" vertex3="clamping_block_PVC_v67"/>
+             <triangular vertex1="clamping_block_PVC_v184" vertex2="clamping_block_PVC_v67" vertex3="clamping_block_PVC_v66"/>
+             <triangular vertex1="clamping_block_PVC_v184" vertex2="clamping_block_PVC_v66" vertex3="clamping_block_PVC_v65"/>
+             <triangular vertex1="clamping_block_PVC_v184" vertex2="clamping_block_PVC_v65" vertex3="clamping_block_PVC_v64"/>
+             <triangular vertex1="clamping_block_PVC_v184" vertex2="clamping_block_PVC_v183" vertex3="clamping_block_PVC_v69"/>
+             <triangular vertex1="clamping_block_PVC_v54" vertex2="clamping_block_PVC_v59" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v63" vertex2="clamping_block_PVC_v184" vertex3="clamping_block_PVC_v64"/>
+             <triangular vertex1="clamping_block_PVC_v182" vertex2="clamping_block_PVC_v63" vertex3="clamping_block_PVC_v62"/>
+             <triangular vertex1="clamping_block_PVC_v182" vertex2="clamping_block_PVC_v62" vertex3="clamping_block_PVC_v61"/>
+             <triangular vertex1="clamping_block_PVC_v182" vertex2="clamping_block_PVC_v61" vertex3="clamping_block_PVC_v60"/>
+             <triangular vertex1="clamping_block_PVC_v182" vertex2="clamping_block_PVC_v60" vertex3="clamping_block_PVC_v58"/>
+             <triangular vertex1="clamping_block_PVC_v182" vertex2="clamping_block_PVC_v58" vertex3="clamping_block_PVC_v56"/>
+             <triangular vertex1="clamping_block_PVC_v182" vertex2="clamping_block_PVC_v56" vertex3="clamping_block_PVC_v54"/>
+             <triangular vertex1="clamping_block_PVC_v182" vertex2="clamping_block_PVC_v54" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v182" vertex2="clamping_block_PVC_v184" vertex3="clamping_block_PVC_v63"/>
+             <triangular vertex1="clamping_block_PVC_v184" vertex2="clamping_block_PVC_v185" vertex3="clamping_block_PVC_v183"/>
+             <triangular vertex1="clamping_block_PVC_v184" vertex2="clamping_block_PVC_v186" vertex3="clamping_block_PVC_v185"/>
+             <triangular vertex1="clamping_block_PVC_v186" vertex2="clamping_block_PVC_v187" vertex3="clamping_block_PVC_v185"/>
+             <triangular vertex1="clamping_block_PVC_v186" vertex2="clamping_block_PVC_v188" vertex3="clamping_block_PVC_v187"/>
+             <triangular vertex1="clamping_block_PVC_v188" vertex2="clamping_block_PVC_v189" vertex3="clamping_block_PVC_v187"/>
+             <triangular vertex1="clamping_block_PVC_v188" vertex2="clamping_block_PVC_v190" vertex3="clamping_block_PVC_v189"/>
+             <triangular vertex1="clamping_block_PVC_v190" vertex2="clamping_block_PVC_v191" vertex3="clamping_block_PVC_v189"/>
+             <triangular vertex1="clamping_block_PVC_v190" vertex2="clamping_block_PVC_v192" vertex3="clamping_block_PVC_v191"/>
+             <triangular vertex1="clamping_block_PVC_v119" vertex2="clamping_block_PVC_v193" vertex3="clamping_block_PVC_v121"/>
+             <triangular vertex1="clamping_block_PVC_v123" vertex2="clamping_block_PVC_v121" vertex3="clamping_block_PVC_v193"/>
+             <triangular vertex1="clamping_block_PVC_v117" vertex2="clamping_block_PVC_v193" vertex3="clamping_block_PVC_v119"/>
+             <triangular vertex1="clamping_block_PVC_v125" vertex2="clamping_block_PVC_v123" vertex3="clamping_block_PVC_v193"/>
+             <triangular vertex1="clamping_block_PVC_v115" vertex2="clamping_block_PVC_v193" vertex3="clamping_block_PVC_v117"/>
+             <triangular vertex1="clamping_block_PVC_v80" vertex2="clamping_block_PVC_v125" vertex3="clamping_block_PVC_v193"/>
+             <triangular vertex1="clamping_block_PVC_v112" vertex2="clamping_block_PVC_v193" vertex3="clamping_block_PVC_v115"/>
+             <triangular vertex1="clamping_block_PVC_v191" vertex2="clamping_block_PVC_v82" vertex3="clamping_block_PVC_v79"/>
+             <triangular vertex1="clamping_block_PVC_v191" vertex2="clamping_block_PVC_v79" vertex3="clamping_block_PVC_v80"/>
+             <triangular vertex1="clamping_block_PVC_v191" vertex2="clamping_block_PVC_v80" vertex3="clamping_block_PVC_v193"/>
+             <triangular vertex1="clamping_block_PVC_v194" vertex2="clamping_block_PVC_v112" vertex3="clamping_block_PVC_v111"/>
+             <triangular vertex1="clamping_block_PVC_v194" vertex2="clamping_block_PVC_v111" vertex3="clamping_block_PVC_v109"/>
+             <triangular vertex1="clamping_block_PVC_v194" vertex2="clamping_block_PVC_v193" vertex3="clamping_block_PVC_v112"/>
+             <triangular vertex1="clamping_block_PVC_v88" vertex2="clamping_block_PVC_v82" vertex3="clamping_block_PVC_v191"/>
+             <triangular vertex1="clamping_block_PVC_v107" vertex2="clamping_block_PVC_v194" vertex3="clamping_block_PVC_v109"/>
+             <triangular vertex1="clamping_block_PVC_v92" vertex2="clamping_block_PVC_v88" vertex3="clamping_block_PVC_v191"/>
+             <triangular vertex1="clamping_block_PVC_v105" vertex2="clamping_block_PVC_v194" vertex3="clamping_block_PVC_v107"/>
+             <triangular vertex1="clamping_block_PVC_v93" vertex2="clamping_block_PVC_v92" vertex3="clamping_block_PVC_v191"/>
+             <triangular vertex1="clamping_block_PVC_v103" vertex2="clamping_block_PVC_v194" vertex3="clamping_block_PVC_v105"/>
+             <triangular vertex1="clamping_block_PVC_v84" vertex2="clamping_block_PVC_v93" vertex3="clamping_block_PVC_v191"/>
+             <triangular vertex1="clamping_block_PVC_v101" vertex2="clamping_block_PVC_v194" vertex3="clamping_block_PVC_v103"/>
+             <triangular vertex1="clamping_block_PVC_v192" vertex2="clamping_block_PVC_v101" vertex3="clamping_block_PVC_v99"/>
+             <triangular vertex1="clamping_block_PVC_v192" vertex2="clamping_block_PVC_v99" vertex3="clamping_block_PVC_v97"/>
+             <triangular vertex1="clamping_block_PVC_v192" vertex2="clamping_block_PVC_v97" vertex3="clamping_block_PVC_v95"/>
+             <triangular vertex1="clamping_block_PVC_v192" vertex2="clamping_block_PVC_v95" vertex3="clamping_block_PVC_v90"/>
+             <triangular vertex1="clamping_block_PVC_v192" vertex2="clamping_block_PVC_v90" vertex3="clamping_block_PVC_v85"/>
+             <triangular vertex1="clamping_block_PVC_v192" vertex2="clamping_block_PVC_v85" vertex3="clamping_block_PVC_v84"/>
+             <triangular vertex1="clamping_block_PVC_v192" vertex2="clamping_block_PVC_v84" vertex3="clamping_block_PVC_v191"/>
+             <triangular vertex1="clamping_block_PVC_v192" vertex2="clamping_block_PVC_v194" vertex3="clamping_block_PVC_v101"/>
+             <triangular vertex1="clamping_block_PVC_v194" vertex2="clamping_block_PVC_v176" vertex3="clamping_block_PVC_v193"/>
+             <triangular vertex1="clamping_block_PVC_v194" vertex2="clamping_block_PVC_v178" vertex3="clamping_block_PVC_v176"/>
+             <triangular vertex1="clamping_block_PVC_v192" vertex2="clamping_block_PVC_v178" vertex3="clamping_block_PVC_v194"/>
+             <triangular vertex1="clamping_block_PVC_v190" vertex2="clamping_block_PVC_v186" vertex3="clamping_block_PVC_v192"/>
+             <triangular vertex1="clamping_block_PVC_v188" vertex2="clamping_block_PVC_v186" vertex3="clamping_block_PVC_v190"/>
+             <triangular vertex1="clamping_block_PVC_v182" vertex2="clamping_block_PVC_v178" vertex3="clamping_block_PVC_v192"/>
+             <triangular vertex1="clamping_block_PVC_v182" vertex2="clamping_block_PVC_v192" vertex3="clamping_block_PVC_v186"/>
+             <triangular vertex1="clamping_block_PVC_v177" vertex2="clamping_block_PVC_v178" vertex3="clamping_block_PVC_v182"/>
+             <triangular vertex1="clamping_block_PVC_v184" vertex2="clamping_block_PVC_v182" vertex3="clamping_block_PVC_v186"/>
+             <triangular vertex1="clamping_block_PVC_v180" vertex2="clamping_block_PVC_v177" vertex3="clamping_block_PVC_v182"/>
+             <triangular vertex1="clamping_block_PVC_v185" vertex2="clamping_block_PVC_v187" vertex3="clamping_block_PVC_v189"/>
+             <triangular vertex1="clamping_block_PVC_v191" vertex2="clamping_block_PVC_v185" vertex3="clamping_block_PVC_v189"/>
+             <triangular vertex1="clamping_block_PVC_v176" vertex2="clamping_block_PVC_v191" vertex3="clamping_block_PVC_v193"/>
+             <triangular vertex1="clamping_block_PVC_v181" vertex2="clamping_block_PVC_v183" vertex3="clamping_block_PVC_v185"/>
+             <triangular vertex1="clamping_block_PVC_v181" vertex2="clamping_block_PVC_v191" vertex3="clamping_block_PVC_v176"/>
+             <triangular vertex1="clamping_block_PVC_v181" vertex2="clamping_block_PVC_v185" vertex3="clamping_block_PVC_v191"/>
+             <triangular vertex1="clamping_block_PVC_v175" vertex2="clamping_block_PVC_v179" vertex3="clamping_block_PVC_v181"/>
+             <triangular vertex1="clamping_block_PVC_v175" vertex2="clamping_block_PVC_v181" vertex3="clamping_block_PVC_v176"/>
+        </tessellated>
+    </solids>
+
+    <structure>
+        <volume name="clamping_block_PVC">
+            <materialref ref="PVC"/>
+            <solidref ref="clamping_block_PVC-SOL"/>
+        </volume>
+    </structure>
+
+    <setup name="Default" version="1.0">
+        <world ref="clamping_block_PVC"/>
+    </setup>
+</gdml>

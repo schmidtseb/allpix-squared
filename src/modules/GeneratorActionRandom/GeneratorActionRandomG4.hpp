@@ -102,9 +102,16 @@ namespace allpix {
         std::uniform_real_distribution<double> uniform_distribution_pyramid;
 
         bool execute_parallel;
+        bool invert_z;
+        int number_of_events;
         int num_parallel;
         int idx;
         int main_idx;
+
+        // Fraction calculation
+        double GetPolynomValue(double x, std::vector<double> parameters);
+
+        std::vector<double> poly_parameters;
     };
 } // namespace allpix
 

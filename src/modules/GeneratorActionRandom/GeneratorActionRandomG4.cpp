@@ -24,6 +24,7 @@
 
 #include "core/config/exceptions.h"
 #include "core/utils/log.h"
+#include "core/utils/unit.h"
 #include "tools/geant4.h"
 
 #include <TBranchElement.h>
@@ -88,8 +89,18 @@ GeneratorActionRandomG4::GeneratorActionRandomG4(const Configuration& config)
         source_position = Eigen::Vector3d(beam_pos_conf.x(), beam_pos_conf.y(), beam_pos_conf.z());
     }
 
+    // Get number of events to simulate
+    number_of_events = config.get<int>("number_of_events");
+
     // Use energy only?
-    energy_only = config.get<bool>("energy_only", "false");
+    energy_only = config.get<bool>("energy_only", false);
+
+    // Invert z?
+    if (config.get<bool>("invert_z", false)) {
+        invert_z = true;
+    } else {
+        invert_z = false;
+    } 
 
     // Initialize random stuff
     InitRandom(config);
@@ -112,11 +123,6 @@ void GeneratorActionRandomG4::InitSource(const Configuration& config, G4Particle
     // Set energy parameters
     single_source->GetEneDist()->SetEnergyDisType(config.get<std::string>("energy_dis_type", "Mono"));
 
-    // Get bounding box dimensions
-    // Position of top right corner
-    bounding_box_x = root_tree->GetMaximum("x");
-    bounding_box_y = root_tree->GetMaximum("y");
-
     // Get source offset
     G4ThreeVector source_offset = config.get<G4ThreeVector>("offset", G4ThreeVector(0, 0, 0));
     x_offset = source_offset.x();
@@ -128,7 +134,7 @@ void GeneratorActionRandomG4::InitSource(const Configuration& config, G4Particle
 
     // Invert the z-axis? 
     // No need to invert x- and y-axes due to symmetries
-    if (config.get<bool>("invert_z", false)) {
+    if (invert_z) {
         z_invert = -1;
     } else {
         z_invert = 1;
@@ -147,9 +153,14 @@ void GeneratorActionRandomG4::InitRandom(const Configuration& config) {
     num_entries = root_tree->GetEntries();
     LOG(INFO) << "Number of entries: " << num_entries;
 
+    // Get bounding box dimensions
+    // Position of top right corner
+    bounding_box_x = root_tree->GetMaximum("x");
+    bounding_box_y = root_tree->GetMaximum("y");
+
     // Get attributes
     root_tree->SetBranchAddress(config.get<std::string>("E_attribute").c_str(), &E_branch, nullptr);
-    if (energy_only) {
+    if (!energy_only) {
         root_tree->SetBranchAddress(config.get<std::string>("x_attribute").c_str(), &x_branch, nullptr);
         root_tree->SetBranchAddress(config.get<std::string>("y_attribute").c_str(), &y_branch, nullptr);
         root_tree->SetBranchAddress(config.get<std::string>("z_attribute").c_str(), &z_branch, nullptr);
@@ -186,16 +197,49 @@ void GeneratorActionRandomG4::InitRandom(const Configuration& config) {
 
     // Create binomial random generator
     execute_parallel = false;
-    double probability = config.get<double>("parallel_source_intensity");
-    std::binomial_distribution<int> binom_dist(static_cast<int>(num_entries), probability);
+
+    double probability = 1.;
+    if(config.has("poly_parameters")) {
+        poly_parameters = config.getArray<double>("poly_parameters");
+        double bounding_box_area = 2 * bounding_box_x * 2 * bounding_box_y / (std::pow(Units::get(1., "mm"), 2));
+        double phantom_area = config.get<double>("phantom_area", Units::get(30., "cm") * Units::get(30, "cm"));
+        double energy = config.get<double>("parallel_source_energy") / Units::get(1., "keV");
+
+        // Probability to hit the Dosemeter Bounding Box when irradiating the phantom
+        double pDBB = GetPolynomValue(energy, poly_parameters) / 100;
+        LOG(INFO) << "Probability to hit the Dosemeter Bounding Box: " << pDBB;
+        probability = bounding_box_area / (bounding_box_area * (1 - pDBB) + phantom_area * pDBB);
+        LOG(INFO) << "Fraction of parallel and backscattered events: " << probability;
+
+        double psim = pDBB + bounding_box_area/phantom_area * (1 - pDBB);
+        LOG(INFO) << "Total number of events: " << number_of_events / psim;
+    } else {
+        probability = config.get<double>("parallel_source_intensity", 1.);
+    }
+
+    std::binomial_distribution<int> binom_dist(number_of_events, probability);
     num_parallel = binom_dist(random_generator);
     LOG(INFO) << "Number of parallel events: " << num_parallel;
 
     // Create uniform random generator
-    uniform_distribution = std::uniform_int_distribution<long long int>(1, num_entries);
+    uniform_distribution = std::uniform_int_distribution<long long int>(1, number_of_events);
     LOG(INFO) << "Created random generator";
     idx = 1;
     main_idx = 1;
+}
+
+/* Parallal / Backscattering - Fraction Calculation */
+double GeneratorActionRandomG4::GetPolynomValue(double x, std::vector<double> parameters) {
+    LOG(INFO) << "Polynomials: ";
+    double result = 0;
+    int n = 0;
+    for (auto p : parameters) {
+        LOG(INFO) << p;
+        result += p * std::pow(x, n);
+        n++;
+    }
+
+    return result;
 }
 
 void GeneratorActionRandomG4::GeneratePrimariesRandom() {
@@ -207,7 +251,7 @@ void GeneratorActionRandomG4::GeneratePrimariesRandom() {
 
     // Set energy, position, and direction of particle source to sampled values
     // Energy
-    single_source->GetEneDist()->SetMonoEnergy(E_branch / 1000);
+    single_source->GetEneDist()->SetMonoEnergy(E_branch / 1000.);
     if (energy_only) {
         return;
     }
@@ -233,11 +277,16 @@ void GeneratorActionRandomG4::GeneratePrimariesParallel() {
 
     // Position & Direction
     single_source->GetAngDist()->SetAngDistType("planar");
-    single_source->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(0, 0, 1));
 
     single_source->GetPosDist()->SetPosDisType("Plane");
     single_source->GetPosDist()->SetPosDisShape("Square");
-    single_source->GetPosDist()->SetCentreCoords(G4ThreeVector(0, 0, -10));
+    if (invert_z) {
+        single_source->GetPosDist()->SetCentreCoords(G4ThreeVector(0, 0, -10));
+        single_source->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(0, 0, 1));
+    } else {
+        single_source->GetPosDist()->SetCentreCoords(G4ThreeVector(0, 0, 10));
+        single_source->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(0, 0, -1));
+    }
     single_source->GetPosDist()->SetHalfX(bounding_box_x);
     single_source->GetPosDist()->SetHalfY(bounding_box_y);
 }
@@ -277,9 +326,9 @@ void GeneratorActionRandomG4::GeneratePrimaries(G4Event* event) {
         GeneratePrimariesRandom();
         GeneratePrimariesPyramid();
     } else {
-        if (main_idx <= num_entries - num_parallel)
+        if (main_idx <= (number_of_events - num_parallel)) {
             GeneratePrimariesRandom();
-        else if (!execute_parallel) {
+        } else if (!execute_parallel) {
             GeneratePrimariesParallel();
         }
     }

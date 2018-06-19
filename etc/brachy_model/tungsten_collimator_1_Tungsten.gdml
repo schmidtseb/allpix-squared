@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+    <define>
+        <position name="tungsten_collimator_1_Tungsten_v0" unit="mm" x="22.32082" y="54.59277" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v1" unit="mm" x="22.32082" y="54.59277" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v2" unit="mm" x="22.30037" y="54.46912" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v3" unit="mm" x="22.30037" y="54.46912" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v4" unit="mm" x="22.31131" y="54.34426" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v5" unit="mm" x="22.31131" y="54.34426" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v6" unit="mm" x="22.74955" y="53.95255" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v7" unit="mm" x="22.74955" y="53.95255" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v8" unit="mm" x="22.87484" y="53.95563" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v9" unit="mm" x="22.35296" y="54.22605" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v10" unit="mm" x="22.87484" y="53.95563" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v11" unit="mm" x="22.35296" y="54.22605" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v12" unit="mm" x="22.4227" y="54.12191" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v13" unit="mm" x="22.99544" y="53.98978" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v14" unit="mm" x="22.99544" y="53.98978" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v15" unit="mm" x="22.4227" y="54.12191" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v16" unit="mm" x="22.51614" y="54.03839" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v17" unit="mm" x="22.51614" y="54.03839" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v18" unit="mm" x="23.10375" y="54.05284" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v19" unit="mm" x="23.10375" y="54.05284" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v20" unit="mm" x="22.62742" y="53.98073" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v21" unit="mm" x="22.62742" y="53.98073" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v22" unit="mm" x="23.19298" y="54.14085" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v23" unit="mm" x="23.19298" y="54.14085" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v24" unit="mm" x="23.25751" y="54.24829" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v25" unit="mm" x="23.25751" y="54.24829" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v26" unit="mm" x="23.2933" y="54.36841" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v27" unit="mm" x="23.2933" y="54.36841" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v28" unit="mm" x="23.29809" y="54.49365" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v29" unit="mm" x="23.29809" y="54.49365" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v30" unit="mm" x="23.27159" y="54.61615" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v31" unit="mm" x="23.27159" y="54.61615" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v32" unit="mm" x="23.21545" y="54.72821" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v33" unit="mm" x="23.21545" y="54.72821" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v34" unit="mm" x="23.13321" y="54.82279" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v35" unit="mm" x="23.13321" y="54.82279" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v36" unit="mm" x="23.03003" y="54.89394" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v37" unit="mm" x="23.03003" y="54.89394" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v38" unit="mm" x="22.9124" y="54.9372" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v39" unit="mm" x="22.9124" y="54.9372" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v40" unit="mm" x="22.78771" y="54.94985" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v41" unit="mm" x="22.78771" y="54.94985" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v42" unit="mm" x="22.66379" y="54.93109" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v43" unit="mm" x="22.66379" y="54.93109" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v44" unit="mm" x="22.54843" y="54.8821" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v45" unit="mm" x="22.54843" y="54.8821" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v46" unit="mm" x="22.44887" y="54.80596" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v47" unit="mm" x="22.44887" y="54.80596" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v48" unit="mm" x="22.37138" y="54.70745" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v49" unit="mm" x="22.37138" y="54.70745" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v50" unit="mm" x="16.8136" y="59.6812" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v51" unit="mm" x="17.11633" y="60.00863" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v52" unit="mm" x="17.11633" y="60.00863" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v53" unit="mm" x="16.8136" y="59.6812" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v54" unit="mm" x="16.5297" y="59.33731" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v55" unit="mm" x="16.5297" y="59.33731" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v56" unit="mm" x="16.26553" y="58.97804" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v57" unit="mm" x="16.26553" y="58.97804" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v58" unit="mm" x="16.02192" y="58.60453" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v59" unit="mm" x="22.44254" y="46.50804" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v60" unit="mm" x="21.9978" y="46.54058" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v61" unit="mm" x="21.9978" y="46.54058" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v62" unit="mm" x="16.02192" y="58.60453" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v63" unit="mm" x="22.44254" y="46.50804" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v64" unit="mm" x="15.79964" y="58.21795" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v65" unit="mm" x="22.88841" y="46.50049" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v66" unit="mm" x="22.88841" y="46.50049" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v67" unit="mm" x="15.79964" y="58.21795" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v68" unit="mm" x="15.59938" y="57.8195" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v69" unit="mm" x="23.33401" y="46.51796" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v70" unit="mm" x="23.33401" y="46.51796" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v71" unit="mm" x="15.59938" y="57.8195" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v72" unit="mm" x="15.42178" y="57.41046" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v73" unit="mm" x="15.42178" y="57.41046" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v74" unit="mm" x="23.77792" y="46.56038" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v75" unit="mm" x="23.77792" y="46.56038" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v76" unit="mm" x="15.26739" y="56.9921" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v77" unit="mm" x="15.26739" y="56.9921" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v78" unit="mm" x="15.1367" y="56.56575" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v79" unit="mm" x="24.21876" y="46.62762" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v80" unit="mm" x="24.21876" y="46.62762" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v81" unit="mm" x="15.1367" y="56.56575" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v82" unit="mm" x="24.65513" y="46.71947" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v83" unit="mm" x="24.65513" y="46.71947" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v84" unit="mm" x="15.03013" y="56.13273" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v85" unit="mm" x="15.03013" y="56.13273" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v86" unit="mm" x="25.08567" y="46.83566" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v87" unit="mm" x="25.08567" y="46.83566" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v88" unit="mm" x="14.948" y="55.69443" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v89" unit="mm" x="14.948" y="55.69443" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v90" unit="mm" x="14.89058" y="55.2522" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v91" unit="mm" x="25.50901" y="46.97579" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v92" unit="mm" x="25.50901" y="46.97579" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v93" unit="mm" x="14.89058" y="55.2522" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v94" unit="mm" x="25.92383" y="47.13945" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v95" unit="mm" x="25.92383" y="47.13945" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v96" unit="mm" x="14.85804" y="54.80746" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v97" unit="mm" x="14.85804" y="54.80746" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v98" unit="mm" x="14.85049" y="54.36158" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v99" unit="mm" x="26.32882" y="47.3261" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v100" unit="mm" x="26.32882" y="47.3261" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v101" unit="mm" x="14.85049" y="54.36158" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v102" unit="mm" x="26.72271" y="47.53517" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v103" unit="mm" x="26.72271" y="47.53517" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v104" unit="mm" x="14.86796" y="53.91599" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v105" unit="mm" x="14.86796" y="53.91599" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v106" unit="mm" x="27.10426" y="47.766" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v107" unit="mm" x="27.10426" y="47.766" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v108" unit="mm" x="14.91038" y="53.47208" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v109" unit="mm" x="14.91038" y="53.47208" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v110" unit="mm" x="27.47226" y="48.01786" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v111" unit="mm" x="27.47226" y="48.01786" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v112" unit="mm" x="14.97762" y="53.03124" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v113" unit="mm" x="14.97762" y="53.03124" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v114" unit="mm" x="27.82556" y="48.28995" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v115" unit="mm" x="27.82556" y="48.28995" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v116" unit="mm" x="15.06948" y="52.59487" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v117" unit="mm" x="15.06948" y="52.59487" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v118" unit="mm" x="28.16305" y="48.58142" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v119" unit="mm" x="28.16305" y="48.58142" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v120" unit="mm" x="15.18566" y="52.16433" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v121" unit="mm" x="15.18566" y="52.16433" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v122" unit="mm" x="15.32579" y="51.74099" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v123" unit="mm" x="28.48367" y="48.89137" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v124" unit="mm" x="28.48367" y="48.89137" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v125" unit="mm" x="15.32579" y="51.74099" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v126" unit="mm" x="15.48945" y="51.32617" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v127" unit="mm" x="28.7864" y="49.2188" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v128" unit="mm" x="28.7864" y="49.2188" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v129" unit="mm" x="15.48945" y="51.32617" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v130" unit="mm" x="15.6761" y="50.92118" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v131" unit="mm" x="29.0703" y="49.56269" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v132" unit="mm" x="29.0703" y="49.56269" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v133" unit="mm" x="15.6761" y="50.92118" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v134" unit="mm" x="15.88517" y="50.52729" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v135" unit="mm" x="29.33447" y="49.92196" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v136" unit="mm" x="29.33447" y="49.92196" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v137" unit="mm" x="15.88517" y="50.52729" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v138" unit="mm" x="16.116" y="50.14574" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v139" unit="mm" x="29.57808" y="50.29547" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v140" unit="mm" x="29.57808" y="50.29547" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v141" unit="mm" x="16.116" y="50.14574" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v142" unit="mm" x="16.36786" y="49.77774" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v143" unit="mm" x="29.80036" y="50.68206" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v144" unit="mm" x="29.80036" y="50.68206" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v145" unit="mm" x="16.36786" y="49.77774" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v146" unit="mm" x="16.63995" y="49.42444" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v147" unit="mm" x="16.63995" y="49.42444" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v148" unit="mm" x="30.00062" y="51.0805" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v149" unit="mm" x="30.00062" y="51.0805" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v150" unit="mm" x="16.93143" y="49.08694" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v151" unit="mm" x="16.93143" y="49.08694" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v152" unit="mm" x="30.17822" y="51.48954" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v153" unit="mm" x="30.17822" y="51.48954" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v154" unit="mm" x="30.33261" y="51.9079" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v155" unit="mm" x="17.24137" y="48.76633" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v156" unit="mm" x="17.24137" y="48.76633" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v157" unit="mm" x="30.33261" y="51.9079" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v158" unit="mm" x="17.5688" y="48.4636" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v159" unit="mm" x="17.5688" y="48.4636" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v160" unit="mm" x="30.4633" y="52.33426" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v161" unit="mm" x="17.91269" y="48.1797" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v162" unit="mm" x="30.4633" y="52.33426" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v163" unit="mm" x="30.56987" y="52.76727" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v164" unit="mm" x="17.91269" y="48.1797" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v165" unit="mm" x="30.56987" y="52.76727" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v166" unit="mm" x="18.27196" y="47.91553" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v167" unit="mm" x="18.27196" y="47.91553" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v168" unit="mm" x="30.652" y="53.20557" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v169" unit="mm" x="30.652" y="53.20557" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v170" unit="mm" x="18.64547" y="47.67192" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v171" unit="mm" x="18.64547" y="47.67192" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v172" unit="mm" x="30.70942" y="53.6478" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v173" unit="mm" x="30.70942" y="53.6478" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v174" unit="mm" x="19.03205" y="47.44963" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v175" unit="mm" x="19.03205" y="47.44963" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v176" unit="mm" x="30.74196" y="54.09254" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v177" unit="mm" x="30.74196" y="54.09254" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v178" unit="mm" x="30.74951" y="54.53841" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v179" unit="mm" x="19.4305" y="47.24938" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v180" unit="mm" x="19.4305" y="47.24938" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v181" unit="mm" x="30.74951" y="54.53841" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v182" unit="mm" x="19.83954" y="47.07178" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v183" unit="mm" x="19.83954" y="47.07178" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v184" unit="mm" x="30.73204" y="54.98401" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v185" unit="mm" x="30.73204" y="54.98401" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v186" unit="mm" x="20.2579" y="46.91739" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v187" unit="mm" x="20.2579" y="46.91739" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v188" unit="mm" x="30.68962" y="55.42792" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v189" unit="mm" x="20.68425" y="46.78671" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v190" unit="mm" x="20.68425" y="46.78671" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v191" unit="mm" x="30.68962" y="55.42792" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v192" unit="mm" x="21.11727" y="46.68013" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v193" unit="mm" x="21.11727" y="46.68013" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v194" unit="mm" x="30.62238" y="55.86876" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v195" unit="mm" x="21.55557" y="46.598" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v196" unit="mm" x="21.55557" y="46.598" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v197" unit="mm" x="30.62238" y="55.86876" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v198" unit="mm" x="30.53052" y="56.30513" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v199" unit="mm" x="30.53052" y="56.30513" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v200" unit="mm" x="30.41434" y="56.73566" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v201" unit="mm" x="30.41434" y="56.73566" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v202" unit="mm" x="30.27421" y="57.15901" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v203" unit="mm" x="30.27421" y="57.15901" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v204" unit="mm" x="30.11055" y="57.57383" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v205" unit="mm" x="30.11055" y="57.57383" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v206" unit="mm" x="29.9239" y="57.97882" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v207" unit="mm" x="29.9239" y="57.97882" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v208" unit="mm" x="29.71483" y="58.37271" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v209" unit="mm" x="29.71483" y="58.37271" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v210" unit="mm" x="29.484" y="58.75426" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v211" unit="mm" x="29.484" y="58.75426" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v212" unit="mm" x="29.23215" y="59.12226" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v213" unit="mm" x="29.23215" y="59.12226" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v214" unit="mm" x="28.96005" y="59.47556" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v215" unit="mm" x="28.96005" y="59.47556" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v216" unit="mm" x="28.66857" y="59.81305" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v217" unit="mm" x="28.66857" y="59.81305" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v218" unit="mm" x="28.35863" y="60.13367" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v219" unit="mm" x="28.35863" y="60.13367" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v220" unit="mm" x="28.0312" y="60.43641" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v221" unit="mm" x="28.0312" y="60.43641" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v222" unit="mm" x="27.68731" y="60.7203" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v223" unit="mm" x="27.68731" y="60.7203" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v224" unit="mm" x="27.32804" y="60.98447" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v225" unit="mm" x="27.32804" y="60.98447" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v226" unit="mm" x="26.95453" y="61.22808" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v227" unit="mm" x="26.95453" y="61.22808" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v228" unit="mm" x="26.56794" y="61.45036" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v229" unit="mm" x="26.56794" y="61.45036" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v230" unit="mm" x="26.1695" y="61.65062" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v231" unit="mm" x="26.1695" y="61.65062" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v232" unit="mm" x="25.76046" y="61.82822" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v233" unit="mm" x="25.76046" y="61.82822" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v234" unit="mm" x="25.3421" y="61.98261" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v235" unit="mm" x="25.3421" y="61.98261" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v236" unit="mm" x="24.91575" y="62.1133" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v237" unit="mm" x="24.91575" y="62.1133" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v238" unit="mm" x="24.48273" y="62.21987" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v239" unit="mm" x="24.48273" y="62.21987" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v240" unit="mm" x="24.04443" y="62.302" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v241" unit="mm" x="24.04443" y="62.302" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v242" unit="mm" x="23.6022" y="62.35942" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v243" unit="mm" x="23.6022" y="62.35942" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v244" unit="mm" x="23.15746" y="62.39196" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v245" unit="mm" x="23.15746" y="62.39196" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v246" unit="mm" x="22.71158" y="62.39951" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v247" unit="mm" x="22.71158" y="62.39951" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v248" unit="mm" x="22.26599" y="62.38205" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v249" unit="mm" x="22.26599" y="62.38205" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v250" unit="mm" x="21.82208" y="62.33962" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v251" unit="mm" x="21.82208" y="62.33962" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v252" unit="mm" x="21.38124" y="62.27238" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v253" unit="mm" x="21.38124" y="62.27238" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v254" unit="mm" x="20.94487" y="62.18052" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v255" unit="mm" x="20.94487" y="62.18052" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v256" unit="mm" x="20.51433" y="62.06434" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v257" unit="mm" x="20.51433" y="62.06434" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v258" unit="mm" x="20.09099" y="61.92421" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v259" unit="mm" x="20.09099" y="61.92421" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v260" unit="mm" x="19.67617" y="61.76055" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v261" unit="mm" x="19.67617" y="61.76055" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v262" unit="mm" x="19.27118" y="61.5739" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v263" unit="mm" x="19.27118" y="61.5739" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v264" unit="mm" x="18.87729" y="61.36483" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v265" unit="mm" x="18.87729" y="61.36483" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v266" unit="mm" x="18.49574" y="61.134" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v267" unit="mm" x="18.49574" y="61.134" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v268" unit="mm" x="18.12774" y="60.88214" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v269" unit="mm" x="18.12774" y="60.88214" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v270" unit="mm" x="17.77444" y="60.61005" z="2.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v271" unit="mm" x="17.77444" y="60.61005" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v272" unit="mm" x="17.43695" y="60.31857" z="4.9"/>
+        <position name="tungsten_collimator_1_Tungsten_v273" unit="mm" x="17.43695" y="60.31857" z="2.9"/>
+    </define>
+
+    <solids>
+        <tessellated aunit="deg" lunit="mm" name="tungsten_collimator_1_Tungsten-SOL">
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v0" vertex2="tungsten_collimator_1_Tungsten_v1" vertex3="tungsten_collimator_1_Tungsten_v2"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v3" vertex2="tungsten_collimator_1_Tungsten_v0" vertex3="tungsten_collimator_1_Tungsten_v2"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v3" vertex2="tungsten_collimator_1_Tungsten_v2" vertex3="tungsten_collimator_1_Tungsten_v4"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v5" vertex2="tungsten_collimator_1_Tungsten_v3" vertex3="tungsten_collimator_1_Tungsten_v4"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v6" vertex2="tungsten_collimator_1_Tungsten_v7" vertex3="tungsten_collimator_1_Tungsten_v8"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v5" vertex2="tungsten_collimator_1_Tungsten_v4" vertex3="tungsten_collimator_1_Tungsten_v9"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v10" vertex2="tungsten_collimator_1_Tungsten_v6" vertex3="tungsten_collimator_1_Tungsten_v8"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v11" vertex2="tungsten_collimator_1_Tungsten_v5" vertex3="tungsten_collimator_1_Tungsten_v9"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v11" vertex2="tungsten_collimator_1_Tungsten_v9" vertex3="tungsten_collimator_1_Tungsten_v12"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v13" vertex2="tungsten_collimator_1_Tungsten_v10" vertex3="tungsten_collimator_1_Tungsten_v14"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v15" vertex2="tungsten_collimator_1_Tungsten_v11" vertex3="tungsten_collimator_1_Tungsten_v12"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v10" vertex2="tungsten_collimator_1_Tungsten_v8" vertex3="tungsten_collimator_1_Tungsten_v14"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v16" vertex2="tungsten_collimator_1_Tungsten_v15" vertex3="tungsten_collimator_1_Tungsten_v17"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v15" vertex2="tungsten_collimator_1_Tungsten_v12" vertex3="tungsten_collimator_1_Tungsten_v17"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v18" vertex2="tungsten_collimator_1_Tungsten_v13" vertex3="tungsten_collimator_1_Tungsten_v19"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v13" vertex2="tungsten_collimator_1_Tungsten_v14" vertex3="tungsten_collimator_1_Tungsten_v19"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v16" vertex2="tungsten_collimator_1_Tungsten_v17" vertex3="tungsten_collimator_1_Tungsten_v20"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v21" vertex2="tungsten_collimator_1_Tungsten_v16" vertex3="tungsten_collimator_1_Tungsten_v20"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v22" vertex2="tungsten_collimator_1_Tungsten_v18" vertex3="tungsten_collimator_1_Tungsten_v23"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v18" vertex2="tungsten_collimator_1_Tungsten_v19" vertex3="tungsten_collimator_1_Tungsten_v23"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v6" vertex2="tungsten_collimator_1_Tungsten_v21" vertex3="tungsten_collimator_1_Tungsten_v7"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v21" vertex2="tungsten_collimator_1_Tungsten_v20" vertex3="tungsten_collimator_1_Tungsten_v7"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v24" vertex2="tungsten_collimator_1_Tungsten_v22" vertex3="tungsten_collimator_1_Tungsten_v25"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v22" vertex2="tungsten_collimator_1_Tungsten_v23" vertex3="tungsten_collimator_1_Tungsten_v25"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v26" vertex2="tungsten_collimator_1_Tungsten_v24" vertex3="tungsten_collimator_1_Tungsten_v27"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v24" vertex2="tungsten_collimator_1_Tungsten_v25" vertex3="tungsten_collimator_1_Tungsten_v27"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v28" vertex2="tungsten_collimator_1_Tungsten_v26" vertex3="tungsten_collimator_1_Tungsten_v29"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v26" vertex2="tungsten_collimator_1_Tungsten_v27" vertex3="tungsten_collimator_1_Tungsten_v29"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v30" vertex2="tungsten_collimator_1_Tungsten_v28" vertex3="tungsten_collimator_1_Tungsten_v31"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v28" vertex2="tungsten_collimator_1_Tungsten_v29" vertex3="tungsten_collimator_1_Tungsten_v31"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v32" vertex2="tungsten_collimator_1_Tungsten_v30" vertex3="tungsten_collimator_1_Tungsten_v33"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v30" vertex2="tungsten_collimator_1_Tungsten_v31" vertex3="tungsten_collimator_1_Tungsten_v33"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v34" vertex2="tungsten_collimator_1_Tungsten_v32" vertex3="tungsten_collimator_1_Tungsten_v35"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v32" vertex2="tungsten_collimator_1_Tungsten_v33" vertex3="tungsten_collimator_1_Tungsten_v35"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v36" vertex2="tungsten_collimator_1_Tungsten_v34" vertex3="tungsten_collimator_1_Tungsten_v37"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v34" vertex2="tungsten_collimator_1_Tungsten_v35" vertex3="tungsten_collimator_1_Tungsten_v37"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v36" vertex2="tungsten_collimator_1_Tungsten_v37" vertex3="tungsten_collimator_1_Tungsten_v38"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v39" vertex2="tungsten_collimator_1_Tungsten_v36" vertex3="tungsten_collimator_1_Tungsten_v38"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v39" vertex2="tungsten_collimator_1_Tungsten_v38" vertex3="tungsten_collimator_1_Tungsten_v40"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v41" vertex2="tungsten_collimator_1_Tungsten_v39" vertex3="tungsten_collimator_1_Tungsten_v40"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v41" vertex2="tungsten_collimator_1_Tungsten_v40" vertex3="tungsten_collimator_1_Tungsten_v42"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v43" vertex2="tungsten_collimator_1_Tungsten_v41" vertex3="tungsten_collimator_1_Tungsten_v42"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v43" vertex2="tungsten_collimator_1_Tungsten_v42" vertex3="tungsten_collimator_1_Tungsten_v44"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v45" vertex2="tungsten_collimator_1_Tungsten_v43" vertex3="tungsten_collimator_1_Tungsten_v44"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v45" vertex2="tungsten_collimator_1_Tungsten_v44" vertex3="tungsten_collimator_1_Tungsten_v46"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v47" vertex2="tungsten_collimator_1_Tungsten_v45" vertex3="tungsten_collimator_1_Tungsten_v46"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v47" vertex2="tungsten_collimator_1_Tungsten_v46" vertex3="tungsten_collimator_1_Tungsten_v48"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v49" vertex2="tungsten_collimator_1_Tungsten_v47" vertex3="tungsten_collimator_1_Tungsten_v48"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v49" vertex2="tungsten_collimator_1_Tungsten_v48" vertex3="tungsten_collimator_1_Tungsten_v1"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v0" vertex2="tungsten_collimator_1_Tungsten_v49" vertex3="tungsten_collimator_1_Tungsten_v1"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v50" vertex2="tungsten_collimator_1_Tungsten_v51" vertex3="tungsten_collimator_1_Tungsten_v52"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v50" vertex2="tungsten_collimator_1_Tungsten_v53" vertex3="tungsten_collimator_1_Tungsten_v54"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v50" vertex2="tungsten_collimator_1_Tungsten_v52" vertex3="tungsten_collimator_1_Tungsten_v53"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v55" vertex2="tungsten_collimator_1_Tungsten_v50" vertex3="tungsten_collimator_1_Tungsten_v54"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v55" vertex2="tungsten_collimator_1_Tungsten_v54" vertex3="tungsten_collimator_1_Tungsten_v56"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v57" vertex2="tungsten_collimator_1_Tungsten_v55" vertex3="tungsten_collimator_1_Tungsten_v56"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v57" vertex2="tungsten_collimator_1_Tungsten_v56" vertex3="tungsten_collimator_1_Tungsten_v58"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v59" vertex2="tungsten_collimator_1_Tungsten_v60" vertex3="tungsten_collimator_1_Tungsten_v61"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v62" vertex2="tungsten_collimator_1_Tungsten_v57" vertex3="tungsten_collimator_1_Tungsten_v58"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v59" vertex2="tungsten_collimator_1_Tungsten_v61" vertex3="tungsten_collimator_1_Tungsten_v63"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v64" vertex2="tungsten_collimator_1_Tungsten_v62" vertex3="tungsten_collimator_1_Tungsten_v58"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v65" vertex2="tungsten_collimator_1_Tungsten_v63" vertex3="tungsten_collimator_1_Tungsten_v66"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v65" vertex2="tungsten_collimator_1_Tungsten_v59" vertex3="tungsten_collimator_1_Tungsten_v63"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v64" vertex2="tungsten_collimator_1_Tungsten_v67" vertex3="tungsten_collimator_1_Tungsten_v68"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v64" vertex2="tungsten_collimator_1_Tungsten_v58" vertex3="tungsten_collimator_1_Tungsten_v67"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v69" vertex2="tungsten_collimator_1_Tungsten_v66" vertex3="tungsten_collimator_1_Tungsten_v70"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v71" vertex2="tungsten_collimator_1_Tungsten_v64" vertex3="tungsten_collimator_1_Tungsten_v68"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v69" vertex2="tungsten_collimator_1_Tungsten_v65" vertex3="tungsten_collimator_1_Tungsten_v66"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v72" vertex2="tungsten_collimator_1_Tungsten_v68" vertex3="tungsten_collimator_1_Tungsten_v73"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v74" vertex2="tungsten_collimator_1_Tungsten_v70" vertex3="tungsten_collimator_1_Tungsten_v75"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v74" vertex2="tungsten_collimator_1_Tungsten_v69" vertex3="tungsten_collimator_1_Tungsten_v70"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v72" vertex2="tungsten_collimator_1_Tungsten_v71" vertex3="tungsten_collimator_1_Tungsten_v68"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v76" vertex2="tungsten_collimator_1_Tungsten_v77" vertex3="tungsten_collimator_1_Tungsten_v78"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v76" vertex2="tungsten_collimator_1_Tungsten_v73" vertex3="tungsten_collimator_1_Tungsten_v77"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v79" vertex2="tungsten_collimator_1_Tungsten_v75" vertex3="tungsten_collimator_1_Tungsten_v80"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v79" vertex2="tungsten_collimator_1_Tungsten_v74" vertex3="tungsten_collimator_1_Tungsten_v75"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v76" vertex2="tungsten_collimator_1_Tungsten_v72" vertex3="tungsten_collimator_1_Tungsten_v73"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v81" vertex2="tungsten_collimator_1_Tungsten_v76" vertex3="tungsten_collimator_1_Tungsten_v78"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v82" vertex2="tungsten_collimator_1_Tungsten_v80" vertex3="tungsten_collimator_1_Tungsten_v83"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v82" vertex2="tungsten_collimator_1_Tungsten_v79" vertex3="tungsten_collimator_1_Tungsten_v80"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v84" vertex2="tungsten_collimator_1_Tungsten_v78" vertex3="tungsten_collimator_1_Tungsten_v85"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v86" vertex2="tungsten_collimator_1_Tungsten_v83" vertex3="tungsten_collimator_1_Tungsten_v87"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v84" vertex2="tungsten_collimator_1_Tungsten_v81" vertex3="tungsten_collimator_1_Tungsten_v78"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v86" vertex2="tungsten_collimator_1_Tungsten_v82" vertex3="tungsten_collimator_1_Tungsten_v83"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v88" vertex2="tungsten_collimator_1_Tungsten_v89" vertex3="tungsten_collimator_1_Tungsten_v90"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v88" vertex2="tungsten_collimator_1_Tungsten_v85" vertex3="tungsten_collimator_1_Tungsten_v89"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v91" vertex2="tungsten_collimator_1_Tungsten_v87" vertex3="tungsten_collimator_1_Tungsten_v92"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v88" vertex2="tungsten_collimator_1_Tungsten_v84" vertex3="tungsten_collimator_1_Tungsten_v85"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v91" vertex2="tungsten_collimator_1_Tungsten_v86" vertex3="tungsten_collimator_1_Tungsten_v87"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v93" vertex2="tungsten_collimator_1_Tungsten_v88" vertex3="tungsten_collimator_1_Tungsten_v90"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v94" vertex2="tungsten_collimator_1_Tungsten_v92" vertex3="tungsten_collimator_1_Tungsten_v95"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v94" vertex2="tungsten_collimator_1_Tungsten_v91" vertex3="tungsten_collimator_1_Tungsten_v92"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v96" vertex2="tungsten_collimator_1_Tungsten_v97" vertex3="tungsten_collimator_1_Tungsten_v98"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v96" vertex2="tungsten_collimator_1_Tungsten_v90" vertex3="tungsten_collimator_1_Tungsten_v97"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v96" vertex2="tungsten_collimator_1_Tungsten_v93" vertex3="tungsten_collimator_1_Tungsten_v90"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v99" vertex2="tungsten_collimator_1_Tungsten_v95" vertex3="tungsten_collimator_1_Tungsten_v100"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v99" vertex2="tungsten_collimator_1_Tungsten_v94" vertex3="tungsten_collimator_1_Tungsten_v95"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v101" vertex2="tungsten_collimator_1_Tungsten_v96" vertex3="tungsten_collimator_1_Tungsten_v98"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v102" vertex2="tungsten_collimator_1_Tungsten_v100" vertex3="tungsten_collimator_1_Tungsten_v103"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v102" vertex2="tungsten_collimator_1_Tungsten_v99" vertex3="tungsten_collimator_1_Tungsten_v100"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v104" vertex2="tungsten_collimator_1_Tungsten_v98" vertex3="tungsten_collimator_1_Tungsten_v105"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v104" vertex2="tungsten_collimator_1_Tungsten_v101" vertex3="tungsten_collimator_1_Tungsten_v98"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v106" vertex2="tungsten_collimator_1_Tungsten_v103" vertex3="tungsten_collimator_1_Tungsten_v107"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v106" vertex2="tungsten_collimator_1_Tungsten_v102" vertex3="tungsten_collimator_1_Tungsten_v103"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v108" vertex2="tungsten_collimator_1_Tungsten_v105" vertex3="tungsten_collimator_1_Tungsten_v109"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v108" vertex2="tungsten_collimator_1_Tungsten_v104" vertex3="tungsten_collimator_1_Tungsten_v105"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v110" vertex2="tungsten_collimator_1_Tungsten_v107" vertex3="tungsten_collimator_1_Tungsten_v111"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v110" vertex2="tungsten_collimator_1_Tungsten_v106" vertex3="tungsten_collimator_1_Tungsten_v107"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v112" vertex2="tungsten_collimator_1_Tungsten_v109" vertex3="tungsten_collimator_1_Tungsten_v113"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v112" vertex2="tungsten_collimator_1_Tungsten_v108" vertex3="tungsten_collimator_1_Tungsten_v109"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v114" vertex2="tungsten_collimator_1_Tungsten_v111" vertex3="tungsten_collimator_1_Tungsten_v115"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v114" vertex2="tungsten_collimator_1_Tungsten_v110" vertex3="tungsten_collimator_1_Tungsten_v111"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v116" vertex2="tungsten_collimator_1_Tungsten_v113" vertex3="tungsten_collimator_1_Tungsten_v117"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v116" vertex2="tungsten_collimator_1_Tungsten_v112" vertex3="tungsten_collimator_1_Tungsten_v113"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v118" vertex2="tungsten_collimator_1_Tungsten_v115" vertex3="tungsten_collimator_1_Tungsten_v119"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v118" vertex2="tungsten_collimator_1_Tungsten_v114" vertex3="tungsten_collimator_1_Tungsten_v115"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v120" vertex2="tungsten_collimator_1_Tungsten_v117" vertex3="tungsten_collimator_1_Tungsten_v121"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v120" vertex2="tungsten_collimator_1_Tungsten_v116" vertex3="tungsten_collimator_1_Tungsten_v117"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v122" vertex2="tungsten_collimator_1_Tungsten_v120" vertex3="tungsten_collimator_1_Tungsten_v121"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v123" vertex2="tungsten_collimator_1_Tungsten_v119" vertex3="tungsten_collimator_1_Tungsten_v124"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v123" vertex2="tungsten_collimator_1_Tungsten_v118" vertex3="tungsten_collimator_1_Tungsten_v119"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v122" vertex2="tungsten_collimator_1_Tungsten_v121" vertex3="tungsten_collimator_1_Tungsten_v125"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v126" vertex2="tungsten_collimator_1_Tungsten_v122" vertex3="tungsten_collimator_1_Tungsten_v125"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v127" vertex2="tungsten_collimator_1_Tungsten_v123" vertex3="tungsten_collimator_1_Tungsten_v124"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v127" vertex2="tungsten_collimator_1_Tungsten_v124" vertex3="tungsten_collimator_1_Tungsten_v128"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v126" vertex2="tungsten_collimator_1_Tungsten_v125" vertex3="tungsten_collimator_1_Tungsten_v129"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v130" vertex2="tungsten_collimator_1_Tungsten_v126" vertex3="tungsten_collimator_1_Tungsten_v129"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v131" vertex2="tungsten_collimator_1_Tungsten_v128" vertex3="tungsten_collimator_1_Tungsten_v132"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v130" vertex2="tungsten_collimator_1_Tungsten_v129" vertex3="tungsten_collimator_1_Tungsten_v133"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v131" vertex2="tungsten_collimator_1_Tungsten_v127" vertex3="tungsten_collimator_1_Tungsten_v128"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v134" vertex2="tungsten_collimator_1_Tungsten_v130" vertex3="tungsten_collimator_1_Tungsten_v133"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v135" vertex2="tungsten_collimator_1_Tungsten_v132" vertex3="tungsten_collimator_1_Tungsten_v136"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v134" vertex2="tungsten_collimator_1_Tungsten_v133" vertex3="tungsten_collimator_1_Tungsten_v137"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v135" vertex2="tungsten_collimator_1_Tungsten_v131" vertex3="tungsten_collimator_1_Tungsten_v132"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v138" vertex2="tungsten_collimator_1_Tungsten_v134" vertex3="tungsten_collimator_1_Tungsten_v137"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v139" vertex2="tungsten_collimator_1_Tungsten_v136" vertex3="tungsten_collimator_1_Tungsten_v140"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v138" vertex2="tungsten_collimator_1_Tungsten_v137" vertex3="tungsten_collimator_1_Tungsten_v141"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v139" vertex2="tungsten_collimator_1_Tungsten_v135" vertex3="tungsten_collimator_1_Tungsten_v136"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v142" vertex2="tungsten_collimator_1_Tungsten_v138" vertex3="tungsten_collimator_1_Tungsten_v141"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v143" vertex2="tungsten_collimator_1_Tungsten_v140" vertex3="tungsten_collimator_1_Tungsten_v144"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v142" vertex2="tungsten_collimator_1_Tungsten_v141" vertex3="tungsten_collimator_1_Tungsten_v145"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v143" vertex2="tungsten_collimator_1_Tungsten_v139" vertex3="tungsten_collimator_1_Tungsten_v140"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v146" vertex2="tungsten_collimator_1_Tungsten_v142" vertex3="tungsten_collimator_1_Tungsten_v145"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v146" vertex2="tungsten_collimator_1_Tungsten_v145" vertex3="tungsten_collimator_1_Tungsten_v147"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v148" vertex2="tungsten_collimator_1_Tungsten_v144" vertex3="tungsten_collimator_1_Tungsten_v149"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v148" vertex2="tungsten_collimator_1_Tungsten_v143" vertex3="tungsten_collimator_1_Tungsten_v144"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v150" vertex2="tungsten_collimator_1_Tungsten_v146" vertex3="tungsten_collimator_1_Tungsten_v147"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v150" vertex2="tungsten_collimator_1_Tungsten_v147" vertex3="tungsten_collimator_1_Tungsten_v151"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v152" vertex2="tungsten_collimator_1_Tungsten_v153" vertex3="tungsten_collimator_1_Tungsten_v154"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v152" vertex2="tungsten_collimator_1_Tungsten_v149" vertex3="tungsten_collimator_1_Tungsten_v153"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v152" vertex2="tungsten_collimator_1_Tungsten_v148" vertex3="tungsten_collimator_1_Tungsten_v149"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v155" vertex2="tungsten_collimator_1_Tungsten_v150" vertex3="tungsten_collimator_1_Tungsten_v151"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v155" vertex2="tungsten_collimator_1_Tungsten_v151" vertex3="tungsten_collimator_1_Tungsten_v156"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v157" vertex2="tungsten_collimator_1_Tungsten_v152" vertex3="tungsten_collimator_1_Tungsten_v154"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v158" vertex2="tungsten_collimator_1_Tungsten_v155" vertex3="tungsten_collimator_1_Tungsten_v156"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v158" vertex2="tungsten_collimator_1_Tungsten_v156" vertex3="tungsten_collimator_1_Tungsten_v159"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v160" vertex2="tungsten_collimator_1_Tungsten_v157" vertex3="tungsten_collimator_1_Tungsten_v154"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v161" vertex2="tungsten_collimator_1_Tungsten_v158" vertex3="tungsten_collimator_1_Tungsten_v159"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v160" vertex2="tungsten_collimator_1_Tungsten_v162" vertex3="tungsten_collimator_1_Tungsten_v163"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v160" vertex2="tungsten_collimator_1_Tungsten_v154" vertex3="tungsten_collimator_1_Tungsten_v162"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v161" vertex2="tungsten_collimator_1_Tungsten_v159" vertex3="tungsten_collimator_1_Tungsten_v164"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v165" vertex2="tungsten_collimator_1_Tungsten_v160" vertex3="tungsten_collimator_1_Tungsten_v163"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v166" vertex2="tungsten_collimator_1_Tungsten_v164" vertex3="tungsten_collimator_1_Tungsten_v167"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v166" vertex2="tungsten_collimator_1_Tungsten_v161" vertex3="tungsten_collimator_1_Tungsten_v164"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v168" vertex2="tungsten_collimator_1_Tungsten_v165" vertex3="tungsten_collimator_1_Tungsten_v163"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v168" vertex2="tungsten_collimator_1_Tungsten_v163" vertex3="tungsten_collimator_1_Tungsten_v169"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v170" vertex2="tungsten_collimator_1_Tungsten_v167" vertex3="tungsten_collimator_1_Tungsten_v171"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v170" vertex2="tungsten_collimator_1_Tungsten_v166" vertex3="tungsten_collimator_1_Tungsten_v167"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v172" vertex2="tungsten_collimator_1_Tungsten_v168" vertex3="tungsten_collimator_1_Tungsten_v169"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v172" vertex2="tungsten_collimator_1_Tungsten_v169" vertex3="tungsten_collimator_1_Tungsten_v173"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v174" vertex2="tungsten_collimator_1_Tungsten_v171" vertex3="tungsten_collimator_1_Tungsten_v175"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v174" vertex2="tungsten_collimator_1_Tungsten_v170" vertex3="tungsten_collimator_1_Tungsten_v171"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v176" vertex2="tungsten_collimator_1_Tungsten_v172" vertex3="tungsten_collimator_1_Tungsten_v173"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v176" vertex2="tungsten_collimator_1_Tungsten_v177" vertex3="tungsten_collimator_1_Tungsten_v178"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v179" vertex2="tungsten_collimator_1_Tungsten_v175" vertex3="tungsten_collimator_1_Tungsten_v180"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v176" vertex2="tungsten_collimator_1_Tungsten_v173" vertex3="tungsten_collimator_1_Tungsten_v177"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v179" vertex2="tungsten_collimator_1_Tungsten_v174" vertex3="tungsten_collimator_1_Tungsten_v175"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v181" vertex2="tungsten_collimator_1_Tungsten_v176" vertex3="tungsten_collimator_1_Tungsten_v178"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v182" vertex2="tungsten_collimator_1_Tungsten_v180" vertex3="tungsten_collimator_1_Tungsten_v183"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v181" vertex2="tungsten_collimator_1_Tungsten_v178" vertex3="tungsten_collimator_1_Tungsten_v184"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v182" vertex2="tungsten_collimator_1_Tungsten_v179" vertex3="tungsten_collimator_1_Tungsten_v180"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v185" vertex2="tungsten_collimator_1_Tungsten_v181" vertex3="tungsten_collimator_1_Tungsten_v184"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v186" vertex2="tungsten_collimator_1_Tungsten_v183" vertex3="tungsten_collimator_1_Tungsten_v187"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v186" vertex2="tungsten_collimator_1_Tungsten_v182" vertex3="tungsten_collimator_1_Tungsten_v183"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v185" vertex2="tungsten_collimator_1_Tungsten_v184" vertex3="tungsten_collimator_1_Tungsten_v188"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v189" vertex2="tungsten_collimator_1_Tungsten_v187" vertex3="tungsten_collimator_1_Tungsten_v190"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v189" vertex2="tungsten_collimator_1_Tungsten_v186" vertex3="tungsten_collimator_1_Tungsten_v187"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v191" vertex2="tungsten_collimator_1_Tungsten_v185" vertex3="tungsten_collimator_1_Tungsten_v188"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v192" vertex2="tungsten_collimator_1_Tungsten_v190" vertex3="tungsten_collimator_1_Tungsten_v193"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v192" vertex2="tungsten_collimator_1_Tungsten_v189" vertex3="tungsten_collimator_1_Tungsten_v190"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v191" vertex2="tungsten_collimator_1_Tungsten_v188" vertex3="tungsten_collimator_1_Tungsten_v194"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v195" vertex2="tungsten_collimator_1_Tungsten_v193" vertex3="tungsten_collimator_1_Tungsten_v196"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v195" vertex2="tungsten_collimator_1_Tungsten_v192" vertex3="tungsten_collimator_1_Tungsten_v193"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v197" vertex2="tungsten_collimator_1_Tungsten_v191" vertex3="tungsten_collimator_1_Tungsten_v194"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v60" vertex2="tungsten_collimator_1_Tungsten_v196" vertex3="tungsten_collimator_1_Tungsten_v61"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v60" vertex2="tungsten_collimator_1_Tungsten_v195" vertex3="tungsten_collimator_1_Tungsten_v196"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v198" vertex2="tungsten_collimator_1_Tungsten_v197" vertex3="tungsten_collimator_1_Tungsten_v194"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v198" vertex2="tungsten_collimator_1_Tungsten_v194" vertex3="tungsten_collimator_1_Tungsten_v199"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v200" vertex2="tungsten_collimator_1_Tungsten_v198" vertex3="tungsten_collimator_1_Tungsten_v199"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v200" vertex2="tungsten_collimator_1_Tungsten_v199" vertex3="tungsten_collimator_1_Tungsten_v201"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v202" vertex2="tungsten_collimator_1_Tungsten_v200" vertex3="tungsten_collimator_1_Tungsten_v201"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v202" vertex2="tungsten_collimator_1_Tungsten_v201" vertex3="tungsten_collimator_1_Tungsten_v203"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v204" vertex2="tungsten_collimator_1_Tungsten_v202" vertex3="tungsten_collimator_1_Tungsten_v203"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v204" vertex2="tungsten_collimator_1_Tungsten_v203" vertex3="tungsten_collimator_1_Tungsten_v205"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v206" vertex2="tungsten_collimator_1_Tungsten_v205" vertex3="tungsten_collimator_1_Tungsten_v207"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v206" vertex2="tungsten_collimator_1_Tungsten_v204" vertex3="tungsten_collimator_1_Tungsten_v205"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v208" vertex2="tungsten_collimator_1_Tungsten_v207" vertex3="tungsten_collimator_1_Tungsten_v209"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v208" vertex2="tungsten_collimator_1_Tungsten_v206" vertex3="tungsten_collimator_1_Tungsten_v207"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v210" vertex2="tungsten_collimator_1_Tungsten_v209" vertex3="tungsten_collimator_1_Tungsten_v211"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v210" vertex2="tungsten_collimator_1_Tungsten_v208" vertex3="tungsten_collimator_1_Tungsten_v209"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v212" vertex2="tungsten_collimator_1_Tungsten_v211" vertex3="tungsten_collimator_1_Tungsten_v213"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v212" vertex2="tungsten_collimator_1_Tungsten_v210" vertex3="tungsten_collimator_1_Tungsten_v211"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v214" vertex2="tungsten_collimator_1_Tungsten_v212" vertex3="tungsten_collimator_1_Tungsten_v213"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v214" vertex2="tungsten_collimator_1_Tungsten_v213" vertex3="tungsten_collimator_1_Tungsten_v215"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v216" vertex2="tungsten_collimator_1_Tungsten_v214" vertex3="tungsten_collimator_1_Tungsten_v215"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v216" vertex2="tungsten_collimator_1_Tungsten_v217" vertex3="tungsten_collimator_1_Tungsten_v218"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v216" vertex2="tungsten_collimator_1_Tungsten_v215" vertex3="tungsten_collimator_1_Tungsten_v217"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v219" vertex2="tungsten_collimator_1_Tungsten_v216" vertex3="tungsten_collimator_1_Tungsten_v218"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v220" vertex2="tungsten_collimator_1_Tungsten_v219" vertex3="tungsten_collimator_1_Tungsten_v218"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v220" vertex2="tungsten_collimator_1_Tungsten_v218" vertex3="tungsten_collimator_1_Tungsten_v221"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v222" vertex2="tungsten_collimator_1_Tungsten_v220" vertex3="tungsten_collimator_1_Tungsten_v221"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v222" vertex2="tungsten_collimator_1_Tungsten_v221" vertex3="tungsten_collimator_1_Tungsten_v223"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v224" vertex2="tungsten_collimator_1_Tungsten_v222" vertex3="tungsten_collimator_1_Tungsten_v223"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v224" vertex2="tungsten_collimator_1_Tungsten_v223" vertex3="tungsten_collimator_1_Tungsten_v225"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v226" vertex2="tungsten_collimator_1_Tungsten_v224" vertex3="tungsten_collimator_1_Tungsten_v225"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v226" vertex2="tungsten_collimator_1_Tungsten_v225" vertex3="tungsten_collimator_1_Tungsten_v227"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v228" vertex2="tungsten_collimator_1_Tungsten_v226" vertex3="tungsten_collimator_1_Tungsten_v227"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v228" vertex2="tungsten_collimator_1_Tungsten_v227" vertex3="tungsten_collimator_1_Tungsten_v229"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v230" vertex2="tungsten_collimator_1_Tungsten_v228" vertex3="tungsten_collimator_1_Tungsten_v229"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v230" vertex2="tungsten_collimator_1_Tungsten_v229" vertex3="tungsten_collimator_1_Tungsten_v231"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v232" vertex2="tungsten_collimator_1_Tungsten_v230" vertex3="tungsten_collimator_1_Tungsten_v231"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v232" vertex2="tungsten_collimator_1_Tungsten_v231" vertex3="tungsten_collimator_1_Tungsten_v233"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v234" vertex2="tungsten_collimator_1_Tungsten_v232" vertex3="tungsten_collimator_1_Tungsten_v233"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v234" vertex2="tungsten_collimator_1_Tungsten_v233" vertex3="tungsten_collimator_1_Tungsten_v235"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v236" vertex2="tungsten_collimator_1_Tungsten_v234" vertex3="tungsten_collimator_1_Tungsten_v235"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v236" vertex2="tungsten_collimator_1_Tungsten_v235" vertex3="tungsten_collimator_1_Tungsten_v237"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v238" vertex2="tungsten_collimator_1_Tungsten_v236" vertex3="tungsten_collimator_1_Tungsten_v237"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v238" vertex2="tungsten_collimator_1_Tungsten_v239" vertex3="tungsten_collimator_1_Tungsten_v240"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v238" vertex2="tungsten_collimator_1_Tungsten_v237" vertex3="tungsten_collimator_1_Tungsten_v239"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v241" vertex2="tungsten_collimator_1_Tungsten_v238" vertex3="tungsten_collimator_1_Tungsten_v240"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v242" vertex2="tungsten_collimator_1_Tungsten_v241" vertex3="tungsten_collimator_1_Tungsten_v240"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v242" vertex2="tungsten_collimator_1_Tungsten_v243" vertex3="tungsten_collimator_1_Tungsten_v244"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v242" vertex2="tungsten_collimator_1_Tungsten_v240" vertex3="tungsten_collimator_1_Tungsten_v243"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v245" vertex2="tungsten_collimator_1_Tungsten_v242" vertex3="tungsten_collimator_1_Tungsten_v244"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v245" vertex2="tungsten_collimator_1_Tungsten_v244" vertex3="tungsten_collimator_1_Tungsten_v246"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v247" vertex2="tungsten_collimator_1_Tungsten_v245" vertex3="tungsten_collimator_1_Tungsten_v246"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v248" vertex2="tungsten_collimator_1_Tungsten_v246" vertex3="tungsten_collimator_1_Tungsten_v249"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v248" vertex2="tungsten_collimator_1_Tungsten_v247" vertex3="tungsten_collimator_1_Tungsten_v246"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v250" vertex2="tungsten_collimator_1_Tungsten_v249" vertex3="tungsten_collimator_1_Tungsten_v251"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v250" vertex2="tungsten_collimator_1_Tungsten_v248" vertex3="tungsten_collimator_1_Tungsten_v249"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v252" vertex2="tungsten_collimator_1_Tungsten_v250" vertex3="tungsten_collimator_1_Tungsten_v251"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v252" vertex2="tungsten_collimator_1_Tungsten_v251" vertex3="tungsten_collimator_1_Tungsten_v253"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v254" vertex2="tungsten_collimator_1_Tungsten_v253" vertex3="tungsten_collimator_1_Tungsten_v255"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v254" vertex2="tungsten_collimator_1_Tungsten_v252" vertex3="tungsten_collimator_1_Tungsten_v253"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v256" vertex2="tungsten_collimator_1_Tungsten_v254" vertex3="tungsten_collimator_1_Tungsten_v255"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v256" vertex2="tungsten_collimator_1_Tungsten_v257" vertex3="tungsten_collimator_1_Tungsten_v258"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v256" vertex2="tungsten_collimator_1_Tungsten_v255" vertex3="tungsten_collimator_1_Tungsten_v257"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v259" vertex2="tungsten_collimator_1_Tungsten_v258" vertex3="tungsten_collimator_1_Tungsten_v260"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v259" vertex2="tungsten_collimator_1_Tungsten_v256" vertex3="tungsten_collimator_1_Tungsten_v258"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v261" vertex2="tungsten_collimator_1_Tungsten_v260" vertex3="tungsten_collimator_1_Tungsten_v262"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v261" vertex2="tungsten_collimator_1_Tungsten_v259" vertex3="tungsten_collimator_1_Tungsten_v260"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v263" vertex2="tungsten_collimator_1_Tungsten_v262" vertex3="tungsten_collimator_1_Tungsten_v264"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v263" vertex2="tungsten_collimator_1_Tungsten_v261" vertex3="tungsten_collimator_1_Tungsten_v262"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v265" vertex2="tungsten_collimator_1_Tungsten_v263" vertex3="tungsten_collimator_1_Tungsten_v264"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v265" vertex2="tungsten_collimator_1_Tungsten_v264" vertex3="tungsten_collimator_1_Tungsten_v266"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v267" vertex2="tungsten_collimator_1_Tungsten_v265" vertex3="tungsten_collimator_1_Tungsten_v266"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v267" vertex2="tungsten_collimator_1_Tungsten_v266" vertex3="tungsten_collimator_1_Tungsten_v268"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v269" vertex2="tungsten_collimator_1_Tungsten_v267" vertex3="tungsten_collimator_1_Tungsten_v268"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v269" vertex2="tungsten_collimator_1_Tungsten_v268" vertex3="tungsten_collimator_1_Tungsten_v270"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v271" vertex2="tungsten_collimator_1_Tungsten_v269" vertex3="tungsten_collimator_1_Tungsten_v270"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v272" vertex2="tungsten_collimator_1_Tungsten_v271" vertex3="tungsten_collimator_1_Tungsten_v270"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v272" vertex2="tungsten_collimator_1_Tungsten_v270" vertex3="tungsten_collimator_1_Tungsten_v273"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v51" vertex2="tungsten_collimator_1_Tungsten_v272" vertex3="tungsten_collimator_1_Tungsten_v273"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v51" vertex2="tungsten_collimator_1_Tungsten_v273" vertex3="tungsten_collimator_1_Tungsten_v52"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v103" vertex2="tungsten_collimator_1_Tungsten_v18" vertex3="tungsten_collimator_1_Tungsten_v107"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v18" vertex2="tungsten_collimator_1_Tungsten_v124" vertex3="tungsten_collimator_1_Tungsten_v119"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v107" vertex2="tungsten_collimator_1_Tungsten_v18" vertex3="tungsten_collimator_1_Tungsten_v111"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v18" vertex2="tungsten_collimator_1_Tungsten_v119" vertex3="tungsten_collimator_1_Tungsten_v115"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v111" vertex2="tungsten_collimator_1_Tungsten_v18" vertex3="tungsten_collimator_1_Tungsten_v115"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v54" vertex2="tungsten_collimator_1_Tungsten_v53" vertex3="tungsten_collimator_1_Tungsten_v47"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v53" vertex2="tungsten_collimator_1_Tungsten_v52" vertex3="tungsten_collimator_1_Tungsten_v47"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v52" vertex2="tungsten_collimator_1_Tungsten_v273" vertex3="tungsten_collimator_1_Tungsten_v47"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v273" vertex2="tungsten_collimator_1_Tungsten_v270" vertex3="tungsten_collimator_1_Tungsten_v47"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v270" vertex2="tungsten_collimator_1_Tungsten_v268" vertex3="tungsten_collimator_1_Tungsten_v47"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v268" vertex2="tungsten_collimator_1_Tungsten_v266" vertex3="tungsten_collimator_1_Tungsten_v45"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v266" vertex2="tungsten_collimator_1_Tungsten_v264" vertex3="tungsten_collimator_1_Tungsten_v45"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v264" vertex2="tungsten_collimator_1_Tungsten_v262" vertex3="tungsten_collimator_1_Tungsten_v45"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v262" vertex2="tungsten_collimator_1_Tungsten_v260" vertex3="tungsten_collimator_1_Tungsten_v45"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v47" vertex2="tungsten_collimator_1_Tungsten_v268" vertex3="tungsten_collimator_1_Tungsten_v45"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v54" vertex2="tungsten_collimator_1_Tungsten_v47" vertex3="tungsten_collimator_1_Tungsten_v49"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v68" vertex2="tungsten_collimator_1_Tungsten_v67" vertex3="tungsten_collimator_1_Tungsten_v49"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v67" vertex2="tungsten_collimator_1_Tungsten_v58" vertex3="tungsten_collimator_1_Tungsten_v49"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v58" vertex2="tungsten_collimator_1_Tungsten_v56" vertex3="tungsten_collimator_1_Tungsten_v49"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v56" vertex2="tungsten_collimator_1_Tungsten_v54" vertex3="tungsten_collimator_1_Tungsten_v49"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v260" vertex2="tungsten_collimator_1_Tungsten_v258" vertex3="tungsten_collimator_1_Tungsten_v43"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v258" vertex2="tungsten_collimator_1_Tungsten_v257" vertex3="tungsten_collimator_1_Tungsten_v43"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v257" vertex2="tungsten_collimator_1_Tungsten_v255" vertex3="tungsten_collimator_1_Tungsten_v43"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v255" vertex2="tungsten_collimator_1_Tungsten_v253" vertex3="tungsten_collimator_1_Tungsten_v43"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v253" vertex2="tungsten_collimator_1_Tungsten_v251" vertex3="tungsten_collimator_1_Tungsten_v43"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v45" vertex2="tungsten_collimator_1_Tungsten_v260" vertex3="tungsten_collimator_1_Tungsten_v43"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v68" vertex2="tungsten_collimator_1_Tungsten_v49" vertex3="tungsten_collimator_1_Tungsten_v0"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v89" vertex2="tungsten_collimator_1_Tungsten_v85" vertex3="tungsten_collimator_1_Tungsten_v0"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v85" vertex2="tungsten_collimator_1_Tungsten_v78" vertex3="tungsten_collimator_1_Tungsten_v0"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v78" vertex2="tungsten_collimator_1_Tungsten_v77" vertex3="tungsten_collimator_1_Tungsten_v0"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v77" vertex2="tungsten_collimator_1_Tungsten_v73" vertex3="tungsten_collimator_1_Tungsten_v0"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v73" vertex2="tungsten_collimator_1_Tungsten_v68" vertex3="tungsten_collimator_1_Tungsten_v0"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v43" vertex2="tungsten_collimator_1_Tungsten_v251" vertex3="tungsten_collimator_1_Tungsten_v41"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v251" vertex2="tungsten_collimator_1_Tungsten_v249" vertex3="tungsten_collimator_1_Tungsten_v41"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v249" vertex2="tungsten_collimator_1_Tungsten_v246" vertex3="tungsten_collimator_1_Tungsten_v41"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v246" vertex2="tungsten_collimator_1_Tungsten_v244" vertex3="tungsten_collimator_1_Tungsten_v41"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v244" vertex2="tungsten_collimator_1_Tungsten_v243" vertex3="tungsten_collimator_1_Tungsten_v41"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v89" vertex2="tungsten_collimator_1_Tungsten_v0" vertex3="tungsten_collimator_1_Tungsten_v3"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v105" vertex2="tungsten_collimator_1_Tungsten_v98" vertex3="tungsten_collimator_1_Tungsten_v3"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v98" vertex2="tungsten_collimator_1_Tungsten_v97" vertex3="tungsten_collimator_1_Tungsten_v3"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v97" vertex2="tungsten_collimator_1_Tungsten_v90" vertex3="tungsten_collimator_1_Tungsten_v3"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v90" vertex2="tungsten_collimator_1_Tungsten_v89" vertex3="tungsten_collimator_1_Tungsten_v3"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v41" vertex2="tungsten_collimator_1_Tungsten_v243" vertex3="tungsten_collimator_1_Tungsten_v39"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v243" vertex2="tungsten_collimator_1_Tungsten_v240" vertex3="tungsten_collimator_1_Tungsten_v39"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v240" vertex2="tungsten_collimator_1_Tungsten_v239" vertex3="tungsten_collimator_1_Tungsten_v39"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v239" vertex2="tungsten_collimator_1_Tungsten_v237" vertex3="tungsten_collimator_1_Tungsten_v39"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v237" vertex2="tungsten_collimator_1_Tungsten_v235" vertex3="tungsten_collimator_1_Tungsten_v39"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v125" vertex2="tungsten_collimator_1_Tungsten_v121" vertex3="tungsten_collimator_1_Tungsten_v5"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v121" vertex2="tungsten_collimator_1_Tungsten_v117" vertex3="tungsten_collimator_1_Tungsten_v5"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v117" vertex2="tungsten_collimator_1_Tungsten_v113" vertex3="tungsten_collimator_1_Tungsten_v5"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v113" vertex2="tungsten_collimator_1_Tungsten_v109" vertex3="tungsten_collimator_1_Tungsten_v5"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v109" vertex2="tungsten_collimator_1_Tungsten_v105" vertex3="tungsten_collimator_1_Tungsten_v5"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v105" vertex2="tungsten_collimator_1_Tungsten_v3" vertex3="tungsten_collimator_1_Tungsten_v5"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v235" vertex2="tungsten_collimator_1_Tungsten_v233" vertex3="tungsten_collimator_1_Tungsten_v36"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v233" vertex2="tungsten_collimator_1_Tungsten_v231" vertex3="tungsten_collimator_1_Tungsten_v36"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v231" vertex2="tungsten_collimator_1_Tungsten_v229" vertex3="tungsten_collimator_1_Tungsten_v36"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v229" vertex2="tungsten_collimator_1_Tungsten_v227" vertex3="tungsten_collimator_1_Tungsten_v36"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v227" vertex2="tungsten_collimator_1_Tungsten_v225" vertex3="tungsten_collimator_1_Tungsten_v36"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v39" vertex2="tungsten_collimator_1_Tungsten_v235" vertex3="tungsten_collimator_1_Tungsten_v36"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v141" vertex2="tungsten_collimator_1_Tungsten_v137" vertex3="tungsten_collimator_1_Tungsten_v11"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v137" vertex2="tungsten_collimator_1_Tungsten_v133" vertex3="tungsten_collimator_1_Tungsten_v11"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v133" vertex2="tungsten_collimator_1_Tungsten_v129" vertex3="tungsten_collimator_1_Tungsten_v11"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v129" vertex2="tungsten_collimator_1_Tungsten_v125" vertex3="tungsten_collimator_1_Tungsten_v11"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v125" vertex2="tungsten_collimator_1_Tungsten_v5" vertex3="tungsten_collimator_1_Tungsten_v11"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v225" vertex2="tungsten_collimator_1_Tungsten_v223" vertex3="tungsten_collimator_1_Tungsten_v34"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v223" vertex2="tungsten_collimator_1_Tungsten_v221" vertex3="tungsten_collimator_1_Tungsten_v34"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v221" vertex2="tungsten_collimator_1_Tungsten_v218" vertex3="tungsten_collimator_1_Tungsten_v34"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v218" vertex2="tungsten_collimator_1_Tungsten_v217" vertex3="tungsten_collimator_1_Tungsten_v34"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v36" vertex2="tungsten_collimator_1_Tungsten_v225" vertex3="tungsten_collimator_1_Tungsten_v34"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v147" vertex2="tungsten_collimator_1_Tungsten_v145" vertex3="tungsten_collimator_1_Tungsten_v15"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v145" vertex2="tungsten_collimator_1_Tungsten_v141" vertex3="tungsten_collimator_1_Tungsten_v15"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v141" vertex2="tungsten_collimator_1_Tungsten_v11" vertex3="tungsten_collimator_1_Tungsten_v15"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v34" vertex2="tungsten_collimator_1_Tungsten_v217" vertex3="tungsten_collimator_1_Tungsten_v32"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v217" vertex2="tungsten_collimator_1_Tungsten_v215" vertex3="tungsten_collimator_1_Tungsten_v32"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v147" vertex2="tungsten_collimator_1_Tungsten_v15" vertex3="tungsten_collimator_1_Tungsten_v151"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v32" vertex2="tungsten_collimator_1_Tungsten_v215" vertex3="tungsten_collimator_1_Tungsten_v213"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v32" vertex2="tungsten_collimator_1_Tungsten_v213" vertex3="tungsten_collimator_1_Tungsten_v211"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v151" vertex2="tungsten_collimator_1_Tungsten_v15" vertex3="tungsten_collimator_1_Tungsten_v156"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v32" vertex2="tungsten_collimator_1_Tungsten_v211" vertex3="tungsten_collimator_1_Tungsten_v209"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v15" vertex2="tungsten_collimator_1_Tungsten_v16" vertex3="tungsten_collimator_1_Tungsten_v159"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v156" vertex2="tungsten_collimator_1_Tungsten_v15" vertex3="tungsten_collimator_1_Tungsten_v159"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v32" vertex2="tungsten_collimator_1_Tungsten_v209" vertex3="tungsten_collimator_1_Tungsten_v207"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v30" vertex2="tungsten_collimator_1_Tungsten_v32" vertex3="tungsten_collimator_1_Tungsten_v207"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v159" vertex2="tungsten_collimator_1_Tungsten_v16" vertex3="tungsten_collimator_1_Tungsten_v164"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v30" vertex2="tungsten_collimator_1_Tungsten_v207" vertex3="tungsten_collimator_1_Tungsten_v205"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v164" vertex2="tungsten_collimator_1_Tungsten_v16" vertex3="tungsten_collimator_1_Tungsten_v167"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v30" vertex2="tungsten_collimator_1_Tungsten_v205" vertex3="tungsten_collimator_1_Tungsten_v203"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v167" vertex2="tungsten_collimator_1_Tungsten_v16" vertex3="tungsten_collimator_1_Tungsten_v171"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v30" vertex2="tungsten_collimator_1_Tungsten_v203" vertex3="tungsten_collimator_1_Tungsten_v201"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v171" vertex2="tungsten_collimator_1_Tungsten_v16" vertex3="tungsten_collimator_1_Tungsten_v175"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v16" vertex2="tungsten_collimator_1_Tungsten_v21" vertex3="tungsten_collimator_1_Tungsten_v175"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v28" vertex2="tungsten_collimator_1_Tungsten_v30" vertex3="tungsten_collimator_1_Tungsten_v199"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v30" vertex2="tungsten_collimator_1_Tungsten_v201" vertex3="tungsten_collimator_1_Tungsten_v199"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v175" vertex2="tungsten_collimator_1_Tungsten_v21" vertex3="tungsten_collimator_1_Tungsten_v180"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v180" vertex2="tungsten_collimator_1_Tungsten_v21" vertex3="tungsten_collimator_1_Tungsten_v183"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v28" vertex2="tungsten_collimator_1_Tungsten_v199" vertex3="tungsten_collimator_1_Tungsten_v194"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v28" vertex2="tungsten_collimator_1_Tungsten_v194" vertex3="tungsten_collimator_1_Tungsten_v188"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v183" vertex2="tungsten_collimator_1_Tungsten_v21" vertex3="tungsten_collimator_1_Tungsten_v187"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v28" vertex2="tungsten_collimator_1_Tungsten_v188" vertex3="tungsten_collimator_1_Tungsten_v184"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v187" vertex2="tungsten_collimator_1_Tungsten_v21" vertex3="tungsten_collimator_1_Tungsten_v190"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v28" vertex2="tungsten_collimator_1_Tungsten_v184" vertex3="tungsten_collimator_1_Tungsten_v178"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v21" vertex2="tungsten_collimator_1_Tungsten_v6" vertex3="tungsten_collimator_1_Tungsten_v193"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v190" vertex2="tungsten_collimator_1_Tungsten_v21" vertex3="tungsten_collimator_1_Tungsten_v193"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v193" vertex2="tungsten_collimator_1_Tungsten_v6" vertex3="tungsten_collimator_1_Tungsten_v196"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v26" vertex2="tungsten_collimator_1_Tungsten_v28" vertex3="tungsten_collimator_1_Tungsten_v177"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v28" vertex2="tungsten_collimator_1_Tungsten_v178" vertex3="tungsten_collimator_1_Tungsten_v177"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v26" vertex2="tungsten_collimator_1_Tungsten_v177" vertex3="tungsten_collimator_1_Tungsten_v173"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v196" vertex2="tungsten_collimator_1_Tungsten_v6" vertex3="tungsten_collimator_1_Tungsten_v61"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v26" vertex2="tungsten_collimator_1_Tungsten_v173" vertex3="tungsten_collimator_1_Tungsten_v169"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v61" vertex2="tungsten_collimator_1_Tungsten_v6" vertex3="tungsten_collimator_1_Tungsten_v63"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v26" vertex2="tungsten_collimator_1_Tungsten_v169" vertex3="tungsten_collimator_1_Tungsten_v163"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v6" vertex2="tungsten_collimator_1_Tungsten_v10" vertex3="tungsten_collimator_1_Tungsten_v66"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v63" vertex2="tungsten_collimator_1_Tungsten_v6" vertex3="tungsten_collimator_1_Tungsten_v66"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v26" vertex2="tungsten_collimator_1_Tungsten_v163" vertex3="tungsten_collimator_1_Tungsten_v162"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v24" vertex2="tungsten_collimator_1_Tungsten_v26" vertex3="tungsten_collimator_1_Tungsten_v162"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v66" vertex2="tungsten_collimator_1_Tungsten_v10" vertex3="tungsten_collimator_1_Tungsten_v70"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v24" vertex2="tungsten_collimator_1_Tungsten_v162" vertex3="tungsten_collimator_1_Tungsten_v154"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v70" vertex2="tungsten_collimator_1_Tungsten_v10" vertex3="tungsten_collimator_1_Tungsten_v75"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v24" vertex2="tungsten_collimator_1_Tungsten_v154" vertex3="tungsten_collimator_1_Tungsten_v153"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v75" vertex2="tungsten_collimator_1_Tungsten_v10" vertex3="tungsten_collimator_1_Tungsten_v80"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v24" vertex2="tungsten_collimator_1_Tungsten_v153" vertex3="tungsten_collimator_1_Tungsten_v149"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v80" vertex2="tungsten_collimator_1_Tungsten_v10" vertex3="tungsten_collimator_1_Tungsten_v83"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v24" vertex2="tungsten_collimator_1_Tungsten_v149" vertex3="tungsten_collimator_1_Tungsten_v144"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v10" vertex2="tungsten_collimator_1_Tungsten_v13" vertex3="tungsten_collimator_1_Tungsten_v87"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v83" vertex2="tungsten_collimator_1_Tungsten_v10" vertex3="tungsten_collimator_1_Tungsten_v87"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v22" vertex2="tungsten_collimator_1_Tungsten_v24" vertex3="tungsten_collimator_1_Tungsten_v140"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v24" vertex2="tungsten_collimator_1_Tungsten_v144" vertex3="tungsten_collimator_1_Tungsten_v140"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v87" vertex2="tungsten_collimator_1_Tungsten_v13" vertex3="tungsten_collimator_1_Tungsten_v92"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v22" vertex2="tungsten_collimator_1_Tungsten_v140" vertex3="tungsten_collimator_1_Tungsten_v136"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v92" vertex2="tungsten_collimator_1_Tungsten_v13" vertex3="tungsten_collimator_1_Tungsten_v95"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v22" vertex2="tungsten_collimator_1_Tungsten_v136" vertex3="tungsten_collimator_1_Tungsten_v132"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v95" vertex2="tungsten_collimator_1_Tungsten_v13" vertex3="tungsten_collimator_1_Tungsten_v100"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v22" vertex2="tungsten_collimator_1_Tungsten_v132" vertex3="tungsten_collimator_1_Tungsten_v128"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v13" vertex2="tungsten_collimator_1_Tungsten_v18" vertex3="tungsten_collimator_1_Tungsten_v103"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v100" vertex2="tungsten_collimator_1_Tungsten_v13" vertex3="tungsten_collimator_1_Tungsten_v103"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v18" vertex2="tungsten_collimator_1_Tungsten_v22" vertex3="tungsten_collimator_1_Tungsten_v124"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v22" vertex2="tungsten_collimator_1_Tungsten_v128" vertex3="tungsten_collimator_1_Tungsten_v124"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v123" vertex2="tungsten_collimator_1_Tungsten_v23" vertex3="tungsten_collimator_1_Tungsten_v19"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v123" vertex2="tungsten_collimator_1_Tungsten_v127" vertex3="tungsten_collimator_1_Tungsten_v23"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v118" vertex2="tungsten_collimator_1_Tungsten_v123" vertex3="tungsten_collimator_1_Tungsten_v19"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v110" vertex2="tungsten_collimator_1_Tungsten_v19" vertex3="tungsten_collimator_1_Tungsten_v106"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v114" vertex2="tungsten_collimator_1_Tungsten_v118" vertex3="tungsten_collimator_1_Tungsten_v19"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v114" vertex2="tungsten_collimator_1_Tungsten_v19" vertex3="tungsten_collimator_1_Tungsten_v110"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v46" vertex2="tungsten_collimator_1_Tungsten_v269" vertex3="tungsten_collimator_1_Tungsten_v271"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v46" vertex2="tungsten_collimator_1_Tungsten_v271" vertex3="tungsten_collimator_1_Tungsten_v272"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v46" vertex2="tungsten_collimator_1_Tungsten_v272" vertex3="tungsten_collimator_1_Tungsten_v51"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v46" vertex2="tungsten_collimator_1_Tungsten_v51" vertex3="tungsten_collimator_1_Tungsten_v50"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v46" vertex2="tungsten_collimator_1_Tungsten_v50" vertex3="tungsten_collimator_1_Tungsten_v55"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v44" vertex2="tungsten_collimator_1_Tungsten_v261" vertex3="tungsten_collimator_1_Tungsten_v263"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v44" vertex2="tungsten_collimator_1_Tungsten_v263" vertex3="tungsten_collimator_1_Tungsten_v265"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v44" vertex2="tungsten_collimator_1_Tungsten_v265" vertex3="tungsten_collimator_1_Tungsten_v267"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v44" vertex2="tungsten_collimator_1_Tungsten_v267" vertex3="tungsten_collimator_1_Tungsten_v269"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v44" vertex2="tungsten_collimator_1_Tungsten_v269" vertex3="tungsten_collimator_1_Tungsten_v46"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v48" vertex2="tungsten_collimator_1_Tungsten_v55" vertex3="tungsten_collimator_1_Tungsten_v57"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v48" vertex2="tungsten_collimator_1_Tungsten_v57" vertex3="tungsten_collimator_1_Tungsten_v62"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v48" vertex2="tungsten_collimator_1_Tungsten_v62" vertex3="tungsten_collimator_1_Tungsten_v64"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v48" vertex2="tungsten_collimator_1_Tungsten_v64" vertex3="tungsten_collimator_1_Tungsten_v71"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v48" vertex2="tungsten_collimator_1_Tungsten_v46" vertex3="tungsten_collimator_1_Tungsten_v55"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v42" vertex2="tungsten_collimator_1_Tungsten_v250" vertex3="tungsten_collimator_1_Tungsten_v252"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v42" vertex2="tungsten_collimator_1_Tungsten_v252" vertex3="tungsten_collimator_1_Tungsten_v254"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v42" vertex2="tungsten_collimator_1_Tungsten_v254" vertex3="tungsten_collimator_1_Tungsten_v256"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v42" vertex2="tungsten_collimator_1_Tungsten_v256" vertex3="tungsten_collimator_1_Tungsten_v259"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v42" vertex2="tungsten_collimator_1_Tungsten_v259" vertex3="tungsten_collimator_1_Tungsten_v261"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v42" vertex2="tungsten_collimator_1_Tungsten_v261" vertex3="tungsten_collimator_1_Tungsten_v44"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v1" vertex2="tungsten_collimator_1_Tungsten_v48" vertex3="tungsten_collimator_1_Tungsten_v71"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v1" vertex2="tungsten_collimator_1_Tungsten_v71" vertex3="tungsten_collimator_1_Tungsten_v72"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v1" vertex2="tungsten_collimator_1_Tungsten_v72" vertex3="tungsten_collimator_1_Tungsten_v76"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v1" vertex2="tungsten_collimator_1_Tungsten_v76" vertex3="tungsten_collimator_1_Tungsten_v81"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v1" vertex2="tungsten_collimator_1_Tungsten_v81" vertex3="tungsten_collimator_1_Tungsten_v84"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v1" vertex2="tungsten_collimator_1_Tungsten_v84" vertex3="tungsten_collimator_1_Tungsten_v88"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v40" vertex2="tungsten_collimator_1_Tungsten_v250" vertex3="tungsten_collimator_1_Tungsten_v42"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v40" vertex2="tungsten_collimator_1_Tungsten_v242" vertex3="tungsten_collimator_1_Tungsten_v245"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v40" vertex2="tungsten_collimator_1_Tungsten_v245" vertex3="tungsten_collimator_1_Tungsten_v247"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v40" vertex2="tungsten_collimator_1_Tungsten_v247" vertex3="tungsten_collimator_1_Tungsten_v248"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v40" vertex2="tungsten_collimator_1_Tungsten_v248" vertex3="tungsten_collimator_1_Tungsten_v250"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v2" vertex2="tungsten_collimator_1_Tungsten_v1" vertex3="tungsten_collimator_1_Tungsten_v88"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v2" vertex2="tungsten_collimator_1_Tungsten_v88" vertex3="tungsten_collimator_1_Tungsten_v93"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v2" vertex2="tungsten_collimator_1_Tungsten_v93" vertex3="tungsten_collimator_1_Tungsten_v96"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v2" vertex2="tungsten_collimator_1_Tungsten_v96" vertex3="tungsten_collimator_1_Tungsten_v101"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v2" vertex2="tungsten_collimator_1_Tungsten_v101" vertex3="tungsten_collimator_1_Tungsten_v104"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v38" vertex2="tungsten_collimator_1_Tungsten_v242" vertex3="tungsten_collimator_1_Tungsten_v40"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v38" vertex2="tungsten_collimator_1_Tungsten_v234" vertex3="tungsten_collimator_1_Tungsten_v236"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v38" vertex2="tungsten_collimator_1_Tungsten_v236" vertex3="tungsten_collimator_1_Tungsten_v238"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v38" vertex2="tungsten_collimator_1_Tungsten_v238" vertex3="tungsten_collimator_1_Tungsten_v241"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v38" vertex2="tungsten_collimator_1_Tungsten_v241" vertex3="tungsten_collimator_1_Tungsten_v242"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v4" vertex2="tungsten_collimator_1_Tungsten_v2" vertex3="tungsten_collimator_1_Tungsten_v104"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v4" vertex2="tungsten_collimator_1_Tungsten_v104" vertex3="tungsten_collimator_1_Tungsten_v108"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v4" vertex2="tungsten_collimator_1_Tungsten_v108" vertex3="tungsten_collimator_1_Tungsten_v112"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v4" vertex2="tungsten_collimator_1_Tungsten_v112" vertex3="tungsten_collimator_1_Tungsten_v116"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v4" vertex2="tungsten_collimator_1_Tungsten_v116" vertex3="tungsten_collimator_1_Tungsten_v120"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v4" vertex2="tungsten_collimator_1_Tungsten_v120" vertex3="tungsten_collimator_1_Tungsten_v122"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v37" vertex2="tungsten_collimator_1_Tungsten_v234" vertex3="tungsten_collimator_1_Tungsten_v38"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v37" vertex2="tungsten_collimator_1_Tungsten_v224" vertex3="tungsten_collimator_1_Tungsten_v226"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v37" vertex2="tungsten_collimator_1_Tungsten_v226" vertex3="tungsten_collimator_1_Tungsten_v228"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v37" vertex2="tungsten_collimator_1_Tungsten_v228" vertex3="tungsten_collimator_1_Tungsten_v230"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v37" vertex2="tungsten_collimator_1_Tungsten_v230" vertex3="tungsten_collimator_1_Tungsten_v232"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v37" vertex2="tungsten_collimator_1_Tungsten_v232" vertex3="tungsten_collimator_1_Tungsten_v234"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v9" vertex2="tungsten_collimator_1_Tungsten_v4" vertex3="tungsten_collimator_1_Tungsten_v122"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v9" vertex2="tungsten_collimator_1_Tungsten_v122" vertex3="tungsten_collimator_1_Tungsten_v126"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v9" vertex2="tungsten_collimator_1_Tungsten_v126" vertex3="tungsten_collimator_1_Tungsten_v130"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v9" vertex2="tungsten_collimator_1_Tungsten_v130" vertex3="tungsten_collimator_1_Tungsten_v134"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v9" vertex2="tungsten_collimator_1_Tungsten_v134" vertex3="tungsten_collimator_1_Tungsten_v138"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v35" vertex2="tungsten_collimator_1_Tungsten_v224" vertex3="tungsten_collimator_1_Tungsten_v37"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v35" vertex2="tungsten_collimator_1_Tungsten_v216" vertex3="tungsten_collimator_1_Tungsten_v219"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v35" vertex2="tungsten_collimator_1_Tungsten_v219" vertex3="tungsten_collimator_1_Tungsten_v220"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v35" vertex2="tungsten_collimator_1_Tungsten_v220" vertex3="tungsten_collimator_1_Tungsten_v222"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v35" vertex2="tungsten_collimator_1_Tungsten_v222" vertex3="tungsten_collimator_1_Tungsten_v224"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v12" vertex2="tungsten_collimator_1_Tungsten_v9" vertex3="tungsten_collimator_1_Tungsten_v138"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v12" vertex2="tungsten_collimator_1_Tungsten_v138" vertex3="tungsten_collimator_1_Tungsten_v142"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v12" vertex2="tungsten_collimator_1_Tungsten_v142" vertex3="tungsten_collimator_1_Tungsten_v146"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v33" vertex2="tungsten_collimator_1_Tungsten_v214" vertex3="tungsten_collimator_1_Tungsten_v216"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v33" vertex2="tungsten_collimator_1_Tungsten_v216" vertex3="tungsten_collimator_1_Tungsten_v35"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v150" vertex2="tungsten_collimator_1_Tungsten_v12" vertex3="tungsten_collimator_1_Tungsten_v146"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v212" vertex2="tungsten_collimator_1_Tungsten_v214" vertex3="tungsten_collimator_1_Tungsten_v33"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v155" vertex2="tungsten_collimator_1_Tungsten_v12" vertex3="tungsten_collimator_1_Tungsten_v150"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v210" vertex2="tungsten_collimator_1_Tungsten_v212" vertex3="tungsten_collimator_1_Tungsten_v33"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v158" vertex2="tungsten_collimator_1_Tungsten_v17" vertex3="tungsten_collimator_1_Tungsten_v12"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v158" vertex2="tungsten_collimator_1_Tungsten_v12" vertex3="tungsten_collimator_1_Tungsten_v155"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v208" vertex2="tungsten_collimator_1_Tungsten_v210" vertex3="tungsten_collimator_1_Tungsten_v33"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v161" vertex2="tungsten_collimator_1_Tungsten_v17" vertex3="tungsten_collimator_1_Tungsten_v158"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v206" vertex2="tungsten_collimator_1_Tungsten_v208" vertex3="tungsten_collimator_1_Tungsten_v33"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v206" vertex2="tungsten_collimator_1_Tungsten_v33" vertex3="tungsten_collimator_1_Tungsten_v31"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v166" vertex2="tungsten_collimator_1_Tungsten_v17" vertex3="tungsten_collimator_1_Tungsten_v161"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v204" vertex2="tungsten_collimator_1_Tungsten_v206" vertex3="tungsten_collimator_1_Tungsten_v31"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v170" vertex2="tungsten_collimator_1_Tungsten_v17" vertex3="tungsten_collimator_1_Tungsten_v166"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v202" vertex2="tungsten_collimator_1_Tungsten_v204" vertex3="tungsten_collimator_1_Tungsten_v31"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v174" vertex2="tungsten_collimator_1_Tungsten_v20" vertex3="tungsten_collimator_1_Tungsten_v17"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v174" vertex2="tungsten_collimator_1_Tungsten_v17" vertex3="tungsten_collimator_1_Tungsten_v170"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v200" vertex2="tungsten_collimator_1_Tungsten_v202" vertex3="tungsten_collimator_1_Tungsten_v31"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v179" vertex2="tungsten_collimator_1_Tungsten_v20" vertex3="tungsten_collimator_1_Tungsten_v174"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v198" vertex2="tungsten_collimator_1_Tungsten_v200" vertex3="tungsten_collimator_1_Tungsten_v31"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v198" vertex2="tungsten_collimator_1_Tungsten_v31" vertex3="tungsten_collimator_1_Tungsten_v29"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v182" vertex2="tungsten_collimator_1_Tungsten_v20" vertex3="tungsten_collimator_1_Tungsten_v179"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v197" vertex2="tungsten_collimator_1_Tungsten_v198" vertex3="tungsten_collimator_1_Tungsten_v29"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v186" vertex2="tungsten_collimator_1_Tungsten_v20" vertex3="tungsten_collimator_1_Tungsten_v182"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v191" vertex2="tungsten_collimator_1_Tungsten_v197" vertex3="tungsten_collimator_1_Tungsten_v29"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v189" vertex2="tungsten_collimator_1_Tungsten_v20" vertex3="tungsten_collimator_1_Tungsten_v186"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v185" vertex2="tungsten_collimator_1_Tungsten_v191" vertex3="tungsten_collimator_1_Tungsten_v29"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v192" vertex2="tungsten_collimator_1_Tungsten_v7" vertex3="tungsten_collimator_1_Tungsten_v20"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v192" vertex2="tungsten_collimator_1_Tungsten_v20" vertex3="tungsten_collimator_1_Tungsten_v189"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v181" vertex2="tungsten_collimator_1_Tungsten_v185" vertex3="tungsten_collimator_1_Tungsten_v29"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v195" vertex2="tungsten_collimator_1_Tungsten_v7" vertex3="tungsten_collimator_1_Tungsten_v192"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v176" vertex2="tungsten_collimator_1_Tungsten_v29" vertex3="tungsten_collimator_1_Tungsten_v27"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v176" vertex2="tungsten_collimator_1_Tungsten_v181" vertex3="tungsten_collimator_1_Tungsten_v29"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v60" vertex2="tungsten_collimator_1_Tungsten_v7" vertex3="tungsten_collimator_1_Tungsten_v195"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v172" vertex2="tungsten_collimator_1_Tungsten_v176" vertex3="tungsten_collimator_1_Tungsten_v27"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v59" vertex2="tungsten_collimator_1_Tungsten_v7" vertex3="tungsten_collimator_1_Tungsten_v60"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v168" vertex2="tungsten_collimator_1_Tungsten_v172" vertex3="tungsten_collimator_1_Tungsten_v27"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v65" vertex2="tungsten_collimator_1_Tungsten_v8" vertex3="tungsten_collimator_1_Tungsten_v7"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v65" vertex2="tungsten_collimator_1_Tungsten_v7" vertex3="tungsten_collimator_1_Tungsten_v59"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v165" vertex2="tungsten_collimator_1_Tungsten_v168" vertex3="tungsten_collimator_1_Tungsten_v27"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v69" vertex2="tungsten_collimator_1_Tungsten_v8" vertex3="tungsten_collimator_1_Tungsten_v65"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v160" vertex2="tungsten_collimator_1_Tungsten_v27" vertex3="tungsten_collimator_1_Tungsten_v25"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v160" vertex2="tungsten_collimator_1_Tungsten_v165" vertex3="tungsten_collimator_1_Tungsten_v27"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v74" vertex2="tungsten_collimator_1_Tungsten_v8" vertex3="tungsten_collimator_1_Tungsten_v69"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v157" vertex2="tungsten_collimator_1_Tungsten_v160" vertex3="tungsten_collimator_1_Tungsten_v25"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v152" vertex2="tungsten_collimator_1_Tungsten_v157" vertex3="tungsten_collimator_1_Tungsten_v25"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v79" vertex2="tungsten_collimator_1_Tungsten_v8" vertex3="tungsten_collimator_1_Tungsten_v74"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v82" vertex2="tungsten_collimator_1_Tungsten_v8" vertex3="tungsten_collimator_1_Tungsten_v79"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v148" vertex2="tungsten_collimator_1_Tungsten_v152" vertex3="tungsten_collimator_1_Tungsten_v25"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v86" vertex2="tungsten_collimator_1_Tungsten_v14" vertex3="tungsten_collimator_1_Tungsten_v8"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v86" vertex2="tungsten_collimator_1_Tungsten_v8" vertex3="tungsten_collimator_1_Tungsten_v82"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v143" vertex2="tungsten_collimator_1_Tungsten_v148" vertex3="tungsten_collimator_1_Tungsten_v25"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v91" vertex2="tungsten_collimator_1_Tungsten_v14" vertex3="tungsten_collimator_1_Tungsten_v86"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v139" vertex2="tungsten_collimator_1_Tungsten_v25" vertex3="tungsten_collimator_1_Tungsten_v23"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v139" vertex2="tungsten_collimator_1_Tungsten_v143" vertex3="tungsten_collimator_1_Tungsten_v25"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v94" vertex2="tungsten_collimator_1_Tungsten_v14" vertex3="tungsten_collimator_1_Tungsten_v91"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v135" vertex2="tungsten_collimator_1_Tungsten_v139" vertex3="tungsten_collimator_1_Tungsten_v23"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v131" vertex2="tungsten_collimator_1_Tungsten_v135" vertex3="tungsten_collimator_1_Tungsten_v23"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v99" vertex2="tungsten_collimator_1_Tungsten_v14" vertex3="tungsten_collimator_1_Tungsten_v94"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v127" vertex2="tungsten_collimator_1_Tungsten_v131" vertex3="tungsten_collimator_1_Tungsten_v23"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v102" vertex2="tungsten_collimator_1_Tungsten_v19" vertex3="tungsten_collimator_1_Tungsten_v14"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v102" vertex2="tungsten_collimator_1_Tungsten_v14" vertex3="tungsten_collimator_1_Tungsten_v99"/>
+             <triangular vertex1="tungsten_collimator_1_Tungsten_v106" vertex2="tungsten_collimator_1_Tungsten_v19" vertex3="tungsten_collimator_1_Tungsten_v102"/>
+        </tessellated>
+    </solids>
+
+    <structure>
+        <volume name="tungsten_collimator_1_Tungsten">
+            <materialref ref="Tungsten"/>
+            <solidref ref="tungsten_collimator_1_Tungsten-SOL"/>
+            <colorref ref="tungsten_color"/>
+        </volume>
+    </structure>
+
+    <setup name="Default" version="1.0">
+        <world ref="tungsten_collimator_1_Tungsten"/>
+    </setup>
+</gdml>

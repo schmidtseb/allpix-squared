@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd" >
+
+<define>
+  <constant name="PhantomLength" unit="cm" value="30"/>
+  <constant name="PhantomHeight" unit="cm" value="30"/>
+  <constant name="PhantomWidth" unit="cm" value="5"/>
+  <constant name="PhantomThickness" unit="cm" value="1"/>
+  
+  <position name="PhantomInnerPos" unit="cm" x="0" y="0" z="0.25 * PhantomThickness"/>
+
+  <constant name="HALFPI" value="pi/2."/>
+  <constant name="PI" value="1.*pi"/>
+  <constant name="TWOPI" value="2.*pi"/>
+  <position name="center" x="0" y="0" z="0"/>
+  <rotation name="identity" x="0" y="0" z="0"/>
+  <rotation name="alignSurfX" y="HALFPI" />
+  <rotation name="alignSurfY" x="HALFPI" />
+</define>
+
+<materials> </materials>
+
+<solids>
+  <box name="WorldBoxPhantomSol" x="50" y="50" z="50" lunit="cm"/>
+  
+  <box name="PhantomBoxOuterSol" x="PhantomLength" y="PhantomHeight" z="PhantomWidth" lunit="cm"/>
+</solids>
+
+<structure>
+  <volume name="PhantomBox">
+    <materialref ref="G4_PLEXIGLASS"/>
+    <solidref ref="PhantomBoxOuterSol"/>
+    <auxiliary auxtype="Color" auxvalue="#ECFEFF22"/>
+  </volume>
+
+  <volume name="WorldBoxPhantom">
+    <materialref ref="G4_AIR"/>
+    <solidref ref="WorldBoxPhantomSol"/>
+
+    <physvol>
+       <volumeref ref="PhantomBox"/>
+       <positionref ref="center"/>
+       <rotationref ref="identity"/>
+    </physvol>
+  </volume>
+
+</structure>
+
+<setup name="Default" version="1.0">
+  <world ref="WorldBoxPhantom"/>
+</setup>
+
+</gdml>
+

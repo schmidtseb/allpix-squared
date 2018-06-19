@@ -1,0 +1,1618 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+    <define>
+        <position name="aperture_Lead_v0" unit="mm" x="23.72705" y="51.59683" z="7.0"/>
+        <position name="aperture_Lead_v1" unit="mm" x="23.40268" y="49.48645" z="9.0"/>
+        <position name="aperture_Lead_v2" unit="mm" x="24.57302" y="49.77492" z="9.0"/>
+        <position name="aperture_Lead_v3" unit="mm" x="14.56638" y="47.15565" z="15.0"/>
+        <position name="aperture_Lead_v4" unit="mm" x="13.92681" y="44.94913" z="17.0"/>
+        <position name="aperture_Lead_v5" unit="mm" x="16.55129" y="45.39718" z="15.0"/>
+        <position name="aperture_Lead_v6" unit="mm" x="14.59586" y="44.36575" z="17.0"/>
+        <position name="aperture_Lead_v7" unit="mm" x="15.30316" y="43.82939" z="17.0"/>
+        <position name="aperture_Lead_v8" unit="mm" x="16.04541" y="43.34255" z="17.0"/>
+        <position name="aperture_Lead_v9" unit="mm" x="16.81915" y="42.90749" z="17.0"/>
+        <position name="aperture_Lead_v10" unit="mm" x="17.62079" y="42.52625" z="17.0"/>
+        <position name="aperture_Lead_v11" unit="mm" x="18.89935" y="44.16482" z="15.0"/>
+        <position name="aperture_Lead_v12" unit="mm" x="18.44657" y="42.20061" z="17.0"/>
+        <position name="aperture_Lead_v13" unit="mm" x="19.29264" y="41.93208" z="17.0"/>
+        <position name="aperture_Lead_v14" unit="mm" x="35.31792" y="57.95736" z="17.0"/>
+        <position name="aperture_Lead_v15" unit="mm" x="35.04939" y="58.80344" z="17.0"/>
+        <position name="aperture_Lead_v16" unit="mm" x="33.48036" y="57.08247" z="15.0"/>
+        <position name="aperture_Lead_v17" unit="mm" x="22.98837" y="57.44408" z="7.0"/>
+        <position name="aperture_Lead_v18" unit="mm" x="23.72705" y="57.30317" z="7.0"/>
+        <position name="aperture_Lead_v19" unit="mm" x="23.40268" y="59.41354" z="9.0"/>
+        <position name="aperture_Lead_v20" unit="mm" x="21.4741" y="43.5302" z="15.0"/>
+        <position name="aperture_Lead_v21" unit="mm" x="20.15507" y="41.72191" z="17.0"/>
+        <position name="aperture_Lead_v22" unit="mm" x="21.02983" y="41.57108" z="17.0"/>
+        <position name="aperture_Lead_v23" unit="mm" x="21.91285" y="41.4803" z="17.0"/>
+        <position name="aperture_Lead_v24" unit="mm" x="22.8" y="41.45" z="17.0"/>
+        <position name="aperture_Lead_v25" unit="mm" x="24.57302" y="59.12508" z="9.0"/>
+        <position name="aperture_Lead_v26" unit="mm" x="32.54002" y="59.56195" z="15.0"/>
+        <position name="aperture_Lead_v27" unit="mm" x="34.72375" y="59.62922" z="17.0"/>
+        <position name="aperture_Lead_v28" unit="mm" x="34.34251" y="60.43085" z="17.0"/>
+        <position name="aperture_Lead_v29" unit="mm" x="33.90745" y="61.20459" z="17.0"/>
+        <position name="aperture_Lead_v30" unit="mm" x="33.42061" y="61.94685" z="17.0"/>
+        <position name="aperture_Lead_v31" unit="mm" x="22.23786" y="57.39686" z="7.0"/>
+        <position name="aperture_Lead_v32" unit="mm" x="22.19732" y="59.41354" z="9.0"/>
+        <position name="aperture_Lead_v33" unit="mm" x="24.1259" y="43.5302" z="15.0"/>
+        <position name="aperture_Lead_v34" unit="mm" x="23.68715" y="41.4803" z="17.0"/>
+        <position name="aperture_Lead_v35" unit="mm" x="24.57017" y="41.57108" z="17.0"/>
+        <position name="aperture_Lead_v36" unit="mm" x="25.44493" y="41.72191" z="17.0"/>
+        <position name="aperture_Lead_v37" unit="mm" x="26.30736" y="41.93208" z="17.0"/>
+        <position name="aperture_Lead_v38" unit="mm" x="32.88425" y="62.65414" z="17.0"/>
+        <position name="aperture_Lead_v39" unit="mm" x="31.03362" y="61.74435" z="15.0"/>
+        <position name="aperture_Lead_v40" unit="mm" x="32.30087" y="63.32319" z="17.0"/>
+        <position name="aperture_Lead_v41" unit="mm" x="31.67319" y="63.95087" z="17.0"/>
+        <position name="aperture_Lead_v42" unit="mm" x="27.15343" y="42.20061" z="17.0"/>
+        <position name="aperture_Lead_v43" unit="mm" x="27.97921" y="42.52625" z="17.0"/>
+        <position name="aperture_Lead_v44" unit="mm" x="26.70065" y="44.16482" z="15.0"/>
+        <position name="aperture_Lead_v45" unit="mm" x="28.78085" y="42.90749" z="17.0"/>
+        <position name="aperture_Lead_v46" unit="mm" x="21.52266" y="57.16448" z="7.0"/>
+        <position name="aperture_Lead_v47" unit="mm" x="21.02698" y="59.12508" z="9.0"/>
+        <position name="aperture_Lead_v48" unit="mm" x="31.00414" y="64.53425" z="17.0"/>
+        <position name="aperture_Lead_v49" unit="mm" x="29.04871" y="63.50282" z="15.0"/>
+        <position name="aperture_Lead_v50" unit="mm" x="30.29684" y="65.07061" z="17.0"/>
+        <position name="aperture_Lead_v51" unit="mm" x="29.55459" y="65.55745" z="17.0"/>
+        <position name="aperture_Lead_v52" unit="mm" x="28.78085" y="65.99251" z="17.0"/>
+        <position name="aperture_Lead_v53" unit="mm" x="29.55459" y="43.34255" z="17.0"/>
+        <position name="aperture_Lead_v54" unit="mm" x="29.04871" y="45.39718" z="15.0"/>
+        <position name="aperture_Lead_v55" unit="mm" x="30.29684" y="43.82939" z="17.0"/>
+        <position name="aperture_Lead_v56" unit="mm" x="31.00414" y="44.36575" z="17.0"/>
+        <position name="aperture_Lead_v57" unit="mm" x="31.67319" y="44.94913" z="17.0"/>
+        <position name="aperture_Lead_v58" unit="mm" x="32.30087" y="45.57681" z="17.0"/>
+        <position name="aperture_Lead_v59" unit="mm" x="31.03362" y="47.15565" z="15.0"/>
+        <position name="aperture_Lead_v60" unit="mm" x="20.88773" y="56.76154" z="7.0"/>
+        <position name="aperture_Lead_v61" unit="mm" x="19.95968" y="58.56492" z="9.0"/>
+        <position name="aperture_Lead_v62" unit="mm" x="32.88425" y="46.24586" z="17.0"/>
+        <position name="aperture_Lead_v63" unit="mm" x="33.42061" y="46.95316" z="17.0"/>
+        <position name="aperture_Lead_v64" unit="mm" x="26.70065" y="64.73518" z="15.0"/>
+        <position name="aperture_Lead_v65" unit="mm" x="27.97921" y="66.37375" z="17.0"/>
+        <position name="aperture_Lead_v66" unit="mm" x="27.15343" y="66.69939" z="17.0"/>
+        <position name="aperture_Lead_v67" unit="mm" x="26.30736" y="66.96793" z="17.0"/>
+        <position name="aperture_Lead_v68" unit="mm" x="33.90745" y="47.69541" z="17.0"/>
+        <position name="aperture_Lead_v69" unit="mm" x="32.54002" y="49.33804" z="15.0"/>
+        <position name="aperture_Lead_v70" unit="mm" x="34.34251" y="48.46915" z="17.0"/>
+        <position name="aperture_Lead_v71" unit="mm" x="34.72375" y="49.27079" z="17.0"/>
+        <position name="aperture_Lead_v72" unit="mm" x="35.04939" y="50.09657" z="17.0"/>
+        <position name="aperture_Lead_v73" unit="mm" x="35.31792" y="50.94264" z="17.0"/>
+        <position name="aperture_Lead_v74" unit="mm" x="33.48036" y="51.81753" z="15.0"/>
+        <position name="aperture_Lead_v75" unit="mm" x="25.70575" y="55.19607" z="7.0"/>
+        <position name="aperture_Lead_v76" unit="mm" x="25.8" y="54.45" z="7.0"/>
+        <position name="aperture_Lead_v77" unit="mm" x="26.77084" y="54.93215" z="8.0"/>
+        <position name="aperture_Lead_v78" unit="mm" x="27.76354" y="55.05268" z="9.0"/>
+        <position name="aperture_Lead_v79" unit="mm" x="27.65471" y="55.64658" z="9.0"/>
+        <position name="aperture_Lead_v80" unit="mm" x="25.42892" y="55.89526" z="7.0"/>
+        <position name="aperture_Lead_v81" unit="mm" x="26.53316" y="55.88648" z="8.0"/>
+        <position name="aperture_Lead_v82" unit="mm" x="27.22728" y="56.77362" z="9.0"/>
+        <position name="aperture_Lead_v83" unit="mm" x="28.75625" y="55.17322" z="10.0"/>
+        <position name="aperture_Lead_v84" unit="mm" x="20.37295" y="56.21336" z="7.0"/>
+        <position name="aperture_Lead_v85" unit="mm" x="19.05745" y="57.76561" z="9.0"/>
+        <position name="aperture_Lead_v86" unit="mm" x="24.98691" y="56.50364" z="7.0"/>
+        <position name="aperture_Lead_v87" unit="mm" x="26.06982" y="56.75397" z="8.0"/>
+        <position name="aperture_Lead_v88" unit="mm" x="26.54255" y="57.76561" z="9.0"/>
+        <position name="aperture_Lead_v89" unit="mm" x="28.4101" y="56.57763" z="10.0"/>
+        <position name="aperture_Lead_v90" unit="mm" x="29.59659" y="56.12521" z="11.0"/>
+        <position name="aperture_Lead_v91" unit="mm" x="28.99819" y="57.70306" z="11.0"/>
+        <position name="aperture_Lead_v92" unit="mm" x="24.40748" y="56.98298" z="7.0"/>
+        <position name="aperture_Lead_v93" unit="mm" x="25.4088" y="57.48219" z="8.0"/>
+        <position name="aperture_Lead_v94" unit="mm" x="24.1259" y="65.3698" z="15.0"/>
+        <position name="aperture_Lead_v95" unit="mm" x="25.64032" y="58.56492" z="9.0"/>
+        <position name="aperture_Lead_v96" unit="mm" x="25.44493" y="67.17809" z="17.0"/>
+        <position name="aperture_Lead_v97" unit="mm" x="24.57017" y="67.32892" z="17.0"/>
+        <position name="aperture_Lead_v98" unit="mm" x="23.68715" y="67.41969" z="17.0"/>
+        <position name="aperture_Lead_v99" unit="mm" x="28.03958" y="59.09186" z="11.0"/>
+        <position name="aperture_Lead_v100" unit="mm" x="27.7379" y="57.85839" z="10.0"/>
+        <position name="aperture_Lead_v101" unit="mm" x="22.8" y="67.45" z="17.0"/>
+        <position name="aperture_Lead_v102" unit="mm" x="31.53848" y="56.60384" z="13.0"/>
+        <position name="aperture_Lead_v103" unit="mm" x="30.7691" y="58.63251" z="13.0"/>
+        <position name="aperture_Lead_v104" unit="mm" x="30.28013" y="57.28684" z="12.0"/>
+        <position name="aperture_Lead_v105" unit="mm" x="24.59008" y="58.0271" z="8.0"/>
+        <position name="aperture_Lead_v106" unit="mm" x="26.77874" y="58.94106" z="10.0"/>
+        <position name="aperture_Lead_v107" unit="mm" x="26.77645" y="60.21089" z="11.0"/>
+        <position name="aperture_Lead_v108" unit="mm" x="29.38387" y="58.99452" z="12.0"/>
+        <position name="aperture_Lead_v109" unit="mm" x="29.5366" y="60.4181" z="13.0"/>
+        <position name="aperture_Lead_v110" unit="mm" x="32.15016" y="57.99605" z="14.0"/>
+        <position name="aperture_Lead_v111" unit="mm" x="25.58834" y="59.76274" z="10.0"/>
+        <position name="aperture_Lead_v112" unit="mm" x="25.28223" y="60.99511" z="11.0"/>
+        <position name="aperture_Lead_v113" unit="mm" x="20.01067" y="55.55437" z="7.0"/>
+        <position name="aperture_Lead_v114" unit="mm" x="18.37272" y="56.77362" z="9.0"/>
+        <position name="aperture_Lead_v115" unit="mm" x="34.71251" y="55.89644" z="16.0"/>
+        <position name="aperture_Lead_v116" unit="mm" x="35.8" y="54.45" z="17.0"/>
+        <position name="aperture_Lead_v117" unit="mm" x="35.7697" y="55.33715" z="17.0"/>
+        <position name="aperture_Lead_v118" unit="mm" x="35.67892" y="56.22017" z="17.0"/>
+        <position name="aperture_Lead_v119" unit="mm" x="35.52809" y="57.09493" z="17.0"/>
+        <position name="aperture_Lead_v120" unit="mm" x="33.7198" y="55.7759" z="15.0"/>
+        <position name="aperture_Lead_v121" unit="mm" x="28.10498" y="60.43809" z="12.0"/>
+        <position name="aperture_Lead_v122" unit="mm" x="27.91258" y="61.85685" z="13.0"/>
+        <position name="aperture_Lead_v123" unit="mm" x="31.02984" y="60.13065" z="14.0"/>
+        <position name="aperture_Lead_v124" unit="mm" x="21.91285" y="67.41969" z="17.0"/>
+        <position name="aperture_Lead_v125" unit="mm" x="21.4741" y="65.3698" z="15.0"/>
+        <position name="aperture_Lead_v126" unit="mm" x="21.02983" y="67.32892" z="17.0"/>
+        <position name="aperture_Lead_v127" unit="mm" x="20.15507" y="67.17809" z="17.0"/>
+        <position name="aperture_Lead_v128" unit="mm" x="19.29264" y="66.96793" z="17.0"/>
+        <position name="aperture_Lead_v129" unit="mm" x="24.23589" y="60.27565" z="10.0"/>
+        <position name="aperture_Lead_v130" unit="mm" x="23.64376" y="61.39896" z="11.0"/>
+        <position name="aperture_Lead_v131" unit="mm" x="26.51779" y="61.53365" z="12.0"/>
+        <position name="aperture_Lead_v132" unit="mm" x="25.99144" y="62.86515" z="13.0"/>
+        <position name="aperture_Lead_v133" unit="mm" x="29.43123" y="61.93511" z="14.0"/>
+        <position name="aperture_Lead_v134" unit="mm" x="22.8" y="60.45" z="10.0"/>
+        <position name="aperture_Lead_v135" unit="mm" x="21.95624" y="61.39896" z="11.0"/>
+        <position name="aperture_Lead_v136" unit="mm" x="23.88483" y="63.38438" z="13.0"/>
+        <position name="aperture_Lead_v137" unit="mm" x="24.71453" y="62.21753" z="12.0"/>
+        <position name="aperture_Lead_v138" unit="mm" x="27.44723" y="63.30456" z="14.0"/>
+        <position name="aperture_Lead_v139" unit="mm" x="21.36411" y="60.27565" z="10.0"/>
+        <position name="aperture_Lead_v140" unit="mm" x="20.31777" y="60.99511" z="11.0"/>
+        <position name="aperture_Lead_v141" unit="mm" x="22.8" y="62.45" z="12.0"/>
+        <position name="aperture_Lead_v142" unit="mm" x="21.71517" y="63.38438" z="13.0"/>
+        <position name="aperture_Lead_v143" unit="mm" x="25.19316" y="64.15942" z="14.0"/>
+        <position name="aperture_Lead_v144" unit="mm" x="19.82366" y="54.826" z="7.0"/>
+        <position name="aperture_Lead_v145" unit="mm" x="17.94529" y="55.64658" z="9.0"/>
+        <position name="aperture_Lead_v146" unit="mm" x="20.01166" y="59.76274" z="10.0"/>
+        <position name="aperture_Lead_v147" unit="mm" x="18.82355" y="60.21089" z="11.0"/>
+        <position name="aperture_Lead_v148" unit="mm" x="20.88548" y="62.21753" z="12.0"/>
+        <position name="aperture_Lead_v149" unit="mm" x="19.60856" y="62.86515" z="13.0"/>
+        <position name="aperture_Lead_v150" unit="mm" x="22.8" y="64.45" z="14.0"/>
+        <position name="aperture_Lead_v151" unit="mm" x="18.44657" y="66.69939" z="17.0"/>
+        <position name="aperture_Lead_v152" unit="mm" x="18.89935" y="64.73518" z="15.0"/>
+        <position name="aperture_Lead_v153" unit="mm" x="17.62079" y="66.37375" z="17.0"/>
+        <position name="aperture_Lead_v154" unit="mm" x="16.81915" y="65.99251" z="17.0"/>
+        <position name="aperture_Lead_v155" unit="mm" x="18.82126" y="58.94106" z="10.0"/>
+        <position name="aperture_Lead_v156" unit="mm" x="17.56042" y="59.09186" z="11.0"/>
+        <position name="aperture_Lead_v157" unit="mm" x="17.68742" y="61.85685" z="13.0"/>
+        <position name="aperture_Lead_v158" unit="mm" x="19.08221" y="61.53365" z="12.0"/>
+        <position name="aperture_Lead_v159" unit="mm" x="20.40684" y="64.15942" z="14.0"/>
+        <position name="aperture_Lead_v160" unit="mm" x="17.8621" y="57.85839" z="10.0"/>
+        <position name="aperture_Lead_v161" unit="mm" x="16.60181" y="57.70306" z="11.0"/>
+        <position name="aperture_Lead_v162" unit="mm" x="17.49502" y="60.43809" z="12.0"/>
+        <position name="aperture_Lead_v163" unit="mm" x="16.0634" y="60.4181" z="13.0"/>
+        <position name="aperture_Lead_v164" unit="mm" x="18.15277" y="63.30456" z="14.0"/>
+        <position name="aperture_Lead_v165" unit="mm" x="16.55129" y="63.50282" z="15.0"/>
+        <position name="aperture_Lead_v166" unit="mm" x="17.1899" y="56.57763" z="10.0"/>
+        <position name="aperture_Lead_v167" unit="mm" x="16.00341" y="56.12521" z="11.0"/>
+        <position name="aperture_Lead_v168" unit="mm" x="16.21613" y="58.99452" z="12.0"/>
+        <position name="aperture_Lead_v169" unit="mm" x="14.8309" y="58.63251" z="13.0"/>
+        <position name="aperture_Lead_v170" unit="mm" x="19.82366" y="54.074" z="7.0"/>
+        <position name="aperture_Lead_v171" unit="mm" x="17.8" y="54.45" z="9.0"/>
+        <position name="aperture_Lead_v172" unit="mm" x="16.16877" y="61.93511" z="14.0"/>
+        <position name="aperture_Lead_v173" unit="mm" x="14.56638" y="61.74435" z="15.0"/>
+        <position name="aperture_Lead_v174" unit="mm" x="16.84375" y="55.17322" z="10.0"/>
+        <position name="aperture_Lead_v175" unit="mm" x="15.8" y="54.45" z="11.0"/>
+        <position name="aperture_Lead_v176" unit="mm" x="15.31987" y="57.28684" z="12.0"/>
+        <position name="aperture_Lead_v177" unit="mm" x="14.06152" y="56.60384" z="13.0"/>
+        <position name="aperture_Lead_v178" unit="mm" x="16.04541" y="65.55745" z="17.0"/>
+        <position name="aperture_Lead_v179" unit="mm" x="14.57016" y="60.13065" z="14.0"/>
+        <position name="aperture_Lead_v180" unit="mm" x="15.30316" y="65.07061" z="17.0"/>
+        <position name="aperture_Lead_v181" unit="mm" x="14.59586" y="64.53425" z="17.0"/>
+        <position name="aperture_Lead_v182" unit="mm" x="13.05998" y="59.56195" z="15.0"/>
+        <position name="aperture_Lead_v183" unit="mm" x="13.92681" y="63.95087" z="17.0"/>
+        <position name="aperture_Lead_v184" unit="mm" x="17.94529" y="53.25342" z="9.0"/>
+        <position name="aperture_Lead_v185" unit="mm" x="16.84375" y="53.72678" z="10.0"/>
+        <position name="aperture_Lead_v186" unit="mm" x="16.00341" y="52.77479" z="11.0"/>
+        <position name="aperture_Lead_v187" unit="mm" x="14.85833" y="55.4143" z="12.0"/>
+        <position name="aperture_Lead_v188" unit="mm" x="13.8" y="54.45" z="13.0"/>
+        <position name="aperture_Lead_v189" unit="mm" x="12.11964" y="57.08247" z="15.0"/>
+        <position name="aperture_Lead_v190" unit="mm" x="13.44984" y="57.99605" z="14.0"/>
+        <position name="aperture_Lead_v191" unit="mm" x="17.1899" y="52.32237" z="10.0"/>
+        <position name="aperture_Lead_v192" unit="mm" x="18.37272" y="52.12638" z="9.0"/>
+        <position name="aperture_Lead_v193" unit="mm" x="16.60181" y="51.19694" z="11.0"/>
+        <position name="aperture_Lead_v194" unit="mm" x="14.85833" y="53.48571" z="12.0"/>
+        <position name="aperture_Lead_v195" unit="mm" x="14.06152" y="52.29616" z="13.0"/>
+        <position name="aperture_Lead_v196" unit="mm" x="12.87291" y="55.65536" z="14.0"/>
+        <position name="aperture_Lead_v197" unit="mm" x="11.8" y="54.45" z="15.0"/>
+        <position name="aperture_Lead_v198" unit="mm" x="17.56042" y="49.80814" z="11.0"/>
+        <position name="aperture_Lead_v199" unit="mm" x="17.8621" y="51.04161" z="10.0"/>
+        <position name="aperture_Lead_v200" unit="mm" x="19.05745" y="51.13439" z="9.0"/>
+        <position name="aperture_Lead_v201" unit="mm" x="14.8309" y="50.26749" z="13.0"/>
+        <position name="aperture_Lead_v202" unit="mm" x="15.31987" y="51.61316" z="12.0"/>
+        <position name="aperture_Lead_v203" unit="mm" x="20.01067" y="53.34563" z="7.0"/>
+        <position name="aperture_Lead_v204" unit="mm" x="12.11964" y="51.81753" z="15.0"/>
+        <position name="aperture_Lead_v205" unit="mm" x="12.87291" y="53.24463" z="14.0"/>
+        <position name="aperture_Lead_v206" unit="mm" x="18.82355" y="48.68911" z="11.0"/>
+        <position name="aperture_Lead_v207" unit="mm" x="18.82126" y="49.95893" z="10.0"/>
+        <position name="aperture_Lead_v208" unit="mm" x="19.95968" y="50.33508" z="9.0"/>
+        <position name="aperture_Lead_v209" unit="mm" x="16.21613" y="49.90548" z="12.0"/>
+        <position name="aperture_Lead_v210" unit="mm" x="16.0634" y="48.4819" z="13.0"/>
+        <position name="aperture_Lead_v211" unit="mm" x="13.29913" y="63.32319" z="17.0"/>
+        <position name="aperture_Lead_v212" unit="mm" x="13.44984" y="50.90395" z="14.0"/>
+        <position name="aperture_Lead_v213" unit="mm" x="12.71575" y="62.65414" z="17.0"/>
+        <position name="aperture_Lead_v214" unit="mm" x="12.17939" y="61.94685" z="17.0"/>
+        <position name="aperture_Lead_v215" unit="mm" x="13.05998" y="49.33804" z="15.0"/>
+        <position name="aperture_Lead_v216" unit="mm" x="21.02698" y="49.77492" z="9.0"/>
+        <position name="aperture_Lead_v217" unit="mm" x="20.01166" y="49.13726" z="10.0"/>
+        <position name="aperture_Lead_v218" unit="mm" x="20.31777" y="47.90489" z="11.0"/>
+        <position name="aperture_Lead_v219" unit="mm" x="17.49502" y="48.46191" z="12.0"/>
+        <position name="aperture_Lead_v220" unit="mm" x="17.68742" y="47.04314" z="13.0"/>
+        <position name="aperture_Lead_v221" unit="mm" x="14.57016" y="48.76935" z="14.0"/>
+        <position name="aperture_Lead_v222" unit="mm" x="21.36411" y="48.62435" z="10.0"/>
+        <position name="aperture_Lead_v223" unit="mm" x="22.19732" y="49.48645" z="9.0"/>
+        <position name="aperture_Lead_v224" unit="mm" x="21.95624" y="47.50104" z="11.0"/>
+        <position name="aperture_Lead_v225" unit="mm" x="19.08221" y="47.36635" z="12.0"/>
+        <position name="aperture_Lead_v226" unit="mm" x="19.60856" y="46.03485" z="13.0"/>
+        <position name="aperture_Lead_v227" unit="mm" x="16.16877" y="46.96489" z="14.0"/>
+        <position name="aperture_Lead_v228" unit="mm" x="22.8" y="48.45" z="10.0"/>
+        <position name="aperture_Lead_v229" unit="mm" x="23.64376" y="47.50104" z="11.0"/>
+        <position name="aperture_Lead_v230" unit="mm" x="20.37295" y="52.68665" z="7.0"/>
+        <position name="aperture_Lead_v231" unit="mm" x="24.40748" y="51.91702" z="7.0"/>
+        <position name="aperture_Lead_v232" unit="mm" x="24.59008" y="50.8729" z="8.0"/>
+        <position name="aperture_Lead_v233" unit="mm" x="25.64032" y="50.33508" z="9.0"/>
+        <position name="aperture_Lead_v234" unit="mm" x="20.88548" y="46.68246" z="12.0"/>
+        <position name="aperture_Lead_v235" unit="mm" x="21.71517" y="45.51562" z="13.0"/>
+        <position name="aperture_Lead_v236" unit="mm" x="18.15277" y="45.59544" z="14.0"/>
+        <position name="aperture_Lead_v237" unit="mm" x="24.23589" y="48.62435" z="10.0"/>
+        <position name="aperture_Lead_v238" unit="mm" x="25.28223" y="47.90489" z="11.0"/>
+        <position name="aperture_Lead_v239" unit="mm" x="11.69255" y="61.20459" z="17.0"/>
+        <position name="aperture_Lead_v240" unit="mm" x="11.25749" y="60.43085" z="17.0"/>
+        <position name="aperture_Lead_v241" unit="mm" x="22.8" y="46.45" z="12.0"/>
+        <position name="aperture_Lead_v242" unit="mm" x="10.87625" y="59.62922" z="17.0"/>
+        <position name="aperture_Lead_v243" unit="mm" x="10.55061" y="58.80344" z="17.0"/>
+        <position name="aperture_Lead_v244" unit="mm" x="23.88483" y="45.51562" z="13.0"/>
+        <position name="aperture_Lead_v245" unit="mm" x="25.4088" y="51.41781" z="8.0"/>
+        <position name="aperture_Lead_v246" unit="mm" x="24.98691" y="52.39636" z="7.0"/>
+        <position name="aperture_Lead_v247" unit="mm" x="26.54255" y="51.13439" z="9.0"/>
+        <position name="aperture_Lead_v248" unit="mm" x="20.40684" y="44.74058" z="14.0"/>
+        <position name="aperture_Lead_v249" unit="mm" x="25.58834" y="49.13726" z="10.0"/>
+        <position name="aperture_Lead_v250" unit="mm" x="26.77645" y="48.68911" z="11.0"/>
+        <position name="aperture_Lead_v251" unit="mm" x="24.71453" y="46.68246" z="12.0"/>
+        <position name="aperture_Lead_v252" unit="mm" x="25.99144" y="46.03485" z="13.0"/>
+        <position name="aperture_Lead_v253" unit="mm" x="25.42892" y="53.00474" z="7.0"/>
+        <position name="aperture_Lead_v254" unit="mm" x="26.06982" y="52.14603" z="8.0"/>
+        <position name="aperture_Lead_v255" unit="mm" x="27.22728" y="52.12638" z="9.0"/>
+        <position name="aperture_Lead_v256" unit="mm" x="22.8" y="44.45" z="14.0"/>
+        <position name="aperture_Lead_v257" unit="mm" x="26.77874" y="49.95893" z="10.0"/>
+        <position name="aperture_Lead_v258" unit="mm" x="28.03958" y="49.80814" z="11.0"/>
+        <position name="aperture_Lead_v259" unit="mm" x="26.51779" y="47.36635" z="12.0"/>
+        <position name="aperture_Lead_v260" unit="mm" x="20.88773" y="52.13846" z="7.0"/>
+        <position name="aperture_Lead_v261" unit="mm" x="27.91258" y="47.04314" z="13.0"/>
+        <position name="aperture_Lead_v262" unit="mm" x="27.65471" y="53.25342" z="9.0"/>
+        <position name="aperture_Lead_v263" unit="mm" x="26.53316" y="53.01352" z="8.0"/>
+        <position name="aperture_Lead_v264" unit="mm" x="25.70575" y="53.70393" z="7.0"/>
+        <position name="aperture_Lead_v265" unit="mm" x="25.19316" y="44.74058" z="14.0"/>
+        <position name="aperture_Lead_v266" unit="mm" x="28.99819" y="51.19694" z="11.0"/>
+        <position name="aperture_Lead_v267" unit="mm" x="27.7379" y="51.04161" z="10.0"/>
+        <position name="aperture_Lead_v268" unit="mm" x="10.28207" y="57.95736" z="17.0"/>
+        <position name="aperture_Lead_v269" unit="mm" x="10.07191" y="57.09493" z="17.0"/>
+        <position name="aperture_Lead_v270" unit="mm" x="9.921082" y="56.22017" z="17.0"/>
+        <position name="aperture_Lead_v271" unit="mm" x="29.5366" y="48.4819" z="13.0"/>
+        <position name="aperture_Lead_v272" unit="mm" x="28.10498" y="48.46191" z="12.0"/>
+        <position name="aperture_Lead_v273" unit="mm" x="26.77084" y="53.96785" z="8.0"/>
+        <position name="aperture_Lead_v274" unit="mm" x="27.44723" y="45.59544" z="14.0"/>
+        <position name="aperture_Lead_v275" unit="mm" x="28.4101" y="52.32237" z="10.0"/>
+        <position name="aperture_Lead_v276" unit="mm" x="29.59659" y="52.77479" z="11.0"/>
+        <position name="aperture_Lead_v277" unit="mm" x="27.76354" y="53.84732" z="9.0"/>
+        <position name="aperture_Lead_v278" unit="mm" x="29.38387" y="49.90548" z="12.0"/>
+        <position name="aperture_Lead_v279" unit="mm" x="30.7691" y="50.26749" z="13.0"/>
+        <position name="aperture_Lead_v280" unit="mm" x="29.43123" y="46.96489" z="14.0"/>
+        <position name="aperture_Lead_v281" unit="mm" x="30.28013" y="51.61316" z="12.0"/>
+        <position name="aperture_Lead_v282" unit="mm" x="21.52266" y="51.73552" z="7.0"/>
+        <position name="aperture_Lead_v283" unit="mm" x="31.53848" y="52.29616" z="13.0"/>
+        <position name="aperture_Lead_v284" unit="mm" x="31.02984" y="48.76935" z="14.0"/>
+        <position name="aperture_Lead_v285" unit="mm" x="32.15016" y="50.90395" z="14.0"/>
+        <position name="aperture_Lead_v286" unit="mm" x="9.830306" y="55.33715" z="17.0"/>
+        <position name="aperture_Lead_v287" unit="mm" x="9.8" y="54.45" z="17.0"/>
+        <position name="aperture_Lead_v288" unit="mm" x="32.72709" y="53.24463" z="14.0"/>
+        <position name="aperture_Lead_v289" unit="mm" x="9.830306" y="53.56285" z="17.0"/>
+        <position name="aperture_Lead_v290" unit="mm" x="9.921082" y="52.67983" z="17.0"/>
+        <position name="aperture_Lead_v291" unit="mm" x="33.7198" y="53.1241" z="15.0"/>
+        <position name="aperture_Lead_v292" unit="mm" x="35.52809" y="51.80507" z="17.0"/>
+        <position name="aperture_Lead_v293" unit="mm" x="34.71251" y="53.00356" z="16.0"/>
+        <position name="aperture_Lead_v294" unit="mm" x="35.67892" y="52.67983" z="17.0"/>
+        <position name="aperture_Lead_v295" unit="mm" x="35.7697" y="53.56285" z="17.0"/>
+        <position name="aperture_Lead_v296" unit="mm" x="32.28267" y="55.02359" z="13.5"/>
+        <position name="aperture_Lead_v297" unit="mm" x="29.28814" y="54.05754" z="10.5"/>
+        <position name="aperture_Lead_v298" unit="mm" x="30.95608" y="55.69133" z="12.25"/>
+        <position name="aperture_Lead_v299" unit="mm" x="32.33284" y="56.49634" z="13.75"/>
+        <position name="aperture_Lead_v300" unit="mm" x="30.46177" y="53.2839" z="11.75"/>
+        <position name="aperture_Lead_v301" unit="mm" x="22.23786" y="51.50314" z="7.0"/>
+        <position name="aperture_Lead_v302" unit="mm" x="10.07191" y="51.80507" z="17.0"/>
+        <position name="aperture_Lead_v303" unit="mm" x="10.28207" y="50.94264" z="17.0"/>
+        <position name="aperture_Lead_v304" unit="mm" x="10.55061" y="50.09657" z="17.0"/>
+        <position name="aperture_Lead_v305" unit="mm" x="22.98837" y="51.45592" z="7.0"/>
+        <position name="aperture_Lead_v306" unit="mm" x="10.87625" y="49.27079" z="17.0"/>
+        <position name="aperture_Lead_v307" unit="mm" x="11.25749" y="48.46915" z="17.0"/>
+        <position name="aperture_Lead_v308" unit="mm" x="11.69255" y="47.69541" z="17.0"/>
+        <position name="aperture_Lead_v309" unit="mm" x="12.17939" y="46.95316" z="17.0"/>
+        <position name="aperture_Lead_v310" unit="mm" x="12.71575" y="46.24586" z="17.0"/>
+        <position name="aperture_Lead_v311" unit="mm" x="13.29913" y="45.57681" z="17.0"/>
+        <position name="aperture_Lead_v312" unit="mm" x="19.12608" y="72.58153" z="17.0"/>
+        <position name="aperture_Lead_v313" unit="mm" x="18.09696" y="72.34222" z="17.0"/>
+        <position name="aperture_Lead_v314" unit="mm" x="41.02905" y="51.29534" z="17.0"/>
+        <position name="aperture_Lead_v315" unit="mm" x="40.81922" y="50.25981" z="17.0"/>
+        <position name="aperture_Lead_v316" unit="mm" x="20.16718" y="72.7617" z="17.0"/>
+        <position name="aperture_Lead_v317" unit="mm" x="41.17941" y="52.34116" z="17.0"/>
+        <position name="aperture_Lead_v318" unit="mm" x="21.21686" y="72.88213" z="17.0"/>
+        <position name="aperture_Lead_v319" unit="mm" x="41.26983" y="53.39386" z="17.0"/>
+        <position name="aperture_Lead_v320" unit="mm" x="22.27171" y="72.94246" z="17.0"/>
+        <position name="aperture_Lead_v321" unit="mm" x="9.170289" y="41.94077" z="17.0"/>
+        <position name="aperture_Lead_v322" unit="mm" x="9.906655" y="41.18306" z="17.0"/>
+        <position name="aperture_Lead_v323" unit="mm" x="41.3" y="54.45" z="17.0"/>
+        <position name="aperture_Lead_v324" unit="mm" x="23.32829" y="72.94246" z="17.0"/>
+        <position name="aperture_Lead_v325" unit="mm" x="10.68508" y="40.46863" z="17.0"/>
+        <position name="aperture_Lead_v326" unit="mm" x="41.26983" y="55.50614" z="17.0"/>
+        <position name="aperture_Lead_v327" unit="mm" x="24.38314" y="72.88213" z="17.0"/>
+        <position name="aperture_Lead_v328" unit="mm" x="7.833186" y="43.57597" z="17.0"/>
+        <position name="aperture_Lead_v329" unit="mm" x="8.47838" y="42.73927" z="17.0"/>
+        <position name="aperture_Lead_v330" unit="mm" x="41.17941" y="56.55884" z="17.0"/>
+        <position name="aperture_Lead_v331" unit="mm" x="11.50301" y="39.79981" z="17.0"/>
+        <position name="aperture_Lead_v332" unit="mm" x="25.43283" y="72.7617" z="17.0"/>
+        <position name="aperture_Lead_v333" unit="mm" x="41.02905" y="57.60466" z="17.0"/>
+        <position name="aperture_Lead_v334" unit="mm" x="7.23681" y="44.44814" z="17.0"/>
+        <position name="aperture_Lead_v335" unit="mm" x="12.3578" y="39.17877" z="17.0"/>
+        <position name="aperture_Lead_v336" unit="mm" x="26.47392" y="72.58153" z="17.0"/>
+        <position name="aperture_Lead_v337" unit="mm" x="40.81922" y="58.64019" z="17.0"/>
+        <position name="aperture_Lead_v338" unit="mm" x="6.691197" y="45.35294" z="17.0"/>
+        <position name="aperture_Lead_v339" unit="mm" x="27.50304" y="72.34222" z="17.0"/>
+        <position name="aperture_Lead_v340" unit="mm" x="13.24665" y="38.60754" z="17.0"/>
+        <position name="aperture_Lead_v341" unit="mm" x="14.16665" y="38.08799" z="17.0"/>
+        <position name="aperture_Lead_v342" unit="mm" x="40.55062" y="59.66205" z="17.0"/>
+        <position name="aperture_Lead_v343" unit="mm" x="6.198129" y="46.28741" z="17.0"/>
+        <position name="aperture_Lead_v344" unit="mm" x="28.51682" y="72.04455" z="17.0"/>
+        <position name="aperture_Lead_v345" unit="mm" x="15.11482" y="37.62181" z="17.0"/>
+        <position name="aperture_Lead_v346" unit="mm" x="40.22412" y="60.66691" z="17.0"/>
+        <position name="aperture_Lead_v347" unit="mm" x="29.51194" y="71.68948" z="17.0"/>
+        <position name="aperture_Lead_v348" unit="mm" x="5.759212" y="47.2485" z="17.0"/>
+        <position name="aperture_Lead_v349" unit="mm" x="39.84079" y="61.6515" z="17.0"/>
+        <position name="aperture_Lead_v350" unit="mm" x="16.08806" y="37.21051" z="17.0"/>
+        <position name="aperture_Lead_v351" unit="mm" x="30.48518" y="71.27819" z="17.0"/>
+        <position name="aperture_Lead_v352" unit="mm" x="39.40187" y="62.61259" z="17.0"/>
+        <position name="aperture_Lead_v353" unit="mm" x="5.04938" y="49.23795" z="17.0"/>
+        <position name="aperture_Lead_v354" unit="mm" x="5.375879" y="48.23309" z="17.0"/>
+        <position name="aperture_Lead_v355" unit="mm" x="31.43335" y="70.81201" z="17.0"/>
+        <position name="aperture_Lead_v356" unit="mm" x="17.08319" y="36.85545" z="17.0"/>
+        <position name="aperture_Lead_v357" unit="mm" x="38.9088" y="63.54706" z="17.0"/>
+        <position name="aperture_Lead_v358" unit="mm" x="32.35335" y="70.29246" z="17.0"/>
+        <position name="aperture_Lead_v359" unit="mm" x="4.780779" y="50.25981" z="17.0"/>
+        <position name="aperture_Lead_v360" unit="mm" x="38.36319" y="64.45186" z="17.0"/>
+        <position name="aperture_Lead_v361" unit="mm" x="18.09696" y="36.55779" z="17.0"/>
+        <position name="aperture_Lead_v362" unit="mm" x="33.2422" y="69.72123" z="17.0"/>
+        <position name="aperture_Lead_v363" unit="mm" x="37.76682" y="65.32403" z="17.0"/>
+        <position name="aperture_Lead_v364" unit="mm" x="4.570954" y="51.29534" z="17.0"/>
+        <position name="aperture_Lead_v365" unit="mm" x="34.09698" y="69.10019" z="17.0"/>
+        <position name="aperture_Lead_v366" unit="mm" x="19.12608" y="36.31847" z="17.0"/>
+        <position name="aperture_Lead_v367" unit="mm" x="20.16718" y="36.1383" z="17.0"/>
+        <position name="aperture_Lead_v368" unit="mm" x="37.12162" y="66.16073" z="17.0"/>
+        <position name="aperture_Lead_v369" unit="mm" x="34.91492" y="68.43137" z="17.0"/>
+        <position name="aperture_Lead_v370" unit="mm" x="36.42971" y="66.95924" z="17.0"/>
+        <position name="aperture_Lead_v371" unit="mm" x="35.69334" y="67.71694" z="17.0"/>
+        <position name="aperture_Lead_v372" unit="mm" x="4.420588" y="52.34116" z="17.0"/>
+        <position name="aperture_Lead_v373" unit="mm" x="21.21686" y="36.01786" z="17.0"/>
+        <position name="aperture_Lead_v374" unit="mm" x="4.330172" y="53.39386" z="17.0"/>
+        <position name="aperture_Lead_v375" unit="mm" x="22.27171" y="35.95755" z="17.0"/>
+        <position name="aperture_Lead_v376" unit="mm" x="4.330172" y="55.50614" z="17.0"/>
+        <position name="aperture_Lead_v377" unit="mm" x="4.3" y="54.45" z="17.0"/>
+        <position name="aperture_Lead_v378" unit="mm" x="23.32829" y="35.95755" z="17.0"/>
+        <position name="aperture_Lead_v379" unit="mm" x="4.420588" y="56.55884" z="17.0"/>
+        <position name="aperture_Lead_v380" unit="mm" x="24.38314" y="36.01786" z="17.0"/>
+        <position name="aperture_Lead_v381" unit="mm" x="4.570954" y="57.60466" z="17.0"/>
+        <position name="aperture_Lead_v382" unit="mm" x="25.43283" y="36.1383" z="17.0"/>
+        <position name="aperture_Lead_v383" unit="mm" x="4.780779" y="58.64019" z="17.0"/>
+        <position name="aperture_Lead_v384" unit="mm" x="26.47392" y="36.31847" z="17.0"/>
+        <position name="aperture_Lead_v385" unit="mm" x="27.50304" y="36.55779" z="17.0"/>
+        <position name="aperture_Lead_v386" unit="mm" x="5.04938" y="59.66205" z="17.0"/>
+        <position name="aperture_Lead_v387" unit="mm" x="28.51682" y="36.85545" z="17.0"/>
+        <position name="aperture_Lead_v388" unit="mm" x="5.759212" y="61.6515" z="17.0"/>
+        <position name="aperture_Lead_v389" unit="mm" x="5.375879" y="60.66691" z="17.0"/>
+        <position name="aperture_Lead_v390" unit="mm" x="29.51194" y="37.21051" z="17.0"/>
+        <position name="aperture_Lead_v391" unit="mm" x="6.198129" y="62.61259" z="17.0"/>
+        <position name="aperture_Lead_v392" unit="mm" x="30.48518" y="37.62181" z="17.0"/>
+        <position name="aperture_Lead_v393" unit="mm" x="6.691197" y="63.54706" z="17.0"/>
+        <position name="aperture_Lead_v394" unit="mm" x="31.43335" y="38.08799" z="17.0"/>
+        <position name="aperture_Lead_v395" unit="mm" x="7.23681" y="64.45186" z="17.0"/>
+        <position name="aperture_Lead_v396" unit="mm" x="32.35335" y="38.60754" z="17.0"/>
+        <position name="aperture_Lead_v397" unit="mm" x="33.2422" y="39.17877" z="17.0"/>
+        <position name="aperture_Lead_v398" unit="mm" x="7.833186" y="65.32403" z="17.0"/>
+        <position name="aperture_Lead_v399" unit="mm" x="34.09698" y="39.79981" z="17.0"/>
+        <position name="aperture_Lead_v400" unit="mm" x="8.47838" y="66.16073" z="17.0"/>
+        <position name="aperture_Lead_v401" unit="mm" x="34.91492" y="40.46863" z="17.0"/>
+        <position name="aperture_Lead_v402" unit="mm" x="9.170289" y="66.95924" z="17.0"/>
+        <position name="aperture_Lead_v403" unit="mm" x="35.69334" y="41.18306" z="17.0"/>
+        <position name="aperture_Lead_v404" unit="mm" x="9.906655" y="67.71694" z="17.0"/>
+        <position name="aperture_Lead_v405" unit="mm" x="36.42971" y="41.94077" z="17.0"/>
+        <position name="aperture_Lead_v406" unit="mm" x="10.68508" y="68.43137" z="17.0"/>
+        <position name="aperture_Lead_v407" unit="mm" x="37.12162" y="42.73927" z="17.0"/>
+        <position name="aperture_Lead_v408" unit="mm" x="11.50301" y="69.10019" z="17.0"/>
+        <position name="aperture_Lead_v409" unit="mm" x="37.76682" y="43.57597" z="17.0"/>
+        <position name="aperture_Lead_v410" unit="mm" x="12.3578" y="69.72123" z="17.0"/>
+        <position name="aperture_Lead_v411" unit="mm" x="38.36319" y="44.44814" z="17.0"/>
+        <position name="aperture_Lead_v412" unit="mm" x="13.24665" y="70.29246" z="17.0"/>
+        <position name="aperture_Lead_v413" unit="mm" x="38.9088" y="45.35294" z="17.0"/>
+        <position name="aperture_Lead_v414" unit="mm" x="14.16665" y="70.81201" z="17.0"/>
+        <position name="aperture_Lead_v415" unit="mm" x="39.40187" y="46.28741" z="17.0"/>
+        <position name="aperture_Lead_v416" unit="mm" x="15.11482" y="71.27819" z="17.0"/>
+        <position name="aperture_Lead_v417" unit="mm" x="39.84079" y="47.2485" z="17.0"/>
+        <position name="aperture_Lead_v418" unit="mm" x="16.08806" y="71.68948" z="17.0"/>
+        <position name="aperture_Lead_v419" unit="mm" x="40.22412" y="48.23309" z="17.0"/>
+        <position name="aperture_Lead_v420" unit="mm" x="17.08319" y="72.04455" z="17.0"/>
+        <position name="aperture_Lead_v421" unit="mm" x="40.55062" y="49.23795" z="17.0"/>
+        <position name="aperture_Lead_v422" unit="mm" x="23.32829" y="35.95755" z="7.0"/>
+        <position name="aperture_Lead_v423" unit="mm" x="24.38314" y="36.01786" z="7.0"/>
+        <position name="aperture_Lead_v424" unit="mm" x="25.43283" y="36.1383" z="7.0"/>
+        <position name="aperture_Lead_v425" unit="mm" x="26.47392" y="36.31847" z="7.0"/>
+        <position name="aperture_Lead_v426" unit="mm" x="41.3" y="54.45" z="7.0"/>
+        <position name="aperture_Lead_v427" unit="mm" x="41.26983" y="55.50614" z="7.0"/>
+        <position name="aperture_Lead_v428" unit="mm" x="27.50304" y="36.55779" z="7.0"/>
+        <position name="aperture_Lead_v429" unit="mm" x="41.17941" y="56.55884" z="7.0"/>
+        <position name="aperture_Lead_v430" unit="mm" x="28.51682" y="36.85545" z="7.0"/>
+        <position name="aperture_Lead_v431" unit="mm" x="41.02905" y="57.60466" z="7.0"/>
+        <position name="aperture_Lead_v432" unit="mm" x="29.51194" y="37.21051" z="7.0"/>
+        <position name="aperture_Lead_v433" unit="mm" x="40.81922" y="58.64019" z="7.0"/>
+        <position name="aperture_Lead_v434" unit="mm" x="30.48518" y="37.62181" z="7.0"/>
+        <position name="aperture_Lead_v435" unit="mm" x="40.55062" y="59.66205" z="7.0"/>
+        <position name="aperture_Lead_v436" unit="mm" x="31.43335" y="38.08799" z="7.0"/>
+        <position name="aperture_Lead_v437" unit="mm" x="40.22412" y="60.66691" z="7.0"/>
+        <position name="aperture_Lead_v438" unit="mm" x="32.35335" y="38.60754" z="7.0"/>
+        <position name="aperture_Lead_v439" unit="mm" x="39.84079" y="61.6515" z="7.0"/>
+        <position name="aperture_Lead_v440" unit="mm" x="33.2422" y="39.17877" z="7.0"/>
+        <position name="aperture_Lead_v441" unit="mm" x="34.09698" y="39.79981" z="7.0"/>
+        <position name="aperture_Lead_v442" unit="mm" x="39.40187" y="62.61259" z="7.0"/>
+        <position name="aperture_Lead_v443" unit="mm" x="34.91492" y="40.46863" z="7.0"/>
+        <position name="aperture_Lead_v444" unit="mm" x="38.9088" y="63.54706" z="7.0"/>
+        <position name="aperture_Lead_v445" unit="mm" x="35.69334" y="41.18306" z="7.0"/>
+        <position name="aperture_Lead_v446" unit="mm" x="38.36319" y="64.45186" z="7.0"/>
+        <position name="aperture_Lead_v447" unit="mm" x="36.42971" y="41.94077" z="7.0"/>
+        <position name="aperture_Lead_v448" unit="mm" x="37.76682" y="65.32403" z="7.0"/>
+        <position name="aperture_Lead_v449" unit="mm" x="37.12162" y="42.73927" z="7.0"/>
+        <position name="aperture_Lead_v450" unit="mm" x="37.12162" y="66.16073" z="7.0"/>
+        <position name="aperture_Lead_v451" unit="mm" x="37.76682" y="43.57597" z="7.0"/>
+        <position name="aperture_Lead_v452" unit="mm" x="36.42971" y="66.95924" z="7.0"/>
+        <position name="aperture_Lead_v453" unit="mm" x="38.36319" y="44.44814" z="7.0"/>
+        <position name="aperture_Lead_v454" unit="mm" x="38.9088" y="45.35294" z="7.0"/>
+        <position name="aperture_Lead_v455" unit="mm" x="35.69334" y="67.71694" z="7.0"/>
+        <position name="aperture_Lead_v456" unit="mm" x="39.40187" y="46.28741" z="7.0"/>
+        <position name="aperture_Lead_v457" unit="mm" x="39.84079" y="47.2485" z="7.0"/>
+        <position name="aperture_Lead_v458" unit="mm" x="34.91492" y="68.43137" z="7.0"/>
+        <position name="aperture_Lead_v459" unit="mm" x="34.09698" y="69.10019" z="7.0"/>
+        <position name="aperture_Lead_v460" unit="mm" x="40.22412" y="48.23309" z="7.0"/>
+        <position name="aperture_Lead_v461" unit="mm" x="33.2422" y="69.72123" z="7.0"/>
+        <position name="aperture_Lead_v462" unit="mm" x="40.55062" y="49.23795" z="7.0"/>
+        <position name="aperture_Lead_v463" unit="mm" x="40.81922" y="50.25981" z="7.0"/>
+        <position name="aperture_Lead_v464" unit="mm" x="32.35335" y="70.29246" z="7.0"/>
+        <position name="aperture_Lead_v465" unit="mm" x="41.02905" y="51.29534" z="7.0"/>
+        <position name="aperture_Lead_v466" unit="mm" x="31.43335" y="70.81201" z="7.0"/>
+        <position name="aperture_Lead_v467" unit="mm" x="41.17941" y="52.34116" z="7.0"/>
+        <position name="aperture_Lead_v468" unit="mm" x="30.48518" y="71.27819" z="7.0"/>
+        <position name="aperture_Lead_v469" unit="mm" x="41.26983" y="53.39386" z="7.0"/>
+        <position name="aperture_Lead_v470" unit="mm" x="29.51194" y="71.68948" z="7.0"/>
+        <position name="aperture_Lead_v471" unit="mm" x="28.51682" y="72.04455" z="7.0"/>
+        <position name="aperture_Lead_v472" unit="mm" x="27.50304" y="72.34222" z="7.0"/>
+        <position name="aperture_Lead_v473" unit="mm" x="26.47392" y="72.58153" z="7.0"/>
+        <position name="aperture_Lead_v474" unit="mm" x="25.43283" y="72.7617" z="7.0"/>
+        <position name="aperture_Lead_v475" unit="mm" x="24.38314" y="72.88213" z="7.0"/>
+        <position name="aperture_Lead_v476" unit="mm" x="23.32829" y="72.94246" z="7.0"/>
+        <position name="aperture_Lead_v477" unit="mm" x="22.27171" y="72.94246" z="7.0"/>
+        <position name="aperture_Lead_v478" unit="mm" x="21.21686" y="72.88213" z="7.0"/>
+        <position name="aperture_Lead_v479" unit="mm" x="20.16718" y="72.7617" z="7.0"/>
+        <position name="aperture_Lead_v480" unit="mm" x="19.12608" y="72.58153" z="7.0"/>
+        <position name="aperture_Lead_v481" unit="mm" x="18.09696" y="72.34222" z="7.0"/>
+        <position name="aperture_Lead_v482" unit="mm" x="17.08319" y="72.04455" z="7.0"/>
+        <position name="aperture_Lead_v483" unit="mm" x="16.08806" y="71.68948" z="7.0"/>
+        <position name="aperture_Lead_v484" unit="mm" x="15.11482" y="71.27819" z="7.0"/>
+        <position name="aperture_Lead_v485" unit="mm" x="14.16665" y="70.81201" z="7.0"/>
+        <position name="aperture_Lead_v486" unit="mm" x="13.24665" y="70.29246" z="7.0"/>
+        <position name="aperture_Lead_v487" unit="mm" x="12.3578" y="69.72123" z="7.0"/>
+        <position name="aperture_Lead_v488" unit="mm" x="11.50301" y="69.10019" z="7.0"/>
+        <position name="aperture_Lead_v489" unit="mm" x="10.68508" y="68.43137" z="7.0"/>
+        <position name="aperture_Lead_v490" unit="mm" x="9.906655" y="67.71694" z="7.0"/>
+        <position name="aperture_Lead_v491" unit="mm" x="9.170289" y="66.95924" z="7.0"/>
+        <position name="aperture_Lead_v492" unit="mm" x="8.47838" y="66.16073" z="7.0"/>
+        <position name="aperture_Lead_v493" unit="mm" x="7.833186" y="65.32403" z="7.0"/>
+        <position name="aperture_Lead_v494" unit="mm" x="7.23681" y="64.45186" z="7.0"/>
+        <position name="aperture_Lead_v495" unit="mm" x="6.691197" y="63.54706" z="7.0"/>
+        <position name="aperture_Lead_v496" unit="mm" x="6.198129" y="62.61259" z="7.0"/>
+        <position name="aperture_Lead_v497" unit="mm" x="5.759212" y="61.6515" z="7.0"/>
+        <position name="aperture_Lead_v498" unit="mm" x="5.375879" y="60.66691" z="7.0"/>
+        <position name="aperture_Lead_v499" unit="mm" x="5.04938" y="59.66205" z="7.0"/>
+        <position name="aperture_Lead_v500" unit="mm" x="4.780779" y="58.64019" z="7.0"/>
+        <position name="aperture_Lead_v501" unit="mm" x="4.570954" y="57.60466" z="7.0"/>
+        <position name="aperture_Lead_v502" unit="mm" x="4.420588" y="56.55884" z="7.0"/>
+        <position name="aperture_Lead_v503" unit="mm" x="4.330172" y="55.50614" z="7.0"/>
+        <position name="aperture_Lead_v504" unit="mm" x="4.3" y="54.45" z="7.0"/>
+        <position name="aperture_Lead_v505" unit="mm" x="4.330172" y="53.39386" z="7.0"/>
+        <position name="aperture_Lead_v506" unit="mm" x="4.420588" y="52.34116" z="7.0"/>
+        <position name="aperture_Lead_v507" unit="mm" x="4.570954" y="51.29534" z="7.0"/>
+        <position name="aperture_Lead_v508" unit="mm" x="4.780779" y="50.25981" z="7.0"/>
+        <position name="aperture_Lead_v509" unit="mm" x="5.04938" y="49.23795" z="7.0"/>
+        <position name="aperture_Lead_v510" unit="mm" x="5.375879" y="48.23309" z="7.0"/>
+        <position name="aperture_Lead_v511" unit="mm" x="5.759212" y="47.2485" z="7.0"/>
+        <position name="aperture_Lead_v512" unit="mm" x="6.198129" y="46.28741" z="7.0"/>
+        <position name="aperture_Lead_v513" unit="mm" x="6.691197" y="45.35294" z="7.0"/>
+        <position name="aperture_Lead_v514" unit="mm" x="7.23681" y="44.44814" z="7.0"/>
+        <position name="aperture_Lead_v515" unit="mm" x="7.833186" y="43.57597" z="7.0"/>
+        <position name="aperture_Lead_v516" unit="mm" x="8.47838" y="42.73927" z="7.0"/>
+        <position name="aperture_Lead_v517" unit="mm" x="9.170289" y="41.94077" z="7.0"/>
+        <position name="aperture_Lead_v518" unit="mm" x="9.906655" y="41.18306" z="7.0"/>
+        <position name="aperture_Lead_v519" unit="mm" x="10.68508" y="40.46863" z="7.0"/>
+        <position name="aperture_Lead_v520" unit="mm" x="11.50301" y="39.79981" z="7.0"/>
+        <position name="aperture_Lead_v521" unit="mm" x="12.3578" y="39.17877" z="7.0"/>
+        <position name="aperture_Lead_v522" unit="mm" x="13.24665" y="38.60754" z="7.0"/>
+        <position name="aperture_Lead_v523" unit="mm" x="14.16665" y="38.08799" z="7.0"/>
+        <position name="aperture_Lead_v524" unit="mm" x="15.11482" y="37.62181" z="7.0"/>
+        <position name="aperture_Lead_v525" unit="mm" x="16.08806" y="37.21051" z="7.0"/>
+        <position name="aperture_Lead_v526" unit="mm" x="17.08319" y="36.85545" z="7.0"/>
+        <position name="aperture_Lead_v527" unit="mm" x="18.09696" y="36.55779" z="7.0"/>
+        <position name="aperture_Lead_v528" unit="mm" x="19.12608" y="36.31847" z="7.0"/>
+        <position name="aperture_Lead_v529" unit="mm" x="20.16718" y="36.1383" z="7.0"/>
+        <position name="aperture_Lead_v530" unit="mm" x="21.21686" y="36.01786" z="7.0"/>
+        <position name="aperture_Lead_v531" unit="mm" x="22.27171" y="35.95755" z="7.0"/>
+    </define>
+
+    <solids>
+        <tessellated aunit="deg" lunit="mm" name="aperture_Lead-SOL">
+             <triangular vertex1="aperture_Lead_v0" vertex2="aperture_Lead_v1" vertex3="aperture_Lead_v2"/>
+             <triangular vertex1="aperture_Lead_v3" vertex2="aperture_Lead_v4" vertex3="aperture_Lead_v5"/>
+             <triangular vertex1="aperture_Lead_v4" vertex2="aperture_Lead_v6" vertex3="aperture_Lead_v5"/>
+             <triangular vertex1="aperture_Lead_v6" vertex2="aperture_Lead_v7" vertex3="aperture_Lead_v5"/>
+             <triangular vertex1="aperture_Lead_v7" vertex2="aperture_Lead_v8" vertex3="aperture_Lead_v5"/>
+             <triangular vertex1="aperture_Lead_v8" vertex2="aperture_Lead_v9" vertex3="aperture_Lead_v5"/>
+             <triangular vertex1="aperture_Lead_v9" vertex2="aperture_Lead_v10" vertex3="aperture_Lead_v11"/>
+             <triangular vertex1="aperture_Lead_v5" vertex2="aperture_Lead_v9" vertex3="aperture_Lead_v11"/>
+             <triangular vertex1="aperture_Lead_v10" vertex2="aperture_Lead_v12" vertex3="aperture_Lead_v11"/>
+             <triangular vertex1="aperture_Lead_v12" vertex2="aperture_Lead_v13" vertex3="aperture_Lead_v11"/>
+             <triangular vertex1="aperture_Lead_v14" vertex2="aperture_Lead_v15" vertex3="aperture_Lead_v16"/>
+             <triangular vertex1="aperture_Lead_v17" vertex2="aperture_Lead_v18" vertex3="aperture_Lead_v19"/>
+             <triangular vertex1="aperture_Lead_v11" vertex2="aperture_Lead_v13" vertex3="aperture_Lead_v20"/>
+             <triangular vertex1="aperture_Lead_v13" vertex2="aperture_Lead_v21" vertex3="aperture_Lead_v20"/>
+             <triangular vertex1="aperture_Lead_v21" vertex2="aperture_Lead_v22" vertex3="aperture_Lead_v20"/>
+             <triangular vertex1="aperture_Lead_v22" vertex2="aperture_Lead_v23" vertex3="aperture_Lead_v20"/>
+             <triangular vertex1="aperture_Lead_v23" vertex2="aperture_Lead_v24" vertex3="aperture_Lead_v20"/>
+             <triangular vertex1="aperture_Lead_v18" vertex2="aperture_Lead_v25" vertex3="aperture_Lead_v19"/>
+             <triangular vertex1="aperture_Lead_v16" vertex2="aperture_Lead_v15" vertex3="aperture_Lead_v26"/>
+             <triangular vertex1="aperture_Lead_v15" vertex2="aperture_Lead_v27" vertex3="aperture_Lead_v26"/>
+             <triangular vertex1="aperture_Lead_v27" vertex2="aperture_Lead_v28" vertex3="aperture_Lead_v26"/>
+             <triangular vertex1="aperture_Lead_v28" vertex2="aperture_Lead_v29" vertex3="aperture_Lead_v26"/>
+             <triangular vertex1="aperture_Lead_v29" vertex2="aperture_Lead_v30" vertex3="aperture_Lead_v26"/>
+             <triangular vertex1="aperture_Lead_v31" vertex2="aperture_Lead_v17" vertex3="aperture_Lead_v32"/>
+             <triangular vertex1="aperture_Lead_v20" vertex2="aperture_Lead_v24" vertex3="aperture_Lead_v33"/>
+             <triangular vertex1="aperture_Lead_v24" vertex2="aperture_Lead_v34" vertex3="aperture_Lead_v33"/>
+             <triangular vertex1="aperture_Lead_v34" vertex2="aperture_Lead_v35" vertex3="aperture_Lead_v33"/>
+             <triangular vertex1="aperture_Lead_v35" vertex2="aperture_Lead_v36" vertex3="aperture_Lead_v33"/>
+             <triangular vertex1="aperture_Lead_v36" vertex2="aperture_Lead_v37" vertex3="aperture_Lead_v33"/>
+             <triangular vertex1="aperture_Lead_v17" vertex2="aperture_Lead_v19" vertex3="aperture_Lead_v32"/>
+             <triangular vertex1="aperture_Lead_v30" vertex2="aperture_Lead_v38" vertex3="aperture_Lead_v39"/>
+             <triangular vertex1="aperture_Lead_v38" vertex2="aperture_Lead_v40" vertex3="aperture_Lead_v39"/>
+             <triangular vertex1="aperture_Lead_v40" vertex2="aperture_Lead_v41" vertex3="aperture_Lead_v39"/>
+             <triangular vertex1="aperture_Lead_v26" vertex2="aperture_Lead_v30" vertex3="aperture_Lead_v39"/>
+             <triangular vertex1="aperture_Lead_v42" vertex2="aperture_Lead_v43" vertex3="aperture_Lead_v44"/>
+             <triangular vertex1="aperture_Lead_v43" vertex2="aperture_Lead_v45" vertex3="aperture_Lead_v44"/>
+             <triangular vertex1="aperture_Lead_v33" vertex2="aperture_Lead_v37" vertex3="aperture_Lead_v44"/>
+             <triangular vertex1="aperture_Lead_v37" vertex2="aperture_Lead_v42" vertex3="aperture_Lead_v44"/>
+             <triangular vertex1="aperture_Lead_v46" vertex2="aperture_Lead_v31" vertex3="aperture_Lead_v47"/>
+             <triangular vertex1="aperture_Lead_v31" vertex2="aperture_Lead_v32" vertex3="aperture_Lead_v47"/>
+             <triangular vertex1="aperture_Lead_v41" vertex2="aperture_Lead_v48" vertex3="aperture_Lead_v49"/>
+             <triangular vertex1="aperture_Lead_v48" vertex2="aperture_Lead_v50" vertex3="aperture_Lead_v49"/>
+             <triangular vertex1="aperture_Lead_v50" vertex2="aperture_Lead_v51" vertex3="aperture_Lead_v49"/>
+             <triangular vertex1="aperture_Lead_v51" vertex2="aperture_Lead_v52" vertex3="aperture_Lead_v49"/>
+             <triangular vertex1="aperture_Lead_v39" vertex2="aperture_Lead_v41" vertex3="aperture_Lead_v49"/>
+             <triangular vertex1="aperture_Lead_v45" vertex2="aperture_Lead_v53" vertex3="aperture_Lead_v54"/>
+             <triangular vertex1="aperture_Lead_v53" vertex2="aperture_Lead_v55" vertex3="aperture_Lead_v54"/>
+             <triangular vertex1="aperture_Lead_v55" vertex2="aperture_Lead_v56" vertex3="aperture_Lead_v54"/>
+             <triangular vertex1="aperture_Lead_v56" vertex2="aperture_Lead_v57" vertex3="aperture_Lead_v54"/>
+             <triangular vertex1="aperture_Lead_v44" vertex2="aperture_Lead_v45" vertex3="aperture_Lead_v54"/>
+             <triangular vertex1="aperture_Lead_v57" vertex2="aperture_Lead_v58" vertex3="aperture_Lead_v59"/>
+             <triangular vertex1="aperture_Lead_v60" vertex2="aperture_Lead_v46" vertex3="aperture_Lead_v61"/>
+             <triangular vertex1="aperture_Lead_v58" vertex2="aperture_Lead_v62" vertex3="aperture_Lead_v59"/>
+             <triangular vertex1="aperture_Lead_v62" vertex2="aperture_Lead_v63" vertex3="aperture_Lead_v59"/>
+             <triangular vertex1="aperture_Lead_v46" vertex2="aperture_Lead_v47" vertex3="aperture_Lead_v61"/>
+             <triangular vertex1="aperture_Lead_v54" vertex2="aperture_Lead_v57" vertex3="aperture_Lead_v59"/>
+             <triangular vertex1="aperture_Lead_v49" vertex2="aperture_Lead_v52" vertex3="aperture_Lead_v64"/>
+             <triangular vertex1="aperture_Lead_v52" vertex2="aperture_Lead_v65" vertex3="aperture_Lead_v64"/>
+             <triangular vertex1="aperture_Lead_v65" vertex2="aperture_Lead_v66" vertex3="aperture_Lead_v64"/>
+             <triangular vertex1="aperture_Lead_v66" vertex2="aperture_Lead_v67" vertex3="aperture_Lead_v64"/>
+             <triangular vertex1="aperture_Lead_v63" vertex2="aperture_Lead_v68" vertex3="aperture_Lead_v69"/>
+             <triangular vertex1="aperture_Lead_v68" vertex2="aperture_Lead_v70" vertex3="aperture_Lead_v69"/>
+             <triangular vertex1="aperture_Lead_v70" vertex2="aperture_Lead_v71" vertex3="aperture_Lead_v69"/>
+             <triangular vertex1="aperture_Lead_v71" vertex2="aperture_Lead_v72" vertex3="aperture_Lead_v69"/>
+             <triangular vertex1="aperture_Lead_v59" vertex2="aperture_Lead_v63" vertex3="aperture_Lead_v69"/>
+             <triangular vertex1="aperture_Lead_v72" vertex2="aperture_Lead_v73" vertex3="aperture_Lead_v74"/>
+             <triangular vertex1="aperture_Lead_v69" vertex2="aperture_Lead_v72" vertex3="aperture_Lead_v74"/>
+             <triangular vertex1="aperture_Lead_v75" vertex2="aperture_Lead_v76" vertex3="aperture_Lead_v77"/>
+             <triangular vertex1="aperture_Lead_v77" vertex2="aperture_Lead_v76" vertex3="aperture_Lead_v78"/>
+             <triangular vertex1="aperture_Lead_v79" vertex2="aperture_Lead_v77" vertex3="aperture_Lead_v78"/>
+             <triangular vertex1="aperture_Lead_v80" vertex2="aperture_Lead_v75" vertex3="aperture_Lead_v81"/>
+             <triangular vertex1="aperture_Lead_v75" vertex2="aperture_Lead_v77" vertex3="aperture_Lead_v81"/>
+             <triangular vertex1="aperture_Lead_v77" vertex2="aperture_Lead_v79" vertex3="aperture_Lead_v81"/>
+             <triangular vertex1="aperture_Lead_v79" vertex2="aperture_Lead_v82" vertex3="aperture_Lead_v81"/>
+             <triangular vertex1="aperture_Lead_v78" vertex2="aperture_Lead_v76" vertex3="aperture_Lead_v83"/>
+             <triangular vertex1="aperture_Lead_v84" vertex2="aperture_Lead_v60" vertex3="aperture_Lead_v85"/>
+             <triangular vertex1="aperture_Lead_v79" vertex2="aperture_Lead_v78" vertex3="aperture_Lead_v83"/>
+             <triangular vertex1="aperture_Lead_v60" vertex2="aperture_Lead_v61" vertex3="aperture_Lead_v85"/>
+             <triangular vertex1="aperture_Lead_v86" vertex2="aperture_Lead_v80" vertex3="aperture_Lead_v87"/>
+             <triangular vertex1="aperture_Lead_v80" vertex2="aperture_Lead_v81" vertex3="aperture_Lead_v87"/>
+             <triangular vertex1="aperture_Lead_v81" vertex2="aperture_Lead_v82" vertex3="aperture_Lead_v87"/>
+             <triangular vertex1="aperture_Lead_v82" vertex2="aperture_Lead_v88" vertex3="aperture_Lead_v87"/>
+             <triangular vertex1="aperture_Lead_v79" vertex2="aperture_Lead_v83" vertex3="aperture_Lead_v89"/>
+             <triangular vertex1="aperture_Lead_v83" vertex2="aperture_Lead_v90" vertex3="aperture_Lead_v89"/>
+             <triangular vertex1="aperture_Lead_v82" vertex2="aperture_Lead_v79" vertex3="aperture_Lead_v89"/>
+             <triangular vertex1="aperture_Lead_v90" vertex2="aperture_Lead_v91" vertex3="aperture_Lead_v89"/>
+             <triangular vertex1="aperture_Lead_v92" vertex2="aperture_Lead_v86" vertex3="aperture_Lead_v93"/>
+             <triangular vertex1="aperture_Lead_v64" vertex2="aperture_Lead_v67" vertex3="aperture_Lead_v94"/>
+             <triangular vertex1="aperture_Lead_v87" vertex2="aperture_Lead_v88" vertex3="aperture_Lead_v93"/>
+             <triangular vertex1="aperture_Lead_v88" vertex2="aperture_Lead_v95" vertex3="aperture_Lead_v93"/>
+             <triangular vertex1="aperture_Lead_v67" vertex2="aperture_Lead_v96" vertex3="aperture_Lead_v94"/>
+             <triangular vertex1="aperture_Lead_v86" vertex2="aperture_Lead_v87" vertex3="aperture_Lead_v93"/>
+             <triangular vertex1="aperture_Lead_v96" vertex2="aperture_Lead_v97" vertex3="aperture_Lead_v94"/>
+             <triangular vertex1="aperture_Lead_v97" vertex2="aperture_Lead_v98" vertex3="aperture_Lead_v94"/>
+             <triangular vertex1="aperture_Lead_v91" vertex2="aperture_Lead_v99" vertex3="aperture_Lead_v100"/>
+             <triangular vertex1="aperture_Lead_v98" vertex2="aperture_Lead_v101" vertex3="aperture_Lead_v94"/>
+             <triangular vertex1="aperture_Lead_v88" vertex2="aperture_Lead_v82" vertex3="aperture_Lead_v100"/>
+             <triangular vertex1="aperture_Lead_v82" vertex2="aperture_Lead_v89" vertex3="aperture_Lead_v100"/>
+             <triangular vertex1="aperture_Lead_v89" vertex2="aperture_Lead_v91" vertex3="aperture_Lead_v100"/>
+             <triangular vertex1="aperture_Lead_v102" vertex2="aperture_Lead_v103" vertex3="aperture_Lead_v104"/>
+             <triangular vertex1="aperture_Lead_v91" vertex2="aperture_Lead_v90" vertex3="aperture_Lead_v104"/>
+             <triangular vertex1="aperture_Lead_v18" vertex2="aperture_Lead_v92" vertex3="aperture_Lead_v105"/>
+             <triangular vertex1="aperture_Lead_v92" vertex2="aperture_Lead_v93" vertex3="aperture_Lead_v105"/>
+             <triangular vertex1="aperture_Lead_v95" vertex2="aperture_Lead_v25" vertex3="aperture_Lead_v105"/>
+             <triangular vertex1="aperture_Lead_v93" vertex2="aperture_Lead_v95" vertex3="aperture_Lead_v105"/>
+             <triangular vertex1="aperture_Lead_v25" vertex2="aperture_Lead_v18" vertex3="aperture_Lead_v105"/>
+             <triangular vertex1="aperture_Lead_v100" vertex2="aperture_Lead_v99" vertex3="aperture_Lead_v106"/>
+             <triangular vertex1="aperture_Lead_v95" vertex2="aperture_Lead_v88" vertex3="aperture_Lead_v106"/>
+             <triangular vertex1="aperture_Lead_v88" vertex2="aperture_Lead_v100" vertex3="aperture_Lead_v106"/>
+             <triangular vertex1="aperture_Lead_v99" vertex2="aperture_Lead_v107" vertex3="aperture_Lead_v106"/>
+             <triangular vertex1="aperture_Lead_v99" vertex2="aperture_Lead_v91" vertex3="aperture_Lead_v108"/>
+             <triangular vertex1="aperture_Lead_v104" vertex2="aperture_Lead_v103" vertex3="aperture_Lead_v108"/>
+             <triangular vertex1="aperture_Lead_v91" vertex2="aperture_Lead_v104" vertex3="aperture_Lead_v108"/>
+             <triangular vertex1="aperture_Lead_v103" vertex2="aperture_Lead_v109" vertex3="aperture_Lead_v108"/>
+             <triangular vertex1="aperture_Lead_v16" vertex2="aperture_Lead_v26" vertex3="aperture_Lead_v110"/>
+             <triangular vertex1="aperture_Lead_v103" vertex2="aperture_Lead_v102" vertex3="aperture_Lead_v110"/>
+             <triangular vertex1="aperture_Lead_v25" vertex2="aperture_Lead_v95" vertex3="aperture_Lead_v111"/>
+             <triangular vertex1="aperture_Lead_v107" vertex2="aperture_Lead_v112" vertex3="aperture_Lead_v111"/>
+             <triangular vertex1="aperture_Lead_v95" vertex2="aperture_Lead_v106" vertex3="aperture_Lead_v111"/>
+             <triangular vertex1="aperture_Lead_v113" vertex2="aperture_Lead_v84" vertex3="aperture_Lead_v114"/>
+             <triangular vertex1="aperture_Lead_v106" vertex2="aperture_Lead_v107" vertex3="aperture_Lead_v111"/>
+             <triangular vertex1="aperture_Lead_v14" vertex2="aperture_Lead_v16" vertex3="aperture_Lead_v115"/>
+             <triangular vertex1="aperture_Lead_v116" vertex2="aperture_Lead_v117" vertex3="aperture_Lead_v115"/>
+             <triangular vertex1="aperture_Lead_v84" vertex2="aperture_Lead_v85" vertex3="aperture_Lead_v114"/>
+             <triangular vertex1="aperture_Lead_v117" vertex2="aperture_Lead_v118" vertex3="aperture_Lead_v115"/>
+             <triangular vertex1="aperture_Lead_v118" vertex2="aperture_Lead_v119" vertex3="aperture_Lead_v115"/>
+             <triangular vertex1="aperture_Lead_v119" vertex2="aperture_Lead_v14" vertex3="aperture_Lead_v115"/>
+             <triangular vertex1="aperture_Lead_v120" vertex2="aperture_Lead_v116" vertex3="aperture_Lead_v115"/>
+             <triangular vertex1="aperture_Lead_v16" vertex2="aperture_Lead_v120" vertex3="aperture_Lead_v115"/>
+             <triangular vertex1="aperture_Lead_v108" vertex2="aperture_Lead_v109" vertex3="aperture_Lead_v121"/>
+             <triangular vertex1="aperture_Lead_v109" vertex2="aperture_Lead_v122" vertex3="aperture_Lead_v121"/>
+             <triangular vertex1="aperture_Lead_v99" vertex2="aperture_Lead_v108" vertex3="aperture_Lead_v121"/>
+             <triangular vertex1="aperture_Lead_v107" vertex2="aperture_Lead_v99" vertex3="aperture_Lead_v121"/>
+             <triangular vertex1="aperture_Lead_v26" vertex2="aperture_Lead_v39" vertex3="aperture_Lead_v123"/>
+             <triangular vertex1="aperture_Lead_v103" vertex2="aperture_Lead_v110" vertex3="aperture_Lead_v123"/>
+             <triangular vertex1="aperture_Lead_v101" vertex2="aperture_Lead_v124" vertex3="aperture_Lead_v125"/>
+             <triangular vertex1="aperture_Lead_v124" vertex2="aperture_Lead_v126" vertex3="aperture_Lead_v125"/>
+             <triangular vertex1="aperture_Lead_v110" vertex2="aperture_Lead_v26" vertex3="aperture_Lead_v123"/>
+             <triangular vertex1="aperture_Lead_v126" vertex2="aperture_Lead_v127" vertex3="aperture_Lead_v125"/>
+             <triangular vertex1="aperture_Lead_v109" vertex2="aperture_Lead_v103" vertex3="aperture_Lead_v123"/>
+             <triangular vertex1="aperture_Lead_v127" vertex2="aperture_Lead_v128" vertex3="aperture_Lead_v125"/>
+             <triangular vertex1="aperture_Lead_v111" vertex2="aperture_Lead_v112" vertex3="aperture_Lead_v129"/>
+             <triangular vertex1="aperture_Lead_v19" vertex2="aperture_Lead_v25" vertex3="aperture_Lead_v129"/>
+             <triangular vertex1="aperture_Lead_v25" vertex2="aperture_Lead_v111" vertex3="aperture_Lead_v129"/>
+             <triangular vertex1="aperture_Lead_v112" vertex2="aperture_Lead_v130" vertex3="aperture_Lead_v129"/>
+             <triangular vertex1="aperture_Lead_v112" vertex2="aperture_Lead_v107" vertex3="aperture_Lead_v131"/>
+             <triangular vertex1="aperture_Lead_v94" vertex2="aperture_Lead_v101" vertex3="aperture_Lead_v125"/>
+             <triangular vertex1="aperture_Lead_v122" vertex2="aperture_Lead_v132" vertex3="aperture_Lead_v131"/>
+             <triangular vertex1="aperture_Lead_v107" vertex2="aperture_Lead_v121" vertex3="aperture_Lead_v131"/>
+             <triangular vertex1="aperture_Lead_v121" vertex2="aperture_Lead_v122" vertex3="aperture_Lead_v131"/>
+             <triangular vertex1="aperture_Lead_v39" vertex2="aperture_Lead_v49" vertex3="aperture_Lead_v133"/>
+             <triangular vertex1="aperture_Lead_v122" vertex2="aperture_Lead_v109" vertex3="aperture_Lead_v133"/>
+             <triangular vertex1="aperture_Lead_v109" vertex2="aperture_Lead_v123" vertex3="aperture_Lead_v133"/>
+             <triangular vertex1="aperture_Lead_v123" vertex2="aperture_Lead_v39" vertex3="aperture_Lead_v133"/>
+             <triangular vertex1="aperture_Lead_v129" vertex2="aperture_Lead_v130" vertex3="aperture_Lead_v134"/>
+             <triangular vertex1="aperture_Lead_v19" vertex2="aperture_Lead_v129" vertex3="aperture_Lead_v134"/>
+             <triangular vertex1="aperture_Lead_v32" vertex2="aperture_Lead_v19" vertex3="aperture_Lead_v134"/>
+             <triangular vertex1="aperture_Lead_v130" vertex2="aperture_Lead_v135" vertex3="aperture_Lead_v134"/>
+             <triangular vertex1="aperture_Lead_v132" vertex2="aperture_Lead_v136" vertex3="aperture_Lead_v137"/>
+             <triangular vertex1="aperture_Lead_v112" vertex2="aperture_Lead_v131" vertex3="aperture_Lead_v137"/>
+             <triangular vertex1="aperture_Lead_v130" vertex2="aperture_Lead_v112" vertex3="aperture_Lead_v137"/>
+             <triangular vertex1="aperture_Lead_v131" vertex2="aperture_Lead_v132" vertex3="aperture_Lead_v137"/>
+             <triangular vertex1="aperture_Lead_v133" vertex2="aperture_Lead_v49" vertex3="aperture_Lead_v138"/>
+             <triangular vertex1="aperture_Lead_v49" vertex2="aperture_Lead_v64" vertex3="aperture_Lead_v138"/>
+             <triangular vertex1="aperture_Lead_v122" vertex2="aperture_Lead_v133" vertex3="aperture_Lead_v138"/>
+             <triangular vertex1="aperture_Lead_v132" vertex2="aperture_Lead_v122" vertex3="aperture_Lead_v138"/>
+             <triangular vertex1="aperture_Lead_v47" vertex2="aperture_Lead_v32" vertex3="aperture_Lead_v139"/>
+             <triangular vertex1="aperture_Lead_v135" vertex2="aperture_Lead_v140" vertex3="aperture_Lead_v139"/>
+             <triangular vertex1="aperture_Lead_v32" vertex2="aperture_Lead_v134" vertex3="aperture_Lead_v139"/>
+             <triangular vertex1="aperture_Lead_v134" vertex2="aperture_Lead_v135" vertex3="aperture_Lead_v139"/>
+             <triangular vertex1="aperture_Lead_v137" vertex2="aperture_Lead_v136" vertex3="aperture_Lead_v141"/>
+             <triangular vertex1="aperture_Lead_v136" vertex2="aperture_Lead_v142" vertex3="aperture_Lead_v141"/>
+             <triangular vertex1="aperture_Lead_v130" vertex2="aperture_Lead_v137" vertex3="aperture_Lead_v141"/>
+             <triangular vertex1="aperture_Lead_v135" vertex2="aperture_Lead_v130" vertex3="aperture_Lead_v141"/>
+             <triangular vertex1="aperture_Lead_v132" vertex2="aperture_Lead_v138" vertex3="aperture_Lead_v143"/>
+             <triangular vertex1="aperture_Lead_v144" vertex2="aperture_Lead_v113" vertex3="aperture_Lead_v145"/>
+             <triangular vertex1="aperture_Lead_v136" vertex2="aperture_Lead_v132" vertex3="aperture_Lead_v143"/>
+             <triangular vertex1="aperture_Lead_v138" vertex2="aperture_Lead_v64" vertex3="aperture_Lead_v143"/>
+             <triangular vertex1="aperture_Lead_v64" vertex2="aperture_Lead_v94" vertex3="aperture_Lead_v143"/>
+             <triangular vertex1="aperture_Lead_v113" vertex2="aperture_Lead_v114" vertex3="aperture_Lead_v145"/>
+             <triangular vertex1="aperture_Lead_v139" vertex2="aperture_Lead_v140" vertex3="aperture_Lead_v146"/>
+             <triangular vertex1="aperture_Lead_v140" vertex2="aperture_Lead_v147" vertex3="aperture_Lead_v146"/>
+             <triangular vertex1="aperture_Lead_v47" vertex2="aperture_Lead_v139" vertex3="aperture_Lead_v146"/>
+             <triangular vertex1="aperture_Lead_v61" vertex2="aperture_Lead_v47" vertex3="aperture_Lead_v146"/>
+             <triangular vertex1="aperture_Lead_v141" vertex2="aperture_Lead_v142" vertex3="aperture_Lead_v148"/>
+             <triangular vertex1="aperture_Lead_v135" vertex2="aperture_Lead_v141" vertex3="aperture_Lead_v148"/>
+             <triangular vertex1="aperture_Lead_v142" vertex2="aperture_Lead_v149" vertex3="aperture_Lead_v148"/>
+             <triangular vertex1="aperture_Lead_v140" vertex2="aperture_Lead_v135" vertex3="aperture_Lead_v148"/>
+             <triangular vertex1="aperture_Lead_v136" vertex2="aperture_Lead_v143" vertex3="aperture_Lead_v150"/>
+             <triangular vertex1="aperture_Lead_v143" vertex2="aperture_Lead_v94" vertex3="aperture_Lead_v150"/>
+             <triangular vertex1="aperture_Lead_v94" vertex2="aperture_Lead_v125" vertex3="aperture_Lead_v150"/>
+             <triangular vertex1="aperture_Lead_v128" vertex2="aperture_Lead_v151" vertex3="aperture_Lead_v152"/>
+             <triangular vertex1="aperture_Lead_v142" vertex2="aperture_Lead_v136" vertex3="aperture_Lead_v150"/>
+             <triangular vertex1="aperture_Lead_v151" vertex2="aperture_Lead_v153" vertex3="aperture_Lead_v152"/>
+             <triangular vertex1="aperture_Lead_v153" vertex2="aperture_Lead_v154" vertex3="aperture_Lead_v152"/>
+             <triangular vertex1="aperture_Lead_v146" vertex2="aperture_Lead_v147" vertex3="aperture_Lead_v155"/>
+             <triangular vertex1="aperture_Lead_v61" vertex2="aperture_Lead_v146" vertex3="aperture_Lead_v155"/>
+             <triangular vertex1="aperture_Lead_v147" vertex2="aperture_Lead_v156" vertex3="aperture_Lead_v155"/>
+             <triangular vertex1="aperture_Lead_v85" vertex2="aperture_Lead_v61" vertex3="aperture_Lead_v155"/>
+             <triangular vertex1="aperture_Lead_v149" vertex2="aperture_Lead_v157" vertex3="aperture_Lead_v158"/>
+             <triangular vertex1="aperture_Lead_v125" vertex2="aperture_Lead_v128" vertex3="aperture_Lead_v152"/>
+             <triangular vertex1="aperture_Lead_v140" vertex2="aperture_Lead_v148" vertex3="aperture_Lead_v158"/>
+             <triangular vertex1="aperture_Lead_v148" vertex2="aperture_Lead_v149" vertex3="aperture_Lead_v158"/>
+             <triangular vertex1="aperture_Lead_v147" vertex2="aperture_Lead_v140" vertex3="aperture_Lead_v158"/>
+             <triangular vertex1="aperture_Lead_v150" vertex2="aperture_Lead_v125" vertex3="aperture_Lead_v159"/>
+             <triangular vertex1="aperture_Lead_v142" vertex2="aperture_Lead_v150" vertex3="aperture_Lead_v159"/>
+             <triangular vertex1="aperture_Lead_v149" vertex2="aperture_Lead_v142" vertex3="aperture_Lead_v159"/>
+             <triangular vertex1="aperture_Lead_v125" vertex2="aperture_Lead_v152" vertex3="aperture_Lead_v159"/>
+             <triangular vertex1="aperture_Lead_v114" vertex2="aperture_Lead_v85" vertex3="aperture_Lead_v160"/>
+             <triangular vertex1="aperture_Lead_v155" vertex2="aperture_Lead_v156" vertex3="aperture_Lead_v160"/>
+             <triangular vertex1="aperture_Lead_v85" vertex2="aperture_Lead_v155" vertex3="aperture_Lead_v160"/>
+             <triangular vertex1="aperture_Lead_v156" vertex2="aperture_Lead_v161" vertex3="aperture_Lead_v160"/>
+             <triangular vertex1="aperture_Lead_v156" vertex2="aperture_Lead_v147" vertex3="aperture_Lead_v162"/>
+             <triangular vertex1="aperture_Lead_v147" vertex2="aperture_Lead_v158" vertex3="aperture_Lead_v162"/>
+             <triangular vertex1="aperture_Lead_v158" vertex2="aperture_Lead_v157" vertex3="aperture_Lead_v162"/>
+             <triangular vertex1="aperture_Lead_v157" vertex2="aperture_Lead_v163" vertex3="aperture_Lead_v162"/>
+             <triangular vertex1="aperture_Lead_v157" vertex2="aperture_Lead_v149" vertex3="aperture_Lead_v164"/>
+             <triangular vertex1="aperture_Lead_v149" vertex2="aperture_Lead_v159" vertex3="aperture_Lead_v164"/>
+             <triangular vertex1="aperture_Lead_v159" vertex2="aperture_Lead_v152" vertex3="aperture_Lead_v164"/>
+             <triangular vertex1="aperture_Lead_v152" vertex2="aperture_Lead_v165" vertex3="aperture_Lead_v164"/>
+             <triangular vertex1="aperture_Lead_v114" vertex2="aperture_Lead_v160" vertex3="aperture_Lead_v166"/>
+             <triangular vertex1="aperture_Lead_v145" vertex2="aperture_Lead_v114" vertex3="aperture_Lead_v166"/>
+             <triangular vertex1="aperture_Lead_v160" vertex2="aperture_Lead_v161" vertex3="aperture_Lead_v166"/>
+             <triangular vertex1="aperture_Lead_v161" vertex2="aperture_Lead_v167" vertex3="aperture_Lead_v166"/>
+             <triangular vertex1="aperture_Lead_v156" vertex2="aperture_Lead_v162" vertex3="aperture_Lead_v168"/>
+             <triangular vertex1="aperture_Lead_v162" vertex2="aperture_Lead_v163" vertex3="aperture_Lead_v168"/>
+             <triangular vertex1="aperture_Lead_v163" vertex2="aperture_Lead_v169" vertex3="aperture_Lead_v168"/>
+             <triangular vertex1="aperture_Lead_v170" vertex2="aperture_Lead_v144" vertex3="aperture_Lead_v171"/>
+             <triangular vertex1="aperture_Lead_v161" vertex2="aperture_Lead_v156" vertex3="aperture_Lead_v168"/>
+             <triangular vertex1="aperture_Lead_v164" vertex2="aperture_Lead_v165" vertex3="aperture_Lead_v172"/>
+             <triangular vertex1="aperture_Lead_v163" vertex2="aperture_Lead_v157" vertex3="aperture_Lead_v172"/>
+             <triangular vertex1="aperture_Lead_v157" vertex2="aperture_Lead_v164" vertex3="aperture_Lead_v172"/>
+             <triangular vertex1="aperture_Lead_v165" vertex2="aperture_Lead_v173" vertex3="aperture_Lead_v172"/>
+             <triangular vertex1="aperture_Lead_v145" vertex2="aperture_Lead_v166" vertex3="aperture_Lead_v174"/>
+             <triangular vertex1="aperture_Lead_v166" vertex2="aperture_Lead_v167" vertex3="aperture_Lead_v174"/>
+             <triangular vertex1="aperture_Lead_v171" vertex2="aperture_Lead_v145" vertex3="aperture_Lead_v174"/>
+             <triangular vertex1="aperture_Lead_v167" vertex2="aperture_Lead_v175" vertex3="aperture_Lead_v174"/>
+             <triangular vertex1="aperture_Lead_v161" vertex2="aperture_Lead_v168" vertex3="aperture_Lead_v176"/>
+             <triangular vertex1="aperture_Lead_v168" vertex2="aperture_Lead_v169" vertex3="aperture_Lead_v176"/>
+             <triangular vertex1="aperture_Lead_v144" vertex2="aperture_Lead_v145" vertex3="aperture_Lead_v171"/>
+             <triangular vertex1="aperture_Lead_v169" vertex2="aperture_Lead_v177" vertex3="aperture_Lead_v176"/>
+             <triangular vertex1="aperture_Lead_v167" vertex2="aperture_Lead_v161" vertex3="aperture_Lead_v176"/>
+             <triangular vertex1="aperture_Lead_v154" vertex2="aperture_Lead_v178" vertex3="aperture_Lead_v165"/>
+             <triangular vertex1="aperture_Lead_v163" vertex2="aperture_Lead_v172" vertex3="aperture_Lead_v179"/>
+             <triangular vertex1="aperture_Lead_v178" vertex2="aperture_Lead_v180" vertex3="aperture_Lead_v165"/>
+             <triangular vertex1="aperture_Lead_v172" vertex2="aperture_Lead_v173" vertex3="aperture_Lead_v179"/>
+             <triangular vertex1="aperture_Lead_v180" vertex2="aperture_Lead_v181" vertex3="aperture_Lead_v165"/>
+             <triangular vertex1="aperture_Lead_v173" vertex2="aperture_Lead_v182" vertex3="aperture_Lead_v179"/>
+             <triangular vertex1="aperture_Lead_v152" vertex2="aperture_Lead_v154" vertex3="aperture_Lead_v165"/>
+             <triangular vertex1="aperture_Lead_v169" vertex2="aperture_Lead_v163" vertex3="aperture_Lead_v179"/>
+             <triangular vertex1="aperture_Lead_v181" vertex2="aperture_Lead_v183" vertex3="aperture_Lead_v165"/>
+             <triangular vertex1="aperture_Lead_v184" vertex2="aperture_Lead_v171" vertex3="aperture_Lead_v185"/>
+             <triangular vertex1="aperture_Lead_v171" vertex2="aperture_Lead_v174" vertex3="aperture_Lead_v185"/>
+             <triangular vertex1="aperture_Lead_v174" vertex2="aperture_Lead_v175" vertex3="aperture_Lead_v185"/>
+             <triangular vertex1="aperture_Lead_v175" vertex2="aperture_Lead_v186" vertex3="aperture_Lead_v185"/>
+             <triangular vertex1="aperture_Lead_v176" vertex2="aperture_Lead_v177" vertex3="aperture_Lead_v187"/>
+             <triangular vertex1="aperture_Lead_v167" vertex2="aperture_Lead_v176" vertex3="aperture_Lead_v187"/>
+             <triangular vertex1="aperture_Lead_v175" vertex2="aperture_Lead_v167" vertex3="aperture_Lead_v187"/>
+             <triangular vertex1="aperture_Lead_v177" vertex2="aperture_Lead_v188" vertex3="aperture_Lead_v187"/>
+             <triangular vertex1="aperture_Lead_v182" vertex2="aperture_Lead_v189" vertex3="aperture_Lead_v190"/>
+             <triangular vertex1="aperture_Lead_v179" vertex2="aperture_Lead_v182" vertex3="aperture_Lead_v190"/>
+             <triangular vertex1="aperture_Lead_v169" vertex2="aperture_Lead_v179" vertex3="aperture_Lead_v190"/>
+             <triangular vertex1="aperture_Lead_v177" vertex2="aperture_Lead_v169" vertex3="aperture_Lead_v190"/>
+             <triangular vertex1="aperture_Lead_v185" vertex2="aperture_Lead_v186" vertex3="aperture_Lead_v191"/>
+             <triangular vertex1="aperture_Lead_v192" vertex2="aperture_Lead_v184" vertex3="aperture_Lead_v191"/>
+             <triangular vertex1="aperture_Lead_v186" vertex2="aperture_Lead_v193" vertex3="aperture_Lead_v191"/>
+             <triangular vertex1="aperture_Lead_v184" vertex2="aperture_Lead_v185" vertex3="aperture_Lead_v191"/>
+             <triangular vertex1="aperture_Lead_v186" vertex2="aperture_Lead_v175" vertex3="aperture_Lead_v194"/>
+             <triangular vertex1="aperture_Lead_v175" vertex2="aperture_Lead_v187" vertex3="aperture_Lead_v194"/>
+             <triangular vertex1="aperture_Lead_v187" vertex2="aperture_Lead_v188" vertex3="aperture_Lead_v194"/>
+             <triangular vertex1="aperture_Lead_v188" vertex2="aperture_Lead_v195" vertex3="aperture_Lead_v194"/>
+             <triangular vertex1="aperture_Lead_v190" vertex2="aperture_Lead_v189" vertex3="aperture_Lead_v196"/>
+             <triangular vertex1="aperture_Lead_v177" vertex2="aperture_Lead_v190" vertex3="aperture_Lead_v196"/>
+             <triangular vertex1="aperture_Lead_v188" vertex2="aperture_Lead_v177" vertex3="aperture_Lead_v196"/>
+             <triangular vertex1="aperture_Lead_v189" vertex2="aperture_Lead_v197" vertex3="aperture_Lead_v196"/>
+             <triangular vertex1="aperture_Lead_v193" vertex2="aperture_Lead_v198" vertex3="aperture_Lead_v199"/>
+             <triangular vertex1="aperture_Lead_v200" vertex2="aperture_Lead_v192" vertex3="aperture_Lead_v199"/>
+             <triangular vertex1="aperture_Lead_v191" vertex2="aperture_Lead_v193" vertex3="aperture_Lead_v199"/>
+             <triangular vertex1="aperture_Lead_v192" vertex2="aperture_Lead_v191" vertex3="aperture_Lead_v199"/>
+             <triangular vertex1="aperture_Lead_v195" vertex2="aperture_Lead_v201" vertex3="aperture_Lead_v202"/>
+             <triangular vertex1="aperture_Lead_v203" vertex2="aperture_Lead_v170" vertex3="aperture_Lead_v184"/>
+             <triangular vertex1="aperture_Lead_v194" vertex2="aperture_Lead_v195" vertex3="aperture_Lead_v202"/>
+             <triangular vertex1="aperture_Lead_v193" vertex2="aperture_Lead_v186" vertex3="aperture_Lead_v202"/>
+             <triangular vertex1="aperture_Lead_v186" vertex2="aperture_Lead_v194" vertex3="aperture_Lead_v202"/>
+             <triangular vertex1="aperture_Lead_v170" vertex2="aperture_Lead_v171" vertex3="aperture_Lead_v184"/>
+             <triangular vertex1="aperture_Lead_v197" vertex2="aperture_Lead_v204" vertex3="aperture_Lead_v205"/>
+             <triangular vertex1="aperture_Lead_v195" vertex2="aperture_Lead_v188" vertex3="aperture_Lead_v205"/>
+             <triangular vertex1="aperture_Lead_v188" vertex2="aperture_Lead_v196" vertex3="aperture_Lead_v205"/>
+             <triangular vertex1="aperture_Lead_v196" vertex2="aperture_Lead_v197" vertex3="aperture_Lead_v205"/>
+             <triangular vertex1="aperture_Lead_v198" vertex2="aperture_Lead_v206" vertex3="aperture_Lead_v207"/>
+             <triangular vertex1="aperture_Lead_v199" vertex2="aperture_Lead_v198" vertex3="aperture_Lead_v207"/>
+             <triangular vertex1="aperture_Lead_v200" vertex2="aperture_Lead_v199" vertex3="aperture_Lead_v207"/>
+             <triangular vertex1="aperture_Lead_v208" vertex2="aperture_Lead_v200" vertex3="aperture_Lead_v207"/>
+             <triangular vertex1="aperture_Lead_v198" vertex2="aperture_Lead_v193" vertex3="aperture_Lead_v209"/>
+             <triangular vertex1="aperture_Lead_v201" vertex2="aperture_Lead_v210" vertex3="aperture_Lead_v209"/>
+             <triangular vertex1="aperture_Lead_v183" vertex2="aperture_Lead_v211" vertex3="aperture_Lead_v173"/>
+             <triangular vertex1="aperture_Lead_v193" vertex2="aperture_Lead_v202" vertex3="aperture_Lead_v209"/>
+             <triangular vertex1="aperture_Lead_v202" vertex2="aperture_Lead_v201" vertex3="aperture_Lead_v209"/>
+             <triangular vertex1="aperture_Lead_v165" vertex2="aperture_Lead_v183" vertex3="aperture_Lead_v173"/>
+             <triangular vertex1="aperture_Lead_v205" vertex2="aperture_Lead_v204" vertex3="aperture_Lead_v212"/>
+             <triangular vertex1="aperture_Lead_v211" vertex2="aperture_Lead_v213" vertex3="aperture_Lead_v173"/>
+             <triangular vertex1="aperture_Lead_v213" vertex2="aperture_Lead_v214" vertex3="aperture_Lead_v173"/>
+             <triangular vertex1="aperture_Lead_v201" vertex2="aperture_Lead_v195" vertex3="aperture_Lead_v212"/>
+             <triangular vertex1="aperture_Lead_v204" vertex2="aperture_Lead_v215" vertex3="aperture_Lead_v212"/>
+             <triangular vertex1="aperture_Lead_v195" vertex2="aperture_Lead_v205" vertex3="aperture_Lead_v212"/>
+             <triangular vertex1="aperture_Lead_v216" vertex2="aperture_Lead_v208" vertex3="aperture_Lead_v217"/>
+             <triangular vertex1="aperture_Lead_v207" vertex2="aperture_Lead_v206" vertex3="aperture_Lead_v217"/>
+             <triangular vertex1="aperture_Lead_v208" vertex2="aperture_Lead_v207" vertex3="aperture_Lead_v217"/>
+             <triangular vertex1="aperture_Lead_v206" vertex2="aperture_Lead_v218" vertex3="aperture_Lead_v217"/>
+             <triangular vertex1="aperture_Lead_v206" vertex2="aperture_Lead_v198" vertex3="aperture_Lead_v219"/>
+             <triangular vertex1="aperture_Lead_v210" vertex2="aperture_Lead_v220" vertex3="aperture_Lead_v219"/>
+             <triangular vertex1="aperture_Lead_v209" vertex2="aperture_Lead_v210" vertex3="aperture_Lead_v219"/>
+             <triangular vertex1="aperture_Lead_v198" vertex2="aperture_Lead_v209" vertex3="aperture_Lead_v219"/>
+             <triangular vertex1="aperture_Lead_v210" vertex2="aperture_Lead_v201" vertex3="aperture_Lead_v221"/>
+             <triangular vertex1="aperture_Lead_v215" vertex2="aperture_Lead_v3" vertex3="aperture_Lead_v221"/>
+             <triangular vertex1="aperture_Lead_v201" vertex2="aperture_Lead_v212" vertex3="aperture_Lead_v221"/>
+             <triangular vertex1="aperture_Lead_v212" vertex2="aperture_Lead_v215" vertex3="aperture_Lead_v221"/>
+             <triangular vertex1="aperture_Lead_v216" vertex2="aperture_Lead_v217" vertex3="aperture_Lead_v222"/>
+             <triangular vertex1="aperture_Lead_v223" vertex2="aperture_Lead_v216" vertex3="aperture_Lead_v222"/>
+             <triangular vertex1="aperture_Lead_v218" vertex2="aperture_Lead_v224" vertex3="aperture_Lead_v222"/>
+             <triangular vertex1="aperture_Lead_v217" vertex2="aperture_Lead_v218" vertex3="aperture_Lead_v222"/>
+             <triangular vertex1="aperture_Lead_v218" vertex2="aperture_Lead_v206" vertex3="aperture_Lead_v225"/>
+             <triangular vertex1="aperture_Lead_v220" vertex2="aperture_Lead_v226" vertex3="aperture_Lead_v225"/>
+             <triangular vertex1="aperture_Lead_v206" vertex2="aperture_Lead_v219" vertex3="aperture_Lead_v225"/>
+             <triangular vertex1="aperture_Lead_v219" vertex2="aperture_Lead_v220" vertex3="aperture_Lead_v225"/>
+             <triangular vertex1="aperture_Lead_v210" vertex2="aperture_Lead_v221" vertex3="aperture_Lead_v227"/>
+             <triangular vertex1="aperture_Lead_v220" vertex2="aperture_Lead_v210" vertex3="aperture_Lead_v227"/>
+             <triangular vertex1="aperture_Lead_v3" vertex2="aperture_Lead_v5" vertex3="aperture_Lead_v227"/>
+             <triangular vertex1="aperture_Lead_v221" vertex2="aperture_Lead_v3" vertex3="aperture_Lead_v227"/>
+             <triangular vertex1="aperture_Lead_v223" vertex2="aperture_Lead_v222" vertex3="aperture_Lead_v228"/>
+             <triangular vertex1="aperture_Lead_v222" vertex2="aperture_Lead_v224" vertex3="aperture_Lead_v228"/>
+             <triangular vertex1="aperture_Lead_v1" vertex2="aperture_Lead_v223" vertex3="aperture_Lead_v228"/>
+             <triangular vertex1="aperture_Lead_v224" vertex2="aperture_Lead_v229" vertex3="aperture_Lead_v228"/>
+             <triangular vertex1="aperture_Lead_v230" vertex2="aperture_Lead_v203" vertex3="aperture_Lead_v192"/>
+             <triangular vertex1="aperture_Lead_v231" vertex2="aperture_Lead_v0" vertex3="aperture_Lead_v232"/>
+             <triangular vertex1="aperture_Lead_v2" vertex2="aperture_Lead_v233" vertex3="aperture_Lead_v232"/>
+             <triangular vertex1="aperture_Lead_v203" vertex2="aperture_Lead_v184" vertex3="aperture_Lead_v192"/>
+             <triangular vertex1="aperture_Lead_v0" vertex2="aperture_Lead_v2" vertex3="aperture_Lead_v232"/>
+             <triangular vertex1="aperture_Lead_v225" vertex2="aperture_Lead_v226" vertex3="aperture_Lead_v234"/>
+             <triangular vertex1="aperture_Lead_v226" vertex2="aperture_Lead_v235" vertex3="aperture_Lead_v234"/>
+             <triangular vertex1="aperture_Lead_v224" vertex2="aperture_Lead_v218" vertex3="aperture_Lead_v234"/>
+             <triangular vertex1="aperture_Lead_v218" vertex2="aperture_Lead_v225" vertex3="aperture_Lead_v234"/>
+             <triangular vertex1="aperture_Lead_v220" vertex2="aperture_Lead_v227" vertex3="aperture_Lead_v236"/>
+             <triangular vertex1="aperture_Lead_v227" vertex2="aperture_Lead_v5" vertex3="aperture_Lead_v236"/>
+             <triangular vertex1="aperture_Lead_v226" vertex2="aperture_Lead_v220" vertex3="aperture_Lead_v236"/>
+             <triangular vertex1="aperture_Lead_v5" vertex2="aperture_Lead_v11" vertex3="aperture_Lead_v236"/>
+             <triangular vertex1="aperture_Lead_v1" vertex2="aperture_Lead_v228" vertex3="aperture_Lead_v237"/>
+             <triangular vertex1="aperture_Lead_v173" vertex2="aperture_Lead_v214" vertex3="aperture_Lead_v182"/>
+             <triangular vertex1="aperture_Lead_v228" vertex2="aperture_Lead_v229" vertex3="aperture_Lead_v237"/>
+             <triangular vertex1="aperture_Lead_v2" vertex2="aperture_Lead_v1" vertex3="aperture_Lead_v237"/>
+             <triangular vertex1="aperture_Lead_v229" vertex2="aperture_Lead_v238" vertex3="aperture_Lead_v237"/>
+             <triangular vertex1="aperture_Lead_v214" vertex2="aperture_Lead_v239" vertex3="aperture_Lead_v182"/>
+             <triangular vertex1="aperture_Lead_v239" vertex2="aperture_Lead_v240" vertex3="aperture_Lead_v182"/>
+             <triangular vertex1="aperture_Lead_v234" vertex2="aperture_Lead_v235" vertex3="aperture_Lead_v241"/>
+             <triangular vertex1="aperture_Lead_v240" vertex2="aperture_Lead_v242" vertex3="aperture_Lead_v182"/>
+             <triangular vertex1="aperture_Lead_v224" vertex2="aperture_Lead_v234" vertex3="aperture_Lead_v241"/>
+             <triangular vertex1="aperture_Lead_v229" vertex2="aperture_Lead_v224" vertex3="aperture_Lead_v241"/>
+             <triangular vertex1="aperture_Lead_v242" vertex2="aperture_Lead_v243" vertex3="aperture_Lead_v182"/>
+             <triangular vertex1="aperture_Lead_v235" vertex2="aperture_Lead_v244" vertex3="aperture_Lead_v241"/>
+             <triangular vertex1="aperture_Lead_v231" vertex2="aperture_Lead_v232" vertex3="aperture_Lead_v245"/>
+             <triangular vertex1="aperture_Lead_v232" vertex2="aperture_Lead_v233" vertex3="aperture_Lead_v245"/>
+             <triangular vertex1="aperture_Lead_v246" vertex2="aperture_Lead_v231" vertex3="aperture_Lead_v245"/>
+             <triangular vertex1="aperture_Lead_v233" vertex2="aperture_Lead_v247" vertex3="aperture_Lead_v245"/>
+             <triangular vertex1="aperture_Lead_v226" vertex2="aperture_Lead_v236" vertex3="aperture_Lead_v248"/>
+             <triangular vertex1="aperture_Lead_v236" vertex2="aperture_Lead_v11" vertex3="aperture_Lead_v248"/>
+             <triangular vertex1="aperture_Lead_v235" vertex2="aperture_Lead_v226" vertex3="aperture_Lead_v248"/>
+             <triangular vertex1="aperture_Lead_v11" vertex2="aperture_Lead_v20" vertex3="aperture_Lead_v248"/>
+             <triangular vertex1="aperture_Lead_v2" vertex2="aperture_Lead_v237" vertex3="aperture_Lead_v249"/>
+             <triangular vertex1="aperture_Lead_v237" vertex2="aperture_Lead_v238" vertex3="aperture_Lead_v249"/>
+             <triangular vertex1="aperture_Lead_v233" vertex2="aperture_Lead_v2" vertex3="aperture_Lead_v249"/>
+             <triangular vertex1="aperture_Lead_v238" vertex2="aperture_Lead_v250" vertex3="aperture_Lead_v249"/>
+             <triangular vertex1="aperture_Lead_v229" vertex2="aperture_Lead_v241" vertex3="aperture_Lead_v251"/>
+             <triangular vertex1="aperture_Lead_v241" vertex2="aperture_Lead_v244" vertex3="aperture_Lead_v251"/>
+             <triangular vertex1="aperture_Lead_v238" vertex2="aperture_Lead_v229" vertex3="aperture_Lead_v251"/>
+             <triangular vertex1="aperture_Lead_v244" vertex2="aperture_Lead_v252" vertex3="aperture_Lead_v251"/>
+             <triangular vertex1="aperture_Lead_v253" vertex2="aperture_Lead_v246" vertex3="aperture_Lead_v254"/>
+             <triangular vertex1="aperture_Lead_v246" vertex2="aperture_Lead_v245" vertex3="aperture_Lead_v254"/>
+             <triangular vertex1="aperture_Lead_v245" vertex2="aperture_Lead_v247" vertex3="aperture_Lead_v254"/>
+             <triangular vertex1="aperture_Lead_v247" vertex2="aperture_Lead_v255" vertex3="aperture_Lead_v254"/>
+             <triangular vertex1="aperture_Lead_v235" vertex2="aperture_Lead_v248" vertex3="aperture_Lead_v256"/>
+             <triangular vertex1="aperture_Lead_v248" vertex2="aperture_Lead_v20" vertex3="aperture_Lead_v256"/>
+             <triangular vertex1="aperture_Lead_v20" vertex2="aperture_Lead_v33" vertex3="aperture_Lead_v256"/>
+             <triangular vertex1="aperture_Lead_v244" vertex2="aperture_Lead_v235" vertex3="aperture_Lead_v256"/>
+             <triangular vertex1="aperture_Lead_v233" vertex2="aperture_Lead_v249" vertex3="aperture_Lead_v257"/>
+             <triangular vertex1="aperture_Lead_v249" vertex2="aperture_Lead_v250" vertex3="aperture_Lead_v257"/>
+             <triangular vertex1="aperture_Lead_v247" vertex2="aperture_Lead_v233" vertex3="aperture_Lead_v257"/>
+             <triangular vertex1="aperture_Lead_v250" vertex2="aperture_Lead_v258" vertex3="aperture_Lead_v257"/>
+             <triangular vertex1="aperture_Lead_v238" vertex2="aperture_Lead_v251" vertex3="aperture_Lead_v259"/>
+             <triangular vertex1="aperture_Lead_v260" vertex2="aperture_Lead_v230" vertex3="aperture_Lead_v200"/>
+             <triangular vertex1="aperture_Lead_v251" vertex2="aperture_Lead_v252" vertex3="aperture_Lead_v259"/>
+             <triangular vertex1="aperture_Lead_v252" vertex2="aperture_Lead_v261" vertex3="aperture_Lead_v259"/>
+             <triangular vertex1="aperture_Lead_v250" vertex2="aperture_Lead_v238" vertex3="aperture_Lead_v259"/>
+             <triangular vertex1="aperture_Lead_v230" vertex2="aperture_Lead_v192" vertex3="aperture_Lead_v200"/>
+             <triangular vertex1="aperture_Lead_v255" vertex2="aperture_Lead_v262" vertex3="aperture_Lead_v263"/>
+             <triangular vertex1="aperture_Lead_v253" vertex2="aperture_Lead_v254" vertex3="aperture_Lead_v263"/>
+             <triangular vertex1="aperture_Lead_v264" vertex2="aperture_Lead_v253" vertex3="aperture_Lead_v263"/>
+             <triangular vertex1="aperture_Lead_v254" vertex2="aperture_Lead_v255" vertex3="aperture_Lead_v263"/>
+             <triangular vertex1="aperture_Lead_v33" vertex2="aperture_Lead_v44" vertex3="aperture_Lead_v265"/>
+             <triangular vertex1="aperture_Lead_v256" vertex2="aperture_Lead_v33" vertex3="aperture_Lead_v265"/>
+             <triangular vertex1="aperture_Lead_v244" vertex2="aperture_Lead_v256" vertex3="aperture_Lead_v265"/>
+             <triangular vertex1="aperture_Lead_v252" vertex2="aperture_Lead_v244" vertex3="aperture_Lead_v265"/>
+             <triangular vertex1="aperture_Lead_v258" vertex2="aperture_Lead_v266" vertex3="aperture_Lead_v267"/>
+             <triangular vertex1="aperture_Lead_v247" vertex2="aperture_Lead_v257" vertex3="aperture_Lead_v267"/>
+             <triangular vertex1="aperture_Lead_v243" vertex2="aperture_Lead_v268" vertex3="aperture_Lead_v189"/>
+             <triangular vertex1="aperture_Lead_v257" vertex2="aperture_Lead_v258" vertex3="aperture_Lead_v267"/>
+             <triangular vertex1="aperture_Lead_v268" vertex2="aperture_Lead_v269" vertex3="aperture_Lead_v189"/>
+             <triangular vertex1="aperture_Lead_v255" vertex2="aperture_Lead_v247" vertex3="aperture_Lead_v267"/>
+             <triangular vertex1="aperture_Lead_v269" vertex2="aperture_Lead_v270" vertex3="aperture_Lead_v189"/>
+             <triangular vertex1="aperture_Lead_v261" vertex2="aperture_Lead_v271" vertex3="aperture_Lead_v272"/>
+             <triangular vertex1="aperture_Lead_v259" vertex2="aperture_Lead_v261" vertex3="aperture_Lead_v272"/>
+             <triangular vertex1="aperture_Lead_v250" vertex2="aperture_Lead_v259" vertex3="aperture_Lead_v272"/>
+             <triangular vertex1="aperture_Lead_v182" vertex2="aperture_Lead_v243" vertex3="aperture_Lead_v189"/>
+             <triangular vertex1="aperture_Lead_v258" vertex2="aperture_Lead_v250" vertex3="aperture_Lead_v272"/>
+             <triangular vertex1="aperture_Lead_v263" vertex2="aperture_Lead_v262" vertex3="aperture_Lead_v273"/>
+             <triangular vertex1="aperture_Lead_v76" vertex2="aperture_Lead_v264" vertex3="aperture_Lead_v273"/>
+             <triangular vertex1="aperture_Lead_v264" vertex2="aperture_Lead_v263" vertex3="aperture_Lead_v273"/>
+             <triangular vertex1="aperture_Lead_v44" vertex2="aperture_Lead_v54" vertex3="aperture_Lead_v274"/>
+             <triangular vertex1="aperture_Lead_v261" vertex2="aperture_Lead_v252" vertex3="aperture_Lead_v274"/>
+             <triangular vertex1="aperture_Lead_v265" vertex2="aperture_Lead_v44" vertex3="aperture_Lead_v274"/>
+             <triangular vertex1="aperture_Lead_v252" vertex2="aperture_Lead_v265" vertex3="aperture_Lead_v274"/>
+             <triangular vertex1="aperture_Lead_v262" vertex2="aperture_Lead_v255" vertex3="aperture_Lead_v275"/>
+             <triangular vertex1="aperture_Lead_v266" vertex2="aperture_Lead_v276" vertex3="aperture_Lead_v275"/>
+             <triangular vertex1="aperture_Lead_v255" vertex2="aperture_Lead_v267" vertex3="aperture_Lead_v275"/>
+             <triangular vertex1="aperture_Lead_v267" vertex2="aperture_Lead_v266" vertex3="aperture_Lead_v275"/>
+             <triangular vertex1="aperture_Lead_v273" vertex2="aperture_Lead_v262" vertex3="aperture_Lead_v277"/>
+             <triangular vertex1="aperture_Lead_v76" vertex2="aperture_Lead_v273" vertex3="aperture_Lead_v277"/>
+             <triangular vertex1="aperture_Lead_v266" vertex2="aperture_Lead_v258" vertex3="aperture_Lead_v278"/>
+             <triangular vertex1="aperture_Lead_v271" vertex2="aperture_Lead_v279" vertex3="aperture_Lead_v278"/>
+             <triangular vertex1="aperture_Lead_v258" vertex2="aperture_Lead_v272" vertex3="aperture_Lead_v278"/>
+             <triangular vertex1="aperture_Lead_v272" vertex2="aperture_Lead_v271" vertex3="aperture_Lead_v278"/>
+             <triangular vertex1="aperture_Lead_v274" vertex2="aperture_Lead_v54" vertex3="aperture_Lead_v280"/>
+             <triangular vertex1="aperture_Lead_v271" vertex2="aperture_Lead_v261" vertex3="aperture_Lead_v280"/>
+             <triangular vertex1="aperture_Lead_v54" vertex2="aperture_Lead_v59" vertex3="aperture_Lead_v280"/>
+             <triangular vertex1="aperture_Lead_v261" vertex2="aperture_Lead_v274" vertex3="aperture_Lead_v280"/>
+             <triangular vertex1="aperture_Lead_v266" vertex2="aperture_Lead_v278" vertex3="aperture_Lead_v281"/>
+             <triangular vertex1="aperture_Lead_v282" vertex2="aperture_Lead_v260" vertex3="aperture_Lead_v208"/>
+             <triangular vertex1="aperture_Lead_v279" vertex2="aperture_Lead_v283" vertex3="aperture_Lead_v281"/>
+             <triangular vertex1="aperture_Lead_v276" vertex2="aperture_Lead_v266" vertex3="aperture_Lead_v281"/>
+             <triangular vertex1="aperture_Lead_v278" vertex2="aperture_Lead_v279" vertex3="aperture_Lead_v281"/>
+             <triangular vertex1="aperture_Lead_v59" vertex2="aperture_Lead_v69" vertex3="aperture_Lead_v284"/>
+             <triangular vertex1="aperture_Lead_v279" vertex2="aperture_Lead_v271" vertex3="aperture_Lead_v284"/>
+             <triangular vertex1="aperture_Lead_v271" vertex2="aperture_Lead_v280" vertex3="aperture_Lead_v284"/>
+             <triangular vertex1="aperture_Lead_v280" vertex2="aperture_Lead_v59" vertex3="aperture_Lead_v284"/>
+             <triangular vertex1="aperture_Lead_v284" vertex2="aperture_Lead_v69" vertex3="aperture_Lead_v285"/>
+             <triangular vertex1="aperture_Lead_v283" vertex2="aperture_Lead_v279" vertex3="aperture_Lead_v285"/>
+             <triangular vertex1="aperture_Lead_v69" vertex2="aperture_Lead_v74" vertex3="aperture_Lead_v285"/>
+             <triangular vertex1="aperture_Lead_v279" vertex2="aperture_Lead_v284" vertex3="aperture_Lead_v285"/>
+             <triangular vertex1="aperture_Lead_v260" vertex2="aperture_Lead_v200" vertex3="aperture_Lead_v208"/>
+             <triangular vertex1="aperture_Lead_v270" vertex2="aperture_Lead_v286" vertex3="aperture_Lead_v197"/>
+             <triangular vertex1="aperture_Lead_v286" vertex2="aperture_Lead_v287" vertex3="aperture_Lead_v197"/>
+             <triangular vertex1="aperture_Lead_v283" vertex2="aperture_Lead_v285" vertex3="aperture_Lead_v288"/>
+             <triangular vertex1="aperture_Lead_v287" vertex2="aperture_Lead_v289" vertex3="aperture_Lead_v197"/>
+             <triangular vertex1="aperture_Lead_v285" vertex2="aperture_Lead_v74" vertex3="aperture_Lead_v288"/>
+             <triangular vertex1="aperture_Lead_v289" vertex2="aperture_Lead_v290" vertex3="aperture_Lead_v197"/>
+             <triangular vertex1="aperture_Lead_v189" vertex2="aperture_Lead_v270" vertex3="aperture_Lead_v197"/>
+             <triangular vertex1="aperture_Lead_v116" vertex2="aperture_Lead_v288" vertex3="aperture_Lead_v291"/>
+             <triangular vertex1="aperture_Lead_v288" vertex2="aperture_Lead_v74" vertex3="aperture_Lead_v291"/>
+             <triangular vertex1="aperture_Lead_v73" vertex2="aperture_Lead_v292" vertex3="aperture_Lead_v293"/>
+             <triangular vertex1="aperture_Lead_v292" vertex2="aperture_Lead_v294" vertex3="aperture_Lead_v293"/>
+             <triangular vertex1="aperture_Lead_v294" vertex2="aperture_Lead_v295" vertex3="aperture_Lead_v293"/>
+             <triangular vertex1="aperture_Lead_v295" vertex2="aperture_Lead_v116" vertex3="aperture_Lead_v293"/>
+             <triangular vertex1="aperture_Lead_v74" vertex2="aperture_Lead_v73" vertex3="aperture_Lead_v293"/>
+             <triangular vertex1="aperture_Lead_v291" vertex2="aperture_Lead_v74" vertex3="aperture_Lead_v293"/>
+             <triangular vertex1="aperture_Lead_v116" vertex2="aperture_Lead_v291" vertex3="aperture_Lead_v293"/>
+             <triangular vertex1="aperture_Lead_v76" vertex2="aperture_Lead_v116" vertex3="aperture_Lead_v296"/>
+             <triangular vertex1="aperture_Lead_v116" vertex2="aperture_Lead_v120" vertex3="aperture_Lead_v296"/>
+             <triangular vertex1="aperture_Lead_v83" vertex2="aperture_Lead_v76" vertex3="aperture_Lead_v296"/>
+             <triangular vertex1="aperture_Lead_v76" vertex2="aperture_Lead_v277" vertex3="aperture_Lead_v297"/>
+             <triangular vertex1="aperture_Lead_v116" vertex2="aperture_Lead_v76" vertex3="aperture_Lead_v297"/>
+             <triangular vertex1="aperture_Lead_v275" vertex2="aperture_Lead_v276" vertex3="aperture_Lead_v297"/>
+             <triangular vertex1="aperture_Lead_v277" vertex2="aperture_Lead_v262" vertex3="aperture_Lead_v297"/>
+             <triangular vertex1="aperture_Lead_v288" vertex2="aperture_Lead_v116" vertex3="aperture_Lead_v297"/>
+             <triangular vertex1="aperture_Lead_v262" vertex2="aperture_Lead_v275" vertex3="aperture_Lead_v297"/>
+             <triangular vertex1="aperture_Lead_v83" vertex2="aperture_Lead_v296" vertex3="aperture_Lead_v298"/>
+             <triangular vertex1="aperture_Lead_v296" vertex2="aperture_Lead_v102" vertex3="aperture_Lead_v298"/>
+             <triangular vertex1="aperture_Lead_v102" vertex2="aperture_Lead_v104" vertex3="aperture_Lead_v298"/>
+             <triangular vertex1="aperture_Lead_v90" vertex2="aperture_Lead_v83" vertex3="aperture_Lead_v298"/>
+             <triangular vertex1="aperture_Lead_v104" vertex2="aperture_Lead_v90" vertex3="aperture_Lead_v298"/>
+             <triangular vertex1="aperture_Lead_v102" vertex2="aperture_Lead_v296" vertex3="aperture_Lead_v299"/>
+             <triangular vertex1="aperture_Lead_v16" vertex2="aperture_Lead_v110" vertex3="aperture_Lead_v299"/>
+             <triangular vertex1="aperture_Lead_v296" vertex2="aperture_Lead_v120" vertex3="aperture_Lead_v299"/>
+             <triangular vertex1="aperture_Lead_v120" vertex2="aperture_Lead_v16" vertex3="aperture_Lead_v299"/>
+             <triangular vertex1="aperture_Lead_v110" vertex2="aperture_Lead_v102" vertex3="aperture_Lead_v299"/>
+             <triangular vertex1="aperture_Lead_v288" vertex2="aperture_Lead_v297" vertex3="aperture_Lead_v300"/>
+             <triangular vertex1="aperture_Lead_v301" vertex2="aperture_Lead_v282" vertex3="aperture_Lead_v216"/>
+             <triangular vertex1="aperture_Lead_v283" vertex2="aperture_Lead_v288" vertex3="aperture_Lead_v300"/>
+             <triangular vertex1="aperture_Lead_v297" vertex2="aperture_Lead_v276" vertex3="aperture_Lead_v300"/>
+             <triangular vertex1="aperture_Lead_v276" vertex2="aperture_Lead_v281" vertex3="aperture_Lead_v300"/>
+             <triangular vertex1="aperture_Lead_v281" vertex2="aperture_Lead_v283" vertex3="aperture_Lead_v300"/>
+             <triangular vertex1="aperture_Lead_v282" vertex2="aperture_Lead_v208" vertex3="aperture_Lead_v216"/>
+             <triangular vertex1="aperture_Lead_v290" vertex2="aperture_Lead_v302" vertex3="aperture_Lead_v204"/>
+             <triangular vertex1="aperture_Lead_v302" vertex2="aperture_Lead_v303" vertex3="aperture_Lead_v204"/>
+             <triangular vertex1="aperture_Lead_v303" vertex2="aperture_Lead_v304" vertex3="aperture_Lead_v204"/>
+             <triangular vertex1="aperture_Lead_v197" vertex2="aperture_Lead_v290" vertex3="aperture_Lead_v204"/>
+             <triangular vertex1="aperture_Lead_v301" vertex2="aperture_Lead_v216" vertex3="aperture_Lead_v223"/>
+             <triangular vertex1="aperture_Lead_v305" vertex2="aperture_Lead_v301" vertex3="aperture_Lead_v223"/>
+             <triangular vertex1="aperture_Lead_v204" vertex2="aperture_Lead_v304" vertex3="aperture_Lead_v215"/>
+             <triangular vertex1="aperture_Lead_v304" vertex2="aperture_Lead_v306" vertex3="aperture_Lead_v215"/>
+             <triangular vertex1="aperture_Lead_v306" vertex2="aperture_Lead_v307" vertex3="aperture_Lead_v215"/>
+             <triangular vertex1="aperture_Lead_v307" vertex2="aperture_Lead_v308" vertex3="aperture_Lead_v215"/>
+             <triangular vertex1="aperture_Lead_v308" vertex2="aperture_Lead_v309" vertex3="aperture_Lead_v215"/>
+             <triangular vertex1="aperture_Lead_v305" vertex2="aperture_Lead_v223" vertex3="aperture_Lead_v1"/>
+             <triangular vertex1="aperture_Lead_v0" vertex2="aperture_Lead_v305" vertex3="aperture_Lead_v1"/>
+             <triangular vertex1="aperture_Lead_v215" vertex2="aperture_Lead_v309" vertex3="aperture_Lead_v3"/>
+             <triangular vertex1="aperture_Lead_v309" vertex2="aperture_Lead_v310" vertex3="aperture_Lead_v3"/>
+             <triangular vertex1="aperture_Lead_v310" vertex2="aperture_Lead_v311" vertex3="aperture_Lead_v3"/>
+             <triangular vertex1="aperture_Lead_v311" vertex2="aperture_Lead_v4" vertex3="aperture_Lead_v3"/>
+             <triangular vertex1="aperture_Lead_v312" vertex2="aperture_Lead_v313" vertex3="aperture_Lead_v127"/>
+             <triangular vertex1="aperture_Lead_v314" vertex2="aperture_Lead_v292" vertex3="aperture_Lead_v315"/>
+             <triangular vertex1="aperture_Lead_v314" vertex2="aperture_Lead_v294" vertex3="aperture_Lead_v292"/>
+             <triangular vertex1="aperture_Lead_v316" vertex2="aperture_Lead_v127" vertex3="aperture_Lead_v126"/>
+             <triangular vertex1="aperture_Lead_v316" vertex2="aperture_Lead_v312" vertex3="aperture_Lead_v127"/>
+             <triangular vertex1="aperture_Lead_v317" vertex2="aperture_Lead_v294" vertex3="aperture_Lead_v314"/>
+             <triangular vertex1="aperture_Lead_v317" vertex2="aperture_Lead_v295" vertex3="aperture_Lead_v294"/>
+             <triangular vertex1="aperture_Lead_v318" vertex2="aperture_Lead_v316" vertex3="aperture_Lead_v126"/>
+             <triangular vertex1="aperture_Lead_v318" vertex2="aperture_Lead_v126" vertex3="aperture_Lead_v124"/>
+             <triangular vertex1="aperture_Lead_v319" vertex2="aperture_Lead_v116" vertex3="aperture_Lead_v295"/>
+             <triangular vertex1="aperture_Lead_v319" vertex2="aperture_Lead_v295" vertex3="aperture_Lead_v317"/>
+             <triangular vertex1="aperture_Lead_v320" vertex2="aperture_Lead_v318" vertex3="aperture_Lead_v124"/>
+             <triangular vertex1="aperture_Lead_v320" vertex2="aperture_Lead_v124" vertex3="aperture_Lead_v101"/>
+             <triangular vertex1="aperture_Lead_v311" vertex2="aperture_Lead_v321" vertex3="aperture_Lead_v322"/>
+             <triangular vertex1="aperture_Lead_v323" vertex2="aperture_Lead_v116" vertex3="aperture_Lead_v319"/>
+             <triangular vertex1="aperture_Lead_v4" vertex2="aperture_Lead_v311" vertex3="aperture_Lead_v322"/>
+             <triangular vertex1="aperture_Lead_v324" vertex2="aperture_Lead_v101" vertex3="aperture_Lead_v98"/>
+             <triangular vertex1="aperture_Lead_v4" vertex2="aperture_Lead_v322" vertex3="aperture_Lead_v325"/>
+             <triangular vertex1="aperture_Lead_v324" vertex2="aperture_Lead_v320" vertex3="aperture_Lead_v101"/>
+             <triangular vertex1="aperture_Lead_v326" vertex2="aperture_Lead_v117" vertex3="aperture_Lead_v116"/>
+             <triangular vertex1="aperture_Lead_v310" vertex2="aperture_Lead_v321" vertex3="aperture_Lead_v311"/>
+             <triangular vertex1="aperture_Lead_v326" vertex2="aperture_Lead_v116" vertex3="aperture_Lead_v323"/>
+             <triangular vertex1="aperture_Lead_v327" vertex2="aperture_Lead_v98" vertex3="aperture_Lead_v97"/>
+             <triangular vertex1="aperture_Lead_v310" vertex2="aperture_Lead_v328" vertex3="aperture_Lead_v329"/>
+             <triangular vertex1="aperture_Lead_v327" vertex2="aperture_Lead_v324" vertex3="aperture_Lead_v98"/>
+             <triangular vertex1="aperture_Lead_v310" vertex2="aperture_Lead_v329" vertex3="aperture_Lead_v321"/>
+             <triangular vertex1="aperture_Lead_v330" vertex2="aperture_Lead_v118" vertex3="aperture_Lead_v117"/>
+             <triangular vertex1="aperture_Lead_v6" vertex2="aperture_Lead_v4" vertex3="aperture_Lead_v325"/>
+             <triangular vertex1="aperture_Lead_v6" vertex2="aperture_Lead_v325" vertex3="aperture_Lead_v331"/>
+             <triangular vertex1="aperture_Lead_v330" vertex2="aperture_Lead_v117" vertex3="aperture_Lead_v326"/>
+             <triangular vertex1="aperture_Lead_v332" vertex2="aperture_Lead_v97" vertex3="aperture_Lead_v96"/>
+             <triangular vertex1="aperture_Lead_v332" vertex2="aperture_Lead_v327" vertex3="aperture_Lead_v97"/>
+             <triangular vertex1="aperture_Lead_v333" vertex2="aperture_Lead_v119" vertex3="aperture_Lead_v118"/>
+             <triangular vertex1="aperture_Lead_v309" vertex2="aperture_Lead_v328" vertex3="aperture_Lead_v310"/>
+             <triangular vertex1="aperture_Lead_v309" vertex2="aperture_Lead_v334" vertex3="aperture_Lead_v328"/>
+             <triangular vertex1="aperture_Lead_v7" vertex2="aperture_Lead_v6" vertex3="aperture_Lead_v331"/>
+             <triangular vertex1="aperture_Lead_v7" vertex2="aperture_Lead_v331" vertex3="aperture_Lead_v335"/>
+             <triangular vertex1="aperture_Lead_v333" vertex2="aperture_Lead_v118" vertex3="aperture_Lead_v330"/>
+             <triangular vertex1="aperture_Lead_v336" vertex2="aperture_Lead_v332" vertex3="aperture_Lead_v96"/>
+             <triangular vertex1="aperture_Lead_v337" vertex2="aperture_Lead_v14" vertex3="aperture_Lead_v119"/>
+             <triangular vertex1="aperture_Lead_v308" vertex2="aperture_Lead_v338" vertex3="aperture_Lead_v334"/>
+             <triangular vertex1="aperture_Lead_v337" vertex2="aperture_Lead_v119" vertex3="aperture_Lead_v333"/>
+             <triangular vertex1="aperture_Lead_v308" vertex2="aperture_Lead_v334" vertex3="aperture_Lead_v309"/>
+             <triangular vertex1="aperture_Lead_v8" vertex2="aperture_Lead_v7" vertex3="aperture_Lead_v335"/>
+             <triangular vertex1="aperture_Lead_v339" vertex2="aperture_Lead_v336" vertex3="aperture_Lead_v96"/>
+             <triangular vertex1="aperture_Lead_v8" vertex2="aperture_Lead_v335" vertex3="aperture_Lead_v340"/>
+             <triangular vertex1="aperture_Lead_v8" vertex2="aperture_Lead_v340" vertex3="aperture_Lead_v341"/>
+             <triangular vertex1="aperture_Lead_v339" vertex2="aperture_Lead_v96" vertex3="aperture_Lead_v67"/>
+             <triangular vertex1="aperture_Lead_v342" vertex2="aperture_Lead_v15" vertex3="aperture_Lead_v14"/>
+             <triangular vertex1="aperture_Lead_v307" vertex2="aperture_Lead_v338" vertex3="aperture_Lead_v308"/>
+             <triangular vertex1="aperture_Lead_v342" vertex2="aperture_Lead_v14" vertex3="aperture_Lead_v337"/>
+             <triangular vertex1="aperture_Lead_v307" vertex2="aperture_Lead_v343" vertex3="aperture_Lead_v338"/>
+             <triangular vertex1="aperture_Lead_v9" vertex2="aperture_Lead_v8" vertex3="aperture_Lead_v341"/>
+             <triangular vertex1="aperture_Lead_v344" vertex2="aperture_Lead_v67" vertex3="aperture_Lead_v66"/>
+             <triangular vertex1="aperture_Lead_v9" vertex2="aperture_Lead_v341" vertex3="aperture_Lead_v345"/>
+             <triangular vertex1="aperture_Lead_v344" vertex2="aperture_Lead_v339" vertex3="aperture_Lead_v67"/>
+             <triangular vertex1="aperture_Lead_v346" vertex2="aperture_Lead_v15" vertex3="aperture_Lead_v342"/>
+             <triangular vertex1="aperture_Lead_v347" vertex2="aperture_Lead_v66" vertex3="aperture_Lead_v65"/>
+             <triangular vertex1="aperture_Lead_v306" vertex2="aperture_Lead_v348" vertex3="aperture_Lead_v343"/>
+             <triangular vertex1="aperture_Lead_v347" vertex2="aperture_Lead_v344" vertex3="aperture_Lead_v66"/>
+             <triangular vertex1="aperture_Lead_v306" vertex2="aperture_Lead_v343" vertex3="aperture_Lead_v307"/>
+             <triangular vertex1="aperture_Lead_v349" vertex2="aperture_Lead_v15" vertex3="aperture_Lead_v346"/>
+             <triangular vertex1="aperture_Lead_v10" vertex2="aperture_Lead_v9" vertex3="aperture_Lead_v345"/>
+             <triangular vertex1="aperture_Lead_v349" vertex2="aperture_Lead_v27" vertex3="aperture_Lead_v15"/>
+             <triangular vertex1="aperture_Lead_v10" vertex2="aperture_Lead_v345" vertex3="aperture_Lead_v350"/>
+             <triangular vertex1="aperture_Lead_v351" vertex2="aperture_Lead_v65" vertex3="aperture_Lead_v52"/>
+             <triangular vertex1="aperture_Lead_v351" vertex2="aperture_Lead_v347" vertex3="aperture_Lead_v65"/>
+             <triangular vertex1="aperture_Lead_v352" vertex2="aperture_Lead_v28" vertex3="aperture_Lead_v27"/>
+             <triangular vertex1="aperture_Lead_v304" vertex2="aperture_Lead_v353" vertex3="aperture_Lead_v354"/>
+             <triangular vertex1="aperture_Lead_v304" vertex2="aperture_Lead_v354" vertex3="aperture_Lead_v348"/>
+             <triangular vertex1="aperture_Lead_v304" vertex2="aperture_Lead_v348" vertex3="aperture_Lead_v306"/>
+             <triangular vertex1="aperture_Lead_v352" vertex2="aperture_Lead_v27" vertex3="aperture_Lead_v349"/>
+             <triangular vertex1="aperture_Lead_v12" vertex2="aperture_Lead_v10" vertex3="aperture_Lead_v350"/>
+             <triangular vertex1="aperture_Lead_v355" vertex2="aperture_Lead_v351" vertex3="aperture_Lead_v52"/>
+             <triangular vertex1="aperture_Lead_v12" vertex2="aperture_Lead_v350" vertex3="aperture_Lead_v356"/>
+             <triangular vertex1="aperture_Lead_v355" vertex2="aperture_Lead_v52" vertex3="aperture_Lead_v51"/>
+             <triangular vertex1="aperture_Lead_v357" vertex2="aperture_Lead_v29" vertex3="aperture_Lead_v28"/>
+             <triangular vertex1="aperture_Lead_v357" vertex2="aperture_Lead_v28" vertex3="aperture_Lead_v352"/>
+             <triangular vertex1="aperture_Lead_v303" vertex2="aperture_Lead_v353" vertex3="aperture_Lead_v304"/>
+             <triangular vertex1="aperture_Lead_v358" vertex2="aperture_Lead_v355" vertex3="aperture_Lead_v51"/>
+             <triangular vertex1="aperture_Lead_v303" vertex2="aperture_Lead_v359" vertex3="aperture_Lead_v353"/>
+             <triangular vertex1="aperture_Lead_v360" vertex2="aperture_Lead_v30" vertex3="aperture_Lead_v29"/>
+             <triangular vertex1="aperture_Lead_v13" vertex2="aperture_Lead_v356" vertex3="aperture_Lead_v361"/>
+             <triangular vertex1="aperture_Lead_v360" vertex2="aperture_Lead_v29" vertex3="aperture_Lead_v357"/>
+             <triangular vertex1="aperture_Lead_v13" vertex2="aperture_Lead_v12" vertex3="aperture_Lead_v356"/>
+             <triangular vertex1="aperture_Lead_v362" vertex2="aperture_Lead_v51" vertex3="aperture_Lead_v50"/>
+             <triangular vertex1="aperture_Lead_v362" vertex2="aperture_Lead_v358" vertex3="aperture_Lead_v51"/>
+             <triangular vertex1="aperture_Lead_v363" vertex2="aperture_Lead_v38" vertex3="aperture_Lead_v30"/>
+             <triangular vertex1="aperture_Lead_v363" vertex2="aperture_Lead_v30" vertex3="aperture_Lead_v360"/>
+             <triangular vertex1="aperture_Lead_v302" vertex2="aperture_Lead_v364" vertex3="aperture_Lead_v359"/>
+             <triangular vertex1="aperture_Lead_v302" vertex2="aperture_Lead_v359" vertex3="aperture_Lead_v303"/>
+             <triangular vertex1="aperture_Lead_v365" vertex2="aperture_Lead_v50" vertex3="aperture_Lead_v48"/>
+             <triangular vertex1="aperture_Lead_v365" vertex2="aperture_Lead_v362" vertex3="aperture_Lead_v50"/>
+             <triangular vertex1="aperture_Lead_v21" vertex2="aperture_Lead_v361" vertex3="aperture_Lead_v366"/>
+             <triangular vertex1="aperture_Lead_v21" vertex2="aperture_Lead_v366" vertex3="aperture_Lead_v367"/>
+             <triangular vertex1="aperture_Lead_v368" vertex2="aperture_Lead_v38" vertex3="aperture_Lead_v363"/>
+             <triangular vertex1="aperture_Lead_v21" vertex2="aperture_Lead_v13" vertex3="aperture_Lead_v361"/>
+             <triangular vertex1="aperture_Lead_v369" vertex2="aperture_Lead_v48" vertex3="aperture_Lead_v41"/>
+             <triangular vertex1="aperture_Lead_v369" vertex2="aperture_Lead_v365" vertex3="aperture_Lead_v48"/>
+             <triangular vertex1="aperture_Lead_v370" vertex2="aperture_Lead_v40" vertex3="aperture_Lead_v38"/>
+             <triangular vertex1="aperture_Lead_v370" vertex2="aperture_Lead_v38" vertex3="aperture_Lead_v368"/>
+             <triangular vertex1="aperture_Lead_v290" vertex2="aperture_Lead_v364" vertex3="aperture_Lead_v302"/>
+             <triangular vertex1="aperture_Lead_v371" vertex2="aperture_Lead_v41" vertex3="aperture_Lead_v40"/>
+             <triangular vertex1="aperture_Lead_v371" vertex2="aperture_Lead_v40" vertex3="aperture_Lead_v370"/>
+             <triangular vertex1="aperture_Lead_v371" vertex2="aperture_Lead_v369" vertex3="aperture_Lead_v41"/>
+             <triangular vertex1="aperture_Lead_v290" vertex2="aperture_Lead_v372" vertex3="aperture_Lead_v364"/>
+             <triangular vertex1="aperture_Lead_v22" vertex2="aperture_Lead_v21" vertex3="aperture_Lead_v367"/>
+             <triangular vertex1="aperture_Lead_v22" vertex2="aperture_Lead_v367" vertex3="aperture_Lead_v373"/>
+             <triangular vertex1="aperture_Lead_v289" vertex2="aperture_Lead_v372" vertex3="aperture_Lead_v290"/>
+             <triangular vertex1="aperture_Lead_v289" vertex2="aperture_Lead_v374" vertex3="aperture_Lead_v372"/>
+             <triangular vertex1="aperture_Lead_v23" vertex2="aperture_Lead_v22" vertex3="aperture_Lead_v373"/>
+             <triangular vertex1="aperture_Lead_v23" vertex2="aperture_Lead_v373" vertex3="aperture_Lead_v375"/>
+             <triangular vertex1="aperture_Lead_v287" vertex2="aperture_Lead_v374" vertex3="aperture_Lead_v289"/>
+             <triangular vertex1="aperture_Lead_v287" vertex2="aperture_Lead_v376" vertex3="aperture_Lead_v377"/>
+             <triangular vertex1="aperture_Lead_v287" vertex2="aperture_Lead_v377" vertex3="aperture_Lead_v374"/>
+             <triangular vertex1="aperture_Lead_v24" vertex2="aperture_Lead_v23" vertex3="aperture_Lead_v375"/>
+             <triangular vertex1="aperture_Lead_v24" vertex2="aperture_Lead_v375" vertex3="aperture_Lead_v378"/>
+             <triangular vertex1="aperture_Lead_v286" vertex2="aperture_Lead_v376" vertex3="aperture_Lead_v287"/>
+             <triangular vertex1="aperture_Lead_v286" vertex2="aperture_Lead_v379" vertex3="aperture_Lead_v376"/>
+             <triangular vertex1="aperture_Lead_v34" vertex2="aperture_Lead_v24" vertex3="aperture_Lead_v378"/>
+             <triangular vertex1="aperture_Lead_v34" vertex2="aperture_Lead_v378" vertex3="aperture_Lead_v380"/>
+             <triangular vertex1="aperture_Lead_v270" vertex2="aperture_Lead_v379" vertex3="aperture_Lead_v286"/>
+             <triangular vertex1="aperture_Lead_v270" vertex2="aperture_Lead_v381" vertex3="aperture_Lead_v379"/>
+             <triangular vertex1="aperture_Lead_v35" vertex2="aperture_Lead_v34" vertex3="aperture_Lead_v380"/>
+             <triangular vertex1="aperture_Lead_v35" vertex2="aperture_Lead_v380" vertex3="aperture_Lead_v382"/>
+             <triangular vertex1="aperture_Lead_v269" vertex2="aperture_Lead_v381" vertex3="aperture_Lead_v270"/>
+             <triangular vertex1="aperture_Lead_v269" vertex2="aperture_Lead_v383" vertex3="aperture_Lead_v381"/>
+             <triangular vertex1="aperture_Lead_v36" vertex2="aperture_Lead_v35" vertex3="aperture_Lead_v382"/>
+             <triangular vertex1="aperture_Lead_v36" vertex2="aperture_Lead_v382" vertex3="aperture_Lead_v384"/>
+             <triangular vertex1="aperture_Lead_v36" vertex2="aperture_Lead_v384" vertex3="aperture_Lead_v385"/>
+             <triangular vertex1="aperture_Lead_v268" vertex2="aperture_Lead_v383" vertex3="aperture_Lead_v269"/>
+             <triangular vertex1="aperture_Lead_v268" vertex2="aperture_Lead_v386" vertex3="aperture_Lead_v383"/>
+             <triangular vertex1="aperture_Lead_v37" vertex2="aperture_Lead_v36" vertex3="aperture_Lead_v385"/>
+             <triangular vertex1="aperture_Lead_v37" vertex2="aperture_Lead_v385" vertex3="aperture_Lead_v387"/>
+             <triangular vertex1="aperture_Lead_v243" vertex2="aperture_Lead_v388" vertex3="aperture_Lead_v389"/>
+             <triangular vertex1="aperture_Lead_v243" vertex2="aperture_Lead_v389" vertex3="aperture_Lead_v386"/>
+             <triangular vertex1="aperture_Lead_v243" vertex2="aperture_Lead_v386" vertex3="aperture_Lead_v268"/>
+             <triangular vertex1="aperture_Lead_v42" vertex2="aperture_Lead_v37" vertex3="aperture_Lead_v387"/>
+             <triangular vertex1="aperture_Lead_v42" vertex2="aperture_Lead_v387" vertex3="aperture_Lead_v390"/>
+             <triangular vertex1="aperture_Lead_v242" vertex2="aperture_Lead_v391" vertex3="aperture_Lead_v388"/>
+             <triangular vertex1="aperture_Lead_v242" vertex2="aperture_Lead_v388" vertex3="aperture_Lead_v243"/>
+             <triangular vertex1="aperture_Lead_v43" vertex2="aperture_Lead_v42" vertex3="aperture_Lead_v390"/>
+             <triangular vertex1="aperture_Lead_v43" vertex2="aperture_Lead_v390" vertex3="aperture_Lead_v392"/>
+             <triangular vertex1="aperture_Lead_v240" vertex2="aperture_Lead_v393" vertex3="aperture_Lead_v391"/>
+             <triangular vertex1="aperture_Lead_v240" vertex2="aperture_Lead_v391" vertex3="aperture_Lead_v242"/>
+             <triangular vertex1="aperture_Lead_v45" vertex2="aperture_Lead_v43" vertex3="aperture_Lead_v392"/>
+             <triangular vertex1="aperture_Lead_v45" vertex2="aperture_Lead_v392" vertex3="aperture_Lead_v394"/>
+             <triangular vertex1="aperture_Lead_v239" vertex2="aperture_Lead_v393" vertex3="aperture_Lead_v240"/>
+             <triangular vertex1="aperture_Lead_v239" vertex2="aperture_Lead_v395" vertex3="aperture_Lead_v393"/>
+             <triangular vertex1="aperture_Lead_v53" vertex2="aperture_Lead_v45" vertex3="aperture_Lead_v394"/>
+             <triangular vertex1="aperture_Lead_v53" vertex2="aperture_Lead_v394" vertex3="aperture_Lead_v396"/>
+             <triangular vertex1="aperture_Lead_v53" vertex2="aperture_Lead_v396" vertex3="aperture_Lead_v397"/>
+             <triangular vertex1="aperture_Lead_v214" vertex2="aperture_Lead_v398" vertex3="aperture_Lead_v395"/>
+             <triangular vertex1="aperture_Lead_v214" vertex2="aperture_Lead_v395" vertex3="aperture_Lead_v239"/>
+             <triangular vertex1="aperture_Lead_v55" vertex2="aperture_Lead_v53" vertex3="aperture_Lead_v397"/>
+             <triangular vertex1="aperture_Lead_v55" vertex2="aperture_Lead_v397" vertex3="aperture_Lead_v399"/>
+             <triangular vertex1="aperture_Lead_v213" vertex2="aperture_Lead_v400" vertex3="aperture_Lead_v398"/>
+             <triangular vertex1="aperture_Lead_v213" vertex2="aperture_Lead_v398" vertex3="aperture_Lead_v214"/>
+             <triangular vertex1="aperture_Lead_v56" vertex2="aperture_Lead_v55" vertex3="aperture_Lead_v399"/>
+             <triangular vertex1="aperture_Lead_v401" vertex2="aperture_Lead_v56" vertex3="aperture_Lead_v399"/>
+             <triangular vertex1="aperture_Lead_v402" vertex2="aperture_Lead_v400" vertex3="aperture_Lead_v213"/>
+             <triangular vertex1="aperture_Lead_v211" vertex2="aperture_Lead_v402" vertex3="aperture_Lead_v213"/>
+             <triangular vertex1="aperture_Lead_v57" vertex2="aperture_Lead_v56" vertex3="aperture_Lead_v401"/>
+             <triangular vertex1="aperture_Lead_v403" vertex2="aperture_Lead_v57" vertex3="aperture_Lead_v401"/>
+             <triangular vertex1="aperture_Lead_v404" vertex2="aperture_Lead_v402" vertex3="aperture_Lead_v211"/>
+             <triangular vertex1="aperture_Lead_v183" vertex2="aperture_Lead_v404" vertex3="aperture_Lead_v211"/>
+             <triangular vertex1="aperture_Lead_v58" vertex2="aperture_Lead_v57" vertex3="aperture_Lead_v403"/>
+             <triangular vertex1="aperture_Lead_v405" vertex2="aperture_Lead_v58" vertex3="aperture_Lead_v403"/>
+             <triangular vertex1="aperture_Lead_v406" vertex2="aperture_Lead_v404" vertex3="aperture_Lead_v183"/>
+             <triangular vertex1="aperture_Lead_v181" vertex2="aperture_Lead_v406" vertex3="aperture_Lead_v183"/>
+             <triangular vertex1="aperture_Lead_v62" vertex2="aperture_Lead_v58" vertex3="aperture_Lead_v405"/>
+             <triangular vertex1="aperture_Lead_v407" vertex2="aperture_Lead_v62" vertex3="aperture_Lead_v405"/>
+             <triangular vertex1="aperture_Lead_v408" vertex2="aperture_Lead_v406" vertex3="aperture_Lead_v181"/>
+             <triangular vertex1="aperture_Lead_v408" vertex2="aperture_Lead_v181" vertex3="aperture_Lead_v180"/>
+             <triangular vertex1="aperture_Lead_v409" vertex2="aperture_Lead_v62" vertex3="aperture_Lead_v407"/>
+             <triangular vertex1="aperture_Lead_v409" vertex2="aperture_Lead_v63" vertex3="aperture_Lead_v62"/>
+             <triangular vertex1="aperture_Lead_v410" vertex2="aperture_Lead_v408" vertex3="aperture_Lead_v180"/>
+             <triangular vertex1="aperture_Lead_v410" vertex2="aperture_Lead_v180" vertex3="aperture_Lead_v178"/>
+             <triangular vertex1="aperture_Lead_v411" vertex2="aperture_Lead_v63" vertex3="aperture_Lead_v409"/>
+             <triangular vertex1="aperture_Lead_v411" vertex2="aperture_Lead_v68" vertex3="aperture_Lead_v63"/>
+             <triangular vertex1="aperture_Lead_v412" vertex2="aperture_Lead_v410" vertex3="aperture_Lead_v178"/>
+             <triangular vertex1="aperture_Lead_v413" vertex2="aperture_Lead_v68" vertex3="aperture_Lead_v411"/>
+             <triangular vertex1="aperture_Lead_v413" vertex2="aperture_Lead_v70" vertex3="aperture_Lead_v68"/>
+             <triangular vertex1="aperture_Lead_v414" vertex2="aperture_Lead_v412" vertex3="aperture_Lead_v178"/>
+             <triangular vertex1="aperture_Lead_v414" vertex2="aperture_Lead_v178" vertex3="aperture_Lead_v154"/>
+             <triangular vertex1="aperture_Lead_v415" vertex2="aperture_Lead_v70" vertex3="aperture_Lead_v413"/>
+             <triangular vertex1="aperture_Lead_v415" vertex2="aperture_Lead_v71" vertex3="aperture_Lead_v70"/>
+             <triangular vertex1="aperture_Lead_v416" vertex2="aperture_Lead_v154" vertex3="aperture_Lead_v153"/>
+             <triangular vertex1="aperture_Lead_v416" vertex2="aperture_Lead_v414" vertex3="aperture_Lead_v154"/>
+             <triangular vertex1="aperture_Lead_v417" vertex2="aperture_Lead_v71" vertex3="aperture_Lead_v415"/>
+             <triangular vertex1="aperture_Lead_v417" vertex2="aperture_Lead_v72" vertex3="aperture_Lead_v71"/>
+             <triangular vertex1="aperture_Lead_v418" vertex2="aperture_Lead_v153" vertex3="aperture_Lead_v151"/>
+             <triangular vertex1="aperture_Lead_v418" vertex2="aperture_Lead_v416" vertex3="aperture_Lead_v153"/>
+             <triangular vertex1="aperture_Lead_v419" vertex2="aperture_Lead_v72" vertex3="aperture_Lead_v417"/>
+             <triangular vertex1="aperture_Lead_v420" vertex2="aperture_Lead_v151" vertex3="aperture_Lead_v128"/>
+             <triangular vertex1="aperture_Lead_v420" vertex2="aperture_Lead_v418" vertex3="aperture_Lead_v151"/>
+             <triangular vertex1="aperture_Lead_v421" vertex2="aperture_Lead_v72" vertex3="aperture_Lead_v419"/>
+             <triangular vertex1="aperture_Lead_v421" vertex2="aperture_Lead_v73" vertex3="aperture_Lead_v72"/>
+             <triangular vertex1="aperture_Lead_v313" vertex2="aperture_Lead_v128" vertex3="aperture_Lead_v127"/>
+             <triangular vertex1="aperture_Lead_v313" vertex2="aperture_Lead_v420" vertex3="aperture_Lead_v128"/>
+             <triangular vertex1="aperture_Lead_v315" vertex2="aperture_Lead_v73" vertex3="aperture_Lead_v421"/>
+             <triangular vertex1="aperture_Lead_v315" vertex2="aperture_Lead_v292" vertex3="aperture_Lead_v73"/>
+             <triangular vertex1="aperture_Lead_v380" vertex2="aperture_Lead_v378" vertex3="aperture_Lead_v422"/>
+             <triangular vertex1="aperture_Lead_v382" vertex2="aperture_Lead_v423" vertex3="aperture_Lead_v424"/>
+             <triangular vertex1="aperture_Lead_v382" vertex2="aperture_Lead_v380" vertex3="aperture_Lead_v423"/>
+             <triangular vertex1="aperture_Lead_v384" vertex2="aperture_Lead_v424" vertex3="aperture_Lead_v425"/>
+             <triangular vertex1="aperture_Lead_v323" vertex2="aperture_Lead_v426" vertex3="aperture_Lead_v427"/>
+             <triangular vertex1="aperture_Lead_v384" vertex2="aperture_Lead_v382" vertex3="aperture_Lead_v424"/>
+             <triangular vertex1="aperture_Lead_v385" vertex2="aperture_Lead_v425" vertex3="aperture_Lead_v428"/>
+             <triangular vertex1="aperture_Lead_v326" vertex2="aperture_Lead_v427" vertex3="aperture_Lead_v429"/>
+             <triangular vertex1="aperture_Lead_v326" vertex2="aperture_Lead_v323" vertex3="aperture_Lead_v427"/>
+             <triangular vertex1="aperture_Lead_v385" vertex2="aperture_Lead_v384" vertex3="aperture_Lead_v425"/>
+             <triangular vertex1="aperture_Lead_v387" vertex2="aperture_Lead_v428" vertex3="aperture_Lead_v430"/>
+             <triangular vertex1="aperture_Lead_v330" vertex2="aperture_Lead_v429" vertex3="aperture_Lead_v431"/>
+             <triangular vertex1="aperture_Lead_v330" vertex2="aperture_Lead_v326" vertex3="aperture_Lead_v429"/>
+             <triangular vertex1="aperture_Lead_v387" vertex2="aperture_Lead_v385" vertex3="aperture_Lead_v428"/>
+             <triangular vertex1="aperture_Lead_v390" vertex2="aperture_Lead_v430" vertex3="aperture_Lead_v432"/>
+             <triangular vertex1="aperture_Lead_v333" vertex2="aperture_Lead_v431" vertex3="aperture_Lead_v433"/>
+             <triangular vertex1="aperture_Lead_v333" vertex2="aperture_Lead_v330" vertex3="aperture_Lead_v431"/>
+             <triangular vertex1="aperture_Lead_v390" vertex2="aperture_Lead_v387" vertex3="aperture_Lead_v430"/>
+             <triangular vertex1="aperture_Lead_v392" vertex2="aperture_Lead_v432" vertex3="aperture_Lead_v434"/>
+             <triangular vertex1="aperture_Lead_v337" vertex2="aperture_Lead_v433" vertex3="aperture_Lead_v435"/>
+             <triangular vertex1="aperture_Lead_v337" vertex2="aperture_Lead_v333" vertex3="aperture_Lead_v433"/>
+             <triangular vertex1="aperture_Lead_v392" vertex2="aperture_Lead_v390" vertex3="aperture_Lead_v432"/>
+             <triangular vertex1="aperture_Lead_v394" vertex2="aperture_Lead_v434" vertex3="aperture_Lead_v436"/>
+             <triangular vertex1="aperture_Lead_v342" vertex2="aperture_Lead_v435" vertex3="aperture_Lead_v437"/>
+             <triangular vertex1="aperture_Lead_v342" vertex2="aperture_Lead_v337" vertex3="aperture_Lead_v435"/>
+             <triangular vertex1="aperture_Lead_v394" vertex2="aperture_Lead_v392" vertex3="aperture_Lead_v434"/>
+             <triangular vertex1="aperture_Lead_v396" vertex2="aperture_Lead_v436" vertex3="aperture_Lead_v438"/>
+             <triangular vertex1="aperture_Lead_v346" vertex2="aperture_Lead_v437" vertex3="aperture_Lead_v439"/>
+             <triangular vertex1="aperture_Lead_v346" vertex2="aperture_Lead_v342" vertex3="aperture_Lead_v437"/>
+             <triangular vertex1="aperture_Lead_v396" vertex2="aperture_Lead_v394" vertex3="aperture_Lead_v436"/>
+             <triangular vertex1="aperture_Lead_v397" vertex2="aperture_Lead_v440" vertex3="aperture_Lead_v441"/>
+             <triangular vertex1="aperture_Lead_v397" vertex2="aperture_Lead_v438" vertex3="aperture_Lead_v440"/>
+             <triangular vertex1="aperture_Lead_v349" vertex2="aperture_Lead_v346" vertex3="aperture_Lead_v439"/>
+             <triangular vertex1="aperture_Lead_v397" vertex2="aperture_Lead_v396" vertex3="aperture_Lead_v438"/>
+             <triangular vertex1="aperture_Lead_v352" vertex2="aperture_Lead_v439" vertex3="aperture_Lead_v442"/>
+             <triangular vertex1="aperture_Lead_v399" vertex2="aperture_Lead_v397" vertex3="aperture_Lead_v441"/>
+             <triangular vertex1="aperture_Lead_v352" vertex2="aperture_Lead_v349" vertex3="aperture_Lead_v439"/>
+             <triangular vertex1="aperture_Lead_v401" vertex2="aperture_Lead_v399" vertex3="aperture_Lead_v441"/>
+             <triangular vertex1="aperture_Lead_v401" vertex2="aperture_Lead_v441" vertex3="aperture_Lead_v443"/>
+             <triangular vertex1="aperture_Lead_v357" vertex2="aperture_Lead_v442" vertex3="aperture_Lead_v444"/>
+             <triangular vertex1="aperture_Lead_v357" vertex2="aperture_Lead_v352" vertex3="aperture_Lead_v442"/>
+             <triangular vertex1="aperture_Lead_v403" vertex2="aperture_Lead_v401" vertex3="aperture_Lead_v443"/>
+             <triangular vertex1="aperture_Lead_v403" vertex2="aperture_Lead_v443" vertex3="aperture_Lead_v445"/>
+             <triangular vertex1="aperture_Lead_v360" vertex2="aperture_Lead_v444" vertex3="aperture_Lead_v446"/>
+             <triangular vertex1="aperture_Lead_v360" vertex2="aperture_Lead_v357" vertex3="aperture_Lead_v444"/>
+             <triangular vertex1="aperture_Lead_v405" vertex2="aperture_Lead_v403" vertex3="aperture_Lead_v445"/>
+             <triangular vertex1="aperture_Lead_v405" vertex2="aperture_Lead_v445" vertex3="aperture_Lead_v447"/>
+             <triangular vertex1="aperture_Lead_v363" vertex2="aperture_Lead_v446" vertex3="aperture_Lead_v448"/>
+             <triangular vertex1="aperture_Lead_v363" vertex2="aperture_Lead_v360" vertex3="aperture_Lead_v446"/>
+             <triangular vertex1="aperture_Lead_v407" vertex2="aperture_Lead_v405" vertex3="aperture_Lead_v447"/>
+             <triangular vertex1="aperture_Lead_v407" vertex2="aperture_Lead_v447" vertex3="aperture_Lead_v449"/>
+             <triangular vertex1="aperture_Lead_v368" vertex2="aperture_Lead_v448" vertex3="aperture_Lead_v450"/>
+             <triangular vertex1="aperture_Lead_v368" vertex2="aperture_Lead_v363" vertex3="aperture_Lead_v448"/>
+             <triangular vertex1="aperture_Lead_v409" vertex2="aperture_Lead_v449" vertex3="aperture_Lead_v451"/>
+             <triangular vertex1="aperture_Lead_v409" vertex2="aperture_Lead_v407" vertex3="aperture_Lead_v449"/>
+             <triangular vertex1="aperture_Lead_v370" vertex2="aperture_Lead_v450" vertex3="aperture_Lead_v452"/>
+             <triangular vertex1="aperture_Lead_v370" vertex2="aperture_Lead_v368" vertex3="aperture_Lead_v450"/>
+             <triangular vertex1="aperture_Lead_v411" vertex2="aperture_Lead_v453" vertex3="aperture_Lead_v454"/>
+             <triangular vertex1="aperture_Lead_v411" vertex2="aperture_Lead_v451" vertex3="aperture_Lead_v453"/>
+             <triangular vertex1="aperture_Lead_v411" vertex2="aperture_Lead_v409" vertex3="aperture_Lead_v451"/>
+             <triangular vertex1="aperture_Lead_v413" vertex2="aperture_Lead_v411" vertex3="aperture_Lead_v454"/>
+             <triangular vertex1="aperture_Lead_v371" vertex2="aperture_Lead_v452" vertex3="aperture_Lead_v455"/>
+             <triangular vertex1="aperture_Lead_v371" vertex2="aperture_Lead_v370" vertex3="aperture_Lead_v452"/>
+             <triangular vertex1="aperture_Lead_v415" vertex2="aperture_Lead_v456" vertex3="aperture_Lead_v457"/>
+             <triangular vertex1="aperture_Lead_v415" vertex2="aperture_Lead_v454" vertex3="aperture_Lead_v456"/>
+             <triangular vertex1="aperture_Lead_v369" vertex2="aperture_Lead_v455" vertex3="aperture_Lead_v458"/>
+             <triangular vertex1="aperture_Lead_v369" vertex2="aperture_Lead_v371" vertex3="aperture_Lead_v455"/>
+             <triangular vertex1="aperture_Lead_v415" vertex2="aperture_Lead_v413" vertex3="aperture_Lead_v454"/>
+             <triangular vertex1="aperture_Lead_v417" vertex2="aperture_Lead_v415" vertex3="aperture_Lead_v457"/>
+             <triangular vertex1="aperture_Lead_v365" vertex2="aperture_Lead_v458" vertex3="aperture_Lead_v459"/>
+             <triangular vertex1="aperture_Lead_v365" vertex2="aperture_Lead_v369" vertex3="aperture_Lead_v458"/>
+             <triangular vertex1="aperture_Lead_v419" vertex2="aperture_Lead_v457" vertex3="aperture_Lead_v460"/>
+             <triangular vertex1="aperture_Lead_v419" vertex2="aperture_Lead_v417" vertex3="aperture_Lead_v457"/>
+             <triangular vertex1="aperture_Lead_v362" vertex2="aperture_Lead_v459" vertex3="aperture_Lead_v461"/>
+             <triangular vertex1="aperture_Lead_v362" vertex2="aperture_Lead_v365" vertex3="aperture_Lead_v459"/>
+             <triangular vertex1="aperture_Lead_v421" vertex2="aperture_Lead_v462" vertex3="aperture_Lead_v463"/>
+             <triangular vertex1="aperture_Lead_v421" vertex2="aperture_Lead_v460" vertex3="aperture_Lead_v462"/>
+             <triangular vertex1="aperture_Lead_v421" vertex2="aperture_Lead_v419" vertex3="aperture_Lead_v460"/>
+             <triangular vertex1="aperture_Lead_v358" vertex2="aperture_Lead_v461" vertex3="aperture_Lead_v464"/>
+             <triangular vertex1="aperture_Lead_v358" vertex2="aperture_Lead_v362" vertex3="aperture_Lead_v461"/>
+             <triangular vertex1="aperture_Lead_v315" vertex2="aperture_Lead_v463" vertex3="aperture_Lead_v465"/>
+             <triangular vertex1="aperture_Lead_v315" vertex2="aperture_Lead_v421" vertex3="aperture_Lead_v463"/>
+             <triangular vertex1="aperture_Lead_v355" vertex2="aperture_Lead_v464" vertex3="aperture_Lead_v466"/>
+             <triangular vertex1="aperture_Lead_v355" vertex2="aperture_Lead_v358" vertex3="aperture_Lead_v464"/>
+             <triangular vertex1="aperture_Lead_v314" vertex2="aperture_Lead_v465" vertex3="aperture_Lead_v467"/>
+             <triangular vertex1="aperture_Lead_v314" vertex2="aperture_Lead_v315" vertex3="aperture_Lead_v465"/>
+             <triangular vertex1="aperture_Lead_v351" vertex2="aperture_Lead_v466" vertex3="aperture_Lead_v468"/>
+             <triangular vertex1="aperture_Lead_v317" vertex2="aperture_Lead_v467" vertex3="aperture_Lead_v469"/>
+             <triangular vertex1="aperture_Lead_v351" vertex2="aperture_Lead_v355" vertex3="aperture_Lead_v466"/>
+             <triangular vertex1="aperture_Lead_v317" vertex2="aperture_Lead_v314" vertex3="aperture_Lead_v467"/>
+             <triangular vertex1="aperture_Lead_v319" vertex2="aperture_Lead_v317" vertex3="aperture_Lead_v469"/>
+             <triangular vertex1="aperture_Lead_v323" vertex2="aperture_Lead_v469" vertex3="aperture_Lead_v426"/>
+             <triangular vertex1="aperture_Lead_v323" vertex2="aperture_Lead_v319" vertex3="aperture_Lead_v469"/>
+             <triangular vertex1="aperture_Lead_v347" vertex2="aperture_Lead_v351" vertex3="aperture_Lead_v468"/>
+             <triangular vertex1="aperture_Lead_v347" vertex2="aperture_Lead_v468" vertex3="aperture_Lead_v470"/>
+             <triangular vertex1="aperture_Lead_v344" vertex2="aperture_Lead_v347" vertex3="aperture_Lead_v470"/>
+             <triangular vertex1="aperture_Lead_v344" vertex2="aperture_Lead_v470" vertex3="aperture_Lead_v471"/>
+             <triangular vertex1="aperture_Lead_v339" vertex2="aperture_Lead_v344" vertex3="aperture_Lead_v471"/>
+             <triangular vertex1="aperture_Lead_v339" vertex2="aperture_Lead_v471" vertex3="aperture_Lead_v472"/>
+             <triangular vertex1="aperture_Lead_v336" vertex2="aperture_Lead_v339" vertex3="aperture_Lead_v472"/>
+             <triangular vertex1="aperture_Lead_v336" vertex2="aperture_Lead_v472" vertex3="aperture_Lead_v473"/>
+             <triangular vertex1="aperture_Lead_v332" vertex2="aperture_Lead_v336" vertex3="aperture_Lead_v473"/>
+             <triangular vertex1="aperture_Lead_v332" vertex2="aperture_Lead_v473" vertex3="aperture_Lead_v474"/>
+             <triangular vertex1="aperture_Lead_v327" vertex2="aperture_Lead_v332" vertex3="aperture_Lead_v474"/>
+             <triangular vertex1="aperture_Lead_v327" vertex2="aperture_Lead_v474" vertex3="aperture_Lead_v475"/>
+             <triangular vertex1="aperture_Lead_v324" vertex2="aperture_Lead_v327" vertex3="aperture_Lead_v475"/>
+             <triangular vertex1="aperture_Lead_v324" vertex2="aperture_Lead_v475" vertex3="aperture_Lead_v476"/>
+             <triangular vertex1="aperture_Lead_v320" vertex2="aperture_Lead_v324" vertex3="aperture_Lead_v476"/>
+             <triangular vertex1="aperture_Lead_v320" vertex2="aperture_Lead_v476" vertex3="aperture_Lead_v477"/>
+             <triangular vertex1="aperture_Lead_v318" vertex2="aperture_Lead_v320" vertex3="aperture_Lead_v477"/>
+             <triangular vertex1="aperture_Lead_v318" vertex2="aperture_Lead_v477" vertex3="aperture_Lead_v478"/>
+             <triangular vertex1="aperture_Lead_v316" vertex2="aperture_Lead_v318" vertex3="aperture_Lead_v478"/>
+             <triangular vertex1="aperture_Lead_v316" vertex2="aperture_Lead_v478" vertex3="aperture_Lead_v479"/>
+             <triangular vertex1="aperture_Lead_v312" vertex2="aperture_Lead_v316" vertex3="aperture_Lead_v479"/>
+             <triangular vertex1="aperture_Lead_v312" vertex2="aperture_Lead_v479" vertex3="aperture_Lead_v480"/>
+             <triangular vertex1="aperture_Lead_v313" vertex2="aperture_Lead_v312" vertex3="aperture_Lead_v480"/>
+             <triangular vertex1="aperture_Lead_v313" vertex2="aperture_Lead_v480" vertex3="aperture_Lead_v481"/>
+             <triangular vertex1="aperture_Lead_v420" vertex2="aperture_Lead_v313" vertex3="aperture_Lead_v481"/>
+             <triangular vertex1="aperture_Lead_v420" vertex2="aperture_Lead_v481" vertex3="aperture_Lead_v482"/>
+             <triangular vertex1="aperture_Lead_v418" vertex2="aperture_Lead_v420" vertex3="aperture_Lead_v482"/>
+             <triangular vertex1="aperture_Lead_v418" vertex2="aperture_Lead_v482" vertex3="aperture_Lead_v483"/>
+             <triangular vertex1="aperture_Lead_v416" vertex2="aperture_Lead_v418" vertex3="aperture_Lead_v483"/>
+             <triangular vertex1="aperture_Lead_v416" vertex2="aperture_Lead_v483" vertex3="aperture_Lead_v484"/>
+             <triangular vertex1="aperture_Lead_v414" vertex2="aperture_Lead_v416" vertex3="aperture_Lead_v484"/>
+             <triangular vertex1="aperture_Lead_v414" vertex2="aperture_Lead_v484" vertex3="aperture_Lead_v485"/>
+             <triangular vertex1="aperture_Lead_v412" vertex2="aperture_Lead_v414" vertex3="aperture_Lead_v485"/>
+             <triangular vertex1="aperture_Lead_v412" vertex2="aperture_Lead_v485" vertex3="aperture_Lead_v486"/>
+             <triangular vertex1="aperture_Lead_v410" vertex2="aperture_Lead_v412" vertex3="aperture_Lead_v486"/>
+             <triangular vertex1="aperture_Lead_v410" vertex2="aperture_Lead_v486" vertex3="aperture_Lead_v487"/>
+             <triangular vertex1="aperture_Lead_v408" vertex2="aperture_Lead_v487" vertex3="aperture_Lead_v488"/>
+             <triangular vertex1="aperture_Lead_v408" vertex2="aperture_Lead_v410" vertex3="aperture_Lead_v487"/>
+             <triangular vertex1="aperture_Lead_v406" vertex2="aperture_Lead_v488" vertex3="aperture_Lead_v489"/>
+             <triangular vertex1="aperture_Lead_v406" vertex2="aperture_Lead_v408" vertex3="aperture_Lead_v488"/>
+             <triangular vertex1="aperture_Lead_v404" vertex2="aperture_Lead_v406" vertex3="aperture_Lead_v489"/>
+             <triangular vertex1="aperture_Lead_v404" vertex2="aperture_Lead_v489" vertex3="aperture_Lead_v490"/>
+             <triangular vertex1="aperture_Lead_v402" vertex2="aperture_Lead_v490" vertex3="aperture_Lead_v491"/>
+             <triangular vertex1="aperture_Lead_v402" vertex2="aperture_Lead_v404" vertex3="aperture_Lead_v490"/>
+             <triangular vertex1="aperture_Lead_v400" vertex2="aperture_Lead_v491" vertex3="aperture_Lead_v492"/>
+             <triangular vertex1="aperture_Lead_v400" vertex2="aperture_Lead_v402" vertex3="aperture_Lead_v491"/>
+             <triangular vertex1="aperture_Lead_v398" vertex2="aperture_Lead_v400" vertex3="aperture_Lead_v492"/>
+             <triangular vertex1="aperture_Lead_v398" vertex2="aperture_Lead_v492" vertex3="aperture_Lead_v493"/>
+             <triangular vertex1="aperture_Lead_v395" vertex2="aperture_Lead_v398" vertex3="aperture_Lead_v493"/>
+             <triangular vertex1="aperture_Lead_v395" vertex2="aperture_Lead_v493" vertex3="aperture_Lead_v494"/>
+             <triangular vertex1="aperture_Lead_v393" vertex2="aperture_Lead_v395" vertex3="aperture_Lead_v494"/>
+             <triangular vertex1="aperture_Lead_v393" vertex2="aperture_Lead_v494" vertex3="aperture_Lead_v495"/>
+             <triangular vertex1="aperture_Lead_v391" vertex2="aperture_Lead_v393" vertex3="aperture_Lead_v495"/>
+             <triangular vertex1="aperture_Lead_v391" vertex2="aperture_Lead_v495" vertex3="aperture_Lead_v496"/>
+             <triangular vertex1="aperture_Lead_v388" vertex2="aperture_Lead_v391" vertex3="aperture_Lead_v496"/>
+             <triangular vertex1="aperture_Lead_v388" vertex2="aperture_Lead_v496" vertex3="aperture_Lead_v497"/>
+             <triangular vertex1="aperture_Lead_v389" vertex2="aperture_Lead_v388" vertex3="aperture_Lead_v497"/>
+             <triangular vertex1="aperture_Lead_v389" vertex2="aperture_Lead_v497" vertex3="aperture_Lead_v498"/>
+             <triangular vertex1="aperture_Lead_v386" vertex2="aperture_Lead_v389" vertex3="aperture_Lead_v498"/>
+             <triangular vertex1="aperture_Lead_v386" vertex2="aperture_Lead_v498" vertex3="aperture_Lead_v499"/>
+             <triangular vertex1="aperture_Lead_v383" vertex2="aperture_Lead_v386" vertex3="aperture_Lead_v499"/>
+             <triangular vertex1="aperture_Lead_v383" vertex2="aperture_Lead_v499" vertex3="aperture_Lead_v500"/>
+             <triangular vertex1="aperture_Lead_v381" vertex2="aperture_Lead_v383" vertex3="aperture_Lead_v500"/>
+             <triangular vertex1="aperture_Lead_v381" vertex2="aperture_Lead_v500" vertex3="aperture_Lead_v501"/>
+             <triangular vertex1="aperture_Lead_v379" vertex2="aperture_Lead_v381" vertex3="aperture_Lead_v501"/>
+             <triangular vertex1="aperture_Lead_v379" vertex2="aperture_Lead_v501" vertex3="aperture_Lead_v502"/>
+             <triangular vertex1="aperture_Lead_v376" vertex2="aperture_Lead_v379" vertex3="aperture_Lead_v502"/>
+             <triangular vertex1="aperture_Lead_v376" vertex2="aperture_Lead_v502" vertex3="aperture_Lead_v503"/>
+             <triangular vertex1="aperture_Lead_v377" vertex2="aperture_Lead_v376" vertex3="aperture_Lead_v503"/>
+             <triangular vertex1="aperture_Lead_v377" vertex2="aperture_Lead_v503" vertex3="aperture_Lead_v504"/>
+             <triangular vertex1="aperture_Lead_v374" vertex2="aperture_Lead_v377" vertex3="aperture_Lead_v504"/>
+             <triangular vertex1="aperture_Lead_v374" vertex2="aperture_Lead_v504" vertex3="aperture_Lead_v505"/>
+             <triangular vertex1="aperture_Lead_v372" vertex2="aperture_Lead_v374" vertex3="aperture_Lead_v505"/>
+             <triangular vertex1="aperture_Lead_v372" vertex2="aperture_Lead_v505" vertex3="aperture_Lead_v506"/>
+             <triangular vertex1="aperture_Lead_v364" vertex2="aperture_Lead_v372" vertex3="aperture_Lead_v506"/>
+             <triangular vertex1="aperture_Lead_v364" vertex2="aperture_Lead_v506" vertex3="aperture_Lead_v507"/>
+             <triangular vertex1="aperture_Lead_v359" vertex2="aperture_Lead_v507" vertex3="aperture_Lead_v508"/>
+             <triangular vertex1="aperture_Lead_v359" vertex2="aperture_Lead_v364" vertex3="aperture_Lead_v507"/>
+             <triangular vertex1="aperture_Lead_v353" vertex2="aperture_Lead_v508" vertex3="aperture_Lead_v509"/>
+             <triangular vertex1="aperture_Lead_v353" vertex2="aperture_Lead_v359" vertex3="aperture_Lead_v508"/>
+             <triangular vertex1="aperture_Lead_v354" vertex2="aperture_Lead_v353" vertex3="aperture_Lead_v509"/>
+             <triangular vertex1="aperture_Lead_v354" vertex2="aperture_Lead_v509" vertex3="aperture_Lead_v510"/>
+             <triangular vertex1="aperture_Lead_v348" vertex2="aperture_Lead_v510" vertex3="aperture_Lead_v511"/>
+             <triangular vertex1="aperture_Lead_v348" vertex2="aperture_Lead_v354" vertex3="aperture_Lead_v510"/>
+             <triangular vertex1="aperture_Lead_v343" vertex2="aperture_Lead_v511" vertex3="aperture_Lead_v512"/>
+             <triangular vertex1="aperture_Lead_v343" vertex2="aperture_Lead_v348" vertex3="aperture_Lead_v511"/>
+             <triangular vertex1="aperture_Lead_v338" vertex2="aperture_Lead_v512" vertex3="aperture_Lead_v513"/>
+             <triangular vertex1="aperture_Lead_v338" vertex2="aperture_Lead_v343" vertex3="aperture_Lead_v512"/>
+             <triangular vertex1="aperture_Lead_v334" vertex2="aperture_Lead_v513" vertex3="aperture_Lead_v514"/>
+             <triangular vertex1="aperture_Lead_v334" vertex2="aperture_Lead_v338" vertex3="aperture_Lead_v513"/>
+             <triangular vertex1="aperture_Lead_v328" vertex2="aperture_Lead_v514" vertex3="aperture_Lead_v515"/>
+             <triangular vertex1="aperture_Lead_v328" vertex2="aperture_Lead_v334" vertex3="aperture_Lead_v514"/>
+             <triangular vertex1="aperture_Lead_v329" vertex2="aperture_Lead_v515" vertex3="aperture_Lead_v516"/>
+             <triangular vertex1="aperture_Lead_v329" vertex2="aperture_Lead_v328" vertex3="aperture_Lead_v515"/>
+             <triangular vertex1="aperture_Lead_v321" vertex2="aperture_Lead_v516" vertex3="aperture_Lead_v517"/>
+             <triangular vertex1="aperture_Lead_v321" vertex2="aperture_Lead_v329" vertex3="aperture_Lead_v516"/>
+             <triangular vertex1="aperture_Lead_v322" vertex2="aperture_Lead_v321" vertex3="aperture_Lead_v517"/>
+             <triangular vertex1="aperture_Lead_v322" vertex2="aperture_Lead_v517" vertex3="aperture_Lead_v518"/>
+             <triangular vertex1="aperture_Lead_v325" vertex2="aperture_Lead_v322" vertex3="aperture_Lead_v518"/>
+             <triangular vertex1="aperture_Lead_v325" vertex2="aperture_Lead_v518" vertex3="aperture_Lead_v519"/>
+             <triangular vertex1="aperture_Lead_v331" vertex2="aperture_Lead_v325" vertex3="aperture_Lead_v519"/>
+             <triangular vertex1="aperture_Lead_v331" vertex2="aperture_Lead_v519" vertex3="aperture_Lead_v520"/>
+             <triangular vertex1="aperture_Lead_v335" vertex2="aperture_Lead_v331" vertex3="aperture_Lead_v520"/>
+             <triangular vertex1="aperture_Lead_v335" vertex2="aperture_Lead_v520" vertex3="aperture_Lead_v521"/>
+             <triangular vertex1="aperture_Lead_v340" vertex2="aperture_Lead_v335" vertex3="aperture_Lead_v521"/>
+             <triangular vertex1="aperture_Lead_v340" vertex2="aperture_Lead_v521" vertex3="aperture_Lead_v522"/>
+             <triangular vertex1="aperture_Lead_v341" vertex2="aperture_Lead_v340" vertex3="aperture_Lead_v522"/>
+             <triangular vertex1="aperture_Lead_v341" vertex2="aperture_Lead_v522" vertex3="aperture_Lead_v523"/>
+             <triangular vertex1="aperture_Lead_v345" vertex2="aperture_Lead_v341" vertex3="aperture_Lead_v523"/>
+             <triangular vertex1="aperture_Lead_v345" vertex2="aperture_Lead_v523" vertex3="aperture_Lead_v524"/>
+             <triangular vertex1="aperture_Lead_v350" vertex2="aperture_Lead_v345" vertex3="aperture_Lead_v524"/>
+             <triangular vertex1="aperture_Lead_v350" vertex2="aperture_Lead_v524" vertex3="aperture_Lead_v525"/>
+             <triangular vertex1="aperture_Lead_v356" vertex2="aperture_Lead_v350" vertex3="aperture_Lead_v525"/>
+             <triangular vertex1="aperture_Lead_v356" vertex2="aperture_Lead_v525" vertex3="aperture_Lead_v526"/>
+             <triangular vertex1="aperture_Lead_v361" vertex2="aperture_Lead_v356" vertex3="aperture_Lead_v526"/>
+             <triangular vertex1="aperture_Lead_v361" vertex2="aperture_Lead_v526" vertex3="aperture_Lead_v527"/>
+             <triangular vertex1="aperture_Lead_v366" vertex2="aperture_Lead_v527" vertex3="aperture_Lead_v528"/>
+             <triangular vertex1="aperture_Lead_v366" vertex2="aperture_Lead_v361" vertex3="aperture_Lead_v527"/>
+             <triangular vertex1="aperture_Lead_v367" vertex2="aperture_Lead_v528" vertex3="aperture_Lead_v529"/>
+             <triangular vertex1="aperture_Lead_v367" vertex2="aperture_Lead_v366" vertex3="aperture_Lead_v528"/>
+             <triangular vertex1="aperture_Lead_v373" vertex2="aperture_Lead_v529" vertex3="aperture_Lead_v530"/>
+             <triangular vertex1="aperture_Lead_v373" vertex2="aperture_Lead_v367" vertex3="aperture_Lead_v529"/>
+             <triangular vertex1="aperture_Lead_v375" vertex2="aperture_Lead_v530" vertex3="aperture_Lead_v531"/>
+             <triangular vertex1="aperture_Lead_v375" vertex2="aperture_Lead_v373" vertex3="aperture_Lead_v530"/>
+             <triangular vertex1="aperture_Lead_v378" vertex2="aperture_Lead_v531" vertex3="aperture_Lead_v422"/>
+             <triangular vertex1="aperture_Lead_v378" vertex2="aperture_Lead_v375" vertex3="aperture_Lead_v531"/>
+             <triangular vertex1="aperture_Lead_v380" vertex2="aperture_Lead_v422" vertex3="aperture_Lead_v423"/>
+             <triangular vertex1="aperture_Lead_v522" vertex2="aperture_Lead_v521" vertex3="aperture_Lead_v260"/>
+             <triangular vertex1="aperture_Lead_v521" vertex2="aperture_Lead_v520" vertex3="aperture_Lead_v260"/>
+             <triangular vertex1="aperture_Lead_v520" vertex2="aperture_Lead_v519" vertex3="aperture_Lead_v260"/>
+             <triangular vertex1="aperture_Lead_v519" vertex2="aperture_Lead_v518" vertex3="aperture_Lead_v260"/>
+             <triangular vertex1="aperture_Lead_v518" vertex2="aperture_Lead_v517" vertex3="aperture_Lead_v260"/>
+             <triangular vertex1="aperture_Lead_v517" vertex2="aperture_Lead_v516" vertex3="aperture_Lead_v230"/>
+             <triangular vertex1="aperture_Lead_v516" vertex2="aperture_Lead_v515" vertex3="aperture_Lead_v230"/>
+             <triangular vertex1="aperture_Lead_v515" vertex2="aperture_Lead_v514" vertex3="aperture_Lead_v230"/>
+             <triangular vertex1="aperture_Lead_v514" vertex2="aperture_Lead_v513" vertex3="aperture_Lead_v230"/>
+             <triangular vertex1="aperture_Lead_v260" vertex2="aperture_Lead_v517" vertex3="aperture_Lead_v230"/>
+             <triangular vertex1="aperture_Lead_v526" vertex2="aperture_Lead_v525" vertex3="aperture_Lead_v282"/>
+             <triangular vertex1="aperture_Lead_v525" vertex2="aperture_Lead_v524" vertex3="aperture_Lead_v282"/>
+             <triangular vertex1="aperture_Lead_v524" vertex2="aperture_Lead_v523" vertex3="aperture_Lead_v282"/>
+             <triangular vertex1="aperture_Lead_v523" vertex2="aperture_Lead_v522" vertex3="aperture_Lead_v282"/>
+             <triangular vertex1="aperture_Lead_v522" vertex2="aperture_Lead_v260" vertex3="aperture_Lead_v282"/>
+             <triangular vertex1="aperture_Lead_v513" vertex2="aperture_Lead_v512" vertex3="aperture_Lead_v203"/>
+             <triangular vertex1="aperture_Lead_v512" vertex2="aperture_Lead_v511" vertex3="aperture_Lead_v203"/>
+             <triangular vertex1="aperture_Lead_v230" vertex2="aperture_Lead_v513" vertex3="aperture_Lead_v203"/>
+             <triangular vertex1="aperture_Lead_v511" vertex2="aperture_Lead_v510" vertex3="aperture_Lead_v203"/>
+             <triangular vertex1="aperture_Lead_v510" vertex2="aperture_Lead_v509" vertex3="aperture_Lead_v203"/>
+             <triangular vertex1="aperture_Lead_v509" vertex2="aperture_Lead_v508" vertex3="aperture_Lead_v203"/>
+             <triangular vertex1="aperture_Lead_v530" vertex2="aperture_Lead_v529" vertex3="aperture_Lead_v301"/>
+             <triangular vertex1="aperture_Lead_v529" vertex2="aperture_Lead_v528" vertex3="aperture_Lead_v301"/>
+             <triangular vertex1="aperture_Lead_v528" vertex2="aperture_Lead_v527" vertex3="aperture_Lead_v301"/>
+             <triangular vertex1="aperture_Lead_v527" vertex2="aperture_Lead_v526" vertex3="aperture_Lead_v301"/>
+             <triangular vertex1="aperture_Lead_v526" vertex2="aperture_Lead_v282" vertex3="aperture_Lead_v301"/>
+             <triangular vertex1="aperture_Lead_v508" vertex2="aperture_Lead_v507" vertex3="aperture_Lead_v170"/>
+             <triangular vertex1="aperture_Lead_v507" vertex2="aperture_Lead_v506" vertex3="aperture_Lead_v170"/>
+             <triangular vertex1="aperture_Lead_v506" vertex2="aperture_Lead_v505" vertex3="aperture_Lead_v170"/>
+             <triangular vertex1="aperture_Lead_v505" vertex2="aperture_Lead_v504" vertex3="aperture_Lead_v170"/>
+             <triangular vertex1="aperture_Lead_v203" vertex2="aperture_Lead_v508" vertex3="aperture_Lead_v170"/>
+             <triangular vertex1="aperture_Lead_v530" vertex2="aperture_Lead_v301" vertex3="aperture_Lead_v305"/>
+             <triangular vertex1="aperture_Lead_v425" vertex2="aperture_Lead_v424" vertex3="aperture_Lead_v305"/>
+             <triangular vertex1="aperture_Lead_v424" vertex2="aperture_Lead_v423" vertex3="aperture_Lead_v305"/>
+             <triangular vertex1="aperture_Lead_v423" vertex2="aperture_Lead_v422" vertex3="aperture_Lead_v305"/>
+             <triangular vertex1="aperture_Lead_v422" vertex2="aperture_Lead_v531" vertex3="aperture_Lead_v305"/>
+             <triangular vertex1="aperture_Lead_v531" vertex2="aperture_Lead_v530" vertex3="aperture_Lead_v305"/>
+             <triangular vertex1="aperture_Lead_v170" vertex2="aperture_Lead_v504" vertex3="aperture_Lead_v144"/>
+             <triangular vertex1="aperture_Lead_v504" vertex2="aperture_Lead_v503" vertex3="aperture_Lead_v144"/>
+             <triangular vertex1="aperture_Lead_v503" vertex2="aperture_Lead_v502" vertex3="aperture_Lead_v144"/>
+             <triangular vertex1="aperture_Lead_v502" vertex2="aperture_Lead_v501" vertex3="aperture_Lead_v144"/>
+             <triangular vertex1="aperture_Lead_v501" vertex2="aperture_Lead_v500" vertex3="aperture_Lead_v144"/>
+             <triangular vertex1="aperture_Lead_v434" vertex2="aperture_Lead_v432" vertex3="aperture_Lead_v0"/>
+             <triangular vertex1="aperture_Lead_v432" vertex2="aperture_Lead_v430" vertex3="aperture_Lead_v0"/>
+             <triangular vertex1="aperture_Lead_v430" vertex2="aperture_Lead_v428" vertex3="aperture_Lead_v0"/>
+             <triangular vertex1="aperture_Lead_v428" vertex2="aperture_Lead_v425" vertex3="aperture_Lead_v0"/>
+             <triangular vertex1="aperture_Lead_v425" vertex2="aperture_Lead_v305" vertex3="aperture_Lead_v0"/>
+             <triangular vertex1="aperture_Lead_v500" vertex2="aperture_Lead_v499" vertex3="aperture_Lead_v113"/>
+             <triangular vertex1="aperture_Lead_v499" vertex2="aperture_Lead_v498" vertex3="aperture_Lead_v113"/>
+             <triangular vertex1="aperture_Lead_v498" vertex2="aperture_Lead_v497" vertex3="aperture_Lead_v113"/>
+             <triangular vertex1="aperture_Lead_v497" vertex2="aperture_Lead_v496" vertex3="aperture_Lead_v113"/>
+             <triangular vertex1="aperture_Lead_v496" vertex2="aperture_Lead_v495" vertex3="aperture_Lead_v113"/>
+             <triangular vertex1="aperture_Lead_v144" vertex2="aperture_Lead_v500" vertex3="aperture_Lead_v113"/>
+             <triangular vertex1="aperture_Lead_v434" vertex2="aperture_Lead_v0" vertex3="aperture_Lead_v231"/>
+             <triangular vertex1="aperture_Lead_v443" vertex2="aperture_Lead_v441" vertex3="aperture_Lead_v231"/>
+             <triangular vertex1="aperture_Lead_v441" vertex2="aperture_Lead_v440" vertex3="aperture_Lead_v231"/>
+             <triangular vertex1="aperture_Lead_v440" vertex2="aperture_Lead_v438" vertex3="aperture_Lead_v231"/>
+             <triangular vertex1="aperture_Lead_v438" vertex2="aperture_Lead_v436" vertex3="aperture_Lead_v231"/>
+             <triangular vertex1="aperture_Lead_v436" vertex2="aperture_Lead_v434" vertex3="aperture_Lead_v231"/>
+             <triangular vertex1="aperture_Lead_v495" vertex2="aperture_Lead_v494" vertex3="aperture_Lead_v84"/>
+             <triangular vertex1="aperture_Lead_v494" vertex2="aperture_Lead_v493" vertex3="aperture_Lead_v84"/>
+             <triangular vertex1="aperture_Lead_v113" vertex2="aperture_Lead_v495" vertex3="aperture_Lead_v84"/>
+             <triangular vertex1="aperture_Lead_v493" vertex2="aperture_Lead_v492" vertex3="aperture_Lead_v84"/>
+             <triangular vertex1="aperture_Lead_v492" vertex2="aperture_Lead_v491" vertex3="aperture_Lead_v84"/>
+             <triangular vertex1="aperture_Lead_v443" vertex2="aperture_Lead_v231" vertex3="aperture_Lead_v246"/>
+             <triangular vertex1="aperture_Lead_v445" vertex2="aperture_Lead_v443" vertex3="aperture_Lead_v246"/>
+             <triangular vertex1="aperture_Lead_v84" vertex2="aperture_Lead_v491" vertex3="aperture_Lead_v60"/>
+             <triangular vertex1="aperture_Lead_v491" vertex2="aperture_Lead_v490" vertex3="aperture_Lead_v60"/>
+             <triangular vertex1="aperture_Lead_v445" vertex2="aperture_Lead_v246" vertex3="aperture_Lead_v447"/>
+             <triangular vertex1="aperture_Lead_v60" vertex2="aperture_Lead_v490" vertex3="aperture_Lead_v489"/>
+             <triangular vertex1="aperture_Lead_v447" vertex2="aperture_Lead_v246" vertex3="aperture_Lead_v449"/>
+             <triangular vertex1="aperture_Lead_v60" vertex2="aperture_Lead_v489" vertex3="aperture_Lead_v488"/>
+             <triangular vertex1="aperture_Lead_v246" vertex2="aperture_Lead_v253" vertex3="aperture_Lead_v451"/>
+             <triangular vertex1="aperture_Lead_v449" vertex2="aperture_Lead_v246" vertex3="aperture_Lead_v451"/>
+             <triangular vertex1="aperture_Lead_v60" vertex2="aperture_Lead_v488" vertex3="aperture_Lead_v487"/>
+             <triangular vertex1="aperture_Lead_v451" vertex2="aperture_Lead_v253" vertex3="aperture_Lead_v453"/>
+             <triangular vertex1="aperture_Lead_v60" vertex2="aperture_Lead_v487" vertex3="aperture_Lead_v486"/>
+             <triangular vertex1="aperture_Lead_v46" vertex2="aperture_Lead_v60" vertex3="aperture_Lead_v486"/>
+             <triangular vertex1="aperture_Lead_v453" vertex2="aperture_Lead_v253" vertex3="aperture_Lead_v454"/>
+             <triangular vertex1="aperture_Lead_v46" vertex2="aperture_Lead_v486" vertex3="aperture_Lead_v485"/>
+             <triangular vertex1="aperture_Lead_v454" vertex2="aperture_Lead_v253" vertex3="aperture_Lead_v456"/>
+             <triangular vertex1="aperture_Lead_v46" vertex2="aperture_Lead_v485" vertex3="aperture_Lead_v484"/>
+             <triangular vertex1="aperture_Lead_v253" vertex2="aperture_Lead_v264" vertex3="aperture_Lead_v457"/>
+             <triangular vertex1="aperture_Lead_v456" vertex2="aperture_Lead_v253" vertex3="aperture_Lead_v457"/>
+             <triangular vertex1="aperture_Lead_v46" vertex2="aperture_Lead_v484" vertex3="aperture_Lead_v483"/>
+             <triangular vertex1="aperture_Lead_v457" vertex2="aperture_Lead_v264" vertex3="aperture_Lead_v460"/>
+             <triangular vertex1="aperture_Lead_v31" vertex2="aperture_Lead_v46" vertex3="aperture_Lead_v482"/>
+             <triangular vertex1="aperture_Lead_v46" vertex2="aperture_Lead_v483" vertex3="aperture_Lead_v482"/>
+             <triangular vertex1="aperture_Lead_v460" vertex2="aperture_Lead_v264" vertex3="aperture_Lead_v462"/>
+             <triangular vertex1="aperture_Lead_v31" vertex2="aperture_Lead_v482" vertex3="aperture_Lead_v481"/>
+             <triangular vertex1="aperture_Lead_v462" vertex2="aperture_Lead_v264" vertex3="aperture_Lead_v463"/>
+             <triangular vertex1="aperture_Lead_v31" vertex2="aperture_Lead_v481" vertex3="aperture_Lead_v480"/>
+             <triangular vertex1="aperture_Lead_v463" vertex2="aperture_Lead_v264" vertex3="aperture_Lead_v465"/>
+             <triangular vertex1="aperture_Lead_v31" vertex2="aperture_Lead_v480" vertex3="aperture_Lead_v479"/>
+             <triangular vertex1="aperture_Lead_v264" vertex2="aperture_Lead_v76" vertex3="aperture_Lead_v467"/>
+             <triangular vertex1="aperture_Lead_v465" vertex2="aperture_Lead_v264" vertex3="aperture_Lead_v467"/>
+             <triangular vertex1="aperture_Lead_v17" vertex2="aperture_Lead_v31" vertex3="aperture_Lead_v478"/>
+             <triangular vertex1="aperture_Lead_v31" vertex2="aperture_Lead_v479" vertex3="aperture_Lead_v478"/>
+             <triangular vertex1="aperture_Lead_v467" vertex2="aperture_Lead_v76" vertex3="aperture_Lead_v469"/>
+             <triangular vertex1="aperture_Lead_v17" vertex2="aperture_Lead_v478" vertex3="aperture_Lead_v477"/>
+             <triangular vertex1="aperture_Lead_v469" vertex2="aperture_Lead_v76" vertex3="aperture_Lead_v426"/>
+             <triangular vertex1="aperture_Lead_v17" vertex2="aperture_Lead_v477" vertex3="aperture_Lead_v476"/>
+             <triangular vertex1="aperture_Lead_v426" vertex2="aperture_Lead_v76" vertex3="aperture_Lead_v427"/>
+             <triangular vertex1="aperture_Lead_v17" vertex2="aperture_Lead_v476" vertex3="aperture_Lead_v475"/>
+             <triangular vertex1="aperture_Lead_v427" vertex2="aperture_Lead_v76" vertex3="aperture_Lead_v429"/>
+             <triangular vertex1="aperture_Lead_v76" vertex2="aperture_Lead_v75" vertex3="aperture_Lead_v429"/>
+             <triangular vertex1="aperture_Lead_v17" vertex2="aperture_Lead_v475" vertex3="aperture_Lead_v474"/>
+             <triangular vertex1="aperture_Lead_v429" vertex2="aperture_Lead_v75" vertex3="aperture_Lead_v431"/>
+             <triangular vertex1="aperture_Lead_v17" vertex2="aperture_Lead_v474" vertex3="aperture_Lead_v473"/>
+             <triangular vertex1="aperture_Lead_v18" vertex2="aperture_Lead_v17" vertex3="aperture_Lead_v473"/>
+             <triangular vertex1="aperture_Lead_v431" vertex2="aperture_Lead_v75" vertex3="aperture_Lead_v433"/>
+             <triangular vertex1="aperture_Lead_v18" vertex2="aperture_Lead_v473" vertex3="aperture_Lead_v472"/>
+             <triangular vertex1="aperture_Lead_v433" vertex2="aperture_Lead_v75" vertex3="aperture_Lead_v435"/>
+             <triangular vertex1="aperture_Lead_v18" vertex2="aperture_Lead_v472" vertex3="aperture_Lead_v471"/>
+             <triangular vertex1="aperture_Lead_v435" vertex2="aperture_Lead_v75" vertex3="aperture_Lead_v437"/>
+             <triangular vertex1="aperture_Lead_v18" vertex2="aperture_Lead_v471" vertex3="aperture_Lead_v470"/>
+             <triangular vertex1="aperture_Lead_v75" vertex2="aperture_Lead_v80" vertex3="aperture_Lead_v439"/>
+             <triangular vertex1="aperture_Lead_v437" vertex2="aperture_Lead_v75" vertex3="aperture_Lead_v439"/>
+             <triangular vertex1="aperture_Lead_v92" vertex2="aperture_Lead_v18" vertex3="aperture_Lead_v468"/>
+             <triangular vertex1="aperture_Lead_v18" vertex2="aperture_Lead_v470" vertex3="aperture_Lead_v468"/>
+             <triangular vertex1="aperture_Lead_v439" vertex2="aperture_Lead_v80" vertex3="aperture_Lead_v442"/>
+             <triangular vertex1="aperture_Lead_v92" vertex2="aperture_Lead_v468" vertex3="aperture_Lead_v466"/>
+             <triangular vertex1="aperture_Lead_v442" vertex2="aperture_Lead_v80" vertex3="aperture_Lead_v444"/>
+             <triangular vertex1="aperture_Lead_v92" vertex2="aperture_Lead_v466" vertex3="aperture_Lead_v464"/>
+             <triangular vertex1="aperture_Lead_v444" vertex2="aperture_Lead_v80" vertex3="aperture_Lead_v446"/>
+             <triangular vertex1="aperture_Lead_v92" vertex2="aperture_Lead_v464" vertex3="aperture_Lead_v461"/>
+             <triangular vertex1="aperture_Lead_v80" vertex2="aperture_Lead_v86" vertex3="aperture_Lead_v448"/>
+             <triangular vertex1="aperture_Lead_v446" vertex2="aperture_Lead_v80" vertex3="aperture_Lead_v448"/>
+             <triangular vertex1="aperture_Lead_v92" vertex2="aperture_Lead_v461" vertex3="aperture_Lead_v459"/>
+             <triangular vertex1="aperture_Lead_v448" vertex2="aperture_Lead_v86" vertex3="aperture_Lead_v450"/>
+             <triangular vertex1="aperture_Lead_v86" vertex2="aperture_Lead_v92" vertex3="aperture_Lead_v458"/>
+             <triangular vertex1="aperture_Lead_v92" vertex2="aperture_Lead_v459" vertex3="aperture_Lead_v458"/>
+             <triangular vertex1="aperture_Lead_v450" vertex2="aperture_Lead_v86" vertex3="aperture_Lead_v452"/>
+             <triangular vertex1="aperture_Lead_v452" vertex2="aperture_Lead_v86" vertex3="aperture_Lead_v455"/>
+             <triangular vertex1="aperture_Lead_v86" vertex2="aperture_Lead_v458" vertex3="aperture_Lead_v455"/>
+        </tessellated>
+    </solids>
+
+    <structure>
+        <volume name="aperture_Lead">
+            <materialref ref="Lead"/>
+            <solidref ref="aperture_Lead-SOL"/>
+        </volume>
+    </structure>
+
+    <setup name="Default" version="1.0">
+        <world ref="aperture_Lead"/>
+    </setup>
+</gdml>

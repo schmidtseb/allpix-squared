@@ -31,6 +31,11 @@
 #include <G4ParticleTable.hh>
 #include "ForceCollisionBiasingOperatorG4.hpp"
 #include "CrossSectionBiasingOperatorG4.hpp"
+// #include "GroupedSigmaBoosterG4.hpp"
+#include <G4ProcessManager.hh>
+#include <G4ProcessTable.hh>
+#include <G4ProcessVector.hh>
+#include <G4VProcess.hh>
 
 #include "core/config/exceptions.h"
 #include "core/geometry/GeometryManager.hpp"
@@ -152,12 +157,12 @@ void DepositionGeant4Module::init() {
 
     // Set biasing
     if(config_.get<bool>("bias")) {
-        // Set biasing physics
-        G4GenericBiasingPhysics* biasing_physics = new G4GenericBiasingPhysics();
-
         // Get particle type from config
         auto particle_type = config_.get<std::string>("bias_particle_type", "gamma");
         std::transform(particle_type.begin(), particle_type.end(), particle_type.begin(), ::tolower);
+
+        // Set biasing physics
+        G4GenericBiasingPhysics* biasing_physics = new G4GenericBiasingPhysics();
 
         // Set biasing on particle type
         biasing_physics->Bias(particle_type);
@@ -174,6 +179,36 @@ void DepositionGeant4Module::init() {
         if(particle == nullptr) {
             throw InvalidValueError(config_, "bias_particle_type", "particle type does not exist.");
         }
+
+        /*
+        // Get process manager for the particle
+        G4ProcessManager* process_manager = particle->GetProcessManager();
+
+        // Get the process table
+        G4ProcessTable* process_table = G4ProcessTable::GetProcessTable();
+
+        // Get processes from table, wrap them with sigma booster and reinsert them
+        G4VProcess* coulomb = process_table->FindProcess("PhotonInelastic", particle);
+        */
+
+        /*
+        G4ProcessVector* process_vector = process_table->FindProcesses();
+        for(int i = 0; i < process_vector->length(); i++) {
+            std::cout << process_vector->removeLast()->GetProcessName() << std::endl;
+        }
+        */
+
+        /*
+        if(coulomb == nullptr) {
+            std::cout << "Shit" << std::endl;
+        }
+        std::cout << coulomb->GetProcessName() << std::endl;
+
+        process_table->Remove(coulomb, process_manager);
+
+        GroupedSigmaBooster* coulomb_boost = new GroupedSigmaBooster("SigmaBooster", coulomb);
+        process_table->Insert(coulomb_boost, process_manager);
+        */
 
         // Create new Biasing Operator for the particle
         fcbo = new ForceCollisionBiasingOperatorG4(particle);

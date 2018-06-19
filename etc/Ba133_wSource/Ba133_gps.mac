@@ -1,0 +1,16 @@
+/gps/particle gamma
+/gps/pos/centre 0. 0. .5 cm
+
+# Energy distribution
+/gps/ene/type User
+/gps/hist/type energy
+/gps/hist/point 0.0531622 2.14
+/gps/hist/point 0.0796142 2.65
+/gps/hist/point 0.0809979 32.9
+/gps/hist/point 0.160612 0.638
+/gps/hist/point 0.2232368 0.453
+/gps/hist/point 0.2763989 7.16
+/gps/hist/point 0.3028508 18.34
+/gps/hist/point 0.3560129 62.05
+/gps/hist/point 0.3838485 8.94
+

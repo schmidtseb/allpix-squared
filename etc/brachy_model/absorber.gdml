@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd" >
+
+<define>
+  <constant name="HALFPI" value="pi/2."/>
+  <constant name="PI" value="1.*pi"/>
+  <constant name="TWOPI" value="2.*pi"/>
+  <position name="center" x="0" y="0" z="0"/>
+  <rotation name="identity" x="0" y="0" z="0"/>
+  <rotation name="alignSurfX" y="HALFPI" />
+  <rotation name="alignSurfY" x="HALFPI" />
+</define>
+
+<materials></materials>
+
+<solids>
+  <box  name="WorldBoxSol" x="1.0" y="1.0" z="1.0" lunit="m"/>
+  <box  name="AbsorberBoxSol" x="15" y="15" z="10" lunit="mm"/>
+</solids>
+
+<structure>
+
+  <volume name="AbsorberBox">
+    <materialref ref="G4_PLEXIGLASS"/>
+    <solidref ref="AbsorberBoxSol"/>
+    <auxiliary auxtype="Color" auxvalue="#0000CD22"/>
+  </volume>
+
+  <volume name="WorldBoxAbsorber">
+    <materialref ref="G4_AIR"/>
+    <solidref ref="WorldBoxSol"/>
+    <physvol>
+       <volumeref ref="AbsorberBox"/>
+       <positionref ref="center"/>
+       <rotationref ref="identity"/>
+    </physvol>
+  </volume>
+
+</structure>
+
+<setup name="Default" version="1.0">
+  <world ref="WorldBoxAbsorber"/>
+</setup>
+
+</gdml>
+

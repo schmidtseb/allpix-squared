@@ -52,7 +52,7 @@ CrossSectionBiasingOperatorG4::ProposeOccurenceBiasingOperation(const G4Track* t
 	}
 
 	double analogXS = 1./analogInteractionLength;
-	double XStransformation = 100.;
+	double XStransformation = 10.;
 
 	G4BOptnChangeCrossSection* operation = fChangeCrossSectionOperations[callingProcess];
 	G4VBiasingOperation* previousOperation = callingProcess->GetPreviousOccurenceBiasingOperation();

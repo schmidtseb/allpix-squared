@@ -1,0 +1,24 @@
+/process/em/fluo true
+/process/em/pixe true
+/process/em/auger true
+
+# /gps/verbose 2
+/gps/particle ion 
+/gps/ion 56 133
+/grdm/nucleusLimits 133 133 56 56
+/grdm/applyICM false
+/gps/pos/centre 0. 0. .5 cm
+
+# Angular distribution
+# /gps/ang/type iso
+
+# Position distribution
+# /gps/pos/type Volume
+# /gps/pos/shape Cylinder
+# /gps/pos/radius 3.625 mm
+# /gps/pos/halfz .5 mm
+
+/gps/energy 0
+
+/run/setCutForAGivenParticle gamma 0.0001 mm
+

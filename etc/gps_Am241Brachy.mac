@@ -1,0 +1,27 @@
+/gps/verbose 2
+/gps/particle gamma
+/gps/pos/type Plane #Point
+/gps/pos/centre 0. 0. 10 cm
+
+# Angular distribution
+/gps/ang/type iso
+
+# Position distribution
+#/gps/pos/shape Circle
+#/gps/pos/radius 5 mm
+
+# Energy distribution
+# /gps/energy 59.5 keV
+/gps/ene/type User
+/gps/hist/type energy
+/gps/hist/point 0.0263446 2.27
+/gps/hist/point 0.032183 0.0174
+/gps/hist/point 0.033196 0.126
+/gps/hist/point 0.042704 0.0055
+/gps/hist/point 0.043420 0.073
+/gps/hist/point 0.05101 0.000026
+/gps/hist/point 0.05556 0.0181
+/gps/hist/point 0.05785 0.0052
+/gps/hist/point 0.0595409 35.9
+# /gps/hist/file /home/solvalou/Documents/dosimetrie/allpix-squared/etc/Am241Hist.dat
+# /gps/hist/inter Lin

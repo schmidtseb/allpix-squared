@@ -151,6 +151,10 @@ void GeometryConstructionG4::init_materials() {
     materials_["air"] = nistman->FindOrBuildMaterial("G4_AIR");
     materials_["lead"] = nistman->FindOrBuildMaterial("G4_Pb");
     materials_["tungsten"] = nistman->FindOrBuildMaterial("G4_W");
+    materials_["palladium"] = nistman->FindOrBuildMaterial("G4_Pd");
+    materials_["nickel"] = nistman->FindOrBuildMaterial("G4_Ni");
+    materials_["gold"] = nistman->FindOrBuildMaterial("G4_Au");
+    materials_["tin"] = nistman->FindOrBuildMaterial("G4_Sn");
 
     // Create required elements:
     G4Element* H = new G4Element("Hydrogen", "H", 1., 1.01 * CLHEP::g / CLHEP::mole);
@@ -381,10 +385,9 @@ void GeometryConstructionG4::build_detectors() {
              */
 
             // Get parameters from model
-            auto bump_height = hybrid_model->getBumpHeight();
-            auto bump_sphere_radius = hybrid_model->getBumpSphereRadius();
-            auto bump_cylinder_radius = hybrid_model->getBumpCylinderRadius();
+            double bump_height = 0;
 
+            // Define shared variables
             // Create the volume containing the bumps
             auto bump_box = std::make_shared<G4Box>("bump_box_" + name,
                                                     hybrid_model->getSensorSize().x() / 2.0,
@@ -397,175 +400,275 @@ void GeometryConstructionG4::build_detectors() {
                 make_shared_no_delete<G4LogicalVolume>(bump_box.get(), world_material_, "bumps_wrapper_" + name + "_log");
             detector->setExternalObject("bumps_wrapper_log", bumps_wrapper_log);
 
-            // Place the general bumps volume
-            G4ThreeVector bumps_pos = toG4Vector(hybrid_model->getBumpsCenter() - hybrid_model->getCenter());
-            LOG(DEBUG) << "  - Bumps\t\t:\t" << display_vector(bumps_pos, {"mm", "um"});
-            auto bumps_wrapper_phys = make_shared_no_delete<G4PVPlacement>(nullptr,
-                                                                           bumps_pos,
-                                                                           bumps_wrapper_log.get(),
-                                                                           "bumps_wrapper_" + name + "_phys",
-                                                                           wrapper_log.get(),
-                                                                           false,
-                                                                           0,
-                                                                           true);
-            detector->setExternalObject("bumps_wrapper_phys", bumps_wrapper_phys);
+            if(config_.get<bool>("DPX_bonds", false)) {
+                double BBDiam = Units::get(31.0, "um");
+                double AlSiCu_layer_height = Units::get(1.2, "um");
+                double AlSiCu_layer_width = Units::get(190, "um");
+                double UBM_Sensor_height = Units::get(0.18, "um");
+                double CopperPillar_height = Units::get(26., "um");
+                double SnLayer_height = Units::get(6.5, "um");
+                double UBM_ASIC_Au_height = Units::get(0.04, "um");
+                double UBM_ASIC_Pd_height = Units::get(0.12, "um");
+                double UBM_ASIC_Ni_height = Units::get(4.75, "um");
+                double UBM_ASIC_Al_height = Units::get(4., "um");
 
-            // Create the individual bump solid
-            auto bump_sphere = std::make_shared<G4Sphere>(
-                "bumps_" + name + "_sphere", 0, bump_sphere_radius, 0, 360 * CLHEP::deg, 0, 360 * CLHEP::deg);
-            solids_.push_back(bump_sphere);
-            auto bump_tube = std::make_shared<G4Tubs>(
-                "bumps_" + name + "_tube", 0., bump_cylinder_radius, bump_height / 2., 0., 360 * CLHEP::deg);
-            solids_.push_back(bump_tube);
-            auto bump = std::make_shared<G4UnionSolid>("bumps_" + name, bump_sphere.get(), bump_tube.get());
-            solids_.push_back(bump);
+                bump_height = AlSiCu_layer_height + UBM_Sensor_height + CopperPillar_height + SnLayer_height + UBM_ASIC_Au_height + UBM_ASIC_Pd_height + UBM_ASIC_Ni_height + UBM_ASIC_Al_height;
 
-            // Create the logical volume for the individual bumps
-            auto bumps_cell_log =
-                make_shared_no_delete<G4LogicalVolume>(bump.get(), materials_["solder"], "bumps_" + name + "_log");
-            detector->setExternalObject("bumps_cell_log", bumps_cell_log);
+                auto UBM_ASIC_Al = std::make_shared<G4Tubs>("UBM_ASIC_Al" + name, 0, BBDiam / 2., UBM_ASIC_Al_height, 0, 360 * CLHEP::deg);
+                auto UBM_ASIC_Pd = std::make_shared<G4Tubs>("UBM_ASIC_Pd" + name, 0, BBDiam / 2., UBM_ASIC_Pd_height, 0, 360 * CLHEP::deg);
+                auto UBM_ASIC_Ni = std::make_shared<G4Tubs>("UBM_ASIC_Ni" + name, 0, BBDiam / 2., UBM_ASIC_Ni_height, 0, 360 * CLHEP::deg);
+                auto UBM_ASIC_Au = std::make_shared<G4Tubs>("UBM_ASIC_Au" + name, 0, BBDiam / 2., UBM_ASIC_Au_height, 0, 360 * CLHEP::deg);
+                auto Sn_Layer = std::make_shared<G4Tubs>("Sn_Layer" + name, 0, BBDiam / 2., SnLayer_height, 0, 360*CLHEP::deg);
+                auto CopperPillar = std::make_shared<G4Tubs>("CopperPillar" + name, 0, BBDiam / 2., CopperPillar_height, 0, 360*CLHEP::deg);
+                auto UBM_Sensor = std::make_shared<G4Tubs>("UBM_Sensor" + name, 0, BBDiam / 2., UBM_Sensor_height, 0, 360*CLHEP::deg);
+                auto AlSiCu_layer = std::make_shared<G4Box>("AlSiCu_layer" + name, AlSiCu_layer_width / 2., AlSiCu_layer_width / 2., AlSiCu_layer_height / 2.);
 
-            // Place the bump bonds grid
-            std::shared_ptr<G4VPVParameterisation> bumps_param = std::make_shared<Parameterization2DG4>(
-                hybrid_model->getNPixels().x(),
-                hybrid_model->getPixelSize().x(),
-                hybrid_model->getPixelSize().y(),
-                -(hybrid_model->getNPixels().x() * hybrid_model->getPixelSize().x()) / 2.0 +
-                    (hybrid_model->getBumpsCenter().x() - hybrid_model->getCenter().x()),
-                -(hybrid_model->getNPixels().y() * hybrid_model->getPixelSize().y()) / 2.0 +
-                    (hybrid_model->getBumpsCenter().y() - hybrid_model->getCenter().y()),
-                0);
-            detector->setExternalObject("bumps_param", bumps_param);
+                // Logical volumes
+                auto UBM_ASIC_Al_log = make_shared_no_delete<G4LogicalVolume>(UBM_ASIC_Al.get(), materials_["aluminum"], "UBM_ASIC_Al" + name + "_log");
+                detector->setExternalObject("UBM_ASIC_Al_log", UBM_ASIC_Al_log);
+                auto UBM_ASIC_Pd_log = make_shared_no_delete<G4LogicalVolume>(UBM_ASIC_Pd.get(), materials_["palladium"], "UBM_ASIC_Pd" + name + "_log");
+                detector->setExternalObject("UBM_ASIC_Pd_log", UBM_ASIC_Pd_log);
+                auto UBM_ASIC_Ni_log = make_shared_no_delete<G4LogicalVolume>(UBM_ASIC_Ni.get(), materials_["nickel"], "UBM_ASIC_Ni" + name + "_log");
+                detector->setExternalObject("UBM_ASIC_Ni_log", UBM_ASIC_Ni_log);
+                auto UBM_ASIC_Au_log = make_shared_no_delete<G4LogicalVolume>(UBM_ASIC_Au.get(), materials_["gold"], "UBM_ASIC_Au" + name + "_log");
+                detector->setExternalObject("UBM_ASIC_Au_log", UBM_ASIC_Au_log);
+                auto Sn_Layer_log = make_shared_no_delete<G4LogicalVolume>(Sn_Layer.get(), materials_["tin"], "Sn_Layer" + name + "_log");
+                detector->setExternalObject("Sn_Layer_log", Sn_Layer_log);
+                auto CopperPillar_log = make_shared_no_delete<G4LogicalVolume>(CopperPillar.get(), materials_["copper"], "CopperPillar" + name + "_log");
+                detector->setExternalObject("CopperPillar_log", CopperPillar_log);
+                auto UBM_Sensor_log = make_shared_no_delete<G4LogicalVolume>(UBM_Sensor.get(), materials_["tungsten"], "UBM_Sensor" + name + "_log");
+                detector->setExternalObject("UBM_Sensor_log", UBM_Sensor_log);
+                auto AlSiCu_layer_log = make_shared_no_delete<G4LogicalVolume>(AlSiCu_layer.get(), materials_["aluminum"], "AlSiCu_layer" + name + "_log");
+                detector->setExternalObject("AlSiCu_layer_log", AlSiCu_layer_log);
 
-            std::shared_ptr<G4PVParameterised> bumps_param_phys =
-                std::make_shared<ParameterisedG4>("bumps_" + name + "_phys",
-                                                  bumps_cell_log.get(),
-                                                  bumps_wrapper_log.get(),
-                                                  kUndefined,
-                                                  hybrid_model->getNPixels().x() * hybrid_model->getNPixels().y(),
-                                                  bumps_param.get(),
-                                                  false);
-            detector->setExternalObject("bumps_param_phys", bumps_param_phys);
+                double divx = hybrid_model->getNPixels().x();
+                double Nx = hybrid_model->getPixelSize().x();
+                double Ny = hybrid_model->getPixelSize().y();
+                double xx = -(hybrid_model->getNPixels().x() * hybrid_model->getPixelSize().x()) / 2.0 +
+                        (hybrid_model->getBumpsCenter().x() - hybrid_model->getCenter().x());
+                double yy = -(hybrid_model->getNPixels().y() * hybrid_model->getPixelSize().y()) / 2.0 +
+                        (hybrid_model->getBumpsCenter().y() - hybrid_model->getCenter().y());
+
+                bump_height = AlSiCu_layer_height + UBM_Sensor_height + CopperPillar_height + SnLayer_height + UBM_ASIC_Au_height + UBM_ASIC_Pd_height + UBM_ASIC_Ni_height + UBM_ASIC_Al_height;
+                bump_height = AlSiCu_layer_height + UBM_Sensor_height + CopperPillar_height + SnLayer_height + UBM_ASIC_Au_height + UBM_ASIC_Pd_height + UBM_ASIC_Ni_height + UBM_ASIC_Al_height;
+
+                // Logical volumes
+                std::shared_ptr<G4VPVParameterisation> UBM_ASIC_Al_param = std::make_shared<Parameterization2DG4>(divx, Nx, Ny, xx, yy, 0);
+                std::shared_ptr<G4PVParameterised> UBM_ASIC_Al_param_phys =
+                    std::make_shared<ParameterisedG4>("UBM_ASIC_Al" + name + "_phys", UBM_ASIC_Al_log.get(), bumps_wrapper_log.get(), kUndefined, hybrid_model->getNPixels().x() * hybrid_model->getNPixels().y(), UBM_ASIC_Al_param.get(), false);
+                detector->setExternalObject("UBM_ASIC_Al_param_phys", UBM_ASIC_Al_param_phys);
+            } else {
+                bump_height = hybrid_model->getBumpHeight();
+
+                auto bump_sphere_radius = hybrid_model->getBumpSphereRadius();
+                auto bump_cylinder_radius = hybrid_model->getBumpCylinderRadius();
+
+                // Place the general bumps volume
+                G4ThreeVector bumps_pos = toG4Vector(hybrid_model->getBumpsCenter() - hybrid_model->getCenter());
+                LOG(DEBUG) << "  - Bumps\t\t:\t" << display_vector(bumps_pos, {"mm", "um"});
+                auto bumps_wrapper_phys = make_shared_no_delete<G4PVPlacement>(nullptr,
+                                                                               bumps_pos,
+                                                                               bumps_wrapper_log.get(),
+                                                                               "bumps_wrapper_" + name + "_phys",
+                                                                               wrapper_log.get(),
+                                                                               false,
+                                                                               0,
+                                                                               true);
+                detector->setExternalObject("bumps_wrapper_phys", bumps_wrapper_phys);
+
+                // Create the individual bump solid
+                auto bump_sphere = std::make_shared<G4Sphere>(
+                    "bumps_" + name + "_sphere", 0, bump_sphere_radius, 0, 360 * CLHEP::deg, 0, 360 * CLHEP::deg);
+                solids_.push_back(bump_sphere);
+                auto bump_tube = std::make_shared<G4Tubs>(
+                    "bumps_" + name + "_tube", 0., bump_cylinder_radius, bump_height / 2., 0., 360 * CLHEP::deg);
+                solids_.push_back(bump_tube);
+                auto bump = std::make_shared<G4UnionSolid>("bumps_" + name, bump_sphere.get(), bump_tube.get());
+                solids_.push_back(bump);
+
+                // Create the logical volume for the individual bumps
+                auto bumps_cell_log =
+                    make_shared_no_delete<G4LogicalVolume>(bump.get(), materials_["solder"], "bumps_" + name + "_log");
+                detector->setExternalObject("bumps_cell_log", bumps_cell_log);
+
+                // Place the bump bonds grid
+                std::shared_ptr<G4VPVParameterisation> bumps_param = std::make_shared<Parameterization2DG4>(
+                    hybrid_model->getNPixels().x(),
+                    hybrid_model->getPixelSize().x(),
+                    hybrid_model->getPixelSize().y(),
+                    -(hybrid_model->getNPixels().x() * hybrid_model->getPixelSize().x()) / 2.0 +
+                        (hybrid_model->getBumpsCenter().x() - hybrid_model->getCenter().x()),
+                    -(hybrid_model->getNPixels().y() * hybrid_model->getPixelSize().y()) / 2.0 +
+                        (hybrid_model->getBumpsCenter().y() - hybrid_model->getCenter().y()),
+                    0);
+                detector->setExternalObject("bumps_param", bumps_param);
+
+                std::shared_ptr<G4PVParameterised> bumps_param_phys =
+                    std::make_shared<ParameterisedG4>("bumps_" + name + "_phys",
+                                                      bumps_cell_log.get(),
+                                                      bumps_wrapper_log.get(),
+                                                      kUndefined,
+                                                      hybrid_model->getNPixels().x() * hybrid_model->getNPixels().y(),
+                                                      bumps_param.get(),
+                                                      false);
+                detector->setExternalObject("bumps_param_phys", bumps_param_phys);
+            }
         }
 
         // ALERT: NO COVER LAYER YET
-
         LOG(TRACE) << " Constructed detector " << detector->getName() << " succesfully";
     }
 }
 
+
 void GeometryConstructionG4::import_gdml() {
 #ifdef Geant4_GDML
-    std::vector<std::string> GDML_input_files = config_.getArray<std::string>("GDML_input_file");
+  std::vector<std::string> GDML_input_files =
+      config_.getPathArray("GDML_input_file");
 
-    // Initialize offset positions at origin
-    std::vector<std::vector<double>> GDML_input_offsets(GDML_input_files.size(), std::vector<double>(3, 0));
-    // Set the offset values
-    if(config_.has("GDML_input_offset")) {
-        GDML_input_offsets = config_.getMatrix<double>("GDML_input_offset");
-        if(GDML_input_files.size() != GDML_input_offsets.size()) {
-            throw allpix::InvalidValueError(config_, "GDML_input_offset", "If GDML offsets are specified, number of values have to be consistent with the number of specified models.");
-        }
-        for(auto row : GDML_input_offsets) {
-            if(row.size() != 3) {
-                throw allpix::InvalidValueError(config_, "GDML_input_offset", "GDML offsets need to be three dimensional.");
-            }
-        } 
+  // Initialize offset positions at origin
+  std::vector<std::vector<double>> GDML_input_offsets(
+      GDML_input_files.size(), std::vector<double>(3, 0));
+
+  // Set the offset values
+  if (config_.has("GDML_input_offset")) {
+    GDML_input_offsets = config_.getMatrix<double>("GDML_input_offset");
+    if (GDML_input_files.size() != GDML_input_offsets.size()) {
+      throw allpix::InvalidValueError(config_, "GDML_input_offset",
+                                      "If GDML offsets are specified, number "
+                                      "of values has to be consistent with the "
+                                      "number of specified models.");
+    }
+    for (auto row : GDML_input_offsets) {
+      if (row.size() != 3) {
+        throw allpix::InvalidValueError(
+            config_, "GDML_input_offset",
+            "GDML offsets need to be three dimensional.");
+      }
+    }
+  }
+
+  // Loop over all GDML input files
+  int idx = 0;
+  std::vector<std::string>
+      name_list; // Contains the names of the daughter volumes
+
+  for (auto GDML_input_file : GDML_input_files) {
+    std::vector<double> offset =
+        GDML_input_offsets.at(static_cast<long unsigned int>(idx));
+    G4ThreeVector GDML_input_offset =
+        G4ThreeVector(offset[0], offset[1], offset[2]);
+    idx++;
+
+    G4GDMLParser parser;
+    parser.Read(GDML_input_file, false);
+    G4VPhysicalVolume *gdml_phys = parser.GetWorldVolume();
+
+    G4LogicalVolume *gdml_log = gdml_phys->GetLogicalVolume();
+    if (gdml_log->GetName() == "World") {
+      std::string error = "The geometry you requested to import in GDML";
+      error +=
+          "contains a World Volume with the name \"World\" which is colliding";
+      error += "with the one of the framework. Please rename it in order to "
+               "proceed.";
+      throw allpix::InvalidValueError(config_, "GDML_input_file", error);
     }
 
-    // Loop over all GDML input files
-    int idx = 0;
-    std::vector<std::string> name_list;     // Contains the names of the daughter volumes
+    int gdml_no_daughters = gdml_log->GetNoDaughters();
+    LOG(DEBUG) << "Number of daughter volumes " << gdml_no_daughters;
+    if (gdml_no_daughters != 0) {
+      // gdml_phys->SetTranslation(gdml_phys->GetTranslation() +
+      // GDML_input_offset);
+      for (int i = 0; i < gdml_no_daughters; i++) {
+        G4VPhysicalVolume *gdml_daughter = gdml_log->GetDaughter(i);
+        G4LogicalVolume *gdml_daughter_log = gdml_daughter->GetLogicalVolume();
 
-    for(auto GDML_input_file : GDML_input_files) {
-        std::vector<double> offset = GDML_input_offsets.at(static_cast<long unsigned int>(idx));
-        G4ThreeVector GDML_input_offset = G4ThreeVector(offset[0], offset[1], offset[2]);
-        LOG(INFO) << GDML_input_offset;
-        idx++;
+        LOG(INFO) << "Daugter's daughters: " << gdml_daughter_log->GetNoDaughters();
 
-        G4GDMLParser parser;
-        parser.Read(GDML_input_file, false);
-        G4VPhysicalVolume* gdml_phys = parser.GetWorldVolume();
-
-        G4LogicalVolume* gdml_log = gdml_phys->GetLogicalVolume();
-        LOG(INFO) << gdml_log->GetName();
-        if(gdml_log->GetName() == "World") {
-            gdml_log->SetName("Test");
+        std::string gdml_daughter_name = gdml_daughter->GetName();
+        LOG(INFO) << gdml_daughter_name;
+        if (!name_list.empty() &&
+            std::find(name_list.begin(), name_list.end(), gdml_daughter_name) !=
+                name_list.end()) {
+          gdml_daughter_name += "_";
+          gdml_daughter->SetName(gdml_daughter_name);
+          gdml_daughter->SetCopyNo(gdml_daughter->GetCopyNo() + 1);
+          gdml_daughter_log->SetName(gdml_daughter_name);
         }
-        LOG(INFO) << gdml_log->GetName();
 
-        int gdml_no_daughters = gdml_log->GetNoDaughters();
-        LOG(INFO) << "Number of daughter volumes " << gdml_no_daughters;
-        if(gdml_no_daughters != 0) {
-            for(int i = 0; i < gdml_no_daughters; i++) {
-                G4VPhysicalVolume* gdml_daughter = gdml_log->GetDaughter(i);
-                G4LogicalVolume* gdml_daughter_log = gdml_daughter->GetLogicalVolume();
+        LOG(INFO) << "Volume " << i << ": " << gdml_daughter_name;
+        name_list.push_back(gdml_daughter_name);
 
-                std::string gdml_daughter_name = gdml_daughter->GetName();
-                if(!name_list.empty() && std::find(name_list.begin(), name_list.end(), gdml_daughter_name) != name_list.end()) {
-                    gdml_daughter_name += "_";
-                    gdml_daughter->SetName(gdml_daughter_name);
-                    gdml_daughter->SetCopyNo(gdml_daughter->GetCopyNo() + 1);
-                    gdml_daughter_log->SetName(gdml_daughter_name);
-                }
+        // Add offset to current daughter location
+        gdml_daughter->SetTranslation(gdml_daughter->GetTranslation() +
+                                      GDML_input_offset);
 
-                LOG(INFO) << "Copy Nr i: " << gdml_daughter->GetCopyNo(); 
-                LOG(INFO) << "Volume " << i << ": " << gdml_daughter_name;
-                name_list.push_back( gdml_daughter_name );
+        // Rotate the current daughter volume
+        // gdml_daughter->SetRotation();
 
-                // Add offset to current daughter location
-                gdml_daughter->SetTranslation(gdml_daughter->GetTranslation() + GDML_input_offset);
+        // Get auxiliary information
+        G4GDMLAuxListType aux_info =
+            parser.GetVolumeAuxiliaryInformation(gdml_daughter_log);
 
-                // Get auxiliary information
-                G4GDMLAuxListType aux_info = parser.GetVolumeAuxiliaryInformation(gdml_daughter_log);
-
-                // Check if color information is available and set it to the daughter volume
-                for(auto aux : aux_info) {
-                    std::string str = aux.type;
-                    std::string val = aux.value;
-                    std::transform(str.begin(), str.end(), str.begin(), ::tolower);
-                    if( str == "color" ) {
-                        G4Colour color = get_color(val);
-                        gdml_daughter_log->SetVisAttributes(G4VisAttributes(color));
-                    }
-                }
-
-                // Add the physical daughter volume to the world voume
-                world_log_.get()->AddDaughter(gdml_daughter);
-            }
-            // gdml_phys->SetMotherLogical(world_log_.get());
-        } else {
-            LOG(INFO) << "Add daughter";
-            gdml_phys->SetTranslation(GDML_input_offset);
-            LOG(INFO) << "Volume " << gdml_phys->GetName();
-            world_log_.get()->AddDaughter(gdml_phys);
+        // Check if color information is available and set it to the daughter
+        // volume
+        for (auto aux : aux_info) {
+          std::string str = aux.type;
+          std::string val = aux.value;
+          std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+          if (str == "color" || str == "colour") {
+            G4Colour color = get_color(val);
+            gdml_daughter_log->SetVisAttributes(G4VisAttributes(color));
+          }
         }
+
+        // Add the physical daughter volume to the world volume
+        world_log_.get()->AddDaughter(gdml_daughter);
+
+        // Set new mother volume to the global one
+        gdml_daughter->SetMotherLogical(world_log_.get());
+      }
+    } else {
+      LOG(DEBUG) << "Add daughter";
+      gdml_phys->SetTranslation(GDML_input_offset);
+      LOG(DEBUG) << "Volume " << gdml_phys->GetName();
+      world_log_.get()->AddDaughter(gdml_phys);
     }
+
+    for (int i = 0; i < gdml_no_daughters; i++) {
+        G4VPhysicalVolume *gdml_daughter = gdml_log->GetDaughter(i);
+        
+        // Remove the daughter from its world volume in order to add it to the
+        // global one
+        gdml_log->RemoveDaughter(gdml_daughter);
+    }
+  }
 
 #else
-    std::string error = "You requested to import the geometry in GDML. ";
-    error += "However, GDML support is currently disabled in Geant4. ";
-    error += "To enable it, configure and compile Geant4 with the option -DGEANT4_USE_GDML=ON.";
-    throw allpix::InvalidValueError(config_, "GDML_input_file", error);
+  std::string error = "You requested to import the geometry in GDML. ";
+  error += "However, GDML support is currently disabled in Geant4. ";
+  error += "To enable it, configure and compile Geant4 with the option "
+           "-DGEANT4_USE_GDML=ON.";
+  throw allpix::InvalidValueError(config_, "GDML_input_file", error);
 #endif
 }
 
 G4Colour GeometryConstructionG4::get_color(std::string value) {
-    std::transform(value.begin(), value.end(), value.begin(), ::tolower);
-
-    int r, g, b, a;
-    r = g = b = a = 256;
-    if(value.size() >= 6) {
-        // Value contains RGBA color
-        value.erase(std::remove(value.begin(), value.end(), '#'), value.end());
-        std::istringstream(value.substr(0,2)) >> std::hex >> r;
-        std::istringstream(value.substr(2,2)) >> std::hex >> g;
-        std::istringstream(value.substr(4,2)) >> std::hex >> b;
-        if(value.size() >= 8) {
-            std::istringstream(value.substr(6,2)) >> std::hex >> a;
-        }
+  std::transform(value.begin(), value.end(), value.begin(), ::tolower);
+  int r, g, b, a;
+  r = g = b = a = 256;
+  if (value.size() >= 6) {
+    // Value contains RGBA color
+    value.erase(std::remove(value.begin(), value.end(), '#'), value.end());
+    std::istringstream(value.substr(0, 2)) >> std::hex >> r;
+    std::istringstream(value.substr(2, 2)) >> std::hex >> g;
+    std::istringstream(value.substr(4, 2)) >> std::hex >> b;
+    if (value.size() >= 8) {
+      std::istringstream(value.substr(6, 2)) >> std::hex >> a;
     }
+  }
 
-    // If no valid color code was specified, return white
-    return G4Colour(static_cast<double>(r)/256, static_cast<double>(g)/256, static_cast<double>(b)/256, static_cast<double>(a)/256);
+  // If no valid color code was specified, return white
+  return G4Colour(static_cast<double>(r) / 256, static_cast<double>(g) / 256,
+                  static_cast<double>(b) / 256, static_cast<double>(a) / 256);
 }

@@ -11,6 +11,19 @@
 #include <string>
 #include <utility>
 
+#include <Eigen/Core>
+
+#include <Math/Point3D.h>
+#include <Math/Vector3D.h>
+#include <TCanvas.h>
+#include <TFile.h>
+#include <TH2F.h>
+#include <TH3F.h>
+#include <TPaveText.h>
+#include <TPolyLine3D.h>
+#include <TPolyMarker3D.h>
+#include <TStyle.h>
+
 #include "core/messenger/Messenger.hpp"
 #include "core/utils/log.h"
 #include "objects/DepositedCharge.hpp"
@@ -45,6 +58,10 @@ ProjectionPropagationModule::ProjectionPropagationModule(Configuration config,
         propagate_type_ = CarrierType::ELECTRON;
     }
 
+    // Use repulsion?
+    config_.setDefault<bool>("use_repulsion", true);
+    use_repulsion = config_.get<bool>("use_repulsion");
+
     // Parameterization variables from https://doi.org/10.1016/0038-1101(77)90054-5 (section 5.2)
     auto temperature = config_.get<double>("temperature");
     electron_Vm_ = Units::get(1.53e9 * std::pow(temperature, -0.87), "cm/s");
@@ -56,6 +73,7 @@ ProjectionPropagationModule::ProjectionPropagationModule(Configuration config,
     hole_Beta_ = 0.46 * std::pow(temperature, 0.17);
 
     boltzmann_kT_ = Units::get(8.6173e-5, "eV/K") * temperature;
+    elementary_charge_ = 1.6021766208e-19; // C = As
 }
 
 void ProjectionPropagationModule::init() {
@@ -69,7 +87,61 @@ void ProjectionPropagationModule::init() {
     }
 }
 
-void ProjectionPropagationModule::run(unsigned int) {
+void ProjectionPropagationModule::create_output_plots(unsigned int event_num) {
+    double minX = FLT_MAX; 
+    double maxX = FLT_MIN;
+    double minY = FLT_MAX;
+    double maxY = FLT_MIN;
+    for(auto& position : output_plot_points_final_) {
+        minX = std::min(minX, position.x());
+        maxX = std::max(maxX, position.x());
+
+        minY = std::min(minY, position.y());
+        maxY = std::max(maxY, position.y());
+    }
+
+    auto canvas_deposition = std::make_unique<TCanvas>(("deposition_plot_" + std::to_string(event_num)).c_str(),
+                                            ("Deposition position projection onto pixel layer for event " + std::to_string(event_num)).c_str(),
+                                            1280,
+                                            1024);
+    canvas_deposition->cd();
+    auto* histogram_deposition = new TH2F(("deposition_plot_" + std::to_string(event_num)).c_str(),
+                                            ("Deposition position projection onto pixel layer for event " + std::to_string(event_num)).c_str(),
+                                            200, minX, maxX,
+                                            200, minY, maxY);
+
+    for(auto& position : output_plot_points_initial_) {
+        histogram_deposition->Fill(position.x(), position.y());
+    }
+
+    histogram_deposition->Draw("COLZ");
+    histogram_deposition->Write();
+    getROOTDirectory()->WriteTObject(canvas_deposition.get());
+
+    // Create 2D histogram for charge projection onto pixel layer
+    auto canvas_pixel = std::make_unique<TCanvas>(("pixel_plot_" + std::to_string(event_num)).c_str(),
+                                            ("Charge projection onto pixel layer for event " + std::to_string(event_num)).c_str(),
+                                            1280,
+                                            1024);
+    canvas_pixel->cd();
+    auto* histogram_pixel = new TH2F(("pixel_plot_" + std::to_string(event_num)).c_str(),
+                                            ("Charge projection onto pixel layer for event " + std::to_string(event_num)).c_str(),
+                                            50, minX, maxX,
+                                            50, minY, maxY);
+
+    for(auto& position : output_plot_points_final_) {
+        histogram_pixel->Fill(position.x(), position.y());
+    }
+
+    histogram_pixel->Draw("COLZ");
+    histogram_pixel->Write();
+    getROOTDirectory()->WriteTObject(canvas_pixel.get());
+
+    output_plot_points_final_.clear();
+    output_plot_points_initial_.clear();
+}
+
+void ProjectionPropagationModule::run(unsigned int event_num) {
 
     // Create vector of propagated charges to output
     std::vector<PropagatedCharge> propagated_charges;
@@ -80,7 +152,10 @@ void ProjectionPropagationModule::run(unsigned int) {
     double total_projected_charge = 0;
 
     // Loop over all deposits for propagation
-    for(auto& deposit : deposits_message_->getData()) {
+
+    // for(auto& deposit : deposits_message_->getData()) {
+    for(auto it = deposits_message_->getData().begin(); it != deposits_message_->getData().end(); it++) {
+        auto& deposit = *it;
 
         auto position = deposit.getLocalPosition();
         auto type = deposit.getType();
@@ -157,12 +232,85 @@ void ProjectionPropagationModule::run(unsigned int) {
         total_charge += charges_remaining;
 
         auto charge_per_step = config_.get<unsigned int>("charge_per_step");
+
+        // ========================
+        // Get position of particle
+        auto position_first = deposit.getLocalPosition();
+        ROOT::Math::XYZVector step_direction;
+        double step_length = Units::get(20., "um");
+
+        // Set cylinder geometry for the next segment
+        bool cylinder = true;
+
+        // Copy iterator
+        auto itt = it;
+        // Get next element
+        if(std::next(it, 1) != deposits_message_->getData().end()) {
+            std::advance(itt, 1);
+
+            // Get the next particle of correct type
+            while(std::next(it, 1) != deposits_message_->getData().end() && deposit.getType() != propagate_type_) {
+                std::advance(itt, 1);
+            }
+        } else {
+            cylinder = false;
+        }
+
+        // Get the next deposit, the direction to it 
+        // and the size of the next step
+        auto& second_deposit = *itt;
+        auto position_second = second_deposit.getLocalPosition();
+        step_direction = position_second - position_first;
+        step_length = std::sqrt(step_direction.Mag2());
+
+        // Charge density of a track segment
+        double charge_density_;
+        // Vector of the track segment
+        std::vector<double> v_vec;
+
+        if(step_length > 0 && step_length < Units::get(1., "um")) {
+            // CYLINDRICAL DISTRIBUTION
+            v_vec = {step_direction.x(), step_direction.y(), step_direction.z()};
+            charge_density_ = charges_remaining * elementary_charge_ / step_length;
+            cylinder = true;
+        } else {
+            // SPHERICAL DISTRIBUTION
+            step_direction = ROOT::Math::XYZVector(0, 0, 0);
+            v_vec = {0, 0, 0};
+            charge_density_ = 3. / 4 * elementary_charge_ * charges_remaining;
+            cylinder = false;
+        }
+
+        // Repulsion parameters
+        double epsilon_0r = 11.68 * 8.854187817e-12 * Units::get(1., "m");
+        double repulsion_coeff = carrier_mobility(efield_mag_top) * charge_density_ / (ROOT::Math::Pi()*epsilon_0r) * drift_time;
+
+        double repulsion_std_dev;
+        if(cylinder) {
+            repulsion_std_dev = std::sqrt(repulsion_coeff);
+        } else {
+            repulsion_std_dev = std::pow(repulsion_coeff, 2./3);
+        }
+
+        // Compute the repulsion in three dimensions
+        Eigen::Vector3d repulsion;
+        std::uniform_real_distribution<double> radius_distribution(0, repulsion_std_dev);
+        std::uniform_real_distribution<double> phi_distribution(0., 2*ROOT::Math::Pi());
+
+        // Number of steps to be performed
+        int deposit_total_steps = static_cast<int>(charges_remaining / (charge_per_step + 0.5));
+
         while(charges_remaining > 0) {
             if(charge_per_step > charges_remaining) {
                 charge_per_step = charges_remaining;
             }
             charges_remaining -= charge_per_step;
 
+            if(output_plots_) {
+                output_plot_points_initial_.push_back(position);
+            }
+
+            // Diffusion
             std::normal_distribution<double> gauss_distribution(0, diffusion_std_dev);
             double diffusion_x = gauss_distribution(random_generator_);
             double diffusion_y = gauss_distribution(random_generator_);
@@ -170,11 +318,68 @@ void ProjectionPropagationModule::run(unsigned int) {
             auto projected_position = ROOT::Math::XYZPoint(
                 position.x() + diffusion_x, position.y() + diffusion_y, model->getSensorSize().z() / 2.);
 
+            if(use_repulsion) {       
+                // Repulsion
+                if(cylinder) {
+                    std::uniform_real_distribution<double> radius_squared_distribution(0, repulsion_std_dev*repulsion_std_dev);
+                    double rand_rep = radius_squared_distribution(random_generator_);
+                    double phi = phi_distribution(random_generator_);
+
+                    // Get the minimum component
+                    auto abs_v_vec = v_vec;
+                    for(auto& elm : v_vec) {
+                       elm = std::abs(elm); 
+                    }
+                    auto minIt = std::min_element(abs_v_vec.begin(), abs_v_vec.end());
+                    int idxMin = static_cast<int>(minIt - abs_v_vec.begin());
+
+                    std::rotate(v_vec.begin(), v_vec.begin()+idxMin, v_vec.end());
+
+                    // Initialize placeholders
+                    double A = v_vec.at(0);
+                    double B = v_vec.at(1);
+                    double C = v_vec.at(2);
+
+                    // Orthonormal vectors
+                    Eigen::Vector3d u = Eigen::Vector3d(0., -C, B);
+                    Eigen::Vector3d v = Eigen::Vector3d(B*B + C*C, -A*B, -A*C);
+                    u /= u.norm();
+                    v /= v.norm();
+
+                    repulsion = std::sqrt(rand_rep) * std::cos(phi) * u + std::sqrt(rand_rep) * std::sin(phi) * v;
+
+                    // Reset z-value
+                    repulsion.z() = 0;
+                } else {
+                    std::uniform_real_distribution<double> theta_distribution(0., 1);
+
+                    double phi = phi_distribution(random_generator_);
+                    double theta = theta_distribution(random_generator_);
+                    double cosTheta = 1 - 2 * theta;
+                    double sinTheta = std::sqrt(1 - cosTheta*cosTheta);
+
+                    double rad = radius_distribution(random_generator_);
+                    repulsion = Eigen::Vector3d(rad * sinTheta*std::cos(phi), rad * sinTheta*std::sin(phi), rad * cosTheta);
+                    repulsion.z() = 0;
+                }
+                
+                projected_position = ROOT::Math::XYZPoint(
+                projected_position.x() + repulsion.x(), projected_position.y() + repulsion.y(), model->getSensorSize().z() / 2.);
+            }
+
+            // If track is present, set new position
+            if (cylinder) 
+                position += 1./deposit_total_steps * step_direction;
+
             // Only add if within sensor volume:
             auto local_position =
                 ROOT::Math::XYZPoint(projected_position.x(), projected_position.y(), model->getSensorSize().z() / 2.);
             if(!detector_->isWithinSensor(local_position)) {
                 continue;
+            }
+
+            if(output_plots_) {
+                output_plot_points_final_.push_back(local_position);
             }
 
             auto global_position = detector_->getGlobalPosition(local_position);
@@ -190,6 +395,11 @@ void ProjectionPropagationModule::run(unsigned int) {
         }
         total_projected_charge += projected_charge;
     }
+
+    if(output_plots_) {
+        create_output_plots(event_num);
+    }
+
     charge_lost = total_charge - total_projected_charge;
 
     LOG(INFO) << "Total charge: " << total_charge << " (lost: " << charge_lost << ", " << (charge_lost / total_charge * 100.)

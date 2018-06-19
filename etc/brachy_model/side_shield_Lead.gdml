@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+    <define>
+        <position name="side_shield_Lead_v0" unit="mm" x="70.40153" y="98.70153" z="11.05"/>
+        <position name="side_shield_Lead_v1" unit="mm" x="65.39742" y="98.70153" z="11.05"/>
+        <position name="side_shield_Lead_v2" unit="mm" x="70.40153" y="-83.29847" z="11.05"/>
+        <position name="side_shield_Lead_v3" unit="mm" x="65.39742" y="-83.29847" z="11.05"/>
+        <position name="side_shield_Lead_v4" unit="mm" x="66.19884" y="98.70153" z="-8.731204"/>
+        <position name="side_shield_Lead_v5" unit="mm" x="71.20294" y="98.70153" z="-8.731204"/>
+        <position name="side_shield_Lead_v6" unit="mm" x="66.19884" y="-83.29847" z="-8.731204"/>
+        <position name="side_shield_Lead_v7" unit="mm" x="71.20294" y="-83.29847" z="-8.731204"/>
+    </define>
+
+    <solids>
+        <tessellated aunit="deg" lunit="mm" name="side_shield_Lead-SOL">
+             <triangular vertex1="side_shield_Lead_v0" vertex2="side_shield_Lead_v1" vertex3="side_shield_Lead_v2"/>
+             <triangular vertex1="side_shield_Lead_v1" vertex2="side_shield_Lead_v3" vertex3="side_shield_Lead_v2"/>
+             <triangular vertex1="side_shield_Lead_v4" vertex2="side_shield_Lead_v5" vertex3="side_shield_Lead_v6"/>
+             <triangular vertex1="side_shield_Lead_v5" vertex2="side_shield_Lead_v7" vertex3="side_shield_Lead_v6"/>
+             <triangular vertex1="side_shield_Lead_v7" vertex2="side_shield_Lead_v0" vertex3="side_shield_Lead_v2"/>
+             <triangular vertex1="side_shield_Lead_v7" vertex2="side_shield_Lead_v5" vertex3="side_shield_Lead_v0"/>
+             <triangular vertex1="side_shield_Lead_v0" vertex2="side_shield_Lead_v5" vertex3="side_shield_Lead_v4"/>
+             <triangular vertex1="side_shield_Lead_v0" vertex2="side_shield_Lead_v4" vertex3="side_shield_Lead_v1"/>
+             <triangular vertex1="side_shield_Lead_v6" vertex2="side_shield_Lead_v2" vertex3="side_shield_Lead_v3"/>
+             <triangular vertex1="side_shield_Lead_v7" vertex2="side_shield_Lead_v2" vertex3="side_shield_Lead_v6"/>
+             <triangular vertex1="side_shield_Lead_v3" vertex2="side_shield_Lead_v1" vertex3="side_shield_Lead_v6"/>
+             <triangular vertex1="side_shield_Lead_v1" vertex2="side_shield_Lead_v4" vertex3="side_shield_Lead_v6"/>
+        </tessellated>
+    </solids>
+
+    <structure>
+        <volume name="side_shield_Lead">
+            <materialref ref="Lead"/>
+            <solidref ref="side_shield_Lead-SOL"/>
+            <colorref ref="lead_color"/>
+        </volume>
+    </structure>
+
+    <setup name="Default" version="1.0">
+        <world ref="side_shield_Lead"/>
+    </setup>
+</gdml>

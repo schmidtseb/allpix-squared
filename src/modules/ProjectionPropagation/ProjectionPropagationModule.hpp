@@ -56,12 +56,17 @@ namespace allpix {
         void finalize() override;
 
     private:
+        void create_output_plots(unsigned int event_num);
+
         Messenger* messenger_;
         std::shared_ptr<const Detector> detector_;
         std::shared_ptr<DetectorModel> model_;
 
         // Random generator for diffusion calculation
         std::mt19937_64 random_generator_;
+
+        // Use repulsion?
+        bool use_repulsion;
 
         // Config parameters: Check whether plots should be generated
         bool output_plots_;
@@ -83,10 +88,18 @@ namespace allpix {
         // Precalculated value for Boltzmann constant:
         double boltzmann_kT_;
 
+        // Elementary charge value
+        double elementary_charge_;
+
         // Output plot for drift time
         TH1D* drift_time_histo;
 
         // Deposits for the bound detector in this event
         std::shared_ptr<DepositedChargeMessage> deposits_message_;
+
+        // List of points to plot for output plots
+        std::vector<ROOT::Math::XYZPoint> output_plot_points_final_;
+        std::vector<ROOT::Math::XYZPoint> output_plot_points_initial_;
+
     };
 } // namespace allpix

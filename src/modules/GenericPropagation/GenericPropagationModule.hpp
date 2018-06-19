@@ -77,7 +77,7 @@ namespace allpix {
          * @param type Type of the carrier to propagate
          * @return Pair of the point where the deposit ended after propagation and the time the propagation took
          */
-        std::pair<ROOT::Math::XYZPoint, double> propagate(const ROOT::Math::XYZPoint& pos, const CarrierType& type);
+        std::pair<ROOT::Math::XYZPoint, double> propagate(const ROOT::Math::XYZPoint& pos, const CarrierType& type, bool cylinder);
 
         // Random generator for this module
         std::mt19937_64 random_generator_;
@@ -94,6 +94,10 @@ namespace allpix {
         double hole_Vm_;
         double hole_Ec_;
         double hole_Beta_;
+        double charge_density_;
+
+        double elementary_charge_;
+        std::vector<double> v_vec;
 
         // Precalculated value for Boltzmann constant:
         double boltzmann_kT_;
@@ -109,8 +113,10 @@ namespace allpix {
         // Output plot for drift time
         TH1D* drift_time_histo;
 
-        // List of points to plot to plot for output plots
+        // List of points to plot for output plots
         std::vector<std::pair<PropagatedCharge, std::vector<ROOT::Math::XYZPoint>>> output_plot_points_;
+        std::vector<ROOT::Math::XYZPoint> output_plot_points_final_;
+        std::vector<ROOT::Math::XYZPoint> output_plot_points_initial_;
     };
 
 } // namespace allpix
