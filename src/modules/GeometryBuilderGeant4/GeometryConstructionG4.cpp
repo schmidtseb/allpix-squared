@@ -387,19 +387,6 @@ void GeometryConstructionG4::build_detectors() {
             // Get parameters from model
             double bump_height = 0;
 
-            // Define shared variables
-            // Create the volume containing the bumps
-            auto bump_box = std::make_shared<G4Box>("bump_box_" + name,
-                                                    hybrid_model->getSensorSize().x() / 2.0,
-                                                    hybrid_model->getSensorSize().y() / 2.0,
-                                                    bump_height / 2.);
-            solids_.push_back(bump_box);
-
-            // Create the logical wrapper volume
-            auto bumps_wrapper_log =
-                make_shared_no_delete<G4LogicalVolume>(bump_box.get(), world_material_, "bumps_wrapper_" + name + "_log");
-            detector->setExternalObject("bumps_wrapper_log", bumps_wrapper_log);
-
             if(config_.get<bool>("DPX_bonds", false)) {
                 double BBDiam = Units::get(31.0, "um");
                 double AlSiCu_layer_height = Units::get(1.2, "um");
@@ -413,6 +400,19 @@ void GeometryConstructionG4::build_detectors() {
                 double UBM_ASIC_Al_height = Units::get(4., "um");
 
                 bump_height = AlSiCu_layer_height + UBM_Sensor_height + CopperPillar_height + SnLayer_height + UBM_ASIC_Au_height + UBM_ASIC_Pd_height + UBM_ASIC_Ni_height + UBM_ASIC_Al_height;
+
+                // Define shared variables
+                // Create the volume containing the bumps
+                auto bump_box = std::make_shared<G4Box>("bump_box_" + name,
+                                                        hybrid_model->getSensorSize().x() / 2.0,
+                                                        hybrid_model->getSensorSize().y() / 2.0,
+                                                        bump_height / 2.);
+                solids_.push_back(bump_box);
+
+                // Create the logical wrapper volume
+                auto bumps_wrapper_log =
+                    make_shared_no_delete<G4LogicalVolume>(bump_box.get(), world_material_, "bumps_wrapper_" + name + "_log");
+                detector->setExternalObject("bumps_wrapper_log", bumps_wrapper_log);
 
                 auto UBM_ASIC_Al = std::make_shared<G4Tubs>("UBM_ASIC_Al" + name, 0, BBDiam / 2., UBM_ASIC_Al_height, 0, 360 * CLHEP::deg);
                 auto UBM_ASIC_Pd = std::make_shared<G4Tubs>("UBM_ASIC_Pd" + name, 0, BBDiam / 2., UBM_ASIC_Pd_height, 0, 360 * CLHEP::deg);
@@ -459,6 +459,19 @@ void GeometryConstructionG4::build_detectors() {
                 detector->setExternalObject("UBM_ASIC_Al_param_phys", UBM_ASIC_Al_param_phys);
             } else {
                 bump_height = hybrid_model->getBumpHeight();
+
+                // Define shared variables
+                // Create the volume containing the bumps
+                auto bump_box = std::make_shared<G4Box>("bump_box_" + name,
+                                                        hybrid_model->getSensorSize().x() / 2.0,
+                                                        hybrid_model->getSensorSize().y() / 2.0,
+                                                        bump_height / 2.);
+                solids_.push_back(bump_box);
+
+                // Create the logical wrapper volume
+                auto bumps_wrapper_log =
+                    make_shared_no_delete<G4LogicalVolume>(bump_box.get(), world_material_, "bumps_wrapper_" + name + "_log");
+                detector->setExternalObject("bumps_wrapper_log", bumps_wrapper_log);
 
                 auto bump_sphere_radius = hybrid_model->getBumpSphereRadius();
                 auto bump_cylinder_radius = hybrid_model->getBumpCylinderRadius();
