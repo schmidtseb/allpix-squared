@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd" >
+
+<define>
+  <constant name="PixelLength" value="0.220"/>
+  <constant name="GNDPlateHeight" value="0.001"/>
+
+  <constant name="BoardHeight" unit="mm" value="1"/>
+
+  <constant name="COBWidth" unit="mm" value="17.6"/>
+  <constant name="COBHeight" unit="mm" value="1"/>
+  <constant name="COBLayerHoleRadius" value="6.5"/>
+  <constant name="COBLayerNiWidth" value="0.004"/>
+  <constant name="COBLayerCuWidth" value="0.035"/>
+
+  <constant name="ConnectorWidth" value="2"/>
+  <constant name="ConnectorLength" value="14"/>
+  <constant name="ConnectorHeight" unit="mm" value="6"/>
+  <constant name="ConnectorPinsWidth" unit="mm" value="0.12"/>
+  <constant name="ConnectorPinsLength" unit="mm" value="13"/>
+
+  <constant name="HalfSphereRadius" unit="mm" value="8.5"/>
+  <constant name="HalfSphereWidthAl" unit="mm" value="2"/>
+  <constant name="HalfSphereWidthSn" unit="mm" value="1"/>
+
+  <constant name="AngleWindowRadius" unit="mm" value=""/>
+
+  <position name="boardPos" unit="cm" x="-5" y="-5" z="0"/>
+
+  <constant name="cobPosZ" unit="mm" value="(0.5 * BoardHeight + ConnectorHeight) / 10"/>
+  <constant name="connectorPinsShift" unit="cm" value="0.09"/>
+  <position name="cobPosFree" unit="cm" x="-1.9" y="0" z="cobPosZ"/>
+  <position name="COBLayerNiPosFree" unit="cm" x="-1.9" y="0" z="cobPosZ + 0.5 * COBLayerNiWidth / 10"/>
+  <position name="COBLayerCuPosFree" unit="cm" x="-1.9" y="0" z="cobPosZ + 0.5 * COBLayerCuWidth / 10"/>
+  <position name="connectorPosFree" unit="cm" x="-1.9" y="0" z="cobPosZ - 0.5 * (COBHeight + ConnectorHeight) / 10"/>
+  <position name="connectorPinsPos1Free" unit="cm" x="-1.9 + connectorPinsShift" y="0" z="cobPosZ - 0.5 * (COBHeight + ConnectorHeight) / 10"/>
+  <position name="connectorPinsPos2Free" unit="cm" x="-1.9 - connectorPinsShift" y="0" z="cobPosZ - 0.5 * (COBHeight + ConnectorHeight) / 10"/>
+
+  <position name="cobPosAl" unit="cm" x="0" y="0" z="cobPosZ"/>
+  <position name="COBLayerNiPosAl" unit="cm" x="0" y="0" z="cobPosZ + 0.5 * COBLayerNiWidth / 10"/>
+  <position name="COBLayerCuPosAl" unit="cm" x="0" y="0" z="cobPosZ + 0.5 * COBLayerCuWidth / 10"/>
+  <position name="connectorPosAl" unit="cm" x="0" y="0" z="cobPosZ - 0.5 * (COBHeight + ConnectorHeight) / 10"/>
+  <position name="connectorPinsPos1Al" unit="cm" x="connectorPinsShift" y="0" z="cobPosZ - 0.5 * (COBHeight + ConnectorHeight) / 10"/>
+  <position name="connectorPinsPos2Al" unit="cm" x="-connectorPinsShift" y="0" z="cobPosZ - 0.5 * (COBHeight + ConnectorHeight) / 10"/>
+
+  <position name="cobPosSn" unit="cm" x="1.9" y="0" z="cobPosZ"/>
+  <position name="COBLayerNiPosSn" unit="cm" x="1.9" y="0" z="cobPosZ + 0.5 * COBLayerNiWidth / 10"/>
+  <position name="COBLayerCuPosSn" unit="cm" x="1.9" y="0" z="cobPosZ + 0.5 * COBLayerCuWidth / 10"/>
+  <position name="connectorPosSn" unit="cm" x="1.9" y="0" z="cobPosZ - 0.5 * (COBHeight + ConnectorHeight) / 10"/>
+  <position name="connectorPinsPos1Sn" unit="cm" x="1.9 + connectorPinsShift" y="0" z="cobPosZ - 0.5 * (COBHeight + ConnectorHeight) / 10"/>
+  <position name="connectorPinsPos2Sn" unit="cm" x="1.9 - connectorPinsShift" y="0" z="cobPosZ - 0.5 * (COBHeight + ConnectorHeight) / 10"/>
+
+  <position name="HalfSpherePosAl" unit="mm" x="0" y="0" z="cobPosZ + COBLayerNiWidth + COBLayerCuWidth + COBHeight + 0.5 * HalfSphereRadius"/>
+  <position name="HalfSpherePosSn" unit="mm" x="19" y="0" z="cobPosZ + COBLayerNiWidth + COBLayerCuWidth + COBHeight+ 0.5 * HalfSphereRadius"/>
+  <position name="AngleWindowPos" unit="mm" x="-19" y="0" z="cobPosZ + COBLayerNiWidth + COBLayerCuWidth + COBHeight + 0.5 * HalfSphereRadius"/>
+
+  <constant name="HALFPI" value="pi/2."/>
+  <constant name="PI" value="1.*pi"/>
+  <constant name="TWOPI" value="2.*pi"/>
+  <position name="center" x="0" y="0" z="0"/>
+  <rotation name="identity" x="0" y="0" z="0"/>
+  <rotation name="90DEG" x="0" y="0" z="HALFPI"/>
+  <rotation name="alignSurfX" y="HALFPI" />
+  <rotation name="alignSurfY" x="HALFPI" />
+</define>
+
+<materials> 
+        <!--          -->
+        <!-- elements -->
+        <!--          -->
+        <!-- http://www-cdf.fnal.gov/~kirby/lbne_geo_tests/lbne_10kT_Materials.gdml -->
+        <element name="videRef"    formula="VACUUM" Z="1"> <atom value="1."/>       </element>
+        <element name="hydrogen"   formula="H"   Z="1">    <atom value="1.0079"/>   </element>
+        <element name="carbon"     formula="C"   Z="6">    <atom value="12.0107"/>  </element>
+        <element name="nitrogen"   formula="N"   Z="7">    <atom value="14.0067"/>  </element>
+        <element name="oxygen"     formula="O"   Z="8">    <atom value="15.999"/>   </element>
+        <element name="sodium"     formula="Na"  Z="11">   <atom value="22.99"/>    </element>
+        <element name="magnesium"  formula="Mg"  Z="12">   <atom value="24.305"/>   </element>
+        <element name="aluminum"   formula="Al"  Z="13">   <atom value="26.9815"/>  </element>
+        <element name="silicon"    formula="Si"  Z="14">   <atom value="28.0855"/>  </element>
+        <element name="phosphorus" formula="P"   Z="15">   <atom value="30.973"/>   </element>
+        <element name="sulphur"    formula="S"   Z="16">   <atom value="32.065"/>   </element>
+        <element name="argon"      formula="Ar"  Z="18">   <atom value="39.9480"/>  </element>
+        <element name="potassium"  formula="K"   Z="19">   <atom value="39.0983"/>  </element>
+        <element name="calcium"    formula="Ca"  Z="20">   <atom value="40.078"/>   </element>
+        <element name="titanium"   formula="Ti"  Z="22">   <atom value="47.867"/>   </element>
+        <element name="chromium"   formula="Cr"  Z="24">   <atom value="51.9961"/>  </element>
+        <element name="iron"       formula="Fe"  Z="26">   <atom value="55.8450"/>  </element>
+        <element name="nickel"     formula="Ni"  Z="28">   <atom value="58.6934"/>  </element>
+        <element name="copper"     formula="Cu"  Z="29">   <atom value="63.55"/>    </element>
+        <element name="germanium"  formula="Ge"  Z="32">   <atom value="72.63"/>    </element>
+        <element name="bromine"    formula="Br"  Z="35">   <atom value="79.904"/>   </element>
+        <element name="aurum"      formula="Au"  Z="79">   <atom value="196.97"/>   </element>
+        <element name="tungsten"   formula="W"   Z="74">   <atom value="183.84"/>   </element>
+        <element name="lead"       formula="Pb"  Z="82">   <atom value="207.2"/>    </element>
+        <element name="bismuth"    formula="Bi"  Z="83">   <atom value="208.980"/>  </element>
+        <element name="chlorine"   formula="Cl"  Z="17">   <atom value="35.45"/>    </element>  
+        <element name="tin"        formula="Sn"  Z="50">   <atom value="118.7"/>    </element>  
+
+        <!-- Board components -->
+        <material name="BoardMat" formula="CuSnPbSi">
+            <D value="3.8849" unit="g/cm3"/>
+            <fraction n="0.146" ref="copper"/>
+            <fraction n="0.0562" ref="tin"/>
+            <fraction n="0.0296" ref="lead"/>
+            <fraction n="0.7862" ref="silicon"/>
+        </material>
+
+        <!-- FR4 submaterials -->
+        <material name="EpoxyResin" formula="C38H40O6Br4">
+            <D value="1.1250" unit="g/cm3"/>
+            <composite n="38" ref="carbon"/>
+            <composite n="40" ref="hydrogen"/>
+            <composite n="6" ref="oxygen"/>
+            <composite n="4" ref="bromine"/>
+        </material>
+
+        <material name="SiO2" formula="SiO2">
+            <D value="2.2" unit="g/cm3"/>
+            <composite n="1" ref="silicon"/>
+            <composite n="2" ref="oxygen"/>
+        </material>
+
+        <material name="Al2O3" formula="Al2O3">
+            <D value="3.97" unit="g/cm3"/>
+            <composite n="2" ref="aluminum"/>
+            <composite n="3" ref="oxygen"/>
+        </material>
+
+        <material name="Fe2O3" formula="Fe2O3">
+            <D value="5.24" unit="g/cm3"/>
+            <composite n="2" ref="iron"/>
+            <composite n="3" ref="oxygen"/>
+        </material>
+
+       <material name="CaO" formula="CaO">
+           <D value="3.35" unit="g/cm3"/>
+           <composite n="1" ref="calcium"/>
+           <composite n="1" ref="oxygen"/>
+       </material>
+
+       <material name="MgO" formula="MgO">
+           <D value="3.58" unit="g/cm3"/>
+           <composite n="1" ref="magnesium"/>
+           <composite n="1" ref="oxygen"/>
+       </material>
+
+       <material name="Na2O" formula="Na2O">
+           <D value="2.27" unit="g/cm3"/>
+           <composite n="2" ref="sodium"/>
+           <composite n="1" ref="oxygen"/>
+       </material>
+
+       <material name="TiO2" formula="TiO2">
+           <D value="4.23" unit="g/cm3"/>
+           <composite n="1" ref="titanium"/>
+           <composite n="2" ref="oxygen"/>
+       </material>
+
+       <material name="FibrousGlass">
+           <D value="2.74351" unit="g/cm3"/>
+           <fraction n="0.600" ref="SiO2"/>
+           <fraction n="0.118" ref="Al2O3"/>
+           <fraction n="0.001" ref="Fe2O3"/>
+           <fraction n="0.224" ref="CaO"/>
+           <fraction n="0.034" ref="MgO"/>
+           <fraction n="0.010" ref="Na2O"/>
+           <fraction n="0.013" ref="TiO2"/>
+       </material>
+
+       <material name="FR4">
+           <D value="1.98281" unit="g/cm3"/>
+           <fraction n="0.47" ref="EpoxyResin"/>
+           <fraction n="0.53" ref="FibrousGlass"/>
+       </material>  
+</materials>
+
+<solids>
+  <box name="WorldBoxBoardSol" x="10" y="10" z="10" lunit="cm"/>
+
+  <!-- COB parts -->
+  <box name="COBLayerNiOuterSol" x="COBWidth" y="COBWidth" z="COBLayerNiWidth" lunit="mm"/>
+  <tube name="COBLayerNiInnerSol" rmin="0" rmax="COBLayerHoleRadius" startphi="0" deltaphi="TWOPI" z="2*COBLayerNiWidth" lunit="mm"/>
+  <box name="COBLayerCuOuterSol" x="COBWidth" y="COBWidth" z="COBLayerCuWidth" lunit="mm"/>
+  <tube name="COBLayerCuInnerSol" rmin="0" rmax="COBLayerHoleRadius" startphi="0" deltaphi="TWOPI" z="2*COBLayerCuWidth" lunit="mm"/>
+
+  <subtraction name="COBLayerNiSol">
+     <first ref="COBLayerNiOuterSol"/>
+     <second ref="COBLayerNiInnerSol"/>
+     <positionref ref="center"/>
+     <rotationref ref="identity"/>
+  </subtraction>
+
+  <subtraction name="COBLayerCuSol">
+     <first ref="COBLayerCuOuterSol"/>
+     <second ref="COBLayerCuInnerSol"/>
+     <positionref ref="center"/>
+     <rotationref ref="identity"/>
+  </subtraction>
+
+  <!-- Connector -->
+  <box name="connectorBoxSol" x="ConnectorWidth" y="ConnectorLength" z="ConnectorHeight" lunit="mm"/>
+  <box name="connectorPinsBoxSol" x="ConnectorPinsWidth" y="ConnectorPinsLength" z="ConnectorHeight" lunit="mm"/>
+
+  <!-- Half Sphere -->
+  <sphere name="HalfSphereAlSol" rmin="HalfSphereRadius - HalfSphereWidthAl" rmax="HalfSphereRadius" startphi="0" deltaphi="TWOPI" deltatheta="HALFPI" lunit="mm"/>
+  <sphere name="HalfSphereSnSol" rmin="HalfSphereRadius - HalfSphereWidthSn" rmax="HalfSphereRadius" startphi="0" deltaphi="TWOPI" deltatheta="HALFPI" lunit="mm"/>
+
+  <!-- Angle Window -->
+  <polycone name="AngleWindowSol" startphi="0" deltaphi="TWOPI" lunit="mm">
+    <zplane rmin="0.5 * 17 - 1" rmax="0.5 * 17" z="0"/>
+    <zplane rmin="0.5 * 17 - 1" rmax="0.5 * 17" z="3.95"/>
+    <zplane rmin="2.5" rmax="0.5 * 17" z="3.95"/>
+    <zplane rmin="2.5" rmax="0.5 * 17" z="3.95 + 0.25"/>
+  </polycone>
+</solids>
+
+<structure>
+  <volume name="COBLayerNi">
+    <materialref ref="G4_Ni"/>
+    <solidref ref="COBLayerNiSol"/>
+    <auxiliary auxtype="Color" auxvalue="#C8D6E8FF"/>
+  </volume>
+
+  <volume name="COBLayerCu">
+    <materialref ref="G4_Cu"/>
+    <solidref ref="COBLayerCuSol"/>
+    <auxiliary auxtype="Color" auxvalue="#FFA252FF"/>
+  </volume>
+
+  <volume name="connectorBox">
+    <materialref ref="G4_POLYETHYLENE"/>
+    <solidref ref="connectorBoxSol"/>
+    <auxiliary auxtype="Color" auxvalue="#020412FF"/>
+  </volume>
+
+  <volume name="connectorPinsBox">
+    <materialref ref="G4_Cu"/>
+    <solidref ref="connectorPinsBoxSol"/>
+    <auxiliary auxtype="Color" auxvalue="#FFA252FF"/>
+  </volume>
+
+  <volume name="HalfSphereAl">
+    <materialref ref="G4_Al"/>
+    <solidref ref="HalfSphereAlSol"/>
+    <auxiliary auxtype="Color" auxvalue="#C5CBDBFF"/>
+  </volume>
+
+  <volume name="HalfSphereSn">
+    <materialref ref="G4_Sn"/>
+    <solidref ref="HalfSphereSnSol"/>
+    <auxiliary auxtype="Color" auxvalue="#5E6169FF"/>
+  </volume>
+
+  <volume name="AngleWindow">
+    <materialref ref="G4_Al"/>
+    <solidref ref="AngleWindowSol"/>
+    <auxiliary auxtype="Color" auxvalue="#C5CBDBFF"/>
+  </volume>
+
+  <volume name="WorldBoxBoard">
+    <materialref ref="G4_AIR"/>
+    <solidref ref="WorldBoxBoardSol"/>
+
+    <!-- Free field -->
+    <physvol>
+      <file name="/home/solvalou/Documents/dosimetrie/allpix-squared/etc/dosepix_model/cob_FR4.gdml"/>
+      <positionref ref="cobPosFree" lunit="cm"/>
+      <rotationref ref="90DEG"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="COBLayerNi"/>
+      <positionref ref="COBLayerNiPosFree"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="COBLayerCu"/>
+      <positionref ref="COBLayerCuPosFree"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="connectorBox"/>
+      <positionref ref="connectorPosFree"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="connectorPinsBox"/>
+      <positionref ref="connectorPinsPos1Free"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="connectorPinsBox"/>
+      <positionref ref="connectorPinsPos2Free"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="AngleWindow"/>
+      <positionref ref="AngleWindowPos"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <!-- Al -->
+    <physvol>
+      <volumeref ref="COBLayerNi"/>
+      <positionref ref="COBLayerNiPosAl"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="COBLayerCu"/>
+      <positionref ref="COBLayerCuPosAl"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <file name="/home/solvalou/Documents/dosimetrie/allpix-squared/etc/dosepix_model/cob_FR4.gdml"/>
+      <positionref ref="cobPosAl" lunit="cm"/>
+      <rotationref ref="90DEG"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="connectorBox"/>
+      <positionref ref="connectorPosAl"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="connectorPinsBox"/>
+      <positionref ref="connectorPinsPos1Al"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="connectorPinsBox"/>
+      <positionref ref="connectorPinsPos2Al"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="HalfSphereAl"/>
+      <positionref ref="HalfSpherePosAl"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <!-- Sn -->
+    <physvol>
+      <volumeref ref="COBLayerNi"/>
+      <positionref ref="COBLayerNiPosSn"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="COBLayerCu"/>
+      <positionref ref="COBLayerCuPosSn"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <file name="/home/solvalou/Documents/dosimetrie/allpix-squared/etc/dosepix_model/cob_FR4.gdml"/>
+      <positionref ref="cobPosSn" lunit="cm"/>
+      <rotationref ref="90DEG"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="connectorBox"/>
+      <positionref ref="connectorPosSn"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="connectorPinsBox"/>
+      <positionref ref="connectorPinsPos1Sn"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="connectorPinsBox"/>
+      <positionref ref="connectorPinsPos2Sn"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="HalfSphereSn"/>
+      <positionref ref="HalfSpherePosSn"/>
+      <rotationref ref="identity"/>
+    </physvol>
+
+    <!-- Dosepix Board -->
+    <physvol>
+      <file name="/home/solvalou/Documents/dosimetrie/allpix-squared/etc/dosepix_model/board_FR4.gdml"/>
+      <positionref ref="boardPos" lunit="cm"/>
+    </physvol>
+
+    <physvol>
+      <file name="/home/solvalou/Documents/dosimetrie/allpix-squared/etc/dosepix_model/board_parts.gdml"/>
+      <positionref ref="boardPos" lunit="cm"/>
+    </physvol>
+
+  </volume>
+</structure>
+
+<setup name="Default" version="1.0">
+  <world ref="WorldBoxBoard"/>
+</setup>
+
+</gdml>
+

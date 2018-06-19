@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+    <define>
+        <position name="cobPos" unit="cm" x="5" y="5" z="0"/>
+
+        <position name="cob_FR4_v0" unit="mm" x="-8.727" y="-8.727" z="0.0"/>
+        <position name="cob_FR4_v1" unit="mm" x="-8.727" y="-8.727" z="-0.76708"/>
+        <position name="cob_FR4_v2" unit="mm" x="8.727" y="-8.727" z="-0.76708"/>
+        <position name="cob_FR4_v3" unit="mm" x="8.727" y="-8.727" z="0.0"/>
+        <position name="cob_FR4_v4" unit="mm" x="8.727" y="8.727" z="-0.76708"/>
+        <position name="cob_FR4_v5" unit="mm" x="8.727" y="8.727" z="0.0"/>
+        <position name="cob_FR4_v6" unit="mm" x="-8.727" y="8.727" z="-0.76708"/>
+        <position name="cob_FR4_v7" unit="mm" x="-8.727" y="8.727" z="0.0"/>
+        <position name="cob_FR4_v8" unit="mm" x="-6.96854" y="1.504599" z="0.0"/>
+        <position name="cob_FR4_v9" unit="mm" x="-7.073297" y="1.524583" z="-0.76708"/>
+        <position name="cob_FR4_v10" unit="mm" x="-6.96854" y="1.504599" z="-0.76708"/>
+        <position name="cob_FR4_v11" unit="mm" x="-6.687928" y="0.9941673" z="0.0"/>
+        <position name="cob_FR4_v12" unit="mm" x="-6.674561" y="1.099972" z="0.0"/>
+        <position name="cob_FR4_v13" unit="mm" x="-6.674561" y="1.099972" z="-0.76708"/>
+        <position name="cob_FR4_v14" unit="mm" x="-6.872044" y="1.459192" z="0.0"/>
+        <position name="cob_FR4_v15" unit="mm" x="-6.872044" y="1.459192" z="-0.76708"/>
+        <position name="cob_FR4_v16" unit="mm" x="-6.727187" y="0.8950103" z="0.0"/>
+        <position name="cob_FR4_v17" unit="mm" x="-6.687928" y="0.9941673" z="-0.76708"/>
+        <position name="cob_FR4_v18" unit="mm" x="-6.789872" y="1.391213" z="0.0"/>
+        <position name="cob_FR4_v19" unit="mm" x="-6.789872" y="1.391213" z="-0.76708"/>
+        <position name="cob_FR4_v20" unit="mm" x="-6.789872" y="0.8087319" z="0.0"/>
+        <position name="cob_FR4_v21" unit="mm" x="-6.727187" y="0.8950103" z="-0.76708"/>
+        <position name="cob_FR4_v22" unit="mm" x="-6.727187" y="1.304935" z="0.0"/>
+        <position name="cob_FR4_v23" unit="mm" x="-6.727187" y="1.304935" z="-0.76708"/>
+        <position name="cob_FR4_v24" unit="mm" x="-6.687928" y="1.205778" z="0.0"/>
+        <position name="cob_FR4_v25" unit="mm" x="-6.687928" y="1.205778" z="-0.76708"/>
+        <position name="cob_FR4_v26" unit="mm" x="-6.789872" y="0.8087319" z="-0.76708"/>
+        <position name="cob_FR4_v27" unit="mm" x="-6.872044" y="0.7407531" z="0.0"/>
+        <position name="cob_FR4_v28" unit="mm" x="-6.872044" y="0.7407531" z="-0.76708"/>
+        <position name="cob_FR4_v29" unit="mm" x="-7.073297" y="0.6753619" z="0.0"/>
+        <position name="cob_FR4_v30" unit="mm" x="-6.96854" y="0.6953454" z="0.0"/>
+        <position name="cob_FR4_v31" unit="mm" x="-6.96854" y="0.6953454" z="-0.76708"/>
+        <position name="cob_FR4_v32" unit="mm" x="-7.073297" y="0.6753619" z="-0.76708"/>
+        <position name="cob_FR4_v33" unit="mm" x="-7.179733" y="0.6820583" z="0.0"/>
+        <position name="cob_FR4_v34" unit="mm" x="-7.179733" y="0.6820583" z="-0.76708"/>
+        <position name="cob_FR4_v35" unit="mm" x="-7.371203" y="0.7721575" z="0.0"/>
+        <position name="cob_FR4_v36" unit="mm" x="-7.281159" y="0.7150137" z="0.0"/>
+        <position name="cob_FR4_v37" unit="mm" x="-7.281159" y="0.7150137" z="-0.76708"/>
+        <position name="cob_FR4_v38" unit="mm" x="-7.444208" y="0.8498992" z="0.0"/>
+        <position name="cob_FR4_v39" unit="mm" x="-7.371203" y="0.7721575" z="-0.76708"/>
+        <position name="cob_FR4_v40" unit="mm" x="-7.444208" y="0.8498992" z="-0.76708"/>
+        <position name="cob_FR4_v41" unit="mm" x="-7.495584" y="0.9433538" z="0.0"/>
+        <position name="cob_FR4_v42" unit="mm" x="-7.495584" y="0.9433538" z="-0.76708"/>
+        <position name="cob_FR4_v43" unit="mm" x="-7.522106" y="1.046649" z="-0.76708"/>
+        <position name="cob_FR4_v44" unit="mm" x="-7.522106" y="1.046649" z="0.0"/>
+        <position name="cob_FR4_v45" unit="mm" x="-7.522106" y="1.153295" z="-0.76708"/>
+        <position name="cob_FR4_v46" unit="mm" x="-7.522106" y="1.153295" z="0.0"/>
+        <position name="cob_FR4_v47" unit="mm" x="-7.495584" y="1.256591" z="-0.76708"/>
+        <position name="cob_FR4_v48" unit="mm" x="-7.444208" y="1.350046" z="0.0"/>
+        <position name="cob_FR4_v49" unit="mm" x="-7.495584" y="1.256591" z="0.0"/>
+        <position name="cob_FR4_v50" unit="mm" x="-7.444208" y="1.350046" z="-0.76708"/>
+        <position name="cob_FR4_v51" unit="mm" x="-7.371203" y="1.427787" z="-0.76708"/>
+        <position name="cob_FR4_v52" unit="mm" x="-7.281159" y="1.484931" z="0.0"/>
+        <position name="cob_FR4_v53" unit="mm" x="-7.371203" y="1.427787" z="0.0"/>
+        <position name="cob_FR4_v54" unit="mm" x="-7.281159" y="1.484931" z="-0.76708"/>
+        <position name="cob_FR4_v55" unit="mm" x="-7.179733" y="1.517887" z="-0.76708"/>
+        <position name="cob_FR4_v56" unit="mm" x="-7.179733" y="1.517887" z="0.0"/>
+        <position name="cob_FR4_v57" unit="mm" x="-7.073297" y="1.524583" z="0.0"/>
+        <position name="cob_FR4_v58" unit="mm" x="7.231483" y="1.504625" z="0.0"/>
+        <position name="cob_FR4_v59" unit="mm" x="7.126725" y="1.524608" z="-0.76708"/>
+        <position name="cob_FR4_v60" unit="mm" x="7.231483" y="1.504625" z="-0.76708"/>
+        <position name="cob_FR4_v61" unit="mm" x="7.512095" y="0.9941927" z="0.0"/>
+        <position name="cob_FR4_v62" unit="mm" x="7.525461" y="1.099998" z="0.0"/>
+        <position name="cob_FR4_v63" unit="mm" x="7.525461" y="1.099998" z="-0.76708"/>
+        <position name="cob_FR4_v64" unit="mm" x="7.327979" y="1.459217" z="0.0"/>
+        <position name="cob_FR4_v65" unit="mm" x="7.327979" y="1.459217" z="-0.76708"/>
+        <position name="cob_FR4_v66" unit="mm" x="7.472836" y="0.8950357" z="0.0"/>
+        <position name="cob_FR4_v67" unit="mm" x="7.512095" y="0.9941927" z="-0.76708"/>
+        <position name="cob_FR4_v68" unit="mm" x="7.410151" y="1.391238" z="0.0"/>
+        <position name="cob_FR4_v69" unit="mm" x="7.410151" y="1.391238" z="-0.76708"/>
+        <position name="cob_FR4_v70" unit="mm" x="7.410151" y="0.8087572" z="0.0"/>
+        <position name="cob_FR4_v71" unit="mm" x="7.472836" y="0.8950357" z="-0.76708"/>
+        <position name="cob_FR4_v72" unit="mm" x="7.472836" y="1.30496" z="0.0"/>
+        <position name="cob_FR4_v73" unit="mm" x="7.472836" y="1.30496" z="-0.76708"/>
+        <position name="cob_FR4_v74" unit="mm" x="7.512095" y="1.205803" z="0.0"/>
+        <position name="cob_FR4_v75" unit="mm" x="7.512095" y="1.205803" z="-0.76708"/>
+        <position name="cob_FR4_v76" unit="mm" x="7.410151" y="0.8087572" z="-0.76708"/>
+        <position name="cob_FR4_v77" unit="mm" x="7.327979" y="0.7407785" z="0.0"/>
+        <position name="cob_FR4_v78" unit="mm" x="7.327979" y="0.7407785" z="-0.76708"/>
+        <position name="cob_FR4_v79" unit="mm" x="7.126725" y="0.6753873" z="0.0"/>
+        <position name="cob_FR4_v80" unit="mm" x="7.231483" y="0.6953708" z="0.0"/>
+        <position name="cob_FR4_v81" unit="mm" x="7.231483" y="0.6953708" z="-0.76708"/>
+        <position name="cob_FR4_v82" unit="mm" x="7.126725" y="0.6753873" z="-0.76708"/>
+        <position name="cob_FR4_v83" unit="mm" x="7.02029" y="0.6820837" z="0.0"/>
+        <position name="cob_FR4_v84" unit="mm" x="7.02029" y="0.6820837" z="-0.76708"/>
+        <position name="cob_FR4_v85" unit="mm" x="6.828819" y="0.7721829" z="0.0"/>
+        <position name="cob_FR4_v86" unit="mm" x="6.918863" y="0.7150391" z="0.0"/>
+        <position name="cob_FR4_v87" unit="mm" x="6.918863" y="0.7150391" z="-0.76708"/>
+        <position name="cob_FR4_v88" unit="mm" x="6.755815" y="0.8499246" z="0.0"/>
+        <position name="cob_FR4_v89" unit="mm" x="6.828819" y="0.7721829" z="-0.76708"/>
+        <position name="cob_FR4_v90" unit="mm" x="6.755815" y="0.8499246" z="-0.76708"/>
+        <position name="cob_FR4_v91" unit="mm" x="6.704438" y="0.9433792" z="0.0"/>
+        <position name="cob_FR4_v92" unit="mm" x="6.704438" y="0.9433792" z="-0.76708"/>
+        <position name="cob_FR4_v93" unit="mm" x="6.677916" y="1.046675" z="-0.76708"/>
+        <position name="cob_FR4_v94" unit="mm" x="6.677916" y="1.046675" z="0.0"/>
+        <position name="cob_FR4_v95" unit="mm" x="6.677916" y="1.153321" z="-0.76708"/>
+        <position name="cob_FR4_v96" unit="mm" x="6.677916" y="1.153321" z="0.0"/>
+        <position name="cob_FR4_v97" unit="mm" x="6.704438" y="1.256616" z="-0.76708"/>
+        <position name="cob_FR4_v98" unit="mm" x="6.755815" y="1.350071" z="0.0"/>
+        <position name="cob_FR4_v99" unit="mm" x="6.704438" y="1.256616" z="0.0"/>
+        <position name="cob_FR4_v100" unit="mm" x="6.755815" y="1.350071" z="-0.76708"/>
+        <position name="cob_FR4_v101" unit="mm" x="6.828819" y="1.427813" z="-0.76708"/>
+        <position name="cob_FR4_v102" unit="mm" x="6.918863" y="1.484957" z="0.0"/>
+        <position name="cob_FR4_v103" unit="mm" x="6.828819" y="1.427813" z="0.0"/>
+        <position name="cob_FR4_v104" unit="mm" x="6.918863" y="1.484957" z="-0.76708"/>
+        <position name="cob_FR4_v105" unit="mm" x="7.02029" y="1.517912" z="-0.76708"/>
+        <position name="cob_FR4_v106" unit="mm" x="7.02029" y="1.517912" z="0.0"/>
+        <position name="cob_FR4_v107" unit="mm" x="7.126725" y="1.524608" z="0.0"/>
+    </define>
+
+    <solids>
+        <tessellated aunit="deg" lunit="mm" name="cob_FR4-SOL">
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v1" vertex3="cob_FR4_v2"/>
+             <triangular vertex1="cob_FR4_v3" vertex2="cob_FR4_v0" vertex3="cob_FR4_v2"/>
+             <triangular vertex1="cob_FR4_v3" vertex2="cob_FR4_v2" vertex3="cob_FR4_v4"/>
+             <triangular vertex1="cob_FR4_v5" vertex2="cob_FR4_v3" vertex3="cob_FR4_v4"/>
+             <triangular vertex1="cob_FR4_v5" vertex2="cob_FR4_v4" vertex3="cob_FR4_v6"/>
+             <triangular vertex1="cob_FR4_v7" vertex2="cob_FR4_v5" vertex3="cob_FR4_v6"/>
+             <triangular vertex1="cob_FR4_v7" vertex2="cob_FR4_v6" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v7" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v8" vertex2="cob_FR4_v9" vertex3="cob_FR4_v10"/>
+             <triangular vertex1="cob_FR4_v11" vertex2="cob_FR4_v12" vertex3="cob_FR4_v13"/>
+             <triangular vertex1="cob_FR4_v14" vertex2="cob_FR4_v8" vertex3="cob_FR4_v15"/>
+             <triangular vertex1="cob_FR4_v8" vertex2="cob_FR4_v10" vertex3="cob_FR4_v15"/>
+             <triangular vertex1="cob_FR4_v16" vertex2="cob_FR4_v11" vertex3="cob_FR4_v17"/>
+             <triangular vertex1="cob_FR4_v18" vertex2="cob_FR4_v14" vertex3="cob_FR4_v19"/>
+             <triangular vertex1="cob_FR4_v11" vertex2="cob_FR4_v13" vertex3="cob_FR4_v17"/>
+             <triangular vertex1="cob_FR4_v14" vertex2="cob_FR4_v15" vertex3="cob_FR4_v19"/>
+             <triangular vertex1="cob_FR4_v20" vertex2="cob_FR4_v16" vertex3="cob_FR4_v21"/>
+             <triangular vertex1="cob_FR4_v22" vertex2="cob_FR4_v18" vertex3="cob_FR4_v23"/>
+             <triangular vertex1="cob_FR4_v16" vertex2="cob_FR4_v17" vertex3="cob_FR4_v21"/>
+             <triangular vertex1="cob_FR4_v18" vertex2="cob_FR4_v19" vertex3="cob_FR4_v23"/>
+             <triangular vertex1="cob_FR4_v24" vertex2="cob_FR4_v22" vertex3="cob_FR4_v25"/>
+             <triangular vertex1="cob_FR4_v20" vertex2="cob_FR4_v21" vertex3="cob_FR4_v26"/>
+             <triangular vertex1="cob_FR4_v22" vertex2="cob_FR4_v23" vertex3="cob_FR4_v25"/>
+             <triangular vertex1="cob_FR4_v12" vertex2="cob_FR4_v24" vertex3="cob_FR4_v13"/>
+             <triangular vertex1="cob_FR4_v24" vertex2="cob_FR4_v25" vertex3="cob_FR4_v13"/>
+             <triangular vertex1="cob_FR4_v27" vertex2="cob_FR4_v20" vertex3="cob_FR4_v28"/>
+             <triangular vertex1="cob_FR4_v20" vertex2="cob_FR4_v26" vertex3="cob_FR4_v28"/>
+             <triangular vertex1="cob_FR4_v29" vertex2="cob_FR4_v30" vertex3="cob_FR4_v31"/>
+             <triangular vertex1="cob_FR4_v30" vertex2="cob_FR4_v27" vertex3="cob_FR4_v31"/>
+             <triangular vertex1="cob_FR4_v27" vertex2="cob_FR4_v28" vertex3="cob_FR4_v31"/>
+             <triangular vertex1="cob_FR4_v29" vertex2="cob_FR4_v31" vertex3="cob_FR4_v32"/>
+             <triangular vertex1="cob_FR4_v33" vertex2="cob_FR4_v29" vertex3="cob_FR4_v34"/>
+             <triangular vertex1="cob_FR4_v29" vertex2="cob_FR4_v32" vertex3="cob_FR4_v34"/>
+             <triangular vertex1="cob_FR4_v35" vertex2="cob_FR4_v36" vertex3="cob_FR4_v37"/>
+             <triangular vertex1="cob_FR4_v36" vertex2="cob_FR4_v33" vertex3="cob_FR4_v37"/>
+             <triangular vertex1="cob_FR4_v33" vertex2="cob_FR4_v34" vertex3="cob_FR4_v37"/>
+             <triangular vertex1="cob_FR4_v38" vertex2="cob_FR4_v35" vertex3="cob_FR4_v39"/>
+             <triangular vertex1="cob_FR4_v35" vertex2="cob_FR4_v37" vertex3="cob_FR4_v39"/>
+             <triangular vertex1="cob_FR4_v38" vertex2="cob_FR4_v39" vertex3="cob_FR4_v40"/>
+             <triangular vertex1="cob_FR4_v41" vertex2="cob_FR4_v38" vertex3="cob_FR4_v42"/>
+             <triangular vertex1="cob_FR4_v38" vertex2="cob_FR4_v40" vertex3="cob_FR4_v42"/>
+             <triangular vertex1="cob_FR4_v41" vertex2="cob_FR4_v42" vertex3="cob_FR4_v43"/>
+             <triangular vertex1="cob_FR4_v44" vertex2="cob_FR4_v41" vertex3="cob_FR4_v43"/>
+             <triangular vertex1="cob_FR4_v44" vertex2="cob_FR4_v43" vertex3="cob_FR4_v45"/>
+             <triangular vertex1="cob_FR4_v46" vertex2="cob_FR4_v44" vertex3="cob_FR4_v45"/>
+             <triangular vertex1="cob_FR4_v46" vertex2="cob_FR4_v45" vertex3="cob_FR4_v47"/>
+             <triangular vertex1="cob_FR4_v48" vertex2="cob_FR4_v49" vertex3="cob_FR4_v47"/>
+             <triangular vertex1="cob_FR4_v49" vertex2="cob_FR4_v46" vertex3="cob_FR4_v47"/>
+             <triangular vertex1="cob_FR4_v48" vertex2="cob_FR4_v47" vertex3="cob_FR4_v50"/>
+             <triangular vertex1="cob_FR4_v48" vertex2="cob_FR4_v50" vertex3="cob_FR4_v51"/>
+             <triangular vertex1="cob_FR4_v52" vertex2="cob_FR4_v53" vertex3="cob_FR4_v51"/>
+             <triangular vertex1="cob_FR4_v53" vertex2="cob_FR4_v48" vertex3="cob_FR4_v51"/>
+             <triangular vertex1="cob_FR4_v52" vertex2="cob_FR4_v51" vertex3="cob_FR4_v54"/>
+             <triangular vertex1="cob_FR4_v52" vertex2="cob_FR4_v54" vertex3="cob_FR4_v55"/>
+             <triangular vertex1="cob_FR4_v56" vertex2="cob_FR4_v52" vertex3="cob_FR4_v55"/>
+             <triangular vertex1="cob_FR4_v8" vertex2="cob_FR4_v57" vertex3="cob_FR4_v9"/>
+             <triangular vertex1="cob_FR4_v57" vertex2="cob_FR4_v56" vertex3="cob_FR4_v9"/>
+             <triangular vertex1="cob_FR4_v56" vertex2="cob_FR4_v55" vertex3="cob_FR4_v9"/>
+             <triangular vertex1="cob_FR4_v58" vertex2="cob_FR4_v59" vertex3="cob_FR4_v60"/>
+             <triangular vertex1="cob_FR4_v61" vertex2="cob_FR4_v62" vertex3="cob_FR4_v63"/>
+             <triangular vertex1="cob_FR4_v64" vertex2="cob_FR4_v58" vertex3="cob_FR4_v65"/>
+             <triangular vertex1="cob_FR4_v58" vertex2="cob_FR4_v60" vertex3="cob_FR4_v65"/>
+             <triangular vertex1="cob_FR4_v66" vertex2="cob_FR4_v61" vertex3="cob_FR4_v67"/>
+             <triangular vertex1="cob_FR4_v68" vertex2="cob_FR4_v64" vertex3="cob_FR4_v69"/>
+             <triangular vertex1="cob_FR4_v61" vertex2="cob_FR4_v63" vertex3="cob_FR4_v67"/>
+             <triangular vertex1="cob_FR4_v64" vertex2="cob_FR4_v65" vertex3="cob_FR4_v69"/>
+             <triangular vertex1="cob_FR4_v70" vertex2="cob_FR4_v66" vertex3="cob_FR4_v71"/>
+             <triangular vertex1="cob_FR4_v72" vertex2="cob_FR4_v68" vertex3="cob_FR4_v73"/>
+             <triangular vertex1="cob_FR4_v66" vertex2="cob_FR4_v67" vertex3="cob_FR4_v71"/>
+             <triangular vertex1="cob_FR4_v68" vertex2="cob_FR4_v69" vertex3="cob_FR4_v73"/>
+             <triangular vertex1="cob_FR4_v74" vertex2="cob_FR4_v72" vertex3="cob_FR4_v75"/>
+             <triangular vertex1="cob_FR4_v70" vertex2="cob_FR4_v71" vertex3="cob_FR4_v76"/>
+             <triangular vertex1="cob_FR4_v72" vertex2="cob_FR4_v73" vertex3="cob_FR4_v75"/>
+             <triangular vertex1="cob_FR4_v62" vertex2="cob_FR4_v74" vertex3="cob_FR4_v63"/>
+             <triangular vertex1="cob_FR4_v74" vertex2="cob_FR4_v75" vertex3="cob_FR4_v63"/>
+             <triangular vertex1="cob_FR4_v77" vertex2="cob_FR4_v70" vertex3="cob_FR4_v78"/>
+             <triangular vertex1="cob_FR4_v70" vertex2="cob_FR4_v76" vertex3="cob_FR4_v78"/>
+             <triangular vertex1="cob_FR4_v79" vertex2="cob_FR4_v80" vertex3="cob_FR4_v81"/>
+             <triangular vertex1="cob_FR4_v80" vertex2="cob_FR4_v77" vertex3="cob_FR4_v81"/>
+             <triangular vertex1="cob_FR4_v77" vertex2="cob_FR4_v78" vertex3="cob_FR4_v81"/>
+             <triangular vertex1="cob_FR4_v79" vertex2="cob_FR4_v81" vertex3="cob_FR4_v82"/>
+             <triangular vertex1="cob_FR4_v83" vertex2="cob_FR4_v79" vertex3="cob_FR4_v84"/>
+             <triangular vertex1="cob_FR4_v79" vertex2="cob_FR4_v82" vertex3="cob_FR4_v84"/>
+             <triangular vertex1="cob_FR4_v85" vertex2="cob_FR4_v86" vertex3="cob_FR4_v87"/>
+             <triangular vertex1="cob_FR4_v86" vertex2="cob_FR4_v83" vertex3="cob_FR4_v87"/>
+             <triangular vertex1="cob_FR4_v83" vertex2="cob_FR4_v84" vertex3="cob_FR4_v87"/>
+             <triangular vertex1="cob_FR4_v88" vertex2="cob_FR4_v85" vertex3="cob_FR4_v89"/>
+             <triangular vertex1="cob_FR4_v85" vertex2="cob_FR4_v87" vertex3="cob_FR4_v89"/>
+             <triangular vertex1="cob_FR4_v88" vertex2="cob_FR4_v89" vertex3="cob_FR4_v90"/>
+             <triangular vertex1="cob_FR4_v91" vertex2="cob_FR4_v88" vertex3="cob_FR4_v92"/>
+             <triangular vertex1="cob_FR4_v88" vertex2="cob_FR4_v90" vertex3="cob_FR4_v92"/>
+             <triangular vertex1="cob_FR4_v91" vertex2="cob_FR4_v92" vertex3="cob_FR4_v93"/>
+             <triangular vertex1="cob_FR4_v94" vertex2="cob_FR4_v91" vertex3="cob_FR4_v93"/>
+             <triangular vertex1="cob_FR4_v94" vertex2="cob_FR4_v93" vertex3="cob_FR4_v95"/>
+             <triangular vertex1="cob_FR4_v96" vertex2="cob_FR4_v94" vertex3="cob_FR4_v95"/>
+             <triangular vertex1="cob_FR4_v96" vertex2="cob_FR4_v95" vertex3="cob_FR4_v97"/>
+             <triangular vertex1="cob_FR4_v98" vertex2="cob_FR4_v99" vertex3="cob_FR4_v97"/>
+             <triangular vertex1="cob_FR4_v99" vertex2="cob_FR4_v96" vertex3="cob_FR4_v97"/>
+             <triangular vertex1="cob_FR4_v98" vertex2="cob_FR4_v97" vertex3="cob_FR4_v100"/>
+             <triangular vertex1="cob_FR4_v98" vertex2="cob_FR4_v100" vertex3="cob_FR4_v101"/>
+             <triangular vertex1="cob_FR4_v102" vertex2="cob_FR4_v103" vertex3="cob_FR4_v101"/>
+             <triangular vertex1="cob_FR4_v103" vertex2="cob_FR4_v98" vertex3="cob_FR4_v101"/>
+             <triangular vertex1="cob_FR4_v102" vertex2="cob_FR4_v101" vertex3="cob_FR4_v104"/>
+             <triangular vertex1="cob_FR4_v102" vertex2="cob_FR4_v104" vertex3="cob_FR4_v105"/>
+             <triangular vertex1="cob_FR4_v106" vertex2="cob_FR4_v102" vertex3="cob_FR4_v105"/>
+             <triangular vertex1="cob_FR4_v58" vertex2="cob_FR4_v107" vertex3="cob_FR4_v59"/>
+             <triangular vertex1="cob_FR4_v107" vertex2="cob_FR4_v106" vertex3="cob_FR4_v59"/>
+             <triangular vertex1="cob_FR4_v106" vertex2="cob_FR4_v105" vertex3="cob_FR4_v59"/>
+             <triangular vertex1="cob_FR4_v32" vertex2="cob_FR4_v31" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v13" vertex2="cob_FR4_v93" vertex3="cob_FR4_v17"/>
+             <triangular vertex1="cob_FR4_v13" vertex2="cob_FR4_v95" vertex3="cob_FR4_v93"/>
+             <triangular vertex1="cob_FR4_v78" vertex2="cob_FR4_v76" vertex3="cob_FR4_v2"/>
+             <triangular vertex1="cob_FR4_v34" vertex2="cob_FR4_v32" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v71" vertex2="cob_FR4_v2" vertex3="cob_FR4_v76"/>
+             <triangular vertex1="cob_FR4_v81" vertex2="cob_FR4_v78" vertex3="cob_FR4_v2"/>
+             <triangular vertex1="cob_FR4_v25" vertex2="cob_FR4_v95" vertex3="cob_FR4_v13"/>
+             <triangular vertex1="cob_FR4_v25" vertex2="cob_FR4_v97" vertex3="cob_FR4_v95"/>
+             <triangular vertex1="cob_FR4_v67" vertex2="cob_FR4_v2" vertex3="cob_FR4_v71"/>
+             <triangular vertex1="cob_FR4_v37" vertex2="cob_FR4_v34" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v82" vertex2="cob_FR4_v81" vertex3="cob_FR4_v2"/>
+             <triangular vertex1="cob_FR4_v23" vertex2="cob_FR4_v97" vertex3="cob_FR4_v25"/>
+             <triangular vertex1="cob_FR4_v63" vertex2="cob_FR4_v2" vertex3="cob_FR4_v67"/>
+             <triangular vertex1="cob_FR4_v23" vertex2="cob_FR4_v100" vertex3="cob_FR4_v97"/>
+             <triangular vertex1="cob_FR4_v84" vertex2="cob_FR4_v82" vertex3="cob_FR4_v2"/>
+             <triangular vertex1="cob_FR4_v39" vertex2="cob_FR4_v37" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v19" vertex2="cob_FR4_v100" vertex3="cob_FR4_v23"/>
+             <triangular vertex1="cob_FR4_v19" vertex2="cob_FR4_v4" vertex3="cob_FR4_v100"/>
+             <triangular vertex1="cob_FR4_v87" vertex2="cob_FR4_v84" vertex3="cob_FR4_v2"/>
+             <triangular vertex1="cob_FR4_v40" vertex2="cob_FR4_v39" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v42" vertex2="cob_FR4_v40" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v89" vertex2="cob_FR4_v87" vertex3="cob_FR4_v2"/>
+             <triangular vertex1="cob_FR4_v90" vertex2="cob_FR4_v89" vertex3="cob_FR4_v2"/>
+             <triangular vertex1="cob_FR4_v43" vertex2="cob_FR4_v42" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v6" vertex2="cob_FR4_v19" vertex3="cob_FR4_v15"/>
+             <triangular vertex1="cob_FR4_v6" vertex2="cob_FR4_v15" vertex3="cob_FR4_v10"/>
+             <triangular vertex1="cob_FR4_v6" vertex2="cob_FR4_v10" vertex3="cob_FR4_v9"/>
+             <triangular vertex1="cob_FR4_v6" vertex2="cob_FR4_v9" vertex3="cob_FR4_v55"/>
+             <triangular vertex1="cob_FR4_v6" vertex2="cob_FR4_v55" vertex3="cob_FR4_v54"/>
+             <triangular vertex1="cob_FR4_v6" vertex2="cob_FR4_v54" vertex3="cob_FR4_v51"/>
+             <triangular vertex1="cob_FR4_v6" vertex2="cob_FR4_v51" vertex3="cob_FR4_v50"/>
+             <triangular vertex1="cob_FR4_v6" vertex2="cob_FR4_v50" vertex3="cob_FR4_v47"/>
+             <triangular vertex1="cob_FR4_v6" vertex2="cob_FR4_v47" vertex3="cob_FR4_v45"/>
+             <triangular vertex1="cob_FR4_v6" vertex2="cob_FR4_v45" vertex3="cob_FR4_v43"/>
+             <triangular vertex1="cob_FR4_v6" vertex2="cob_FR4_v4" vertex3="cob_FR4_v19"/>
+             <triangular vertex1="cob_FR4_v4" vertex2="cob_FR4_v2" vertex3="cob_FR4_v63"/>
+             <triangular vertex1="cob_FR4_v1" vertex2="cob_FR4_v6" vertex3="cob_FR4_v43"/>
+             <triangular vertex1="cob_FR4_v4" vertex2="cob_FR4_v63" vertex3="cob_FR4_v75"/>
+             <triangular vertex1="cob_FR4_v4" vertex2="cob_FR4_v75" vertex3="cob_FR4_v73"/>
+             <triangular vertex1="cob_FR4_v4" vertex2="cob_FR4_v73" vertex3="cob_FR4_v69"/>
+             <triangular vertex1="cob_FR4_v4" vertex2="cob_FR4_v69" vertex3="cob_FR4_v65"/>
+             <triangular vertex1="cob_FR4_v4" vertex2="cob_FR4_v65" vertex3="cob_FR4_v60"/>
+             <triangular vertex1="cob_FR4_v4" vertex2="cob_FR4_v60" vertex3="cob_FR4_v59"/>
+             <triangular vertex1="cob_FR4_v4" vertex2="cob_FR4_v59" vertex3="cob_FR4_v105"/>
+             <triangular vertex1="cob_FR4_v4" vertex2="cob_FR4_v105" vertex3="cob_FR4_v104"/>
+             <triangular vertex1="cob_FR4_v4" vertex2="cob_FR4_v104" vertex3="cob_FR4_v101"/>
+             <triangular vertex1="cob_FR4_v4" vertex2="cob_FR4_v101" vertex3="cob_FR4_v100"/>
+             <triangular vertex1="cob_FR4_v26" vertex2="cob_FR4_v2" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v26" vertex2="cob_FR4_v90" vertex3="cob_FR4_v2"/>
+             <triangular vertex1="cob_FR4_v28" vertex2="cob_FR4_v26" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v21" vertex2="cob_FR4_v90" vertex3="cob_FR4_v26"/>
+             <triangular vertex1="cob_FR4_v21" vertex2="cob_FR4_v92" vertex3="cob_FR4_v90"/>
+             <triangular vertex1="cob_FR4_v31" vertex2="cob_FR4_v28" vertex3="cob_FR4_v1"/>
+             <triangular vertex1="cob_FR4_v17" vertex2="cob_FR4_v92" vertex3="cob_FR4_v21"/>
+             <triangular vertex1="cob_FR4_v17" vertex2="cob_FR4_v93" vertex3="cob_FR4_v92"/>
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v30" vertex3="cob_FR4_v29"/>
+             <triangular vertex1="cob_FR4_v11" vertex2="cob_FR4_v94" vertex3="cob_FR4_v12"/>
+             <triangular vertex1="cob_FR4_v94" vertex2="cob_FR4_v96" vertex3="cob_FR4_v12"/>
+             <triangular vertex1="cob_FR4_v3" vertex2="cob_FR4_v70" vertex3="cob_FR4_v77"/>
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v29" vertex3="cob_FR4_v33"/>
+             <triangular vertex1="cob_FR4_v70" vertex2="cob_FR4_v3" vertex3="cob_FR4_v66"/>
+             <triangular vertex1="cob_FR4_v3" vertex2="cob_FR4_v77" vertex3="cob_FR4_v80"/>
+             <triangular vertex1="cob_FR4_v12" vertex2="cob_FR4_v96" vertex3="cob_FR4_v24"/>
+             <triangular vertex1="cob_FR4_v96" vertex2="cob_FR4_v99" vertex3="cob_FR4_v24"/>
+             <triangular vertex1="cob_FR4_v66" vertex2="cob_FR4_v3" vertex3="cob_FR4_v61"/>
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v33" vertex3="cob_FR4_v36"/>
+             <triangular vertex1="cob_FR4_v3" vertex2="cob_FR4_v80" vertex3="cob_FR4_v79"/>
+             <triangular vertex1="cob_FR4_v24" vertex2="cob_FR4_v99" vertex3="cob_FR4_v22"/>
+             <triangular vertex1="cob_FR4_v61" vertex2="cob_FR4_v3" vertex3="cob_FR4_v62"/>
+             <triangular vertex1="cob_FR4_v99" vertex2="cob_FR4_v98" vertex3="cob_FR4_v22"/>
+             <triangular vertex1="cob_FR4_v3" vertex2="cob_FR4_v79" vertex3="cob_FR4_v83"/>
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v36" vertex3="cob_FR4_v35"/>
+             <triangular vertex1="cob_FR4_v22" vertex2="cob_FR4_v98" vertex3="cob_FR4_v18"/>
+             <triangular vertex1="cob_FR4_v98" vertex2="cob_FR4_v5" vertex3="cob_FR4_v18"/>
+             <triangular vertex1="cob_FR4_v3" vertex2="cob_FR4_v83" vertex3="cob_FR4_v86"/>
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v35" vertex3="cob_FR4_v38"/>
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v38" vertex3="cob_FR4_v41"/>
+             <triangular vertex1="cob_FR4_v3" vertex2="cob_FR4_v86" vertex3="cob_FR4_v85"/>
+             <triangular vertex1="cob_FR4_v3" vertex2="cob_FR4_v85" vertex3="cob_FR4_v88"/>
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v41" vertex3="cob_FR4_v44"/>
+             <triangular vertex1="cob_FR4_v14" vertex2="cob_FR4_v18" vertex3="cob_FR4_v7"/>
+             <triangular vertex1="cob_FR4_v8" vertex2="cob_FR4_v14" vertex3="cob_FR4_v7"/>
+             <triangular vertex1="cob_FR4_v57" vertex2="cob_FR4_v8" vertex3="cob_FR4_v7"/>
+             <triangular vertex1="cob_FR4_v56" vertex2="cob_FR4_v57" vertex3="cob_FR4_v7"/>
+             <triangular vertex1="cob_FR4_v52" vertex2="cob_FR4_v56" vertex3="cob_FR4_v7"/>
+             <triangular vertex1="cob_FR4_v53" vertex2="cob_FR4_v52" vertex3="cob_FR4_v7"/>
+             <triangular vertex1="cob_FR4_v48" vertex2="cob_FR4_v53" vertex3="cob_FR4_v7"/>
+             <triangular vertex1="cob_FR4_v49" vertex2="cob_FR4_v48" vertex3="cob_FR4_v7"/>
+             <triangular vertex1="cob_FR4_v46" vertex2="cob_FR4_v49" vertex3="cob_FR4_v7"/>
+             <triangular vertex1="cob_FR4_v44" vertex2="cob_FR4_v46" vertex3="cob_FR4_v7"/>
+             <triangular vertex1="cob_FR4_v18" vertex2="cob_FR4_v5" vertex3="cob_FR4_v7"/>
+             <triangular vertex1="cob_FR4_v62" vertex2="cob_FR4_v3" vertex3="cob_FR4_v5"/>
+             <triangular vertex1="cob_FR4_v44" vertex2="cob_FR4_v7" vertex3="cob_FR4_v0"/>
+             <triangular vertex1="cob_FR4_v74" vertex2="cob_FR4_v62" vertex3="cob_FR4_v5"/>
+             <triangular vertex1="cob_FR4_v72" vertex2="cob_FR4_v74" vertex3="cob_FR4_v5"/>
+             <triangular vertex1="cob_FR4_v68" vertex2="cob_FR4_v72" vertex3="cob_FR4_v5"/>
+             <triangular vertex1="cob_FR4_v64" vertex2="cob_FR4_v68" vertex3="cob_FR4_v5"/>
+             <triangular vertex1="cob_FR4_v58" vertex2="cob_FR4_v64" vertex3="cob_FR4_v5"/>
+             <triangular vertex1="cob_FR4_v107" vertex2="cob_FR4_v58" vertex3="cob_FR4_v5"/>
+             <triangular vertex1="cob_FR4_v106" vertex2="cob_FR4_v107" vertex3="cob_FR4_v5"/>
+             <triangular vertex1="cob_FR4_v102" vertex2="cob_FR4_v106" vertex3="cob_FR4_v5"/>
+             <triangular vertex1="cob_FR4_v103" vertex2="cob_FR4_v102" vertex3="cob_FR4_v5"/>
+             <triangular vertex1="cob_FR4_v98" vertex2="cob_FR4_v103" vertex3="cob_FR4_v5"/>
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v3" vertex3="cob_FR4_v20"/>
+             <triangular vertex1="cob_FR4_v3" vertex2="cob_FR4_v88" vertex3="cob_FR4_v20"/>
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v20" vertex3="cob_FR4_v27"/>
+             <triangular vertex1="cob_FR4_v20" vertex2="cob_FR4_v88" vertex3="cob_FR4_v16"/>
+             <triangular vertex1="cob_FR4_v88" vertex2="cob_FR4_v91" vertex3="cob_FR4_v16"/>
+             <triangular vertex1="cob_FR4_v0" vertex2="cob_FR4_v27" vertex3="cob_FR4_v30"/>
+             <triangular vertex1="cob_FR4_v16" vertex2="cob_FR4_v91" vertex3="cob_FR4_v11"/>
+             <triangular vertex1="cob_FR4_v91" vertex2="cob_FR4_v94" vertex3="cob_FR4_v11"/>
+        </tessellated>
+    </solids>
+
+    <structure>
+        <volume name="cob_FR4">
+            <materialref ref="FR4"/>
+            <solidref ref="cob_FR4-SOL"/>
+            <positionref ref="cobPos"/>
+            <auxiliary auxtype="Color" auxvalue="#008C4A"/>
+        </volume>
+    </structure>
+
+    <setup name="Default" version="1.0">
+        <world ref="cob_FR4"/>
+    </setup>
+</gdml>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd" >
+
+<define>
+  <constant name="StlSteelWindowRadius" unit="mm" value="5.5"/>
+  <constant name="StlSteelWindowHeight" unit="mm" value="0.2"/>
+  <constant name="StlSteelBodyHeight" unit="mm" value="5.1"/>
+
+  <constant name="AmRadius" value="3.625"/>
+  <constant name="AmHeight" value="1."/>
+
+  <constant name="WBottomRadius1" value="4.65"/>
+  <constant name="WBottomRadius2" value="4.5"/>
+  <constant name="WBottomHeight" value="2."/>
+  <constant name="WTopHeight" value="0.5"/>
+
+  <constant name="LidOuterRadius" value="4.65"/>
+  <constant name="LidInnerRadius" value="3.65"/>
+  <constant name="LidBottomHeight" value="1"/>
+  <constant name="LidTopHeight" value="1.2"/>
+	
+  <constant name="LeadShieldOuterRadius" value="7"/>
+  <constant name="LeadShieldInnerRadius" value="5.5"/>
+  <constant name="LeadShieldBottomHeight" value="2"/>
+  <constant name="LeadShieldTopHeight" value="10"/>
+
+  <constant name="HALFPI" value="pi/2."/>
+  <constant name="PI" value="1.*pi"/>
+  <constant name="TWOPI" value="2.*pi"/>
+  <position name="center" x="0" y="0" z="0"/>
+  <rotation name="identity" x="0" y="0" z="0"/>
+
+  <position name="HousingPos" x="0" y="0" z="-0.5 * AmHeight - StlSteelWindowHeight"/>
+  <position name="AmPos" x="0" y="0" z="0"/>
+  <position name="WPos" x="0" y="0" z="-0.5 * AmHeight"/>
+  <position name="LidPos" x="0" y="0" z="-0.5 * AmHeight + WBottomHeight + WTopHeight"/>
+  <position name="LeadShieldPos" x="0" y="0" z="-0.5*AmHeight - StlSteelWindowHeight - StlSteelBodyHeight"/>
+  <rotation name="rot" y="180" unit="deg"/>
+</define>
+
+<materials> 
+        <element name="oxygen"     formula="O"   Z="8">    <atom value="15.999"/>     </element>
+        <element name="americium"  formula="Am"  Z="95">   <atom value="241.056829"/> </element>
+        <element name="carbon"     formula="C"   Z="6">    <atom value="12.0107"/>    </element>
+        <element name="nitrogen"   formula="N"   Z="7">    <atom value="14.0067"/>    </element>
+        <element name="phosphorus" formula="P"   Z="15">   <atom value="30.973"/>     </element>
+        <element name="sulphur"    formula="S"   Z="16">   <atom value="32.065"/>     </element>
+        <element name="chromium"   formula="Cr"  Z="24">   <atom value="51.9961"/>    </element>
+        <element name="iron"       formula="Fe"  Z="26">   <atom value="55.8450"/>    </element>
+        <element name="nickel"     formula="Ni"  Z="28">   <atom value="58.6934"/>    </element>
+        <element name="nitrogen"   formula="N"   Z="7">    <atom value="14.0067"/>    </element>
+        <element name="magnesium"  formula="Mg"  Z="12">   <atom value="24.305"/>     </element>
+        <element name="silicon"    formula="Si"  Z="14">   <atom value="28.0855"/>    </element>
+        <element name="molybdenum" formula="Mo"  Z="42">   <atom value="95.95"/>      </element>
+        <element name="manganese"  formula="Mn"  Z="25">   <atom value="54.938"/>     </element>
+        <element name="tungsten"   formula="W"   Z="74">   <atom value="183.84"/>     </element>
+        <element name="copper"     formula="Cu"  Z="29">   <atom value="63.55"/>      </element>
+        <element name="lead"       formula="Pb"  Z="82">   <atom value="207.2"/>      </element>
+        <element name="antimony"   formula="Sb"  Z="51">   <atom value="121.76"/>     </element>
+
+        <material name="Americium_dioxide" formula="AmO2">
+            <D value="11.68" unit="g/cm3"/>
+            <fraction n="0.8837" ref="americium"/>
+            <fraction n="0.1163" ref="oxygen"/>
+        </material>
+
+	<material name="V4A" formula="X5CrNiMo17-12-2">
+	    <D value="8." unit="g/cm3"/>
+	    <fraction n="0.00858" ref="carbon"/>
+	    <fraction n="0.0286" ref="silicon"/>
+	    <fraction n="0.0572" ref="manganese"/>
+	    <fraction n="0.000858" ref="phosphorus"/>
+	    <fraction n="0.000858" ref="sulphur"/>
+	    <fraction n="0.4864" ref="chromium"/>
+	    <fraction n="0.3577" ref="nickel"/>
+	    <fraction n="0.00315" ref="nitrogen"/>
+	    <fraction n="0.0644" ref="molybdenum"/>
+	</material>
+
+	<material name="Tungsten_alloy" formula="HD18">
+	    <D value="18." unit="g/cm3"/>
+	    <fraction n="0.95" ref="tungsten"/>
+	    <fraction n="0.035" ref="nickel"/>
+	    <fraction n="0.015" ref="copper"/>
+	</material>
+
+        <material name="Hard_lead" formula="HardLead">
+            <D value="11." unit="g/cm3"/>
+            <fraction n="0.96" ref="lead"/>
+            <fraction n="0.04" ref="antimony"/>
+        </material>
+</materials>
+
+<solids>
+  <polycone name="HousingSol" startphi="0" deltaphi="TWOPI" lunit="mm">
+    <zplane rmin="0" rmax="StlSteelWindowRadius" z="0"/>
+    <zplane rmin="0" rmax="StlSteelWindowRadius" z="StlSteelWindowHeight"/>
+    <zplane rmin="LidOuterRadius" rmax="StlSteelWindowRadius" z="StlSteelWindowHeight"/>
+    <zplane rmin="LidOuterRadius" rmax="StlSteelWindowRadius" z="StlSteelWindowHeight + WBottomHeight + WTopHeight + LidBottomHeight + LidTopHeight"/>
+  </polycone>
+
+  <tube name="AmSol" rmin="0" rmax="AmRadius" z="AmHeight" startphi="0" deltaphi="TWOPI" lunit="mm"/>
+
+  <polycone name="WSol" startphi="0" deltaphi="TWOPI" lunit="mm">
+    <zplane rmin="AmRadius" rmax="WBottomRadius2" z="0"/>
+    <zplane rmin="AmRadius" rmax="4.6" z="AmHeight"/>
+    <zplane rmin="0" rmax="WBottomRadius1" z="AmHeight"/>
+    <zplane rmin="0" rmax="WBottomRadius1" z="WBottomHeight"/>
+    <zplane rmin="0" rmax="WBottomRadius1" z="WBottomHeight + WTopHeight"/>
+  </polycone>
+
+  <polycone name="LidSol" startphi="0" deltaphi="TWOPI" lunit="mm">
+    <zplane rmin="0" rmax="LidOuterRadius" z="0"/>
+    <zplane rmin="0" rmax="LidOuterRadius" z="LidBottomHeight"/>
+    <zplane rmin="LidInnerRadius" rmax="LidOuterRadius" z="LidBottomHeight"/>
+    <zplane rmin="LidInnerRadius" rmax="LidOuterRadius" z="LidBottomHeight + LidTopHeight"/>
+  </polycone>
+
+  <polycone name="LeadShieldSol" startphi="0" deltaphi="TWOPI" lunit="mm">
+    <zplane rmin="LeadShieldInnerRadius" rmax="LeadShieldOuterRadius" z="0"/>
+    <zplane rmin="LeadShieldInnerRadius" rmax="LeadShieldOuterRadius" z="LeadShieldTopHeight"/>
+    <zplane rmin="0" rmax="LeadShieldOuterRadius" z="LeadShieldTopHeight"/>
+    <zplane rmin="0" rmax="LeadShieldOuterRadius" z="LeadShieldTopHeight + LeadShieldBottomHeight"/>
+  </polycone>
+
+  <box name="WorldBoxSourceSol" x="10" y="10" z="10" lunit="m"/>
+</solids>
+
+<structure>
+  <volume name="HousingVol">
+    <materialref ref="V4A"/>
+    <solidref ref="HousingSol"/>
+    <auxiliary auxtype="Color" auxvalue="#E0E0E0FF"/>
+  </volume>
+
+  <volume name="AmVol">
+    <materialref ref="Americium_dioxide"/>
+    <solidref ref="AmSol"/>
+    <auxiliary auxtype="Color" auxvalue="#1F1F1FFF"/>
+  </volume>
+
+  <volume name="WVol">
+    <materialref ref="Tungsten_alloy"/>
+    <solidref ref="WSol"/>
+    <auxiliary auxtype="Color" auxvalue="#B8B8B8FF"/>
+  </volume>
+
+  <volume name="LidVol">
+    <materialref ref="V4A"/>
+    <solidref ref="LidSol"/>
+    <auxiliary auxtype="Color" auxvalue="#E0E0E0FF"/>
+  </volume>
+
+  <volume name="LeadShieldVol">
+    <materialref ref="Hard_lead"/>
+    <solidref ref="LeadShieldSol"/>
+    <auxiliary auxtype="Color" auxvalue="#E0E0E0FF"/>
+  </volume>
+
+  <volume name="WorldBoxSource">
+    <materialref ref="G4_AIR"/>
+    <solidref ref="WorldBoxSourceSol"/>
+
+    <physvol>
+       <volumeref ref="HousingVol"/>
+       <positionref ref="HousingPos"/>
+       <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+       <volumeref ref="AmVol"/>
+       <positionref ref="AmPos"/>
+       <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+       <volumeref ref="WVol"/>
+       <positionref ref="WPos"/>
+       <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+       <volumeref ref="LidVol"/>
+       <positionref ref="LidPos"/>
+       <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+       <volumeref ref="LeadShieldVol"/>
+       <positionref ref="LeadShieldPos"/>
+       <rotationref ref="identity"/>
+    </physvol>
+  </volume>
+
+</structure>
+
+<setup name="Default" version="1.0">
+  <world ref="WorldBoxSource"/>
+</setup>
+
+</gdml>

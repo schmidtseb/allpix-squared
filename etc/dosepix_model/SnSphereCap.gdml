@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd" >
+
+<define>
+  <constant name="SnSphereRadius" value="0.5"/>
+  <constant name="HousingCylinderHeight" value="3.5"/>
+  <constant name="HousingBoxHeight" value="5"/>
+	
+  <constant name="HALFPI" value="pi/2."/>
+  <constant name="PI" value="1.*pi"/>
+  <constant name="TWOPI" value="2.*pi"/>
+  <position name="center" x="0" y="0" z="0"/>
+  <rotation name="identity" x="0" y="0" z="0"/>
+  <rotation name="alignSurfX" y="HALFPI" />
+  <rotation name="alignSurfY" x="HALFPI" />
+
+  <position name="housingBoxPos" x="0" y="0" z="0"/>
+  <position name="housingCylPos" x="0" y="0" z="0.75"/>
+  <position name="SnSpherePos" x="0" y="0" z="0.5*HousingBoxHeight - HousingCylinderHeight + SnSphereRadius"/>
+</define>
+
+<materials> </materials>
+
+<solids>
+  <box name="WorldBoxSol" x="10" y="10" z="10" lunit="mm"/>
+  <box name="housingBoxSol" x="17.5" y="17.5" z="HousingBoxHeight" lunit="mm"/>
+  <tube name="housingCylSol" rmin="0" rmax="7.5" z="HousingCylinderHeight" startphi="0" deltaphi="TWOPI" lunit="mm"/>
+
+  <subtraction name="housingSol">
+    <first ref="housingBoxSol"/>
+    <second ref="housingCylSol"/>
+    <positionref ref="housingCylPos"/>
+    <rotationref ref="identity"/>
+  </subtraction>
+
+  <sphere name="SnSphereSol" rmin="0" rmax="SnSphereRadius" startphi="0" deltaphi="TWOPI" starttheta="0" deltatheta="PI" lunit="mm"/>
+</solids>
+
+<structure>
+  <volume name="housing">
+    <materialref ref="G4_PLEXIGLASS"/>
+    <solidref ref="housingSol"/>
+    <auxiliary auxtype="Color" auxvalue="#ECFEFF22"/>
+  </volume>
+
+  <volume name="SnSphere">
+    <materialref ref="G4_Sn"/>
+    <solidref ref="SnSphereSol"/>
+    <auxiliary auxtype="Color" auxvalue="#363A3BFF"/>
+  </volume>
+
+  <volume name="WorldBox">
+    <materialref ref="G4_AIR"/>
+    <solidref ref="WorldBoxSol"/>
+
+    <physvol>
+       <volumeref ref="housing"/>
+       <positionref ref="center"/>
+       <rotationref ref="identity"/>
+    </physvol>
+
+    <physvol>
+      <volumeref ref="SnSphere"/>
+      <positionref ref="SnSpherePos"/>
+      <rotationref ref="identity"/>
+    </physvol>
+  </volume>
+
+</structure>
+
+<setup name="Default" version="1.0">
+  <world ref="WorldBox"/>
+</setup>
+
+</gdml>
