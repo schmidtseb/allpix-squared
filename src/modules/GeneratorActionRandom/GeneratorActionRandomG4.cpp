@@ -213,8 +213,10 @@ void GeneratorActionRandomG4::InitRandom(const Configuration& config) {
 
         double psim = pDBB + bounding_box_area/phantom_area * (1 - pDBB);
         LOG(INFO) << "Total number of events: " << number_of_events / psim;
-    } else {
+    } else if(config.has("parallel_source_intensity")) {
         probability = config.get<double>("parallel_source_intensity", 1.);
+    } else if(config.has("phantom_events")) {
+        probability = num_entries / config.get<double>("phantom_events");
     }
 
     std::binomial_distribution<int> binom_dist(number_of_events, probability);
